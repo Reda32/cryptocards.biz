@@ -1,0 +1,37 @@
+---
+interface Props {
+  slug: string;
+  label?: string;
+  variant?: 'primary' | 'accent' | 'secondary';
+  class?: string;
+  /** Optional disclaimer shown beneath the button. */
+  note?: string;
+}
+
+const {
+  slug,
+  label = 'Get this card',
+  variant = 'primary',
+  class: className = '',
+  note,
+} = Astro.props;
+
+const variantClass = {
+  primary: 'btn-primary',
+  accent: 'btn-accent',
+  secondary: 'btn-secondary',
+}[variant];
+---
+
+<div class:list={['inline-flex flex-col gap-1', className]}>
+  <a
+    href={`/go/${slug}`}
+    class={variantClass}
+    rel="sponsored nofollow noopener"
+    target="_blank"
+    data-affiliate={slug}
+  >
+    {label}
+  </a>
+  {note && <span class="text-[11px] text-slate-400">{note}</span>}
+</div>

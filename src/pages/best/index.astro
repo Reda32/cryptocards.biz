@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { getAllCards } from '@/lib/cards';
+import { topicsForCards } from '@/lib/topics';
+
+const cards = await getAllCards();
+const topics = topicsForCards(cards);
+---
+
+<BaseLayout
+  title="Best Crypto Cards: Curated Lists"
+  description="Curated lists of the best crypto cards by use case: no-KYC, Bitcoin, no-fee, cashback, virtual and stablecoin cards."
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Best cards' }]} />
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+      Best crypto cards
+    </h1>
+    <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+      Every list is generated from the same data we use in our reviews and sorted by our editorial
+      score. No paid placements.
+    </p>
+
+    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+      {
+        topics.map(({ topic, matches }) => (
+          <a
+            href={`/best/${topic.slug}`}
+            class="card-surface p-5 transition hover:border-brand-400"
+          >
+            <h2 class="font-bold text-slate-900 dark:text-white">{topic.title}</h2>
+            <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">{topic.description}</p>
+            <p class="mt-3 text-xs font-medium text-brand-600 dark:text-brand-400">
+              {matches.length} {matches.length === 1 ? 'card' : 'cards'} →
+            </p>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>

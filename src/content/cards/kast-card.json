@@ -1,0 +1,130 @@
+{
+  "name": "KAST Card",
+  "slug": "kast-card",
+  "company": "KAST",
+  "summary": "KAST is a stablecoin-first Visa card aimed at people who want to spend USDT and USDC without heavy verification. Onboarding is fast and the virtual card is issued instantly, though limits stay modest until you completeKYC.",
+  "logo": "/logos/kast.svg",
+  "brandColor": "#7c3aed",
+  "type": ["virtual", "physical"],
+  "network": "visa",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "instant-issuance",
+    "crypto-topup",
+    "rewards",
+    "multi-currency",
+    "app-notifications"
+  ],
+  "fees": {
+    "issuance": 0,
+    "monthly": 0,
+    "fx": 1.0,
+    "atm": "Varies by tier",
+    "topup": "Free for stablecoin top-ups",
+    "decline": 0.3
+  },
+  "limits": {
+    "dailySpend": "US$5,000 (before KYC)",
+    "monthlySpend": "US$50,000",
+    "atmWithdrawal": "Tier dependent"
+  },
+  "rewards": {
+    "cashback": "Up to 2% on eligible spend",
+    "cashbackToken": "Stablecoin rewards",
+    "welcomeBonus": "Varies by promotion",
+    "referralBonus": "Varies by promotion"
+  },
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Brazil",
+    "Canada",
+    "France",
+    "Germany",
+    "Indonesia",
+    "Italy",
+    "Japan",
+    "Mexico",
+    "Netherlands",
+    "Philippines",
+    "Poland",
+    "Singapore",
+    "Spain",
+    "Thailand",
+    "Turkey",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Vietnam"
+  ],
+  "cryptos": [
+    { "symbol": "USDT", "networks": ["ETH", "TRON", "BSC", "SOL", "Polygon"] },
+    { "symbol": "USDC", "networks": ["ETH", "SOL", "Polygon", "Base"] },
+    { "symbol": "USDe", "networks": ["ETH"] }
+  ],
+  "kyc": {
+    "level": "basic",
+    "email": true,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Email sign-up unlocks an instant virtual card with capped limits. A government ID is requested later to raise limits and to order the physical card."
+  },
+  "pros": [
+    "Instant virtual card after email sign-up",
+    "Stablecoin-first: USDT and USDC with no conversion guesswork",
+    "Up to 2% cashback paid in stablecoins",
+    "Apple Pay and Google Pay supported from day one"
+  ],
+  "cons": [
+    "Low spending limits until you complete KYC",
+    "Smaller coin list than multi-chain competitors",
+    "Physical card availability and ATM fees vary by tier",
+    "Rewards rates change with promotions"
+  ],
+  "rating": 7.9,
+  "referral": {
+    "code": "KAST-REF",
+    "url": "https://www.kast.xyz/?ref=KAST-REF",
+    "bonus": "Welcome reward for new users who make their first top-up",
+    "terms": "Reward is credited after the first qualifying top-up. New users only, one per account."
+  },
+  "variants": [
+    {
+      "name": "Standard",
+      "price": 0,
+      "rewards": "Up to 2% cashback",
+      "monthlyFee": 0,
+      "limits": "US$5,000 / day before KYC",
+      "cardInfo": "Virtual Visa, instant issuance"
+    },
+    {
+      "name": "Metal",
+      "price": 50,
+      "rewards": "Up to 2% cashback",
+      "monthlyFee": 3,
+      "limits": "Higher limits after KYC",
+      "cardInfo": "Physical metal Visa"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I use KAST without KYC?",
+      "answer": "You can sign up with an email and get an instant virtual card with capped limits. Identity verification is required later to raise limits and order a physical card."
+    },
+    {
+      "question": "What can I spend with the KAST card?",
+      "answer": "KAST is stablecoin-first and supports USDT, USDC and USDe across several networks. Spending is settled through a Visa card wherever Visa is accepted."
+    },
+    {
+      "question": "Does KAST pay cashback?",
+      "answer": "KAST advertises cashback of up to 2% on eligible spend, paid in stablecoins. The exact rate depends on the tier and current promotions."
+    },
+    {
+      "question": "Is the KAST physical card worth it?",
+      "answer": "The metal card adds a monthly fee, so it only pays off if you want ATM access or higher limits. The free virtual card is enough for most online spending."
+    }
+  ],
+  "lastVerified": "2026-09-01"
+}

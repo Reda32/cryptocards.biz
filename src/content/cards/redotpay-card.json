@@ -1,0 +1,131 @@
+{
+  "name": "RedotPay Card",
+  "slug": "redotpay-card",
+  "company": "RedotPay",
+  "summary": "RedotPay is a Hong Kong-based crypto card that lets you spend USDT, USDC, BTC and ETH wherever Visa is accepted. It pairs low FX fees with a usable virtual card, but it is not available everywhere and many features require identity verification.",
+  "logo": "/logos/redotpay.svg",
+  "brandColor": "#e11d48",
+  "type": ["virtual", "physical"],
+  "network": "visa",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "no-annual-fee",
+    "crypto-topup",
+    "atm-withdrawal",
+    "multi-currency",
+    "app-notifications"
+  ],
+  "fees": {
+    "issuance": 10,
+    "monthly": 0,
+    "fx": 1.2,
+    "atm": "2% (min US$2)",
+    "topup": "Free for crypto top-ups",
+    "decline": 0.5
+  },
+  "limits": {
+    "dailySpend": "US$10,000",
+    "monthlySpend": "US$100,000",
+    "atmWithdrawal": "US$2,000 / day"
+  },
+  "rewards": {
+    "cashback": "None",
+    "welcomeBonus": "Varies by promotion",
+    "referralBonus": "Varies by promotion"
+  },
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Brazil",
+    "Canada",
+    "France",
+    "Germany",
+    "Hong Kong",
+    "Indonesia",
+    "Italy",
+    "Japan",
+    "Malaysia",
+    "Netherlands",
+    "Philippines",
+    "Singapore",
+    "Spain",
+    "Thailand",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Vietnam"
+  ],
+  "cryptos": [
+    { "symbol": "USDT", "networks": ["ETH", "TRON", "BSC", "SOL", "Polygon"] },
+    { "symbol": "USDC", "networks": ["ETH", "SOL", "Polygon"] },
+    { "symbol": "BTC", "networks": ["Bitcoin"] },
+    { "symbol": "ETH", "networks": ["Ethereum"] },
+    { "symbol": "BNB", "networks": ["BSC"] },
+    { "symbol": "SOL", "networks": ["Solana"] }
+  ],
+  "kyc": {
+    "level": "id",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": true,
+    "notes": "Email sign-up is enough to create an account, but issuing a card and raising limits requires a government ID and a liveness selfie. Some regions also ask for proof of address."
+  },
+  "pros": [
+    "Low 1.2% FX fee on non-USD spending",
+    "No monthly or annual card fee",
+    "Supports USDT, USDC, BTC and ETH across major networks",
+    "Works with Apple Pay and Google Pay"
+  ],
+  "cons": [
+    "Not available in the United States",
+    "No cashback or rewards programme",
+    "Identity verification is required to unlock real limits",
+    "ATM withdrawals carry a 2% fee (min US$2)"
+  ],
+  "rating": 8.1,
+  "referral": {
+    "code": "REDA-REF",
+    "url": "https://www.redotpay.com/en/referral/?code=REDA-REF",
+    "bonus": "Mystery bonus for new users who complete KYC",
+    "terms": "Bonus credited after identity verification and first top-up. Amount varies by promotion and region."
+  },
+  "variants": [
+    {
+      "name": "Virtual",
+      "price": 10,
+      "rewards": "None",
+      "monthlyFee": 0,
+      "limits": "US$10,000 / day",
+      "cardInfo": "Virtual Visa, instant issuance"
+    },
+    {
+      "name": "Physical",
+      "price": 10,
+      "rewards": "None",
+      "monthlyFee": 0,
+      "limits": "US$100,000 / month",
+      "cardInfo": "Physical Visa, shipped after full KYC"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is RedotPay available in the United States?",
+      "answer": "No. RedotPay is not offered to US residents. Availability varies by region, so check the app before completing verification."
+    },
+    {
+      "question": "Do I need to complete KYC to use RedotPay?",
+      "answer": "You can create an account with just an email and phone number, but a government ID and selfie are required to issue a card and unlock higher limits."
+    },
+    {
+      "question": "What cryptocurrencies does RedotPay support?",
+      "answer": "RedotPay supports USDT, USDC, BTC, ETH, BNB and SOL, with deposits over several networks including Ethereum, TRON, BSC, Solana and Polygon."
+    },
+    {
+      "question": "Does RedotPay charge a monthly fee?",
+      "answer": "No. The card has no monthly or annual fee. You pay a one-off issuance fee and a 1.2% FX fee on non-USD transactions."
+    }
+  ],
+  "lastVerified": "2026-09-01"
+}

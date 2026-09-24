@@ -1,0 +1,126 @@
+---
+import ScoreCircle from './ScoreCircle.astro';
+import { formatDate } from '@/lib/types';
+
+interface Source {
+  name: 'appstore' | 'playstore' | 'trustpilot' | 'reddit' | 'x';
+  rawRating: number | null;
+  count: number;
+  score10: number;
+  url: string;
+}
+
+interface Props {
+  score: number | null;
+  sources: Source[];
+  summary: string;
+  updatedAt: Date;
+  categories?: Partial<Record<'support' | 'fees' | 'reliability' | 'app' | 'kycEase', number>>;
+}
+
+const { score, sources, summary, updatedAt, categories } = Astro.props;
+
+const SOURCE_META: Record<Source['name'], { label: string; kind: 'star' | 'post' }> = {
+  appstore: { label: 'App Store', kind: 'star' },
+  playstore: { label: 'Google Play', kind: 'star' },
+  trustpilot: { label: 'Trustpilot', kind: 'star' },
+  reddit: { label: 'Reddit', kind: 'post' },
+  x: { label: 'X', kind: 'post' },
+};
+
+const CATEGORY_LABELS: Record<string, string> = {
+  support: 'Customer support',
+  fees: 'Fees',
+  reliability: 'Reliability',
+  app: 'Mobile app',
+  kycEase: 'KYC experience',
+};
+
+const ratings = sources.filter((s) => SOURCE_META[s.name].kind === 'star').reduce((sum, s) => sum + s.count, 0);
+const posts = sources.filter((s) => SOURCE_META[s.name].kind === 'post').reduce((sum, s) => sum + s.count, 0);
+const hasScore = score !== null && sources.length >= 3;
+---
+
+<div class="card-surface p-6">
+  {hasScore ? (
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-center">
+      <ScoreCircle score={score} size={110} outOf />
+      <div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Community Score</h3>
+        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+          Based on {ratings.toLocaleString('en-US')} ratings and {posts.toLocaleString('en-US')} posts
+          we analysed. Updated {formatDate(updatedAt)}.
+        </p>
+        <p class="mt-3 text-sm">{summary}</p>
+        <a href="/methodology" class="mt-2 inline-block text-xs font-medium text-brand-600 hover:underline dark:text-brand-400">
+          How the Community Score works
+        </a>
+      </div>
+    </div>
+  ) : (
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+      <ScoreCircle score={null} size={96} />
+      <div>
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Not enough data</h3>
+        <p class="mt-1 max-w-prose text-sm text-slate-500 dark:text-slate-400">
+          {summary} We require at least three independent sources with recent activity before
+          publishing a Community Score, so we never present a number built on guesswork.
+        </p>
+        <a href="/methodology" class="mt-2 inline-block text-xs font-medium text-brand-600 hover:underline dark:text-brand-400">
+          Read our methodology
+        </a>
+      </div>
+    </div>
+  )}
+
+  {
+    sources.length > 0 && (
+      <div class="mt-6 overflow-hidden rounded-lg border border-slate-200 dark:border-slate-800">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-50 text-left text-xs uppercase tracking-wide text-slate-500 dark:border-slate-800 dark:bg-slate-900/50">
+              <th class="px-4 py-2 font-medium">Source</th>
+              <th class="px-4 py-2 font-medium">Raw rating</th>
+              <th class="px-4 py-2 font-medium">Sample</th>
+              <th class="px-4 py-2 font-medium">Score /10</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sources.map((source) => (
+              <tr class="border-b border-slate-100 last:border-0 dark:border-slate-800/60">
+                <td class="px-4 py-2.5">
+                  <a href={source.url} rel="nofollow noopener" target="_blank" class="font-medium text-brand-600 hover:underline dark:text-brand-400">
+                    {SOURCE_META[source.name].label}
+                  </a>
+                </td>
+                <td class="px-4 py-2.5">{source.rawRating !== null ? `${source.rawRating} / 5` : '—'}</td>
+                <td class="px-4 py-2.5 text-slate-500 dark:text-slate-400">{source.count.toLocaleString('en-US')}</td>
+                <td class="px-4 py-2.5 font-medium">{source.score10.toFixed(1)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+
+  {
+    categories && Object.keys(categories).length > 0 && (
+      <div class="mt-6 space-y-3">
+        <h4 class="text-sm font-semibold text-slate-900 dark:text-white">What people mention</h4>
+        {Object.entries(categories).map(([key, value]) => (
+          <div class="flex items-center gap-3 text-sm">
+            <span class="w-36 shrink-0 text-slate-500 dark:text-slate-400">{CATEGORY_LABELS[key] ?? key}</span>
+            <span class="h-2 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
+              <span
+                class="block h-full rounded-full bg-brand-500"
+                style={`width:${Math.max(0, Math.min(100, (value as number) * 10))}%`}
+              />
+            </span>
+            <span class="w-8 text-right font-medium tabular-nums">{(value as number).toFixed(1)}</span>
+          </div>
+        ))}
+      </div>
+    )
+  }
+</div>

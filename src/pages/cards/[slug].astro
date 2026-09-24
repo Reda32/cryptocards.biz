@@ -1,0 +1,283 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardHeader from '@/components/CardHeader.astro';
+import Disclosure from '@/components/Disclosure.astro';
+import ProsCons from '@/components/ProsCons.astro';
+import KycBlock from '@/components/KycBlock.astro';
+import CryptoList from '@/components/CryptoList.astro';
+import FeesTable from '@/components/FeesTable.astro';
+import CommunityScore from '@/components/CommunityScore.astro';
+import VariantsTable from '@/components/VariantsTable.astro';
+import FaqSection from '@/components/FaqSection.astro';
+import Section from '@/components/Section.astro';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import {
+  getAllCards,
+  getCommunityForCard,
+  getReviewForCard,
+  featureLabel,
+  formatIsoDate,
+} from '@/lib/cards';
+import { slugify } from '@/lib/taxonomy';
+import { CURATED_PAIRS, pairSlug } from '@/lib/pairs';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  return cards.map((card) => ({ params: { slug: card.data.slug }, props: { card } }));
+}
+
+const { card } = Astro.props;
+const d = card.data;
+
+const [community, review, allCards] = await Promise.all([
+  getCommunityForCard(d.slug),
+  getReviewForCard(d.slug),
+  getAllCards(),
+]);
+
+const ReviewContent = review ? (await render(review)).Content : null;
+
+const comparisons = CURATED_PAIRS.filter(
+  (pair) => pair.a === d.slug || pair.b === d.slug,
+).map((pair) => {
+  const otherSlug = pair.a === d.slug ? pair.b : pair.a;
+  const other = allCards.find((c) => c.data.slug === otherSlug);
+  return {
+    href: `/compare/${pairSlug(pair.a, pair.b)}`,
+    label: other ? `${d.name} vs ${other.data.name}` : 'Comparison',
+  };
+});
+
+const others = allCards.filter((c) => c.data.slug !== d.slug);
+
+const toc = [
+  { id: 'overview', label: 'Overview' },
+  { id: 'kyc', label: 'KYC requirements' },
+  { id: 'community', label: 'Community sentiment' },
+  { id: 'features', label: 'Features' },
+  { id: 'cryptos', label: 'Supported cryptocurrencies' },
+  { id: 'fees', label: 'Fees & limits' },
+  ...(d.variants.length > 0 ? [{ id: 'variants', label: 'Variants' }] : []),
+  ...(d.faq.length > 0 ? [{ id: 'faq', label: 'FAQ' }] : []),
+];
+
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: {
+    '@type': 'Product',
+    name: d.name,
+    brand: { '@type': 'Brand', name: d.company },
+    category: 'Crypto card',
+  },
+  author: { '@type': 'Organization', name: 'CryptoCards.biz' },
+  publisher: { '@type': 'Organization', name: 'CryptoCards.biz' },
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: d.rating,
+    bestRating: 10,
+    worstRating: 0,
+  },
+  datePublished: formatIsoDate(d.lastVerified),
+  dateModified: formatIsoDate(d.lastVerified),
+  reviewBody: d.summary,
+};
+---
+
+<BaseLayout
+  title={`${d.name} Review 2026: Fees, Limits & KYC`}
+  description={`${d.summary} Read our verdict, fees, limits and KYC requirements for the ${d.name}.`}
+  image={`/og/${d.slug}.png`}
+  type="article"
+  modifiedTime={d.lastVerified}
+  schemas={[reviewSchema]}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Cards', href: '/cards' },
+      { label: d.name },
+    ]}
+  />
+
+  <div class="container-page mt-4 space-y-10">
+    <CardHeader card={card} communityScore={community?.data.score ?? null} />
+
+    <Disclosure />
+
+    <div class="grid gap-8 lg:grid-cols-[1fr_16rem]">
+      <div class="space-y-12">
+        <Section
+          id="overview"
+          title="Overview"
+        >
+          <p class="text-slate-600 dark:text-slate-300">
+            {d.summary} Our editorial score is{' '}
+            <strong>{d.rating.toFixed(1)}/10</strong>, based on fees, limits, supported coins, KYC
+            friction and day-to-day usability.
+          </p>
+          <div class="mt-6">
+            <ProsCons pros={d.pros} cons={d.cons} />
+          </div>
+        </Section>
+
+        <Section id="kyc" title="KYC requirements">
+          <KycBlock kyc={d.kyc} />
+        </Section>
+
+        {
+          community && (
+            <Section id="community" title="Community sentiment">
+              <CommunityScore
+                score={community.data.score}
+                sources={community.data.sources}
+                summary={community.data.summary}
+                updatedAt={community.data.updatedAt}
+                categories={community.data.categories}
+              />
+            </Section>
+          )
+        }
+
+        <Section id="features" title="Features">
+          <ul class="grid gap-3 sm:grid-cols-2">
+            {
+              d.features.map((feature) => (
+                <li class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 text-sm dark:border-slate-800 dark:bg-slate-900">
+                  <span class="grid h-6 w-6 place-items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">
+                    ✓
+                  </span>
+                  {featureLabel(feature)}
+                </li>
+              ))
+            }
+            {
+              d.wallets.map((wallet) => (
+                <li class="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 text-sm dark:border-slate-800 dark:bg-slate-900">
+                  <span class="grid h-6 w-6 place-items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400">
+                    ✓
+                  </span>
+                  {wallet === 'apple' ? 'Apple Pay' : 'Google Pay'}
+                </li>
+              ))
+            }
+          </ul>
+        </Section>
+
+        <Section id="cryptos" title="Supported cryptocurrencies">
+          <CryptoList cryptos={d.cryptos} />
+        </Section>
+
+        <Section id="fees" title="Fees & limits">
+          <FeesTable fees={d.fees} limits={d.limits} rewards={d.rewards} />
+        </Section>
+
+        {
+          d.variants.length > 0 && (
+            <Section id="variants" title="Variants">
+              <VariantsTable variants={d.variants} />
+            </Section>
+          )
+        }
+
+        {
+          ReviewContent && (
+            <Section id="review" title="Our full review">
+              <div class="prose-page text-slate-600 dark:text-slate-300">
+                <ReviewContent />
+              </div>
+            </Section>
+          )
+        }
+
+        {
+          d.faq.length > 0 && (
+            <Section id="faq" title="Frequently asked questions">
+              <FaqSection items={d.faq} />
+            </Section>
+          )
+        }
+
+        <section class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-xs text-slate-500 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
+          <p>
+            Last verified {d.lastVerified.toISOString().slice(0, 10)}. Fees, limits and availability
+            change frequently — always confirm the current terms with {d.company} before applying.
+            This is not financial advice.
+          </p>
+        </section>
+
+        {
+          others.length > 0 && (
+            <Section id="related" title="Compare with other cards">
+              <div class="space-y-4">
+                {others.map((other) => (
+                  <CardSummaryRow card={other} />
+                ))}
+              </div>
+            </Section>
+          )
+        }
+      </div>
+
+      <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
+        <nav class="card-surface p-5 text-sm" aria-label="On this page">
+          <h2 class="mb-3 text-xs font-bold uppercase tracking-wide text-slate-400">On this page</h2>
+          <ul class="space-y-2">
+            {
+              toc.map((item) => (
+                <li>
+                  <a href={`#${item.id}`} class="text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400">
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div class="card-surface p-5">
+          <h2 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Get the bonus</h2>
+          <p class="mb-3 text-sm text-slate-500 dark:text-slate-400">{d.referral.bonus}</p>
+          <a href={`/coupons/${d.slug}`} class="btn-secondary w-full">
+            View coupon & steps
+          </a>
+        </div>
+
+        {
+          comparisons.length > 0 && (
+            <div class="card-surface p-5">
+              <h2 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Head-to-head</h2>
+              <ul class="space-y-2 text-sm">
+                {comparisons.map((item) => (
+                  <li>
+                    <a href={item.href} class="text-brand-600 hover:underline dark:text-brand-400">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        }
+
+        <div class="card-surface p-5">
+          <h2 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Available in</h2>
+          <ul class="flex flex-wrap gap-1.5">
+            {d.countries.slice(0, 8).map((country) => (
+              <li>
+                <a
+                  href={`/countries/${slugify(country)}`}
+                  class="badge bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300"
+                >
+                  {country}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

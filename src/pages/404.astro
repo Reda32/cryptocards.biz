@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The page you were looking for could not be found."
+  noindex
+>
+  <div class="container-page flex flex-col items-center py-24 text-center">
+    <p class="text-6xl font-extrabold text-brand-600 dark:text-brand-400">404</p>
+    <h1 class="mt-4 text-2xl font-bold text-slate-900 dark:text-white">Page not found</h1>
+    <p class="mt-2 max-w-md text-slate-500 dark:text-slate-400">
+      The page you were looking for does not exist or has moved. Try one of these instead.
+    </p>
+    <div class="mt-6 flex flex-wrap justify-center gap-3">
+      <a href="/cards" class="btn-primary">Browse cards</a>
+      <a href="/compare" class="btn-secondary">Compare cards</a>
+    </div>
+  </div>
+</BaseLayout>

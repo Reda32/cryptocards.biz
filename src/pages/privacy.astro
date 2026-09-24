@@ -1,0 +1,54 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+
+const updated = 'September 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="What data CryptoCards.biz collects, how we use it, and the choices you have."
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Privacy' }]} />
+  <div class="container-page mt-6">
+    <article class="prose-page max-w-3xl">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        Privacy policy
+      </h1>
+      <p class="mt-4 text-sm text-slate-500 dark:text-slate-400">Last updated: {updated}</p>
+
+      <p class="mt-4">
+        This policy explains what we collect when you use CryptoCards.biz and how we handle it. We aim
+        to collect as little as possible.
+      </p>
+
+      <h2>Information we collect</h2>
+      <ul>
+        <li><strong>Analytics.</strong> We use privacy-friendly, self-hosted analytics to understand aggregate traffic. It does not use third-party advertising cookies.</li>
+        <li><strong>Affiliate clicks.</strong> When you follow an affiliate link, our <code>/go/</code> redirect records an anonymous event (for example, which card link was used).</li>
+        <li><strong>Local preferences.</strong> Your compare selection is stored in your browser's localStorage. It stays on your device and is not sent to us.</li>
+      </ul>
+
+      <h2>What we do not collect</h2>
+      <ul>
+        <li>We do not ask for your wallet, seed phrase, or exchange credentials — ever.</li>
+        <li>We do not sell personal data.</li>
+      </ul>
+
+      <h2>Third-party providers</h2>
+      <p>
+        When you click a referral link, the provider's own privacy policy applies to any information
+        you give them during sign-up. We encourage you to read it before creating an account.
+      </p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>You can clear your compare selection at any time in your browser settings.</li>
+        <li>You can block analytics without affecting how the site works.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>For privacy questions or data requests, contact us at the address published on our site.</p>
+    </article>
+  </div>
+</BaseLayout>

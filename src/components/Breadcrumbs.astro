@@ -1,0 +1,51 @@
+---
+interface Crumb {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: Crumb[];
+  /** Emit BreadcrumbList JSON-LD (skip when the page already provides it). */
+  schema?: boolean;
+}
+
+const { items, schema = true } = Astro.props;
+const site = Astro.site ?? new URL('https://cryptocards.biz');
+
+const listSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: item.href ? new URL(item.href, site).href : undefined,
+  })),
+};
+---
+
+<nav aria-label="Breadcrumb" class="container-page pt-6">
+  <ol class="flex flex-wrap items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+    {
+      items.map((item, index) => (
+        <li class="flex items-center gap-1">
+          {index > 0 && <span aria-hidden="true">/</span>}
+          {item.href && index < items.length - 1 ? (
+            <a href={item.href} class="hover:text-brand-600 dark:hover:text-brand-400">
+              {item.label}
+            </a>
+          ) : (
+            <span class="font-medium text-slate-700 dark:text-slate-200">{item.label}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+{
+  schema && (
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(listSchema)} />
+  )
+}

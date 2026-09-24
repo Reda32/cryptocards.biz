@@ -1,0 +1,72 @@
+---
+import { KYC_LABELS, KYC_DESCRIPTIONS, type KycLevel } from '@/lib/types';
+
+interface Props {
+  kyc: {
+    level: KycLevel;
+    email: boolean;
+    phone: boolean;
+    idDocument: boolean;
+    proofOfAddress: boolean;
+    selfie: boolean;
+    notes?: string;
+  };
+}
+
+const { kyc } = Astro.props;
+
+const rows = [
+  { label: 'Email verification', required: kyc.email },
+  { label: 'Phone verification', required: kyc.phone },
+  { label: 'Identity document', required: kyc.idDocument },
+  { label: 'Proof of address', required: kyc.proofOfAddress },
+  { label: 'Selfie / liveness check', required: kyc.selfie },
+];
+
+const badgeClass: Record<KycLevel, string> = {
+  none: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300',
+  basic: 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300',
+  id: 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300',
+  full: 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300',
+};
+---
+
+<div class="card-surface overflow-hidden">
+  <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 p-5 dark:border-slate-800">
+    <div>
+      <span class:list={['badge', badgeClass[kyc.level]]}>{KYC_LABELS[kyc.level]}</span>
+      <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">{KYC_DESCRIPTIONS[kyc.level]}</p>
+    </div>
+  </div>
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b border-slate-200 text-left text-xs uppercase tracking-wide text-slate-500 dark:border-slate-800">
+        <th class="px-5 py-2 font-medium">Requirement</th>
+        <th class="px-5 py-2 font-medium">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr class="border-b border-slate-100 last:border-0 dark:border-slate-800/60">
+            <td class="px-5 py-2.5">{row.label}</td>
+            <td class="px-5 py-2.5">
+              {row.required ? (
+                <span class="font-medium text-amber-700 dark:text-amber-400">Required</span>
+              ) : (
+                <span class="text-emerald-700 dark:text-emerald-400">Not required</span>
+              )}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  {
+    kyc.notes && (
+      <p class="border-t border-slate-200 bg-slate-50 p-5 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
+        {kyc.notes}
+      </p>
+    )
+  }
+</div>

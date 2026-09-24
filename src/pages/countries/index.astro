@@ -1,0 +1,43 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import { getAllCards } from '@/lib/cards';
+import { groupByCountry } from '@/lib/taxonomy';
+
+const cards = await getAllCards();
+const countries = groupByCountry(cards);
+---
+
+<BaseLayout
+  title="Crypto Cards by Country"
+  description="Find out which crypto cards are available in your country, with local KYC requirements, fees and limits."
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Countries' }]} />
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+      Crypto cards by country
+    </h1>
+    <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+      Availability and KYC rules vary by region. Pick a country to see which cards you can order and
+      what verification they ask for.
+    </p>
+
+    <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        countries.map((country) => (
+          <li>
+            <a
+              href={`/countries/${country.slug}`}
+              class="card-surface flex items-center justify-between p-4 transition hover:border-brand-400"
+            >
+              <span class="font-medium text-slate-800 dark:text-slate-100">{country.name}</span>
+              <span class="text-xs text-slate-400">
+                {country.cards.length} {country.cards.length === 1 ? 'card' : 'cards'}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

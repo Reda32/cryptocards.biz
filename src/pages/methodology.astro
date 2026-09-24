@@ -1,0 +1,132 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+
+const weights = [
+  { source: 'Trustpilot', weight: '30%', reason: 'Detailed reviews, but skews negative and can contain fake entries.' },
+  { source: 'App Store', weight: '20%', reason: 'Real users, though it reflects the app more than the card.' },
+  { source: 'Google Play', weight: '20%', reason: 'As above, usually with a larger sample.' },
+  { source: 'Reddit', weight: '20%', reason: 'Candid, detailed problem reports from real users.' },
+  { source: 'X', weight: '10%', reason: 'Noisy and full of affiliates and bots, so we weight it lightly.' },
+];
+---
+
+<BaseLayout
+  title="Methodology: How We Rate Crypto Cards"
+  description="How CryptoCards.biz scores crypto cards editorially and how the Community Score is collected, filtered, normalised and weighted."
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Methodology' }]} />
+  <div class="container-page mt-6">
+    <article class="prose-page max-w-3xl">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        Methodology
+      </h1>
+      <p class="lead mt-4 text-lg text-slate-600 dark:text-slate-300">
+        Two scores appear on a card page: an editorial score and a Community Score. They are produced
+        separately and never blended, so you can see what we think and what real users report.
+      </p>
+
+      <h2>Editorial score</h2>
+      <p>
+        Our editorial score is out of 10 and weighs the factors that change how a card feels to use
+        day to day:
+      </p>
+      <ul>
+        <li><strong>Fees</strong> — issuance, monthly, FX markup, ATM and declined-transaction charges.</li>
+        <li><strong>Limits</strong> — daily, monthly and ATM ceilings, and when they unlock.</li>
+        <li><strong>Supported coins and networks</strong> — breadth and relevance of top-ups.</li>
+        <li><strong>KYC friction</strong> — how much verification is needed to get useful limits.</li>
+        <li><strong>Usability</strong> — mobile wallets, card types, app quality and reliability.</li>
+      </ul>
+      <p>
+        Scores are assigned by an editor after reviewing the provider's published terms and, where
+        possible, testing the product. We show a last-verified date on every card page and re-check
+        listings on a schedule.
+      </p>
+
+      <h2 id="community">Community Score</h2>
+      <p>
+        The Community Score summarises what people say across five sources: the App Store, Google
+        Play, Trustpilot, Reddit and X. We only publish it when at least three sources have enough
+        recent activity. Otherwise the card shows <strong>Not enough data</strong>.
+      </p>
+
+      <h3>1. Normalise each source to a 0–10 scale</h3>
+      <ul>
+        <li>Star ratings (App Store, Play Store, Trustpilot): <code>score10 = rating × 2</code>.</li>
+        <li>
+          Reddit and X: a language model classifies each post as positive, neutral or negative, then{' '}
+          <code>score10 = 5 + 5 × (positive − negative) / total</code>.
+        </li>
+      </ul>
+
+      <h3>2. Adjust for low volume</h3>
+      <p>Small samples are pulled toward a prior using a Bayesian average:</p>
+      <pre><code>{`score = (n × score + m × prior) / (n + m)
+
+// Star sources:     m = 30, prior = 7.0
+// Reddit / X posts: m = 10, prior = 5.5`}</code></pre>
+
+      <h3>3. Weight the sources</h3>
+      <div class="not-prose my-6 overflow-x-auto">
+        <table class="w-full min-w-[520px] text-sm">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-50 text-left dark:border-slate-800 dark:bg-slate-900/50">
+              <th class="px-4 py-2 font-medium">Source</th>
+              <th class="px-4 py-2 font-medium">Weight</th>
+              <th class="px-4 py-2 font-medium">Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              weights.map((row) => (
+                <tr class="border-b border-slate-100 last:border-0 dark:border-slate-800/60">
+                  <td class="px-4 py-2 font-medium">{row.source}</td>
+                  <td class="px-4 py-2">{row.weight}</td>
+                  <td class="px-4 py-2 text-slate-500 dark:text-slate-400">{row.reason}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The weighted result is renormalised across whichever sources are available, then rounded to
+        one decimal place.
+      </p>
+
+      <h3>4. Filter before scoring</h3>
+      <ul>
+        <li>Only items from the last 12 months, with newer items weighted higher.</li>
+        <li>Posts containing referral links or promo codes are removed.</li>
+        <li>Very new accounts and obvious bot patterns are removed.</li>
+        <li>Reviews about unrelated products on a shared app are excluded.</li>
+      </ul>
+
+      <h3>5. Category breakdown</h3>
+      <p>
+        In the same pass we tag each item with the aspects it mentions — support, fees, reliability,
+        app and KYC experience — and whether the mention is positive or negative. A category is shown
+        only when it has at least 10 mentions.
+      </p>
+
+      <h2>What we will not do</h2>
+      <ul>
+        <li>We never fabricate or round up source counts.</li>
+        <li>We show "Not enough data" rather than a score built on thin evidence.</li>
+        <li>
+          We do not mark up third-party ratings as an <code>AggregateRating</code>, to avoid
+          misrepresenting other people's reviews. Only our editorial rating uses <code>Review</code>{' '}
+          structured data.
+        </li>
+        <li>Affiliate relationships never change a score, and every page with referral links is labelled.</li>
+      </ul>
+
+      <h2>Corrections</h2>
+      <p>
+        Fees and limits change often. If you spot something out of date, tell us and we will re-verify
+        it and update the last-verified date.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

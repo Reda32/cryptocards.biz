@@ -1,0 +1,41 @@
+---
+interface Props {
+  src?: string;
+  name: string;
+  color?: string;
+  size?: number;
+  class?: string;
+}
+
+const { src, name, color = '#1f42f5', size = 40, class: className = '' } = Astro.props;
+const initials = name
+  .split(/\s+/)
+  .slice(0, 2)
+  .map((word) => word[0]?.toUpperCase() ?? '')
+  .join('');
+---
+
+{
+  src ? (
+    <img
+      src={src}
+      alt={`${name} logo`}
+      width={size}
+      height={size}
+      class:list={['shrink-0 rounded-lg', className]}
+      style={`width:${size}px;height:${size}px`}
+      loading="lazy"
+    />
+  ) : (
+    <span
+      aria-hidden="true"
+      class:list={[
+        'flex shrink-0 items-center justify-center rounded-lg font-bold text-white',
+        className,
+      ]}
+      style={`width:${size}px;height:${size}px;background:${color};font-size:${Math.round(size * 0.4)}px`}
+    >
+      {initials}
+    </span>
+  )
+}

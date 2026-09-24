@@ -1,0 +1,28 @@
+---
+interface Props {
+  cryptos: { symbol: string; networks: string[] }[];
+}
+const { cryptos } = Astro.props;
+---
+
+<ul class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    cryptos.map((crypto) => (
+      <li class="card-surface flex items-start gap-3 p-4">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-slate-900 text-xs font-bold text-white dark:bg-slate-700">
+          {crypto.symbol.slice(0, 4)}
+        </span>
+        <div>
+          <p class="text-sm font-semibold text-slate-900 dark:text-white">{crypto.symbol}</p>
+          <div class="mt-1 flex flex-wrap gap-1">
+            {crypto.networks.map((network) => (
+              <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                {network}
+              </span>
+            ))}
+          </div>
+        </div>
+      </li>
+    ))
+  }
+</ul>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+  title="Affiliate Disclosure"
+  description="How CryptoCards.biz earns money, and why affiliate relationships do not affect our ratings."
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Affiliate disclosure' }]} />
+  <div class="container-page mt-6">
+    <article class="prose-page max-w-3xl">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        Affiliate disclosure
+      </h1>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">
+        CryptoCards.biz is free to use. We fund the site through affiliate partnerships with some of
+        the crypto card providers we write about.
+      </p>
+
+      <h2>What this means</h2>
+      <ul>
+        <li>Some links on this site are referral links. If you sign up through one, we may earn a commission.</li>
+        <li>The commission comes from the provider. It never costs you anything extra.</li>
+        <li>Links that may earn us a commission use <code>rel="sponsored nofollow"</code> and route through our <code>/go/</code> redirect.</li>
+      </ul>
+
+      <h2>What this does not mean</h2>
+      <ul>
+        <li>We are not paid to give a card a particular rating.</li>
+        <li>We do not hide negative findings to protect a partnership. If a card has high fees or heavy KYC, we say so.</li>
+        <li>We do not accept payment for placement in a "best" list. Lists are generated from our own data and sorted by our editorial score.</li>
+      </ul>
+
+      <h2>Sponsorship and advertising</h2>
+      <p>
+        If we ever publish sponsored content or display advertising, it will be clearly labelled and
+        kept separate from editorial reviews and rankings.
+      </p>
+
+      <h2>Questions</h2>
+      <p>
+        If you believe a page does not disclose a relationship clearly enough, contact us and we will
+        correct it.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

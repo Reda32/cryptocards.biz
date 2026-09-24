@@ -1,0 +1,183 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardLogo from '@/components/CardLogo.astro';
+import CtaButton from '@/components/CtaButton.astro';
+import FeesTable from '@/components/FeesTable.astro';
+import CopyCodeButton from '@/components/islands/CopyCodeButton.tsx';
+import Disclosure from '@/components/Disclosure.astro';
+import { KYC_LABELS, formatIsoDate, formatDate } from '@/lib/cards';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  return cards.map((card) => ({ params: { slug: card.data.slug }, props: { card } }));
+}
+
+const { card } = Astro.props;
+const d = card.data;
+
+const kycStep =
+  d.kyc.level === 'none'
+    ? 'No identity check is required before you can use the card.'
+    : `Complete identity verification: ${KYC_LABELS[d.kyc.level]} is required. ${d.kyc.notes ?? ''}`.trim();
+
+const steps = [
+  'Open the sign-up page using our link below — the code is usually pre-filled.',
+  `Create your account with an email${d.kyc.phone ? ' and phone number' : ''}.`,
+  `Enter the referral code ${d.referral.code} if it is not already applied.`,
+  kycStep,
+  'Make a first top-up to trigger the reward.',
+];
+
+const faq = [
+  {
+    question: `What does the ${d.name} referral bonus require?`,
+    answer: d.referral.terms ?? d.referral.bonus,
+  },
+  {
+    question: `Do I need to complete KYC to claim the ${d.referral.code} bonus?`,
+    answer:
+      d.kyc.level === 'none'
+        ? 'No. This card does not require identity verification for basic use, so you can claim the bonus without a document check.'
+        : `Yes. You need to reach ${KYC_LABELS[d.kyc.level]} to qualify. ${d.kyc.notes ?? ''}`.trim(),
+  },
+  {
+    question: `Is the ${d.referral.code} code safe?`,
+    answer:
+      'Yes. It is the official referral code for this card. Sign-ups go through the provider’s own website or app, and we never ask for your seed phrase or exchange login.',
+  },
+];
+
+const offerSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Offer',
+  name: `${d.name} referral bonus`,
+  description: d.referral.bonus,
+  url: `https://cryptocards.biz/coupons/${d.slug}`,
+  price: 0,
+  priceCurrency: 'USD',
+  availability: 'https://schema.org/InStock',
+  validFrom: formatIsoDate(d.lastVerified),
+  seller: { '@type': 'Organization', name: d.company },
+  itemOffered: { '@type': 'Service', name: d.name },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title={`${d.name} Referral Code & Bonus 2026`}
+  description={`Use code ${d.referral.code} for the ${d.name} sign-up bonus. See the exact redemption steps, KYC requirements and terms before you apply.`}
+  image={`/og/${d.slug}.png`}
+  modifiedTime={d.lastVerified}
+  schemas={[offerSchema, faqSchema]}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Coupons', href: '/coupons' },
+      { label: d.name },
+    ]}
+  />
+
+  <div class="container-page mt-6 space-y-10">
+    <header class="card-surface p-6">
+      <div class="flex items-center gap-4">
+        <CardLogo src={d.logo} name={d.name} color={d.brandColor} size={52} />
+        <div>
+          <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+            {d.name} referral code
+          </h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400">{d.referral.bonus}</p>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <CopyCodeButton code={d.referral.code} client:load />
+      </div>
+
+      <div class="mt-6 flex flex-wrap items-center gap-4">
+        <CtaButton slug={d.slug} label="Claim the bonus" variant="accent" />
+        <a
+          href={`/cards/${d.slug}`}
+          class="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400"
+        >
+          Read the full {d.name} review →
+        </a>
+      </div>
+      <p class="mt-4 text-xs text-slate-400">Last verified {formatDate(d.lastVerified)}</p>
+    </header>
+
+    <Disclosure />
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        How to redeem the code
+      </h2>
+      <ol class="mt-4 space-y-4">
+        {
+          steps.map((step, index) => (
+            <li class="flex gap-4">
+              <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-600 text-sm font-bold text-white">
+                {index + 1}
+              </span>
+              <p class="pt-1 text-slate-600 dark:text-slate-300">{step}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        Fees you should know about
+      </h2>
+      <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+        The bonus is only worth it if the ongoing fees suit your spending. Here is the summary.
+      </p>
+      <div class="mt-4">
+        <FeesTable fees={d.fees} limits={d.limits} rewards={d.rewards} />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        Terms and conditions
+      </h2>
+      <div class="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-300">
+        <p>{d.referral.terms ?? 'Bonus terms are set by the provider and can change at any time.'}</p>
+        <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+          Bonuses are offered by {d.company}, not by CryptoCards.biz. Eligibility, amount and timing
+          are controlled by {d.company} and may vary by region.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        Referral code FAQ
+      </h2>
+      <div class="mt-4 space-y-3">
+        {
+          faq.map((item) => (
+            <details class="card-surface p-4">
+              <summary class="cursor-pointer font-semibold text-slate-900 dark:text-white">
+                {item.question}
+              </summary>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{item.answer}</p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</BaseLayout>

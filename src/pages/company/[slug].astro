@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import { getAllCards, getAllCommunities } from '@/lib/cards';
+import { groupByCompany } from '@/lib/taxonomy';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  return groupByCompany(cards).map((company) => ({
+    params: { slug: company.slug },
+    props: { companyName: company.name },
+  }));
+}
+
+const { companyName } = Astro.props;
+const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
+const companyCards = cards.filter((card) => card.data.company === companyName);
+const scoreFor = (slug: string) =>
+  communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
+---
+
+<BaseLayout
+  title={`${companyName} Crypto Cards`}
+  description={`Every ${companyName} card we review, compared on fees, limits, KYC requirements and supported cryptocurrencies.`}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Companies', href: '/cards' },
+      { label: companyName },
+    ]}
+  />
+  <div class="container-page mt-6 space-y-8">
+    <header>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        {companyName} cards
+      </h1>
+      <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+        We currently track {companyCards.length} {companyCards.length === 1 ? 'card' : 'cards'} from{' '}
+        {companyName}. Each review covers the same criteria so you can compare them directly.
+      </p>
+    </header>
+
+    <div class="space-y-4">
+      {companyCards.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import Disclosure from '@/components/Disclosure.astro';
+import { getAllCards, getAllCommunities, KYC_LABELS } from '@/lib/cards';
+import { groupByCountry } from '@/lib/taxonomy';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  return groupByCountry(cards).map((country) => ({
+    params: { country: country.slug },
+    props: { countryName: country.name },
+  }));
+}
+
+const { countryName } = Astro.props;
+const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
+const inCountry = cards.filter((card) => card.data.countries.includes(countryName));
+const scoreFor = (slug: string) =>
+  communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
+
+const easiest = [...inCountry].sort((a, b) => {
+  const rank = { none: 0, basic: 1, id: 2, full: 3 };
+  return rank[a.data.kyc.level] - rank[b.data.kyc.level];
+})[0];
+---
+
+<BaseLayout
+  title={`Crypto Cards in ${countryName}`}
+  description={`Which crypto cards work in ${countryName}? Compare availability, KYC requirements, fees and limits for ${inCountry.length} cards.`}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Countries', href: '/countries' },
+      { label: countryName },
+    ]}
+  />
+  <div class="container-page mt-6 space-y-8">
+    <header>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        Crypto cards in {countryName}
+      </h1>
+      <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+        {inCountry.length} of the cards we track list {countryName} as a supported region. Fees and
+        KYC requirements are set by each provider and can differ from the global average — check the
+        card page for the details we verified.
+        {
+          easiest && (
+            <> The easiest to start with is <strong>{easiest.data.name}</strong> ({KYC_LABELS[easiest.data.kyc.level]}).</>
+          )
+        }
+      </p>
+    </header>
+
+    <Disclosure />
+
+    <div class="space-y-4">
+      {inCountry.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+    </div>
+
+    <section class="card-surface p-6 text-sm text-slate-500 dark:text-slate-400">
+      <p>
+        Availability changes often. If a card is listed here but unavailable when you sign up, let us
+        know and we will re-check it. We review every listing on a schedule and show the last-verified
+        date on each card page.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

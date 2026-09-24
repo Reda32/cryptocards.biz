@@ -1,0 +1,46 @@
+---
+import SeoHead from './SeoHead.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import CompareBar from './islands/CompareBar.tsx';
+import { getCompareCards } from '@/lib/cards';
+import { allPairSlugs } from '@/lib/pairs';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: Date;
+  modifiedTime?: Date;
+  schemas?: Record<string, unknown>[];
+}
+
+const props = Astro.props;
+
+const compareCards = await getCompareCards();
+const payload = JSON.stringify({ cards: compareCards, pairs: allPairSlugs() });
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SeoHead {...props} />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <Header />
+    <main class="flex-1 pb-24">
+      <slot />
+    </main>
+    <Footer />
+
+    <script type="application/json" id="compare-data" is:inline set:html={payload} />
+    <CompareBar client:load />
+  </body>
+</html>

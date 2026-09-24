@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans:
+    'Inter var', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dae6ff;
+  --color-brand-200: #bcd2ff;
+  --color-brand-300: #8eb4ff;
+  --color-brand-400: #598cff;
+  --color-brand-500: #3363ff;
+  --color-brand-600: #1f42f5;
+  --color-brand-700: #1a33e1;
+  --color-brand-800: #1c2db6;
+  --color-brand-900: #1c2d8f;
+
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+
+  --radius-card: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-200;
+}
+
+a {
+  @apply underline-offset-2;
+}
+
+/* Reusable primitives ---------------------------------------------------- */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card-surface {
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800;
+  }
+  .btn-accent {
+    @apply bg-accent-500 text-white hover:bg-accent-600;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .prose-page {
+    @apply max-w-none leading-relaxed;
+  }
+  .prose-page h2 {
+    @apply mt-8 mb-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white;
+  }
+  .prose-page h3 {
+    @apply mt-6 mb-2 text-xl font-semibold text-slate-900 dark:text-white;
+  }
+  .prose-page p {
+    @apply my-4;
+  }
+  .prose-page ul {
+    @apply my-4 list-disc space-y-2 pl-6;
+  }
+  .prose-page ol {
+    @apply my-4 list-decimal space-y-2 pl-6;
+  }
+  .prose-page a {
+    @apply text-brand-600 hover:underline dark:text-brand-400;
+  }
+  .prose-page table {
+    @apply my-6 w-full border-collapse text-sm;
+  }
+  .prose-page th,
+  .prose-page td {
+    @apply border border-slate-200 px-3 py-2 text-left dark:border-slate-800;
+  }
+  .prose-page th {
+    @apply bg-slate-100 font-semibold dark:bg-slate-800;
+  }
+}

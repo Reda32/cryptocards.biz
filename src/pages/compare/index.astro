@@ -1,0 +1,72 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CompareTable from '@/components/islands/CompareTable.tsx';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import { getAllCards, getAllCommunities } from '@/lib/cards';
+import { CURATED_PAIRS, pairSlug } from '@/lib/pairs';
+
+const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
+const scoreFor = (slug: string) =>
+  communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
+
+const pairLinks = CURATED_PAIRS.map((pair) => {
+  const a = cards.find((c) => c.data.slug === pair.a);
+  const b = cards.find((c) => c.data.slug === pair.b);
+  return {
+    href: `/compare/${pairSlug(pair.a, pair.b)}`,
+    label: a && b ? `${a.data.name} vs ${b.data.name}` : 'Comparison',
+  };
+});
+---
+
+<BaseLayout
+  title="Compare Crypto Cards Side by Side"
+  description="Build your own crypto card comparison. Choose up to four cards and compare fees, limits, cashback, KYC requirements and supported cryptocurrencies."
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Compare' }]} />
+  <div class="container-page mt-6 space-y-10">
+    <header>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        Compare crypto cards
+      </h1>
+      <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+        Pick up to four cards to compare fees, limits, cashback, KYC requirements and supported
+        coins in one table. Your selection is saved as you browse and can be shared with a link.
+      </p>
+    </header>
+
+    <CompareTable client:load />
+
+    <section>
+      <h2 class="mb-4 text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        All cards
+      </h2>
+      <div class="space-y-4">
+        {cards.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+      </div>
+    </section>
+
+    {
+      pairLinks.length > 0 && (
+        <section>
+          <h2 class="mb-4 text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Popular comparisons
+          </h2>
+          <ul class="flex flex-wrap gap-2 text-sm">
+            {pairLinks.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="rounded-lg border border-slate-200 bg-white px-3 py-2 font-medium text-slate-700 hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

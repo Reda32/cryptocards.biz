@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import Disclosure from '@/components/Disclosure.astro';
+import { getAllCards, getAllCommunities } from '@/lib/cards';
+import { TOPICS, topicBySlug, topicsForCards } from '@/lib/topics';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  return topicsForCards(cards).map(({ topic }) => ({
+    params: { topic: topic.slug },
+  }));
+}
+
+const { topic: topicSlug } = Astro.params;
+const topic = topicBySlug(topicSlug!);
+if (!topic) throw new Error(`Unknown topic: ${topicSlug}`);
+
+const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
+const matches = cards.filter(topic.filter);
+const others = cards.filter((c) => !matches.includes(c));
+const scoreFor = (slug: string) =>
+  communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
+---
+
+<BaseLayout
+  title={`${topic.title} (2026)`}
+  description={topic.description}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Best cards', href: '/best' },
+      { label: topic.title },
+    ]}
+  />
+  <div class="container-page mt-6 space-y-8">
+    <header>
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        {topic.title}
+      </h1>
+      <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">{topic.intro}</p>
+    </header>
+
+    <Disclosure />
+
+    <div class="space-y-4">
+      {matches.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+    </div>
+
+    <section class="card-surface p-6">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white">How we ranked these</h2>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+        Cards are filtered by the criteria above and ordered by our editorial score, which weighs
+        fees, limits, supported coins, KYC friction and usability. {TOPICS.length} lists are built
+        from the same dataset. Read the{' '}
+        <a href="/methodology" class="text-brand-600 hover:underline dark:text-brand-400">
+          full methodology
+        </a>.
+      </p>
+    </section>
+
+    {
+      others.length > 0 && (
+        <section>
+          <h2 class="mb-4 text-lg font-bold text-slate-900 dark:text-white">
+            Other cards worth considering
+          </h2>
+          <div class="space-y-4">
+            {others.map((card) => (
+              <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

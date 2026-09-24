@@ -1,0 +1,59 @@
+---
+import CardLogo from './CardLogo.astro';
+import CtaButton from './CtaButton.astro';
+import CompareToggle from './CompareToggle.astro';
+import ScoreCircle from './ScoreCircle.astro';
+import { KYC_LABELS, formatDate, type Card } from '@/lib/cards';
+
+interface Props {
+  card: Card;
+  communityScore?: number | null;
+}
+
+const { card, communityScore = null } = Astro.props;
+const d = card.data;
+
+const networkLabel = d.network === 'visa' ? 'Visa' : 'Mastercard';
+const typeLabel = d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ');
+---
+
+<header class="card-surface overflow-hidden">
+  <div class="h-1.5 w-full" style={`background:${d.brandColor ?? '#1f42f5'}`}></div>
+  <div class="flex flex-col gap-6 p-6 lg:flex-row lg:items-start lg:justify-between">
+    <div class="flex-1">
+      <div class="flex items-center gap-4">
+        <CardLogo src={d.logo} name={d.name} color={d.brandColor} size={56} />
+        <div>
+          <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+            {d.name}
+          </h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            by <a href={`/company/${d.company.toLowerCase().replace(/\s+/g, '-')}`} class="hover:text-brand-600 dark:hover:text-brand-400">{d.company}</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">{networkLabel}</span>
+        <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">{typeLabel}</span>
+        <span class="badge bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300">{KYC_LABELS[d.kyc.level]}</span>
+        {d.wallets.includes('apple') && <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">Apple Pay</span>}
+        {d.wallets.includes('google') && <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">Google Pay</span>}
+      </div>
+
+      <p class="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">{d.summary}</p>
+      <p class="mt-3 text-xs text-slate-400">Last verified {formatDate(d.lastVerified)}</p>
+    </div>
+
+    <div class="flex shrink-0 flex-col gap-5 border-t border-slate-200 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 dark:border-slate-800">
+      <div class="flex items-center gap-6">
+        <ScoreCircle score={d.rating} label="Overall" size={80} outOf />
+        <ScoreCircle score={communityScore} label="Community" size={80} outOf />
+      </div>
+      <div class="flex flex-col gap-2">
+        <CtaButton slug={d.slug} label="Get This Card" variant="primary" note="Affiliate link · no extra cost" />
+        <CompareToggle slug={d.slug} label="Add to compare" />
+      </div>
+    </div>
+  </div>
+</header>

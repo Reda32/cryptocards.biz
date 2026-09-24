@@ -1,0 +1,137 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import { getAllCards, getAllCommunities } from '@/lib/cards';
+import { topicsForCards } from '@/lib/topics';
+import { CURATED_PAIRS, pairSlug } from '@/lib/pairs';
+
+const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
+const topics = topicsForCards(cards);
+
+const scoreFor = (slug: string) =>
+  communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
+
+const pairLinks = CURATED_PAIRS.map((pair) => {
+  const a = cards.find((c) => c.data.slug === pair.a);
+  const b = cards.find((c) => c.data.slug === pair.b);
+  return {
+    href: `/compare/${pairSlug(pair.a, pair.b)}`,
+    label: a && b ? `${a.data.name} vs ${b.data.name}` : 'Comparison',
+  };
+});
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'CryptoCards.biz',
+  url: 'https://cryptocards.biz',
+  logo: 'https://cryptocards.biz/favicon.svg',
+  description:
+    'Independent reviews and comparisons of crypto cards, including fees, limits, KYC requirements and community sentiment.',
+};
+---
+
+<BaseLayout
+  title="Crypto Card Reviews & Comparisons"
+  description="Independent reviews and side-by-side comparisons of crypto cards. Compare fees, limits, KYC requirements and cashback for RedotPay, KAST and more."
+  schemas={[orgSchema]}
+>
+  <section class="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+    <div class="container-page py-16 sm:py-20">
+      <p class="text-sm font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">
+        Crypto cards, decoded
+      </p>
+      <h1 class="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl dark:text-white">
+        Find the right crypto card — with the fees and limits spelled out.
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+        Side-by-side reviews of RedotPay, KAST and more. Compare fees, limits, supported coins, KYC
+        requirements and what real users say, before you sign up.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/cards" class="btn-primary">Browse all cards</a>
+        <a href="/compare" class="btn-secondary">Compare side by side</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container-page space-y-16 py-14">
+    <section>
+      <div class="mb-6 flex items-end justify-between">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Card reviews
+        </h2>
+        <a href="/cards" class="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400">
+          View all
+        </a>
+      </div>
+      <div class="space-y-4">
+        {cards.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+      </div>
+    </section>
+
+    <section class="grid gap-8 lg:grid-cols-2">
+      <div>
+        <h2 class="mb-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Best crypto cards
+        </h2>
+        <ul class="space-y-2 text-sm">
+          {
+            topics.map(({ topic }) => (
+              <li>
+                <a
+                  href={`/best/${topic.slug}`}
+                  class="flex items-center justify-between rounded-lg border border-slate-200 bg-white p-3 font-medium text-slate-700 hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
+                >
+                  {topic.title}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h2 class="mb-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+          Head-to-head comparisons
+        </h2>
+        <ul class="space-y-2 text-sm">
+          {
+            pairLinks.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="flex items-center justify-between rounded-lg border border-slate-200 bg-white p-3 font-medium text-slate-700 hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
+                >
+                  {item.label}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))
+          }
+          <li>
+            <a
+              href="/compare"
+              class="flex items-center justify-between rounded-lg border border-dashed border-slate-300 p-3 font-medium text-slate-500 hover:border-brand-400 hover:text-brand-600 dark:border-slate-700 dark:text-slate-400"
+            >
+              Build your own comparison
+              <span aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card-surface p-6 sm:p-8">
+      <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+        How we rate
+      </h2>
+      <p class="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+        Every card gets an editorial score across fees, limits, supported coins, KYC friction and
+        usability. Where we have enough data we also publish a Community Score built from App Store,
+        Google Play, Trustpilot, Reddit and X — with the method and sample size shown on each page.
+      </p>
+      <a href="/methodology" class="btn-secondary mt-5">Read the methodology</a>
+    </section>
+  </div>
+</BaseLayout>

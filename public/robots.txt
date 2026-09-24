@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Affiliate redirect endpoints add no indexable value.
+Disallow: /go/
+
+Sitemap: https://cryptocards.biz/sitemap-index.xml

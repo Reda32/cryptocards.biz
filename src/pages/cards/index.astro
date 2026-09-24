@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import { getAllCards, getAllCommunities } from '@/lib/cards';
+
+const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
+const scoreFor = (slug: string) =>
+  communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
+
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Crypto card reviews',
+  itemListElement: cards.map((card, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    url: `https://cryptocards.biz/cards/${card.data.slug}`,
+    name: card.data.name,
+  })),
+};
+---
+
+<BaseLayout
+  title="Crypto Card Reviews 2026"
+  description="Every crypto card we review, with fees, limits, KYC requirements, supported cryptocurrencies and our verdict."
+  schemas={[itemList]}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Cards' }]} />
+  <div class="container-page mt-6">
+    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+      Crypto card reviews
+    </h1>
+    <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
+      We test and document each crypto card the same way: fees, limits, supported coins, KYC
+      requirements and usability. Select any two to compare them side by side.
+    </p>
+    <div class="mt-8 space-y-4">
+      {cards.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+    </div>
+  </div>
+</BaseLayout>
