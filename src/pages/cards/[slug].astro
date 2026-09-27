@@ -107,8 +107,8 @@ const reviewSchema = {
 
     <Disclosure />
 
-    <div class="grid gap-8 lg:grid-cols-[1fr_16rem]">
-      <div class="space-y-12">
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_16rem]">
+      <div class="min-w-0 space-y-12">
         <Section
           id="overview"
           title="Overview"
@@ -221,7 +221,7 @@ const reviewSchema = {
         }
       </div>
 
-      <aside class="space-y-6 lg:sticky lg:top-24 lg:self-start">
+      <aside class="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
         <nav class="card-surface p-5 text-sm" aria-label="On this page">
           <h2 class="mb-3 text-xs font-bold uppercase tracking-wide text-slate-400">On this page</h2>
           <ul class="space-y-2">

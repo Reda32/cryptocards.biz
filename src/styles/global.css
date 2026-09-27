@@ -89,6 +89,16 @@ a {
   .prose-page a {
     @apply text-brand-600 hover:underline dark:text-brand-400;
   }
+  .prose-page code {
+    @apply rounded bg-slate-100 px-1.5 py-0.5 text-sm text-slate-700 dark:bg-slate-800 dark:text-slate-200;
+  }
+  .prose-page pre {
+    @apply my-4 overflow-x-auto rounded-lg bg-slate-900 p-4 text-xs leading-relaxed text-slate-100;
+  }
+  .prose-page pre code {
+    @apply block bg-transparent p-0 text-inherit;
+    white-space: pre;
+  }
   .prose-page table {
     @apply my-6 w-full border-collapse text-sm;
   }

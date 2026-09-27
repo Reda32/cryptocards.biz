@@ -46,9 +46,9 @@ const typeLabel = d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).
     </div>
 
     <div class="flex shrink-0 flex-col gap-5 border-t border-slate-200 pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 dark:border-slate-800">
-      <div class="flex items-center gap-6">
-        <ScoreCircle score={d.rating} label="Overall" size={80} outOf />
-        <ScoreCircle score={communityScore} label="Community" size={80} outOf />
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-5">
+        <ScoreCircle score={d.rating} label="Overall" size={80} outOf layout="col" />
+        <ScoreCircle score={communityScore} label="Community" size={80} outOf layout="col" />
       </div>
       <div class="flex flex-col gap-2">
         <CtaButton slug={d.slug} label="Get This Card" variant="primary" note="Affiliate link · no extra cost" />

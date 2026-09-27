@@ -58,13 +58,13 @@ export default function CompareBar() {
 
   return (
     <div class="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
-      <div class="container-page flex flex-wrap items-center gap-3 py-3">
-        <span class="text-xs font-semibold uppercase tracking-wide text-slate-400">
+      <div class="container-page flex items-center gap-2 py-2.5 sm:gap-3 sm:py-3">
+        <span class="hidden shrink-0 text-xs font-semibold uppercase tracking-wide text-slate-400 md:inline">
           Compare ({selected.length}/{MAX_COMPARE})
         </span>
-        <ul class="flex flex-1 flex-wrap items-center gap-2">
+        <ul class="flex min-w-0 flex-1 items-center gap-2 overflow-x-auto py-1 whitespace-nowrap">
           {selected.map((card) => (
-            <li key={card.slug}>
+            <li key={card.slug} class="shrink-0">
               <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 py-1 pl-2 pr-1 text-sm dark:border-slate-700 dark:bg-slate-900">
                 {card.logo ? (
                   <img src={card.logo} alt="" width={18} height={18} class="rounded" />
@@ -91,14 +91,14 @@ export default function CompareBar() {
         </ul>
         <button
           type="button"
-          class="text-xs font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
+          class="shrink-0 text-xs font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
           onClick={() => clearSlugs()}
         >
           Clear
         </button>
         <a
           href={compareHref(slugs)}
-          class={`btn-primary ${disabled ? 'pointer-events-none opacity-50' : ''}`}
+          class={`btn-primary shrink-0 ${disabled ? 'pointer-events-none opacity-50' : ''}`}
           aria-disabled={disabled}
         >
           Compare now
