@@ -14,6 +14,10 @@ export const CURATED_PAIRS: CuratedPair[] = [
   { a: 'nexo-card', b: 'redotpay-card' },
   { a: 'avici-card', b: 'kast-card' },
   { a: 'nexo-card', b: 'kast-card' },
+  { a: 'ether-fi-cash-card', b: 'avici-card' },
+  { a: 'ether-fi-cash-card', b: 'nexo-card' },
+  { a: 'ether-fi-cash-card', b: 'redotpay-card' },
+  { a: 'ether-fi-cash-card', b: 'kast-card' },
 ];
 
 export function pairSlug(a: string, b: string): string {

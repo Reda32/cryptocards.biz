@@ -1,0 +1,148 @@
+{
+  "name": "Ether.fi Cash Card",
+  "slug": "ether-fi-cash-card",
+  "company": "Ether.fi",
+  "summary": "Ether.fi Cash is a non-custodial Visa card that lets you borrow against your crypto instead of selling it. Spend USDC on Scroll with gasless transactions while your collateral keeps earning yield, and earn banded cashback paid in WETH — provided you clear the onboarding checks and avoid liquidation.",
+  "logo": "/logos/etherfi.svg",
+  "brandColor": "#0ea5e9",
+  "type": ["virtual", "physical"],
+  "network": "visa",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "online-payments",
+    "staking",
+    "rewards",
+    "crypto-topup",
+    "non-custodial"
+  ],
+  "fees": {
+    "issuance": 40,
+    "monthly": 0,
+    "fx": 1,
+    "atm": "2%",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "US$30,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "US$250 / day"
+  },
+  "rewards": {
+    "cashback": "Up to 3% (banded)",
+    "cashbackToken": "WETH or SCR",
+    "referralBonus": "Varies by promotion"
+  },
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Bulgaria",
+    "Canada",
+    "Croatia",
+    "Czechia",
+    "Denmark",
+    "Estonia",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Hungary",
+    "Ireland",
+    "Italy",
+    "Japan",
+    "Latvia",
+    "Lithuania",
+    "Luxembourg",
+    "Mexico",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "Thailand",
+    "Turkey",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Vietnam"
+  ],
+  "cryptos": [
+    { "symbol": "ETH", "networks": ["Ethereum", "Scroll"] },
+    { "symbol": "USDC", "networks": ["Ethereum", "Scroll"] },
+    { "symbol": "USDT", "networks": ["Ethereum"] }
+  ],
+  "kyc": {
+    "level": "id",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Email, phone and a government ID are required. Users frequently report lengthy address-verification delays and jurisdiction blocks (including around 20 US states), so budget time for onboarding."
+  },
+  "pros": [
+    "Non-custodial: your collateral stays in self-custodied vaults",
+    "Up to 3% cashback with no category caps, paid in WETH",
+    "Spend without selling — no taxable disposal of your crypto",
+    "Yield keeps accruing on deposited collateral via Liquid Vaults",
+    "No late fees or minimum payments, with Apple Pay and Google Pay"
+  ],
+  "cons": [
+    "You must maintain enough collateral or face liquidation in Borrow Mode",
+    "Cashback steps down after monthly spending bands",
+    "Onboarding and address verification can take weeks or months",
+    "Not available in the US, India, Indonesia or the Netherlands",
+    "1% FX outside USD/EUR, 2% ATM fee and a US$40 issuance cost"
+  ],
+  "rating": 7.8,
+  "referral": {
+    "code": "ETHERFI-REF",
+    "url": "https://www.ether.fi/?ref=ETHERFI-REF",
+    "bonus": "Referral rewards for new users who activate the card",
+    "terms": "Bonus amount and eligibility are set by Ether.fi and vary by region and promotion. Confirm the current offer before depositing collateral."
+  },
+  "variants": [
+    {
+      "name": "Virtual",
+      "price": 0,
+      "rewards": "Up to 3% cashback",
+      "monthlyFee": 0,
+      "limits": "US$30,000 / day",
+      "cardInfo": "Virtual Visa, instant issuance"
+    },
+    {
+      "name": "Physical",
+      "price": 40,
+      "rewards": "Up to 3% cashback",
+      "monthlyFee": 0,
+      "limits": "US$30,000 / day",
+      "cardInfo": "Physical Visa, US$40 issuance"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does the Ether.fi Cash card work?",
+      "answer": "You deposit crypto into a self-custodied vault and borrow USDC against it to spend through a Visa card. Your collateral keeps earning yield, and because you are borrowing rather than selling, you avoid a taxable disposal of your assets."
+    },
+    {
+      "question": "Does the Ether.fi card charge monthly fees?",
+      "answer": "No. There is no monthly fee. The main costs are a US$40 card issuance fee, a 1% FX markup outside USD/EUR, a 2% ATM fee capped at US$250 per day, and interest outside promotional 0% periods."
+    },
+    {
+      "question": "Where is the Ether.fi Cash card not available?",
+      "answer": "It is not available in the United States (including a reported block across roughly 20 states), India, Indonesia or the Netherlands. Availability can change, so confirm your region before completing KYC."
+    },
+    {
+      "question": "Is the Ether.fi card safe?",
+      "answer": "It is non-custodial, which means your collateral sits in a self-custodied vault rather than on Ether.fi's balance sheet. The main risk is liquidation if your collateral value falls below the required ratio in Borrow Mode."
+    }
+  ],
+  "lastVerified": "2026-09-28"
+}
