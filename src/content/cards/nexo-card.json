@@ -1,0 +1,151 @@
+{
+  "name": "Nexo Card",
+  "slug": "nexo-card",
+  "company": "Nexo",
+  "summary": "Nexo's card works in two modes: spend your crypto directly, or borrow against it with a collateralised credit line so you never sell. With up to 2% cashback, up to 14% APY on idle balances and no annual fee, it targets long-term holders in the EEA and UK — though physical cards are paused and US users are excluded.",
+  "logo": "/logos/nexo.svg",
+  "brandColor": "#0057ff",
+  "type": ["virtual", "physical"],
+  "network": "mastercard",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "staking",
+    "rewards",
+    "crypto-topup",
+    "crypto-earn",
+    "multi-currency"
+  ],
+  "fees": {
+    "issuance": 0,
+    "monthly": 0,
+    "fx": 0.2,
+    "atm": "2% (free up to €2,000/month)",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "US$2,000 / month fee-free"
+  },
+  "rewards": {
+    "cashback": "Up to 2%",
+    "cashbackToken": "NEXO or BTC",
+    "referralBonus": "Varies by promotion"
+  },
+  "countries": [
+    "Austria",
+    "Belgium",
+    "Bulgaria",
+    "Croatia",
+    "Cyprus",
+    "Czechia",
+    "Denmark",
+    "Estonia",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Hungary",
+    "Ireland",
+    "Italy",
+    "Latvia",
+    "Lithuania",
+    "Luxembourg",
+    "Malta",
+    "Netherlands",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Slovakia",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "United Kingdom"
+  ],
+  "cryptos": [
+    { "symbol": "BTC", "networks": ["Bitcoin"] },
+    { "symbol": "ETH", "networks": ["Ethereum"] },
+    { "symbol": "USDT", "networks": ["Ethereum", "Tron", "BSC"] },
+    { "symbol": "USDC", "networks": ["Ethereum", "Solana", "Polygon"] },
+    { "symbol": "DAI", "networks": ["Ethereum"] },
+    { "symbol": "XRP", "networks": ["XRP Ledger"] },
+    { "symbol": "SOL", "networks": ["Solana"] },
+    { "symbol": "ADA", "networks": ["Cardano"] },
+    { "symbol": "DOT", "networks": ["Polkadot"] },
+    { "symbol": "MATIC", "networks": ["Polygon"] },
+    { "symbol": "LINK", "networks": ["Ethereum"] },
+    { "symbol": "AVAX", "networks": ["Avalanche"] },
+    { "symbol": "ATOM", "networks": ["Cosmos"] },
+    { "symbol": "UNI", "networks": ["Ethereum"] },
+    { "symbol": "AAVE", "networks": ["Ethereum"] }
+  ],
+  "kyc": {
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Nexo runs full KYC through automated verification (Sumsub): identity document, proof of address and a liveness selfie. Most applicants are verified within a day."
+  },
+  "pros": [
+    "Unique Credit Mode to borrow against crypto without selling",
+    "Up to 2% cashback paid in NEXO or BTC",
+    "Earn up to 14% APY on idle balance",
+    "No monthly or annual fees",
+    "Free ATM withdrawals up to €2,000 per month"
+  ],
+  "cons": [
+    "Physical card ordering has been paused since early 2025",
+    "Best rates require holding NEXO tokens",
+    "Not available in the United States",
+    "Credit-mode interest can be high outside the top tiers",
+    "Availability limited to the EEA and UK"
+  ],
+  "rating": 7.1,
+  "referral": {
+    "code": "NEXO-REF",
+    "url": "https://nexo.com/?ref=NEXO-REF",
+    "bonus": "Sign-up bonus for new Nexo users",
+    "terms": "Bonus amount and eligibility are set by Nexo and vary by region and promotion. Confirm the current offer before depositing."
+  },
+  "variants": [
+    {
+      "name": "Virtual",
+      "price": 0,
+      "rewards": "Up to 2% cashback",
+      "monthlyFee": 0,
+      "limits": "Unlimited spend",
+      "cardInfo": "Virtual Mastercard, instant issuance"
+    },
+    {
+      "name": "Physical (paused)",
+      "price": 0,
+      "rewards": "Up to 2% cashback",
+      "monthlyFee": 0,
+      "limits": "Unlimited spend",
+      "cardInfo": "Physical Mastercard — orders paused"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does the Nexo card Credit Mode work?",
+      "answer": "In Credit Mode, purchases are funded by a collateralised credit line backed by your crypto holdings, so you keep your exposure instead of selling. You repay with crypto or stablecoins, and interest depends on your loyalty tier."
+    },
+    {
+      "question": "Does the Nexo card charge a monthly fee?",
+      "answer": "No. The Nexo card has no monthly or annual fee. The main costs are a small FX markup (around 0.2% weekday EEA), weekend surcharges and ATM fees after the free monthly allowance."
+    },
+    {
+      "question": "Why can't I order a physical Nexo card?",
+      "answer": "Nexo paused new physical card orders in early 2025 and the pause has continued into 2026. Existing holders can keep using their cards and new users can use the virtual card as a workaround."
+    },
+    {
+      "question": "Is the Nexo card available in the US?",
+      "answer": "No. The Nexo card is limited to the EEA and UK, and UK residents cannot earn crypto cashback under FCA rules. US users should check the latest availability directly with Nexo."
+    }
+  ],
+  "lastVerified": "2026-09-28"
+}

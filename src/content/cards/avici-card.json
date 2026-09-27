@@ -1,0 +1,132 @@
+{
+  "name": "Avici Card",
+  "slug": "avici-card",
+  "company": "Avici",
+  "summary": "Avici is a Solana-based crypto card built around self-custody: your funds stay in your wallet until the moment you pay, and a collateral-based credit model lets you keep your crypto exposure. It targets DeFi-native users with Visa Signature acceptance, 5% cashback and gas-sponsored transactions.",
+  "logo": "/logos/avici.svg",
+  "brandColor": "#10b981",
+  "type": ["virtual", "physical"],
+  "network": "visa",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "online-payments",
+    "bank-transfers",
+    "crypto-topup",
+    "gas-sponsored"
+  ],
+  "fees": {
+    "issuance": 0,
+    "monthly": 0,
+    "fx": 1,
+    "atm": "US$1 + 0.65%",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  },
+  "rewards": {
+    "cashback": "5%",
+    "cashbackToken": "Crypto"
+  },
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Brazil",
+    "Canada",
+    "France",
+    "Germany",
+    "Indonesia",
+    "Italy",
+    "Japan",
+    "Mexico",
+    "Netherlands",
+    "Nigeria",
+    "Philippines",
+    "Singapore",
+    "South Africa",
+    "Spain",
+    "Thailand",
+    "Turkey",
+    "United Arab Emirates",
+    "United Kingdom",
+    "Vietnam"
+  ],
+  "cryptos": [
+    { "symbol": "SOL", "networks": ["Solana"] },
+    { "symbol": "USDC", "networks": ["Solana", "Base", "Ethereum"] },
+    { "symbol": "USDT", "networks": ["Solana", "Ethereum", "Tron"] },
+    { "symbol": "ETH", "networks": ["Ethereum", "Base"] },
+    { "symbol": "BTC", "networks": ["Bitcoin"] }
+  ],
+  "kyc": {
+    "level": "id",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Avici requires identity verification before issuing a card, but does not ask for proof of address or a selfie at this tier."
+  },
+  "pros": [
+    "True self-custody — funds stay in your wallet until purchase",
+    "No monthly fees, top-up fees or maintenance charges",
+    "Visa Signature accepted at 90+ million merchants",
+    "Supports Apple Pay and Google Pay contactless payments",
+    "Gas-sponsored transactions on Solana and Base"
+  ],
+  "cons": [
+    "Collateral-based system carries liquidation risk if crypto drops",
+    "FX fees can reach up to 3% on international transactions",
+    "ATM withdrawals cost US$1 + 0.65%",
+    "Not available in India, China, Russia or sanctioned countries",
+    "Newer platform with an evolving fee structure"
+  ],
+  "rating": 8.8,
+  "referral": {
+    "code": "AVICI-REF",
+    "url": "https://avici.money/?ref=AVICI-REF",
+    "bonus": "Referral rewards for new users who complete onboarding",
+    "terms": "Rewards are set by Avici and can change. Verify the current offer and eligibility in the app before completing verification."
+  },
+  "variants": [
+    {
+      "name": "Virtual",
+      "price": 0,
+      "rewards": "5% cashback",
+      "monthlyFee": 0,
+      "limits": "Unlimited",
+      "cardInfo": "Virtual Visa Signature"
+    },
+    {
+      "name": "Physical",
+      "price": 0,
+      "rewards": "5% cashback",
+      "monthlyFee": 0,
+      "limits": "Unlimited",
+      "cardInfo": "Physical Visa Signature"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the Avici card?",
+      "answer": "Avici is a Solana-based crypto card that combines self-custody with a collateral-based credit model. Your funds stay in your wallet until you spend, and you can borrow against your crypto instead of selling it."
+    },
+    {
+      "question": "Does Avici require KYC?",
+      "answer": "Yes. Avici requires identity verification (ID document) before issuing a card. Proof of address and a selfie are not requested at this tier."
+    },
+    {
+      "question": "Where is the Avici card not available?",
+      "answer": "Avici is not available in India, China, Russia or sanctioned countries. Availability can change, so confirm your region in the app before applying."
+    },
+    {
+      "question": "What fees does the Avici card charge?",
+      "answer": "Avici has no monthly, issuance or top-up fees. It charges around 1% FX on non-USD spending (up to 3% in some cases) and ATM withdrawals cost US$1 plus 0.65%."
+    }
+  ],
+  "lastVerified": "2026-09-28"
+}
