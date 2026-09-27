@@ -84,6 +84,15 @@ Only add "A vs B" pages for queries people actually search. Edit `CURATED_PAIRS`
 `src/lib/pairs.ts`; each pair produces a `/compare/<a>-vs-<b>` page. The interactive
 `/compare` tool works regardless, and links to a static page when one exists.
 
+## Icons
+
+Coin and network icons are self-hosted SVG (no CDN requests) under
+`public/icons/`:
+
+- Coin art comes from [spothq/cryptocurrency-icons](https://github.com/spothq/cryptocurrency-icons) (MIT) — see `public/icons/CREDITS.md`.
+- `src/lib/icons.ts` maps a coin symbol or chain name to its icon path and returns `null` for anything unknown, so the UI falls back to a text monogram instead of a broken image.
+- To add a coin, drop `<symbol>.svg` into `public/icons/crypto/` and add the symbol to `CRYPTO_ICONS` in `src/lib/icons.ts` (same pattern for `public/icons/networks/` + `NETWORK_SLUGS`).
+
 ## Community Score
 
 The UI, data model and methodology page are complete. The **automation pipeline**

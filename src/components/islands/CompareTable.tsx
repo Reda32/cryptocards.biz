@@ -16,9 +16,10 @@ import {
   setSlugs,
   toggleSlug,
 } from '@/stores/compare';
+import { cryptoIcon } from '@/lib/icons';
 
 type Tone = 'good' | 'warn' | 'bad';
-type Cell = { text: string; sort?: number | null; tone?: Tone };
+type Cell = { text: string; sort?: number | null; tone?: Tone; icons?: string[] };
 type Row = { label: string; best?: 'high' | 'low'; cell: (c: CompareCard) => Cell };
 
 const KYC_RANK: Record<KycLevel, number> = { none: 0, basic: 1, id: 2, full: 3 };
@@ -106,6 +107,9 @@ const ROWS: Row[] = [
     cell: (c) => ({
       text: c.cryptos.map((x) => x.symbol).join(', ') || '—',
       sort: c.cryptos.length,
+      icons: c.cryptos
+        .map((x) => cryptoIcon(x.symbol))
+        .filter((icon): icon is string => Boolean(icon)),
     }),
   },
   {
@@ -308,7 +312,25 @@ export default function CompareTable() {
                             : toneClass(cell.tone)
                         }`}
                       >
-                        {cell.text}
+                        {cell.icons && cell.icons.length > 0 ? (
+                          <span class="flex items-center gap-2">
+                            <span class="flex shrink-0 -space-x-1">
+                              {cell.icons.slice(0, 6).map((src) => (
+                                <img
+                                  src={src}
+                                  alt=""
+                                  width={16}
+                                  height={16}
+                                  loading="lazy"
+                                  class="h-4 w-4 rounded-full ring-1 ring-white dark:ring-slate-900"
+                                />
+                              ))}
+                            </span>
+                            <span>{cell.text}</span>
+                          </span>
+                        ) : (
+                          cell.text
+                        )}
                       </td>
                     ))}
                   </tr>
