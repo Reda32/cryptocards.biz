@@ -24,7 +24,18 @@ const {
 } = Astro.props;
 
 const site = Astro.site ?? new URL('https://cryptocards.biz');
-const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', site);
+
+// `build.format: 'file'` means the runtime pathname can include `.html`;
+// normalise it so canonicals are clean and slash-consistent.
+const cleanPath = (() => {
+  let pathname = Astro.url.pathname;
+  pathname = pathname.replace(/index\.html$/, '');
+  pathname = pathname.replace(/\.html$/, '');
+  if (!pathname.startsWith('/')) pathname = `/${pathname}`;
+  return pathname === '' ? '/' : pathname;
+})();
+
+const canonical = new URL(cleanPath, site);
 const ogImage = new URL(image, site);
 
 const fullTitle = title.includes('CryptoCards.biz') ? title : `${title} | CryptoCards.biz`;

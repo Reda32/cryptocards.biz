@@ -12,6 +12,8 @@ export default defineConfig({
   // Static-first. Routes that must run on the server opt out with
   // `export const prerender = false` (e.g. /go/[slug]).
   output: 'static',
+  // Keep URLs, canonical tags and the sitemap in agreement: no trailing slash.
+  trailingSlash: 'never',
   adapter: node({ mode: 'standalone' }),
   integrations: [preact(), mdx(), sitemap()],
   vite: {
