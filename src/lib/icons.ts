@@ -24,6 +24,8 @@ const CRYPTO_ICONS = new Set([
   'uni',
   'aave',
   'trx',
+  'doge',
+  'ltc',
   'usde',
 ]);
 

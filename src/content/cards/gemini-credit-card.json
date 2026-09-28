@@ -1,0 +1,138 @@
+{
+  "name": "Gemini Credit Card",
+  "slug": "gemini-credit-card",
+  "company": "Gemini",
+  "summary": "The Gemini Credit Card is a US-only, no-annual-fee Mastercard that pays crypto rewards on every purchase — up to 4% on gas and EV charging, 3% on dining and 2% on groceries, paid instantly in Bitcoin or 60+ other coins. Conceptually strong, but it is gated behind a credit check and criticised for low credit limits and slow support.",
+  "logo": "/logos/gemini.svg",
+  "brandColor": "#00c2ff",
+  "type": ["physical"],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [
+    "contactless",
+    "rewards",
+    "no-annual-fee",
+    "no-fx-fee",
+    "recurring-payments",
+    "referral-program"
+  ],
+  "fees": {
+    "issuance": 0,
+    "monthly": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  },
+  "rewards": {
+    "cashback": "Up to 4% (gas/EV), 3% dining, 2% groceries, 1% other",
+    "cashbackToken": "BTC or 60+ cryptocurrencies",
+    "welcomeBonus": "$200",
+    "referralBonus": "$50"
+  },
+  "countries": ["United States"],
+  "restrictedCountries": [
+    "Canada",
+    "United Kingdom",
+    "European Union",
+    "Australia",
+    "India",
+    "Singapore",
+    "United Arab Emirates",
+    "Brazil",
+    "Mexico",
+    "Japan",
+    "South Africa",
+    "Nigeria"
+  ],
+  "availabilityNotes": "The Gemini Credit Card is available to US residents only, including US territories where supported. It cannot be ordered outside the United States. The card is issued by WebBank.",
+  "cryptos": [
+    { "symbol": "BTC", "networks": ["Bitcoin"] },
+    { "symbol": "ETH", "networks": ["Ethereum"] },
+    { "symbol": "SOL", "networks": ["Solana"] },
+    { "symbol": "DOGE", "networks": ["Dogecoin"] },
+    { "symbol": "XRP", "networks": ["XRP Ledger"] },
+    { "symbol": "ADA", "networks": ["Cardano"] },
+    { "symbol": "DOT", "networks": ["Polkadot"] },
+    { "symbol": "MATIC", "networks": ["Polygon"] },
+    { "symbol": "AVAX", "networks": ["Avalanche"] },
+    { "symbol": "LINK", "networks": ["Ethereum"] },
+    { "symbol": "UNI", "networks": ["Ethereum"] },
+    { "symbol": "AAVE", "networks": ["Ethereum"] },
+    { "symbol": "LTC", "networks": ["Litecoin"] },
+    { "symbol": "ATOM", "networks": ["Cosmos"] }
+  ],
+  "kyc": {
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Full KYC plus a US credit check. You need a US Social Security number, a US address and a credit profile to be approved. Identity checks are run by Gemini and the card issuer, WebBank."
+  },
+  "pros": [
+    "Up to 4% crypto rewards on gas and EV charging",
+    "No annual fee and no foreign transaction fees",
+    "Choose rewards in 60+ cryptocurrencies, paid instantly",
+    "$200 welcome bonus for eligible new cardholders",
+    "Regulated US issuer with a strong compliance record"
+  ],
+  "cons": [
+    "US residents only",
+    "Requires a credit check and approval",
+    "The 4% category is capped at US$300 of spend per month",
+    "Variable APR of roughly 17–29% if you carry a balance",
+    "No debit or virtual card option"
+  ],
+  "rating": 6.8,
+  "referral": {
+    "code": "GEMINI-REF",
+    "url": "https://www.gemini.com/?ref=GEMINI-REF",
+    "bonus": "$50 referral bonus for new cardholders ($200 welcome bonus for eligible applicants)",
+    "terms": "Bonuses are set by Gemini and depend on approval and qualifying spend. The welcome bonus typically requires meeting a spend threshold within a set period. Confirm the current offer before applying.",
+    "expiry": "Ongoing",
+    "eligibility": "US residents aged 18+ who apply for the Gemini Credit Card and are approved after a credit check."
+  },
+  "howToGet": [
+    "Confirm you are a US resident with a Social Security number and a US credit profile.",
+    "Open the Gemini app or website and start the Gemini Credit Card application.",
+    "Complete the credit check and, if approved, finish identity verification.",
+    "Use the card for eligible purchases and pick the crypto your rewards are paid in.",
+    "Rewards are credited instantly to your Gemini account, where they are held in custody."
+  ],
+  "variants": [
+    {
+      "name": "Physical (metal)",
+      "price": 0,
+      "rewards": "Up to 4% crypto back",
+      "monthlyFee": 0,
+      "limits": "Credit limit set by issuer (WebBank)",
+      "cardInfo": "Numberless metal Mastercard"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Who can get the Gemini Credit Card?",
+      "answer": "US residents only. You need to be 18 or over with a Social Security number, a US address and a credit profile that passes the issuer's credit check. It is not available outside the United States."
+    },
+    {
+      "question": "Does the Gemini Credit Card have an annual fee?",
+      "answer": "No. There is no annual fee and no foreign transaction fee. The main cost is interest if you carry a balance, with a variable APR of roughly 17–29%."
+    },
+    {
+      "question": "How much cashback does the Gemini Credit Card pay?",
+      "answer": "Up to 4% on gas and EV charging, 3% on dining, 2% on groceries and 1% on everything else, paid in crypto. The 4% category is capped at US$300 of spend per month, after which it drops to the base rate."
+    },
+    {
+      "question": "Can I choose which crypto my rewards are paid in?",
+      "answer": "Yes. Rewards can be paid in Bitcoin or 60+ other supported cryptocurrencies, and they are credited to your Gemini account rather than to a self-custody wallet."
+    }
+  ],
+  "lastVerified": "2026-09-28"
+}

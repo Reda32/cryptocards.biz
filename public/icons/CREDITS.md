@@ -44,7 +44,7 @@ license.
 
 ```bash
 BASE=https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.18.1/svg/color
-for s in btc eth usdt usdc bnb sol dai xrp ada dot matic link avax atom uni aave trx; do
+for s in btc eth usdt usdc bnb sol dai xrp ada dot matic link avax atom uni aave trx doge ltc; do
   curl -fsSL "$BASE/$s.svg" -o "public/icons/crypto/$s.svg"
 done
 ```
