@@ -1,0 +1,194 @@
+{
+  "name": "Plasma One",
+  "slug": "plasma-one-card",
+  "company": "Plasma",
+  "summary": "Plasma One is a self-custodial stablecoin Visa card built on the Plasma blockchain. You top up with USDT or USDC, spend anywhere Visa is accepted across 180+ countries, keep earning up to ~6% yield on your balance, and collect up to 4% cashback paid in XPL — with zero fees on Plasma-routed transfers. Access is invite-only via a free code.",
+  "logo": "/logos/plasma-one.svg",
+  "brandColor": "#4f46e5",
+  "type": ["virtual", "physical"],
+  "network": "visa",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "self-custodial",
+    "crypto-topup",
+    "rewards",
+    "yield",
+    "multi-currency",
+    "no-annual-fee"
+  ],
+  "fees": {
+    "issuance": 0,
+    "monthly": 0,
+    "fx": 0,
+    "atm": "Varies by tier",
+    "topup": "Free on Plasma routes (third-party fees may apply)",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Tier dependent",
+    "monthlySpend": "Tier dependent",
+    "atmWithdrawal": "Tier dependent"
+  },
+  "rewards": {
+    "cashback": "Up to 4% base (tier dependent)",
+    "cashbackToken": "XPL",
+    "welcomeBonus": "Core tier free for the first year during launch promotions",
+    "referralBonus": "Free access code (invite-only)"
+  },
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Bulgaria",
+    "Canada",
+    "Croatia",
+    "Cyprus",
+    "Czechia",
+    "Denmark",
+    "Estonia",
+    "Finland",
+    "France",
+    "Germany",
+    "Greece",
+    "Hungary",
+    "India",
+    "Indonesia",
+    "Ireland",
+    "Italy",
+    "Japan",
+    "Latvia",
+    "Lithuania",
+    "Luxembourg",
+    "Malta",
+    "Mexico",
+    "Netherlands",
+    "Nigeria",
+    "Norway",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "South Africa",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "Thailand",
+    "Turkey",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Vietnam"
+  ],
+  "restrictedCountries": [
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba",
+    "Russia",
+    "Belarus",
+    "Myanmar",
+    "Afghanistan",
+    "Sudan",
+    "South Sudan",
+    "Venezuela"
+  ],
+  "availabilityNotes": "Plasma One is available in 180+ countries where Visa is accepted, subject to geographic and regulatory limits. Account services are provided by Bridge and the card is issued by Rain, a Visa Principal Member. Availability is invite-only during the current phase — confirm eligibility in the app.",
+  "cryptos": [
+    { "symbol": "USDT", "networks": ["Plasma", "Ethereum"] },
+    { "symbol": "USDC", "networks": ["Plasma", "Ethereum"] }
+  ],
+  "kyc": {
+    "level": "id",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Plasma One is invite-only: you need a free access code, then complete KYC with an email, phone number and government ID. Proof of address is not usually requested. Never pay for an access code — official codes are always free."
+  },
+  "pros": [
+    "Zero fees on Plasma-routed stablecoin transfers",
+    "Up to 4% cashback paid in XPL, tier dependent",
+    "Keep earning up to ~6% variable yield on your balance",
+    "Fully self-custodial — Plasma never holds your assets",
+    "Spend in 180+ countries with Apple Pay and Google Pay"
+  ],
+  "cons": [
+    "Invite-only: you need a free access code to join",
+    "Yield comes from third-party DeFi vaults and can lose value",
+    "Best cashback and yield require the paid or XPL-locked tiers",
+    "Cashback is paid in volatile XPL rather than a stablecoin",
+    "Newer platform with a short operating track record"
+  ],
+  "rating": 8.3,
+  "referral": {
+    "code": "TRLLNX",
+    "url": "https://plasmaone.onelink.me/P8qq/hnkjg5pj?deep_link_value=access_code&deep_link_sub1=TRLLNX",
+    "bonus": "Free access code to join Plasma One, plus Core tier free for the first year during launch promotions",
+    "terms": "Access codes are free — never pay for one. Tier promotions (such as Core free for the first year, or free for six months on Android) run for limited windows with their own terms. Cashback and yield rates are variable and tier dependent. Confirm the current offer before topping up.",
+    "expiry": "Ongoing (tier promotions are time-limited)",
+    "eligibility": "New users in supported countries with a valid access code who complete KYC."
+  },
+  "howToGet": [
+    "Download the Plasma One app (iOS or Android).",
+    "Enter a free access code — ours is pre-filled when you use our link. Codes are invite-only.",
+    "Complete KYC with your email, phone number and a government ID.",
+    "Top up with USDT or USDC on the Plasma network (or from an exchange such as Cryptal).",
+    "Add the virtual card to Apple Pay or Google Pay and start spending."
+  ],
+  "variants": [
+    {
+      "name": "Lite",
+      "price": 0,
+      "rewards": "2% cashback",
+      "monthlyFee": 0,
+      "limits": "Cashback cap around US$250/month",
+      "cardInfo": "Free tier · 1 virtual card"
+    },
+    {
+      "name": "Core",
+      "price": 0,
+      "rewards": "3% cashback + 5% on qualifying AI spend",
+      "monthlyFee": 10,
+      "limits": "Cashback cap around US$250/month",
+      "cardInfo": "Up to 2 virtual cards · ChatGPT Go · free first year via code"
+    },
+    {
+      "name": "Platinum",
+      "price": 0,
+      "rewards": "4% cashback + 10% AI + 10% flights",
+      "monthlyFee": 0,
+      "limits": "Cashback cap around US$1,000/month",
+      "cardInfo": "VIP · Claude Pro + ChatGPT Plus · requires 100,000 XPL lock"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Plasma One?",
+      "answer": "Plasma One is a self-custodial stablecoin account with a Visa card built on the Plasma blockchain. You top up with USDT or USDC, spend anywhere Visa is accepted, and earn cashback and yield on your balance."
+    },
+    {
+      "question": "Is Plasma One free?",
+      "answer": "There are no fees on Plasma-routed stablecoin transfers, and the Lite tier is free. The Core tier normally costs about US$120 per year but has been offered free for the first year with an access code, and the Platinum tier requires locking 100,000 XPL for 12 months."
+    },
+    {
+      "question": "How do I get a Plasma One access code?",
+      "answer": "Plasma One is invite-only. Official access codes are free — you can use ours, or find fresh ones in the official community. Never pay anyone for a code, as paid codes are a common scam."
+    },
+    {
+      "question": "What cashback and yield does Plasma One pay?",
+      "answer": "Cashback ranges from 2% on Lite up to 4% base on Platinum (plus boosted rates on AI spending and flights), paid in XPL. Idle balances can earn up to about 6% variable yield through third-party DeFi vaults, which carry risk and are not guaranteed."
+    },
+    {
+      "question": "Is my money safe with Plasma One?",
+      "answer": "Plasma One is self-custodial — Plasma does not hold your assets. However, the yield feature routes funds into third-party DeFi vaults that are not deposit-insured and can lose value. Stablecoin balances are not bank deposits."
+    }
+  ],
+  "lastVerified": "2026-09-28"
+}
