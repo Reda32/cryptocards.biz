@@ -1,24 +1,34 @@
 ---
 import BaseLayout from '@/components/BaseLayout.astro';
 import CardSummaryRow from '@/components/CardSummaryRow.astro';
+import CardSearch from '@/components/islands/CardSearch.tsx';
 import { getAllCards, getAllCommunities } from '@/lib/cards';
 import { topicsForCards } from '@/lib/topics';
 import { CURATED_PAIRS, pairSlug } from '@/lib/pairs';
 
-const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
-const topics = topicsForCards(cards);
+const [allCards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
 
 const scoreFor = (slug: string) =>
   communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
 
+// Featured = verified cards first (highest rated), then the rest.
+const featured = [...allCards]
+  .sort((a, b) => Number(b.data.verified) - Number(a.data.verified))
+  .slice(0, 8);
+
+const topics = topicsForCards(allCards);
+
 const pairLinks = CURATED_PAIRS.map((pair) => {
-  const a = cards.find((c) => c.data.slug === pair.a);
-  const b = cards.find((c) => c.data.slug === pair.b);
+  const a = allCards.find((c) => c.data.slug === pair.a);
+  const b = allCards.find((c) => c.data.slug === pair.b);
   return {
     href: `/compare/${pairSlug(pair.a, pair.b)}`,
     label: a && b ? `${a.data.name} vs ${b.data.name}` : 'Comparison',
   };
 });
+
+const firstPairs = pairLinks.slice(0, 6);
+const morePairs = pairLinks.slice(6);
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -48,7 +58,10 @@ const orgSchema = {
         Side-by-side reviews of RedotPay, KAST and more. Compare fees, limits, supported coins, KYC
         requirements and what real users say, before you sign up.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
+      <div class="mt-8">
+        <CardSearch client:load />
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
         <a href="/cards" class="btn-primary">Browse all cards</a>
         <a href="/compare" class="btn-secondary">Compare side by side</a>
       </div>
@@ -66,7 +79,10 @@ const orgSchema = {
         </a>
       </div>
       <div class="space-y-4">
-        {cards.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+        {featured.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
+      </div>
+      <div class="mt-6 text-center">
+        <a href="/cards" class="btn-secondary">View all {allCards.length} cards</a>
       </div>
     </section>
 
@@ -97,7 +113,7 @@ const orgSchema = {
         </h2>
         <ul class="space-y-2 text-sm">
           {
-            pairLinks.map((item) => (
+            firstPairs.map((item) => (
               <li>
                 <a
                   href={item.href}
@@ -108,6 +124,31 @@ const orgSchema = {
                 </a>
               </li>
             ))
+          }
+          {
+            morePairs.length > 0 && (
+              <li>
+                <details class="group">
+                  <summary class="flex cursor-pointer list-none items-center justify-between rounded-lg border border-slate-200 bg-white p-3 font-medium text-brand-600 hover:border-brand-400 dark:border-slate-800 dark:bg-slate-900 dark:text-brand-400 [&::-webkit-details-marker]:hidden">
+                    Show {morePairs.length} more comparisons
+                    <span class="transition group-open:rotate-180" aria-hidden="true">▾</span>
+                  </summary>
+                  <ul class="mt-2 space-y-2">
+                    {morePairs.map((item) => (
+                      <li>
+                        <a
+                          href={item.href}
+                          class="flex items-center justify-between rounded-lg border border-slate-200 bg-white p-3 font-medium text-slate-700 hover:border-brand-400 hover:text-brand-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200"
+                        >
+                          {item.label}
+                          <span aria-hidden="true">→</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            )
           }
           <li>
             <a

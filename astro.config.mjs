@@ -17,6 +17,7 @@ const excluded = new Set();
 const verifiedCompanySlugs = new Set();
 const unverifiedCompanySlugs = new Set();
 
+/** @param {string} name */
 const companySlug = (name) =>
   name
     .toLowerCase()
