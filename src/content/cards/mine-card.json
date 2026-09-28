@@ -1,0 +1,201 @@
+{
+  "name": "Mine Card",
+  "slug": "mine-card",
+  "company": "Mine",
+  "summary": "Mine is a pre-launch Swiss neobank on stablecoin rails: a CHF and EUR IBAN in your own name that settles as USDC in a self-custodial wallet, plus a Mastercard accepted in 175+ countries. Non-custodial by default, with opt-in 5% yield via Aave V3 and free instant Mine-to-Mine transfers. Sign-up is not live yet.",
+  "logo": "/logos/mine.svg",
+  "brandColor": "#b45309",
+  "type": ["virtual", "physical"],
+  "network": "mastercard",
+  "wallets": ["apple", "google"],
+  "features": [
+    "contactless",
+    "self-custodial",
+    "crypto-topup",
+    "yield",
+    "multi-currency",
+    "bank-transfers",
+    "no-monthly-fee"
+  ],
+  "fees": {
+    "issuance": 5,
+    "monthly": 0,
+    "fx": 1.5,
+    "atm": "US$5 per international withdrawal",
+    "topup": "0% card top-up; on-ramp US$0.90 flat at 1:1, first 500 CHF/EUR conversion free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "US$50,000 (Basic) · US$500,000 (Premium)",
+    "monthlySpend": "US$100,000 (Basic) · US$1,000,000 (Premium)",
+    "atmWithdrawal": "US$2,500 per transaction · US$20,000/month (Basic)"
+  },
+  "rewards": {
+    "cashback": "None on Basic; 0.5% USDC on Premium (max US$25/month)",
+    "cashbackToken": "USDC",
+    "welcomeBonus": "None",
+    "referralBonus": "Invite codes give card discounts (free Basic / 20% off Premium); invite rewards in development"
+  },
+  "countries": [
+    "Argentina",
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Brazil",
+    "Bulgaria",
+    "Canada",
+    "Colombia",
+    "Croatia",
+    "Czechia",
+    "Denmark",
+    "Estonia",
+    "Finland",
+    "France",
+    "Germany",
+    "Ghana",
+    "Greece",
+    "Hungary",
+    "India",
+    "Indonesia",
+    "Ireland",
+    "Italy",
+    "Japan",
+    "Kenya",
+    "Mexico",
+    "Netherlands",
+    "Nigeria",
+    "Norway",
+    "Pakistan",
+    "Peru",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Romania",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "South Africa",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "Thailand",
+    "Turkey",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Vietnam"
+  ],
+  "restrictedCountries": [
+    "Russia",
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba",
+    "Belarus"
+  ],
+  "availabilityNotes": "Mine is pre-launch — sign-up is currently listed as 'coming soon', so this page describes announced specifications that may change. The Mastercard is accepted in 172–175 countries including the US, but the account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list. Onboarding follows AML rules and some countries require extra verification.",
+  "cryptos": [
+    { "symbol": "USDC", "networks": ["Ethereum"] },
+    { "symbol": "ETH", "networks": ["Ethereum"] },
+    { "symbol": "BTC", "networks": ["Bitcoin"] }
+  ],
+  "kyc": {
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": false,
+    "notes": "Onboarding follows AML rules and requires identity verification, with extra checks in some countries. The account and IBAN are not available to US persons or Russian citizens regardless of residence."
+  },
+  "pros": [
+    "Non-custodial by default — you hold the keys, Mine never custodies funds",
+    "CHF and EUR IBAN in your own name that settles as USDC in your wallet",
+    "Mastercard accepted in 175+ countries including the US, with Apple Pay and Google Pay",
+    "First 500 CHF/EUR convert to USDC free, with no spread",
+    "Opt-in 5% yield via Aave V3, off by default",
+    "Free instant Mine-to-Mine transfers and local rails (SEPA, ACH, PIX, M-Pesa, UPI)"
+  ],
+  "cons": [
+    "Not live yet — sign-up is 'coming soon' (pre-launch)",
+    "Basic tier has 0% cashback and no physical card",
+    "Basic FX at 1.5% is high for the category",
+    "ATM withdrawals cost US$5 per international withdrawal",
+    "Earn routes funds into Aave V3 smart contracts, which carry smart-contract risk",
+    "Metal and Private tiers, their pricing and business features are still unannounced"
+  ],
+  "rating": 7.0,
+  "referral": {
+    "code": "MINE-REF",
+    "url": "https://mine.financial/",
+    "bonus": "Invite code: a free Basic virtual card (normally US$5) or 20% off the Premium card (US$99 instead of US$124)",
+    "terms": "Mine is invite-only — every member holds three codes. Invites are personal and may be revoked for abuse, and invite rewards are still in development. The card programme is pre-launch, so confirm the current offer when sign-up opens.",
+    "expiry": "Pre-launch (announcement coming)",
+    "eligibility": "New users in supported countries (not US persons or Russian citizens) who complete AML verification."
+  },
+  "howToGet": [
+    "Get a Mine invite code — the card is invite-only and sign-up is currently 'coming soon'.",
+    "Open an account and complete AML identity verification.",
+    "Use the code to issue a free Basic virtual card or take 20% off Premium.",
+    "Fund your wallet — your CHF or EUR IBAN settles incoming money as USDC.",
+    "Add the Mastercard to Apple Pay or Google Pay and spend in 175+ countries."
+  ],
+  "variants": [
+    {
+      "name": "Basic",
+      "price": 5,
+      "rewards": "No cashback",
+      "monthlyFee": 0,
+      "limits": "US$100,000/month spend · US$20,000/month ATM",
+      "cardInfo": "Virtual Mastercard · free with an invite code"
+    },
+    {
+      "name": "Premium",
+      "price": 124,
+      "rewards": "0.5% USDC cashback (max US$25/month)",
+      "monthlyFee": 0,
+      "limits": "US$1,000,000/month spend · US$60,000/month ATM",
+      "cardInfo": "Physical + virtual Mastercard · 0.25% FX · US$99 with a code"
+    },
+    {
+      "name": "Metal (announced)",
+      "price": 0,
+      "rewards": "Boosted cashback (TBA)",
+      "monthlyFee": 0,
+      "limits": "Higher limits (TBA)",
+      "cardInfo": "Metal Mastercard · subscription pricing coming soon"
+    },
+    {
+      "name": "Private (announced)",
+      "price": 0,
+      "rewards": "Bespoke (TBA)",
+      "monthlyFee": 0,
+      "limits": "Unlimited limits (TBA)",
+      "cardInfo": "Private Mastercard · invite only · announcement coming soon"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the Mine card available now?",
+      "answer": "No. Mine is pre-launch and sign-up is currently listed as 'coming soon'. This page describes announced specifications, which may change before launch."
+    },
+    {
+      "question": "Where is Mine available?",
+      "answer": "The Mastercard is accepted in 172–175 countries including the US. The account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list."
+    },
+    {
+      "question": "What fees does the Mine card charge?",
+      "answer": "The Basic virtual card is US$5 one-off (free with an invite code) and Premium is US$124 (US$99 with a code), with no subscription on those tiers. Card top-up is 0%, FX is up to 1.5% on Basic (about 0.25% on Premium), and international ATM withdrawals cost US$5."
+    },
+    {
+      "question": "Is my money safe with Mine?",
+      "answer": "Mine is non-custodial: your balance is USDC in a wallet you control, so Mine cannot freeze or seize it and funds remain accessible if Mine shuts down. There is no government deposit insurance, and the optional 5% Earn routes funds into Aave V3 smart contracts, which carry smart-contract risk."
+    },
+    {
+      "question": "Do I need crypto experience to use Mine?",
+      "answer": "No. Your CHF or EUR IBAN works like a normal bank account and incoming money settles as USDC automatically. Crypto and tokenized stocks are optional features you opt into rather than requirements."
+    }
+  ],
+  "lastVerified": "2026-09-28"
+}
