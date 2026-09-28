@@ -90,5 +90,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "$15,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://www.changeinvest.com/"
 }

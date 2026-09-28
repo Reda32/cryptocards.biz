@@ -88,5 +88,6 @@
     "dailySpend": "$15,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$2,000"
-  }
+  },
+  "signupUrl": "https://shop.ledger.com/pages/cl-card-crypto-card"
 }

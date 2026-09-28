@@ -80,5 +80,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://ultimopay.io/"
 }

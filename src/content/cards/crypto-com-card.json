@@ -93,5 +93,6 @@
     "dailySpend": "$25,000",
     "monthlySpend": "$100,000",
     "atmWithdrawal": "$2,000"
-  }
+  },
+  "signupUrl": "https://crypto.com/cards"
 }

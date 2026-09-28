@@ -90,5 +90,6 @@
     "dailySpend": "$20,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$0"
-  }
+  },
+  "signupUrl": "https://upay.com/"
 }

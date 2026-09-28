@@ -91,5 +91,6 @@
     "dailySpend": "$2,500",
     "monthlySpend": "$25,000",
     "atmWithdrawal": "$1,000"
-  }
+  },
+  "signupUrl": "https://www.coinbase.com/"
 }

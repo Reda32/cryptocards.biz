@@ -86,5 +86,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://www.nexacards.com/"
 }

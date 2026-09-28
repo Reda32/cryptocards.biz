@@ -89,5 +89,6 @@
     "dailySpend": "$10,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$6,000"
-  }
+  },
+  "signupUrl": "https://www.bitpay.com/"
 }

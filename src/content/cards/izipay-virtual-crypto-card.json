@@ -88,5 +88,6 @@
     "dailySpend": "$50,000",
     "monthlySpend": "$200,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://izipay.me/register?ref=16963"
 }

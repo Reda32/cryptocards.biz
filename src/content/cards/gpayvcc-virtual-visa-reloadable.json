@@ -92,5 +92,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://gpayvcc.com/"
 }

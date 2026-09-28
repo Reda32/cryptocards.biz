@@ -1,0 +1,81 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'About CryptoCards.biz',
+  url: 'https://cryptocards.biz/about',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'CryptoCards.biz',
+    url: 'https://cryptocards.biz',
+    logo: 'https://cryptocards.biz/favicon.svg',
+    email: 'hello@cryptocards.biz',
+    sameAs: ['https://t.me/redati32'],
+    description:
+      'Independent reviews and comparisons of crypto cards, covering fees, limits, KYC requirements, supported countries and community sentiment.',
+  },
+};
+---
+
+<BaseLayout
+  title="About CryptoCards.biz"
+  description="Who we are, how we research and rate crypto cards, how we make money, and how to reach us."
+  schemas={[orgSchema]}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+  <div class="container-page mt-6">
+    <article class="prose-page max-w-3xl">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        About CryptoCards.biz
+      </h1>
+      <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+        CryptoCards.biz is an independent resource for comparing crypto cards. We track the cards
+        people actually use, document their fees, limits, KYC requirements and supported countries,
+        and let you compare them side by side.
+      </p>
+
+      <h2>What we cover</h2>
+      <p>
+        For every card we publish a review, a promo-code page and a supported-countries page. Each
+        listing shows the fees, limits, card type, network, supported cryptocurrencies and the
+        verification steps required, along with a last-verified date so you know how fresh the data
+        is.
+      </p>
+
+      <h2>How we research</h2>
+      <ul>
+        <li>We compile each card's published terms — fees, limits, KYC and availability.</li>
+        <li>We re-check listings on a schedule and stamp every card with a <strong>last-verified</strong> date.</li>
+        <li>Our editorial score weighs fees, limits, supported coins, KYC friction and usability.</li>
+        <li>Where we have enough data we publish a Community Score — see the <a href="/methodology">methodology</a>.</li>
+      </ul>
+      <p>
+        We are a small editorial team. We do our best to be accurate, but crypto card terms change
+        often — always confirm the current terms with the provider before you apply.
+      </p>
+
+      <h2>How we make money</h2>
+      <p>
+        Some links on the site are affiliate or referral links. If you sign up through one, we may
+        earn a commission at no extra cost to you. This never changes a rating or a ranking. Read the
+        full <a href="/affiliate-disclosure">affiliate disclosure</a>.
+      </p>
+
+      <h2>Corrections &amp; submissions</h2>
+      <p>
+        Spotted something out of date, or want to submit a card? Head to the{' '}
+        <a href="/contact">contact page</a>.
+      </p>
+
+      <h2>Not financial advice</h2>
+      <p>
+        CryptoCards.biz provides general information only. Nothing here is financial, legal or tax
+        advice, and nothing is a recommendation to buy or use any product. See our{' '}
+        <a href="/terms">terms</a>.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

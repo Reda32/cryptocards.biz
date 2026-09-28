@@ -77,5 +77,6 @@
     "dailySpend": "$50,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$250"
-  }
+  },
+  "signupUrl": "https://tangem.com/en"
 }

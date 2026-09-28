@@ -90,5 +90,6 @@
     "dailySpend": "$30,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$450"
-  }
+  },
+  "signupUrl": "https://cryptopay.me/"
 }

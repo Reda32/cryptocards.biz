@@ -84,5 +84,6 @@
     "dailySpend": "$8,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$500"
-  }
+  },
+  "signupUrl": "https://gnosispay.com/"
 }

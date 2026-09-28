@@ -85,5 +85,6 @@
     "dailySpend": "$9,800",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://www.fiat24.com/"
 }

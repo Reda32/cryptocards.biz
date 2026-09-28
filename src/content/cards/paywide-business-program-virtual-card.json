@@ -91,5 +91,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "$10,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://www.paywide.io/"
 }

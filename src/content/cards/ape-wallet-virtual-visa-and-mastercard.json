@@ -78,5 +78,6 @@
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
   },
-  "rating": 3.7
+  "rating": 3.7,
+  "signupUrl": "https://about.apewallet.net/"
 }

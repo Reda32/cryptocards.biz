@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact CryptoCards.biz',
+  url: 'https://cryptocards.biz/contact',
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'CryptoCards.biz',
+    url: 'https://cryptocards.biz',
+    email: 'hello@cryptocards.biz',
+    sameAs: ['https://t.me/redati32'],
+  },
+};
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with CryptoCards.biz — submit a card, suggest a correction or ask a question."
+  schemas={[contactSchema]}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
+  <div class="container-page mt-6">
+    <article class="prose-page max-w-3xl">
+      <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-white">
+        Contact
+      </h1>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">
+        Questions, corrections or a card you'd like us to add? Reach us through either channel below
+        and we'll get back to you.
+      </p>
+
+      <div class="not-prose mt-8 grid gap-4 sm:grid-cols-2">
+        <a
+          href="https://t.me/redati32"
+          target="_blank"
+          rel="noopener"
+          class="card-surface flex flex-col gap-1 p-5 transition hover:border-brand-400"
+        >
+          <span class="text-xs font-semibold uppercase tracking-wide text-slate-400">Telegram</span>
+          <span class="text-lg font-bold text-slate-900 dark:text-white">@redati32</span>
+          <span class="text-sm text-slate-500 dark:text-slate-400">Fastest reply — submit a card or ask a question.</span>
+        </a>
+        <a
+          href="mailto:hello@cryptocards.biz"
+          class="card-surface flex flex-col gap-1 p-5 transition hover:border-brand-400"
+        >
+          <span class="text-xs font-semibold uppercase tracking-wide text-slate-400">Email</span>
+          <span class="text-lg font-bold text-slate-900 dark:text-white">hello@cryptocards.biz</span>
+          <span class="text-sm text-slate-500 dark:text-slate-400">Corrections, partnerships and press.</span>
+        </a>
+      </div>
+
+      <h2>Submit a card</h2>
+      <p>
+        Want a crypto card listed or updated? Message us on Telegram with the card name and a link to
+        the provider — we'll review it and add a full review, promo page and countries page.
+      </p>
+
+      <h2>Report an error</h2>
+      <p>
+        Fees, limits and availability change constantly. If something on a page is wrong, tell us the
+        card and the field and we'll re-verify and update it.
+      </p>
+    </article>
+  </div>
+</BaseLayout>

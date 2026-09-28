@@ -72,5 +72,6 @@
     "dailySpend": "$1,000,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://www.thorwallet.org/"
 }

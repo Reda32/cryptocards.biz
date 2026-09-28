@@ -90,5 +90,6 @@
     "monthlySpend": "$10,000",
     "atmWithdrawal": "$2,500"
   },
-  "rating": 6
+  "rating": 6,
+  "signupUrl": "https://choise.com/"
 }

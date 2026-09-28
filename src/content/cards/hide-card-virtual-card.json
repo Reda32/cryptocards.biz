@@ -88,5 +88,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://hide.cards/"
 }

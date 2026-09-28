@@ -93,5 +93,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "$30,000",
     "atmWithdrawal": "$3,000"
-  }
+  },
+  "signupUrl": "https://brighty.app/en"
 }

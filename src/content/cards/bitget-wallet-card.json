@@ -81,5 +81,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://web3.bitget.com/en/card"
 }

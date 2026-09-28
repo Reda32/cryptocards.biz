@@ -89,5 +89,6 @@
     "dailySpend": "$200,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://www.kazawallet.com/"
 }

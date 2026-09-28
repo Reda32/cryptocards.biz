@@ -78,5 +78,6 @@
     "dailySpend": "$100,000",
     "monthlySpend": "$5,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://paywithmoon.com/"
 }

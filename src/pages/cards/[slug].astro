@@ -104,7 +104,11 @@ const reviewSchema = {
     brand: { '@type': 'Brand', name: d.company },
     category: 'Crypto card',
   },
-  author: { '@type': 'Organization', name: 'CryptoCards.biz' },
+  author: {
+    '@type': 'Organization',
+    name: 'CryptoCards.biz',
+    url: 'https://cryptocards.biz/about',
+  },
   publisher: { '@type': 'Organization', name: 'CryptoCards.biz' },
   ...(d.rating !== null && d.rating !== undefined
     ? {
@@ -335,11 +339,11 @@ const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [rev
             }
           </ol>
           <div class="mt-5 flex flex-wrap items-center gap-3">
-            {d.referral ? (
+            {d.referral || d.signupUrl ? (
               <CtaButton slug={d.slug} label={`Get the ${d.name}`} variant="accent" />
             ) : (
               <span class="text-sm text-slate-500 dark:text-slate-400">
-                No verified sign-up link yet.
+                No sign-up link yet.
               </span>
             )}
             <a href={`/coupons/${d.slug}`} class="btn-secondary">See promo codes</a>
@@ -415,7 +419,7 @@ const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [rev
         </div>
 
         {
-          d.referral && (
+          (d.referral || d.signupUrl) && (
             <div class="card-surface hidden p-5 lg:block">
               <CardQr slug={d.slug} />
             </div>

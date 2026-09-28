@@ -88,5 +88,6 @@
     "dailySpend": "$2,500",
     "monthlySpend": "$10,000",
     "atmWithdrawal": "$0"
-  }
+  },
+  "signupUrl": "https://app.zeroid.cc/?ref=c9bda4e9-0678-4aea-8af5-b20d267735f5"
 }

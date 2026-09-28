@@ -89,5 +89,6 @@
     "dailySpend": "$1,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://trocador.app/en/"
 }

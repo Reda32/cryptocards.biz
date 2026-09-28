@@ -80,5 +80,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "$22,500",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://plutus.it/"
 }

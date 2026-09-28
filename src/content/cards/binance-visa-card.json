@@ -90,5 +90,6 @@
     "dailySpend": "$8,700",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$290"
-  }
+  },
+  "signupUrl": "https://www.binance.com/"
 }

@@ -92,5 +92,6 @@
     "dailySpend": "$15,000",
     "monthlySpend": "$75,000",
     "atmWithdrawal": "$1,500"
-  }
+  },
+  "signupUrl": "https://www.wirexapp.com/"
 }

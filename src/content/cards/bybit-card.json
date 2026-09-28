@@ -92,5 +92,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$0"
-  }
+  },
+  "signupUrl": "https://www.bybit.com/"
 }

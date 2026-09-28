@@ -90,5 +90,6 @@
     "dailySpend": "$1,500",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$350"
-  }
+  },
+  "signupUrl": "https://bitsacard.com/en"
 }

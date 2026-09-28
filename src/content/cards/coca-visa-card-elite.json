@@ -93,5 +93,6 @@
     "dailySpend": "$32,400",
     "monthlySpend": "$32,400",
     "atmWithdrawal": "$918"
-  }
+  },
+  "signupUrl": "https://www.coca.xyz/"
 }

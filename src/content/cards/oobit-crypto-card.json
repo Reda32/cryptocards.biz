@@ -92,5 +92,6 @@
     "dailySpend": "$10,000",
     "monthlySpend": "$300,000",
     "atmWithdrawal": "$750"
-  }
+  },
+  "signupUrl": "https://www.oobit.com/"
 }

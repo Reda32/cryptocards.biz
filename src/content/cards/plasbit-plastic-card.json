@@ -88,5 +88,6 @@
     "dailySpend": "$30,000",
     "monthlySpend": "$30,000",
     "atmWithdrawal": "$0"
-  }
+  },
+  "signupUrl": "https://plasbit.com/"
 }

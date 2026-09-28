@@ -89,5 +89,6 @@
     "dailySpend": "$25,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$2,500"
-  }
+  },
+  "signupUrl": "https://spectrocoin.com/"
 }

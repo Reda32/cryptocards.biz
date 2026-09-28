@@ -50,7 +50,7 @@ const rating = d.rating ?? null;
   </div>
 
   <div class="flex flex-col items-stretch gap-2 sm:w-40">
-    {d.referral ? <CtaButton slug={d.slug} label="Get card" /> : <a href={`/cards/${d.slug}`} class="btn-secondary">View details</a>}
+    {d.referral || d.signupUrl ? <CtaButton slug={d.slug} label="Get card" /> : <a href={`/cards/${d.slug}`} class="btn-secondary">View details</a>}
     <CompareToggle slug={d.slug} />
   </div>
 </article>

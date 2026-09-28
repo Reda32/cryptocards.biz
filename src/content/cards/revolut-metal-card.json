@@ -90,5 +90,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$800"
-  }
+  },
+  "signupUrl": "https://www.revolut.com/"
 }

@@ -89,5 +89,6 @@
     "monthlySpend": "$500,000",
     "atmWithdrawal": "Unlimited"
   },
-  "rating": 6.1
+  "rating": 6.1,
+  "signupUrl": "https://zexocard.com/"
 }

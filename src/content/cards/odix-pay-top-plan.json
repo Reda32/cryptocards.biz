@@ -80,5 +80,6 @@
     "dailySpend": "$100,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://odixpay.com/"
 }

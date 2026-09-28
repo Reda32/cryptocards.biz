@@ -90,5 +90,6 @@
     "dailySpend": "$2,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$0"
-  }
+  },
+  "signupUrl": "https://www.airtm.com/en/"
 }

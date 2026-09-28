@@ -76,5 +76,6 @@
     "dailySpend": "$25,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://telegram.me/pintopaybot?start=p_6a749331599b6dac6f9c06d4"
 }

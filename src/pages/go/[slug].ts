@@ -10,12 +10,13 @@ export const GET: APIRoute = async ({ params, request, redirect, url }) => {
 
   const cards = await getCollection('cards');
   const card = cards.find((entry) => entry.data.slug === slug || entry.id === slug);
-  if (!card || !card.data.referral) return new Response('Unknown card', { status: 404 });
+  const target = card?.data.referral?.url ?? card?.data.signupUrl;
+  if (!card || !target) return new Response('Unknown card', { status: 404 });
 
   // Best-effort analytics; never block or break the redirect.
   void logClick(card.data.slug, request, url);
 
-  return redirect(card.data.referral.url, 302);
+  return redirect(target, 302);
 };
 
 async function logClick(slug: string, request: Request, url: URL): Promise<void> {

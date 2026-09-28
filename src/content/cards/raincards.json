@@ -76,5 +76,6 @@
     "dailySpend": "$5,000",
     "monthlySpend": "$25,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://raincards.xyz/"
 }

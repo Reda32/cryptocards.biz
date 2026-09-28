@@ -89,5 +89,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$400"
-  }
+  },
+  "signupUrl": "https://www.bleap.finance/en-us"
 }

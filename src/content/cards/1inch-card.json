@@ -89,5 +89,6 @@
     "dailySpend": "$8,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://1inch.com/card"
 }

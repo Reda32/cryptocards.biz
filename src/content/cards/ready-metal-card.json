@@ -85,5 +85,6 @@
     "dailySpend": "$10,000",
     "monthlySpend": "$30,000",
     "atmWithdrawal": "$500"
-  }
+  },
+  "signupUrl": "https://www.ready.co/"
 }

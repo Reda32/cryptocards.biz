@@ -90,5 +90,6 @@
     "dailySpend": "$30,000",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "$2,000"
-  }
+  },
+  "signupUrl": "https://www.zen.com/"
 }

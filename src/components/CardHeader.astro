@@ -54,10 +54,15 @@ const kycLabel = d.kyc ? KYC_LABELS[d.kyc.level] : null;
       </div>
       <div class="flex flex-col gap-2">
         {
-          d.referral ? (
-            <CtaButton slug={d.slug} label="Get This Card" variant="primary" note="Affiliate link · no extra cost" />
+          d.referral || d.signupUrl ? (
+            <CtaButton
+              slug={d.slug}
+              label="Get This Card"
+              variant="primary"
+              note={d.referral ? 'Affiliate link · no extra cost' : 'Opens the provider site'}
+            />
           ) : (
-            <span class="text-xs text-slate-400">No verified sign-up link yet.</span>
+            <span class="text-xs text-slate-400">No sign-up link yet.</span>
           )
         }
         <CompareToggle slug={d.slug} label="Add to compare" />

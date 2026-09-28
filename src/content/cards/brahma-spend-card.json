@@ -81,5 +81,6 @@
     "dailySpend": "$5,000",
     "monthlySpend": "$20,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://brahma.fi/"
 }

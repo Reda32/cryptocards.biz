@@ -70,5 +70,6 @@
     "dailySpend": "$175,000",
     "monthlySpend": "$1,000,000",
     "atmWithdrawal": "$22,000"
-  }
+  },
+  "signupUrl": "https://zypto.com/"
 }

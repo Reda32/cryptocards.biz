@@ -85,5 +85,6 @@
     "dailySpend": "$10,000",
     "monthlySpend": "$50,000",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://paysend.com/"
 }

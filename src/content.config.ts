@@ -118,6 +118,8 @@ const cards = defineCollection({
     verified: z.boolean().default(true),
     /** Where the data came from, for imported cards. */
     sourceUrl: z.url().optional(),
+    /** Non-affiliate provider sign-up URL, so the CTA/QR work before real affiliate links. */
+    signupUrl: z.url().optional(),
     /** Raw price/limit label shown in listings when structured fees are unknown. */
     priceLabel: z.string().optional(),
 

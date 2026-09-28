@@ -91,5 +91,6 @@
     "dailySpend": "Unlimited",
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
-  }
+  },
+  "signupUrl": "https://app.rivocard.com/?ref=8ASHG5QV"
 }

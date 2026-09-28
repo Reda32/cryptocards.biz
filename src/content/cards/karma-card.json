@@ -82,5 +82,6 @@
     "monthlySpend": "Unlimited",
     "atmWithdrawal": "Unlimited"
   },
-  "rating": 8.5
+  "rating": 8.5,
+  "signupUrl": "https://www.karmacard.io/"
 }
