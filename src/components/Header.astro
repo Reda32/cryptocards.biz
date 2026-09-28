@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from './islands/ThemeToggle.tsx';
+
 const path = Astro.url.pathname;
 const links = [
   { href: '/cards', label: 'Cards' },
@@ -14,52 +16,56 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
 <header
   class="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90"
 >
-  <div class="container-page flex h-16 items-center justify-between">
+  <div class="container-page flex h-16 items-center justify-between gap-4">
     <a href="/" class="flex items-center gap-2 font-bold tracking-tight text-slate-900 dark:text-white">
       <img src="/favicon.svg" alt="" width="28" height="28" />
       <span>CryptoCards<span class="text-brand-600 dark:text-brand-400">.biz</span></span>
     </a>
 
-    <nav class="hidden items-center gap-6 text-sm font-medium md:flex" aria-label="Main">
-      {
-        links.map((link) => (
-          <a
-            href={link.href}
-            aria-current={isActive(link.href) ? 'page' : undefined}
-            class:list={[
-              'transition hover:text-brand-600 dark:hover:text-brand-400',
-              isActive(link.href)
-                ? 'text-brand-600 dark:text-brand-400'
-                : 'text-slate-600 dark:text-slate-300',
-            ]}
-          >
-            {link.label}
-          </a>
-        ))
-      }
-    </nav>
-
-    <details class="relative md:hidden">
-      <summary
-        class="cursor-pointer list-none rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium [&::-webkit-details-marker]:hidden dark:border-slate-700"
-      >
-        Menu
-      </summary>
-      <nav
-        class="absolute right-0 mt-2 w-48 rounded-lg border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-800 dark:bg-slate-900"
-        aria-label="Mobile"
-      >
+    <div class="flex items-center gap-2 sm:gap-4">
+      <nav class="hidden items-center gap-6 text-sm font-medium md:flex" aria-label="Main">
         {
           links.map((link) => (
             <a
               href={link.href}
-              class="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+              aria-current={isActive(link.href) ? 'page' : undefined}
+              class:list={[
+                'transition hover:text-brand-600 dark:hover:text-brand-400',
+                isActive(link.href)
+                  ? 'text-brand-600 dark:text-brand-400'
+                  : 'text-slate-600 dark:text-slate-300',
+              ]}
             >
               {link.label}
             </a>
           ))
         }
       </nav>
-    </details>
+
+      <ThemeToggle client:load />
+
+      <details class="relative md:hidden">
+        <summary
+          class="cursor-pointer list-none rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium [&::-webkit-details-marker]:hidden dark:border-slate-700"
+        >
+          Menu
+        </summary>
+        <nav
+          class="absolute right-0 mt-2 w-48 rounded-lg border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-800 dark:bg-slate-900"
+          aria-label="Mobile"
+        >
+          {
+            links.map((link) => (
+              <a
+                href={link.href}
+                class="block rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </nav>
+      </details>
+    </div>
   </div>
 </header>

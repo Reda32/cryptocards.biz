@@ -93,6 +93,15 @@ Coin and network icons are self-hosted SVG (no CDN requests) under
 - `src/lib/icons.ts` maps a coin symbol or chain name to its icon path and returns `null` for anything unknown, so the UI falls back to a text monogram instead of a broken image.
 - To add a coin, drop `<symbol>.svg` into `public/icons/crypto/` and add the symbol to `CRYPTO_ICONS` in `src/lib/icons.ts` (same pattern for `public/icons/networks/` + `NETWORK_SLUGS`).
 
+## Theming
+
+Dark mode is class-based (`html.dark`) via Tailwind's `dark:` variant.
+
+- A tiny inline script in `BaseLayout.astro` applies the saved theme before paint (no flash of the wrong theme).
+- `src/components/islands/ThemeToggle.tsx` toggles the class and persists the choice to `localStorage.theme`.
+- With no saved choice, the system `prefers-color-scheme` is used.
+- Colours are defined as tokens in `src/styles/global.css` (`@theme` + `color-scheme`); add new shades there so dark mode stays consistent.
+
 ## Community Score
 
 The UI, data model and methodology page are complete. The **automation pipeline**

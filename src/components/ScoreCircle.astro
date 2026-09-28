@@ -32,7 +32,7 @@ const inner = size - 16;
 >
   <div
     class="relative grid shrink-0 place-items-center rounded-full"
-    style={`width:${size}px;height:${size}px;background:conic-gradient(${color} ${pct * 3.6}deg, #e2e8f0 0deg)`}
+    style={`width:${size}px;height:${size}px;background:conic-gradient(${color} ${pct * 3.6}deg, var(--score-track) 0deg)`}
     role="img"
     aria-label={score === null ? 'No score yet' : `Score ${score} out of 10`}
   >
