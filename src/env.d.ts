@@ -3,8 +3,7 @@
 
 interface ImportMetaEnv {
   readonly PUBLIC_SITE_URL?: string;
-  readonly UMAMI_URL?: string;
-  readonly UMAMI_WEBSITE_ID?: string;
+  readonly PUBLIC_RYBBIT_SITE_ID?: string;
 }
 
 interface ImportMeta {

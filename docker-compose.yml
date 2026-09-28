@@ -1,6 +1,9 @@
-# Self-managed deployment example.
-# On Coolify you can either point a resource at this compose file or build
-# from the Dockerfile directly and add Umami as a separate service.
+# Self-managed deployment example. On Coolify you can either point a resource
+# at this compose file or build from the Dockerfile directly.
+#
+# Analytics: deploy Rybbit as its own Coolify service and set RYBBIT_HOST +
+# PUBLIC_RYBBIT_SITE_ID on this app (the tracking script is proxied first-party
+# via /analytics/*).
 
 services:
   app:
@@ -11,31 +14,6 @@ services:
     environment:
       HOST: 0.0.0.0
       PORT: '4321'
-      UMAMI_URL: http://umami:3000
-      UMAMI_WEBSITE_ID: ${UMAMI_WEBSITE_ID:-}
-    depends_on:
-      - umami
-
-  umami:
-    image: ghcr.io/umami-software/umami:postgresql-latest
-    restart: unless-stopped
-    ports:
-      - '3000:3000'
-    environment:
-      DATABASE_URL: postgresql://umami:umami@umami-db:5432/umami
-      APP_SECRET: change-me
-    depends_on:
-      - umami-db
-
-  umami-db:
-    image: postgres:16-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_USER: umami
-      POSTGRES_PASSWORD: umami
-      POSTGRES_DB: umami
-    volumes:
-      - umami-db-data:/var/lib/postgresql/data
-
-volumes:
-  umami-db-data:
+      PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://cryptocards.biz}
+      RYBBIT_HOST: ${RYBBIT_HOST:-}
+      PUBLIC_RYBBIT_SITE_ID: ${PUBLIC_RYBBIT_SITE_ID:-}

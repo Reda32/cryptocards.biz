@@ -4,4 +4,7 @@ Allow: /
 # Affiliate redirect endpoints add no indexable value.
 Disallow: /go/
 
+# First-party analytics proxy.
+Disallow: /analytics/
+
 Sitemap: https://cryptocards.biz/sitemap-index.xml
