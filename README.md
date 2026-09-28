@@ -13,7 +13,7 @@ to be deployed on [Coolify](https://coolify.io).
 | Interactivity | Preact islands |
 | Shared state | nanostores + `@nanostores/persistent` (localStorage) |
 | Content | JSON + MDX via the Astro Content Layer API, stored in Git |
-| Analytics | Rybbit (optional, self-hosted via Coolify) |
+| Analytics | Umami (optional, self-hosted via Coolify) |
 | Hosting | Coolify (Docker) |
 
 There is no database. Card data lives in the repository, and the only server-rendered
@@ -113,7 +113,7 @@ scoring rules that `/methodology` documents.
 
 - Every CTA points at `/go/<card-slug>` and carries `rel="sponsored nofollow noopener"`.
 - The redirect target is `referral.url` (affiliate) or `signupUrl` (provider fallback).
-- Clicks are tracked client-side with Rybbit via `data-rybbit-event="affiliate_click"`.
+- Clicks are tracked client-side with Umami via `data-umami-event="affiliate_click"`.
 - Always keep the affiliate disclosure visible on pages with referral links.
 
 ## SEO
@@ -133,19 +133,19 @@ Copy `.env.example` to `.env`:
 | Variable | Purpose |
 | --- | --- |
 | `PUBLIC_SITE_URL` | Canonical/site URL (defaults to `https://cryptocards.biz`) |
-| `RYBBIT_HOST` | Your self-hosted Rybbit URL, e.g. `https://analytics.cryptocards.biz` (server-side, used by the `/analytics/*` proxy) |
-| `PUBLIC_RYBBIT_SITE_ID` | Rybbit site id (public). Leave blank to disable analytics entirely. |
+| `UMAMI_HOST` | Your self-hosted Umami URL, e.g. `https://an.cryptocards.biz` (server-side, used by the `/stats/*` proxy) |
+| `PUBLIC_UMAMI_WEBSITE_ID` | Umami website id (public). Leave blank to disable analytics entirely. |
 
-### Rybbit analytics (first-party proxy)
+### Umami analytics (first-party proxy)
 
-The tracking script is served from **`/analytics/*`** and proxied to your Rybbit
-instance, so it appears as first-party traffic and survives ad blockers.
+The tracking script is served from **`/stats/script.js`** and proxied to your
+Umami instance, so it appears as first-party traffic and survives ad blockers.
 
-- `src/pages/analytics/[...path].ts` proxies `/analytics/<x>` → `<RYBBIT_HOST>/api/<x>`,
-  forwarding all headers and `X-Forwarded-For`.
-- In Rybbit **Site Settings → Privacy & Security**, enable **First-Party Proxy**.
-- Affiliate clicks fire a `affiliate_click` custom event (data attributes on the CTA).
-- Session replay is off by default.
+- `src/pages/stats/[...path].ts` proxies `/stats/<x>` → `<UMAMI_HOST>/<x>`
+  (script + `/api/send`), forwarding all headers.
+- Affiliate clicks fire an `affiliate_click` event (data attributes on the CTA).
+- Umami's default login is `admin` / `umami` — change it on first login.
+- Session replay/heatmaps are optional and off by default.
 
 ## Deploying on Coolify
 
@@ -154,9 +154,10 @@ instance, so it appears as first-party traffic and survives ad blockers.
 3. Health check path: `/`. Exposed port: `4321`.
 4. Add the environment variables above.
 5. Set the domain and let Coolify provision HTTPS.
-6. (Optional) Deploy Rybbit as a separate Coolify service and point `RYBBIT_HOST`
-   at it. In Rybbit set the backend URL to `$frontend_URL/api` and uncheck
-   "Strip Prefixes".
+6. (Optional) Deploy Umami as a separate Coolify service
+   (`ghcr.io/umami-software/umami:postgresql-latest` + Postgres), log in
+   `admin`/`umami`, add a website, and point `UMAMI_HOST` +
+   `PUBLIC_UMAMI_WEBSITE_ID` at it.
 
 To refresh content automatically later: run the Community Score job on a schedule,
 commit the updated JSON, then trigger a Coolify rebuild webhook.

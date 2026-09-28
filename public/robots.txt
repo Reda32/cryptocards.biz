@@ -5,6 +5,6 @@ Allow: /
 Disallow: /go/
 
 # First-party analytics proxy.
-Disallow: /analytics/
+Disallow: /stats/
 
 Sitemap: https://cryptocards.biz/sitemap-index.xml

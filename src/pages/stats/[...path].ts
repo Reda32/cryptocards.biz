@@ -1,10 +1,11 @@
 import type { APIRoute } from 'astro';
 
-// First-party proxy for Rybbit analytics. Runs on the Node adapter.
-// /analytics/* -> <RYBBIT_HOST>/api/*
+// First-party proxy for self-hosted Umami. Runs on the Node adapter.
+// /stats/script.js  -> <UMAMI_HOST>/script.js
+// /stats/api/send   -> <UMAMI_HOST>/api/send
 export const prerender = false;
 
-const HOST = process.env.RYBBIT_HOST;
+const HOST = process.env.UMAMI_HOST;
 const cache = new Map<string, { body: ArrayBuffer; status: number; contentType: string | null; at: number }>();
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
 
@@ -12,7 +13,7 @@ export const ALL: APIRoute = async ({ params, request, url }) => {
   if (!HOST) return new Response('Analytics disabled', { status: 404 });
 
   const path = params.path ?? '';
-  const target = `${HOST.replace(/\/$/, '')}/api/${path}${url.search}`;
+  const target = `${HOST.replace(/\/$/, '')}/${path}${url.search}`;
   const isCacheable = request.method === 'GET' && path.endsWith('.js');
 
   if (isCacheable) {
@@ -20,12 +21,15 @@ export const ALL: APIRoute = async ({ params, request, url }) => {
     if (hit && Date.now() - hit.at < CACHE_TTL) {
       return new Response(hit.body, {
         status: hit.status,
-        headers: { 'content-type': hit.contentType ?? 'application/javascript', 'cache-control': 'public, max-age=3600' },
+        headers: {
+          'content-type': hit.contentType ?? 'application/javascript',
+          'cache-control': 'public, max-age=3600',
+        },
       });
     }
   }
 
-  // Forward all browser headers; Rybbit's bot detection needs the full set.
+  // Forward all browser headers so Umami records accurate session data.
   const headers = new Headers(request.headers);
   headers.delete('host');
   headers.delete('content-length');
@@ -44,9 +48,9 @@ export const ALL: APIRoute = async ({ params, request, url }) => {
     });
 
     const outHeaders = new Headers(res.headers);
-    const buffer = isCacheable ? await res.arrayBuffer() : null;
 
-    if (isCacheable && buffer) {
+    if (isCacheable) {
+      const buffer = await res.arrayBuffer();
       cache.set(path, {
         body: buffer,
         status: res.status,

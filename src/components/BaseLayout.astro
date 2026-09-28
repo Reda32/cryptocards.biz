@@ -23,7 +23,7 @@ interface Props {
 
 const { comparePayload = 'minimal', ...props } = Astro.props;
 
-const rybbitSiteId = import.meta.env.PUBLIC_RYBBIT_SITE_ID;
+const umamiWebsiteId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
 
 const allCards = await getCompareCards();
 const cards =
@@ -56,8 +56,8 @@ const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
     </script>
     <SeoHead {...props} />
     {
-      rybbitSiteId && (
-        <script is:inline src="/analytics/script.js" data-site-id={rybbitSiteId} async></script>
+      umamiWebsiteId && (
+        <script is:inline defer src="/stats/script.js" data-website-id={umamiWebsiteId}></script>
       )
     }
   </head>
