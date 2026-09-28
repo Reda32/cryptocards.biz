@@ -11,6 +11,8 @@ const links = [
   { href: '/methodology', label: 'Methodology' },
 ];
 
+const submitHref = 'https://t.me/redati32';
+
 const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
 ---
 
@@ -24,7 +26,7 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
     </a>
 
     <div class="flex items-center gap-2 sm:gap-4">
-      <nav class="hidden items-center gap-4 text-sm font-medium md:flex" aria-label="Main">
+      <nav class="hidden items-center gap-4 text-sm font-medium lg:flex" aria-label="Main">
         {
           links.map((link) => (
             <a
@@ -43,16 +45,25 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
         }
       </nav>
 
+      <a
+        href={submitHref}
+        target="_blank"
+        rel="noopener"
+        class="btn-primary hidden px-3 py-1.5 text-xs sm:inline-flex"
+      >
+        Submit card
+      </a>
+
       <ThemeToggle client:load />
 
-      <details class="relative md:hidden">
+      <details class="relative lg:hidden">
         <summary
           class="cursor-pointer list-none rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium [&::-webkit-details-marker]:hidden dark:border-slate-700"
         >
           Menu
         </summary>
         <nav
-          class="absolute right-0 mt-2 w-48 rounded-lg border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-800 dark:bg-slate-900"
+          class="absolute right-0 mt-2 w-52 rounded-lg border border-slate-200 bg-white p-2 shadow-lg dark:border-slate-800 dark:bg-slate-900"
           aria-label="Mobile"
         >
           {
@@ -65,6 +76,14 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
               </a>
             ))
           }
+          <a
+            href={submitHref}
+            target="_blank"
+            rel="noopener"
+            class="mt-1 block rounded-md bg-brand-600 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-brand-700"
+          >
+            Submit card
+          </a>
         </nav>
       </details>
     </div>
