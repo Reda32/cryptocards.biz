@@ -1,0 +1,49 @@
+{
+  "name": "Ledger CL Card",
+  "slug": "ledger-cl-card",
+  "company": "Ledger CL",
+  "summary": "Hardware wallet-integrated Visa card via Baanx. ~2.25% conversion cost. Up to 2% cashback (BTC/USDT 1%, BXX 2%). €15K daily spend, €2K ATM. Connect up to 5 wallets.",
+  "type": [
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/ledger-cl-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/ledger-cl-card.webp"
+}

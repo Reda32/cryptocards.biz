@@ -1,0 +1,50 @@
+{
+  "name": "Exactly Visa Card",
+  "slug": "exactly-visa-card",
+  "company": "Exactly",
+  "summary": "The self-custodial card that lets you spend crypto like fiat.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/exactly-visa-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/exactly-visa-card.webp"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Plutus Card",
+  "slug": "plutus-card",
+  "company": "Plutus",
+  "summary": "Plutus Card offers 3-9% cashback in PLU tokens plus monthly perks from 50+ brands like Netflix, Spotify, and Amazon. Stake PLU to unlock higher rewards tiers. Non-custodial with user-controlled keys.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "3% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/plutus-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/plutus-card.webp"
+}

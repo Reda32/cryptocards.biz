@@ -1,0 +1,49 @@
+{
+  "name": "CardUpNow Standard Virtual Visa / Mastercard",
+  "slug": "cardupnow-standard-virtual-visa-mastercard",
+  "company": "CardUpNow",
+  "summary": "An instantly issued, no-KYC virtual prepaid card funded via major cryptocurrencies, designed for secure online shopping and digital advertising.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 4,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/cardupnow-cardupnow-standard-virtual-visa-mastercard",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/cardupnow-standard-virtual-visa-mastercard.webp"
+}

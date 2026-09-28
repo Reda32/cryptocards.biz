@@ -1,0 +1,45 @@
+{
+  "name": "Spendly Card",
+  "slug": "spendly-card",
+  "company": "Spendly",
+  "summary": "Instant no-KYC crypto card for privacy-focused spending. Get started in minutes without document verification. Best for simple, low-limit privacy transactions.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 4.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/spendly-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/spendly-card.webp"
+}

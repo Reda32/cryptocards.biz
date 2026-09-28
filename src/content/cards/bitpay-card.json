@@ -1,0 +1,50 @@
+{
+  "name": "BitPay Card",
+  "slug": "bitpay-card",
+  "company": "BitPay",
+  "summary": "BitPay Card is a prepaid Mastercard that lets you convert crypto to dollars and spend anywhere Mastercard is accepted. Pioneer in crypto payments since 2011. Currently on waitlist as BitPay transitions to a new banking partner.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bitpay-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bitpay-card.webp"
+}

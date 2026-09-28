@@ -1,0 +1,37 @@
+{
+  "name": "Fuse Pay Card",
+  "slug": "fuse-pay-card",
+  "company": "Fuse Pay",
+  "summary": "Virtual Visa prepaid card for stablecoin spending. Zero-fee swaps via Jupiter. No seed phrases - uses multi-sig and biometrics. Issued by Lead Bank. US only (except NY, LA, FL, AK).",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/fuse-pay-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/fuse-pay-card.webp"
+}

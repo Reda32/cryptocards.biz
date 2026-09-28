@@ -1,0 +1,38 @@
+{
+  "name": "Fold Bitcoin Credit Card",
+  "slug": "fold-bitcoin-credit-card",
+  "company": "Fold Bitcoin Credit",
+  "summary": "A no-annual-fee Visa credit card that earns up to 4% back in Bitcoin and allows users to build credit while spending.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "1.5% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/fold-fold-bitcoin-credit-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/fold-bitcoin-credit-card.webp"
+}

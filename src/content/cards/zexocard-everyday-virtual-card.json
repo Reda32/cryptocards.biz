@@ -1,0 +1,47 @@
+{
+  "name": "ZexoCard Everyday Virtual Card",
+  "slug": "zexocard-everyday-virtual-card",
+  "company": "ZexoCard Everyday",
+  "summary": "A virtual card designed for day-to-day use, such as travel bookings, online purchases, and contactless spending.",
+  "type": [
+    "virtual"
+  ],
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/zexocard-zexocard-everyday-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/zexocard-everyday-virtual-card.webp"
+}

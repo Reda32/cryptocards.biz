@@ -1,0 +1,56 @@
+{
+  "name": "CryptoPay Card",
+  "slug": "cryptopay-card",
+  "company": "CryptoPay",
+  "summary": "CryptoPay Card is one of the earliest Bitcoin debit cards in Europe, supporting 35+ cryptocurrencies. High €30,000 daily spending limit with straightforward €1/month fee structure.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 1,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$1/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/cryptopay-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/cryptopay-card.webp"
+}

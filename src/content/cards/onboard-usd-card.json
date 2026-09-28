@@ -1,0 +1,32 @@
+{
+  "name": "Onboard USD Card",
+  "slug": "onboard-usd-card",
+  "company": "Onboard USD",
+  "summary": "Virtual USD card with $3 one-time creation fee. Zero deposit fees. $5K daily / $20K monthly limits. 2% + $0.5 for non-USD transactions.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/onboard-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/onboard-usd-card.webp"
+}

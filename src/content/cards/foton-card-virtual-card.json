@@ -1,0 +1,37 @@
+{
+  "name": "Foton Card Virtual Card",
+  "slug": "foton-card-virtual-card",
+  "company": "Foton",
+  "summary": "A No-KYC virtual prepaid card optimized for digital advertising and global online shopping, funded via USDT on the Tron network.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/foton-card-foton-card-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/foton-card-virtual-card.webp"
+}

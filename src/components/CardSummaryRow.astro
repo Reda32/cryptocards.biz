@@ -12,8 +12,10 @@ interface Props {
 const { card, communityScore = null } = Astro.props;
 const d = card.data;
 
-const networkLabel = d.network === 'visa' ? 'Visa' : 'Mastercard';
+const networkLabel = d.network === 'visa' ? 'Visa' : d.network === 'mastercard' ? 'Mastercard' : null;
 const typeLabel = d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ');
+const kycLabel = d.kyc ? KYC_LABELS[d.kyc.level] : null;
+const rating = d.rating ?? null;
 ---
 
 <article class="card-surface flex flex-col gap-5 p-5 sm:flex-row sm:items-center">
@@ -24,9 +26,9 @@ const typeLabel = d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).
         <a href={`/cards/${d.slug}`} class="hover:text-brand-600 dark:hover:text-brand-400">{d.name}</a>
       </h3>
       <div class="mt-1.5 flex flex-wrap gap-1.5">
-        <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">{networkLabel}</span>
-        <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">{typeLabel}</span>
-        <span class="badge bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300">{KYC_LABELS[d.kyc.level]}</span>
+        {networkLabel && <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">{networkLabel}</span>}
+        {typeLabel && <span class="badge bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">{typeLabel}</span>}
+        {kycLabel && <span class="badge bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300">{kycLabel}</span>}
       </div>
       <p class="mt-2 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{d.summary}</p>
     </div>
@@ -35,7 +37,9 @@ const typeLabel = d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).
   <div class="flex items-center gap-6 sm:flex-col sm:items-end sm:gap-2">
     <div class="text-right">
       <p class="text-xs uppercase tracking-wide text-slate-400">Overall</p>
-      <p class="text-xl font-bold tabular-nums text-slate-900 dark:text-white">{d.rating.toFixed(1)}</p>
+      <p class="text-xl font-bold tabular-nums text-slate-900 dark:text-white">
+        {rating !== null ? rating.toFixed(1) : '—'}
+      </p>
     </div>
     <div class="text-right">
       <p class="text-xs uppercase tracking-wide text-slate-400">Community</p>
@@ -46,7 +50,7 @@ const typeLabel = d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).
   </div>
 
   <div class="flex flex-col items-stretch gap-2 sm:w-40">
-    <CtaButton slug={d.slug} label="Get card" />
+    {d.referral ? <CtaButton slug={d.slug} label="Get card" /> : <a href={`/cards/${d.slug}`} class="btn-secondary">View details</a>}
     <CompareToggle slug={d.slug} />
   </div>
 </article>

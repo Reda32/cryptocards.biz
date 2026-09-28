@@ -1,0 +1,56 @@
+{
+  "name": "NearPay Card",
+  "slug": "nearpay-card",
+  "company": "NearPay",
+  "summary": "NearPay is the first crypto card from the NEAR Protocol ecosystem, supporting 38+ cryptocurrencies. Low €1/month fee with instant virtual card and physical card options for UK and EEA residents.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 1,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "NEAR",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$1/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/nearpay-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/nearpay-card.webp"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Xkard Essential Card",
+  "slug": "xkard-essential-card",
+  "company": "Xkard Essential",
+  "summary": "An entry-level virtual card for privacy-conscious users with a $25,000 annual spending limit and no KYC requirements.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 9,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 5.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$9/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/xkard-xkard-essential-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/xkard-essential-card.webp"
+}

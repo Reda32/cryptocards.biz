@@ -1,0 +1,49 @@
+{
+  "name": "Bleap Physical Plastic Card",
+  "slug": "bleap-physical-plastic-card",
+  "company": "Bleap",
+  "summary": "A standard physical plastic debit card for global in-store payments and ATM withdrawals, directly linked to your self-custodial on-chain balance. Bleap Card Benefits * Up to 20% cashback on selected categories: * Gaming (Steam, PlayStation, Xbox, Nintendo, Twitch) * Streaming (Netflix, Disney+, Amazon Prime, YouTube Premium) * AI subscriptions (ChatGPT, Claude, Gemini) * 3% cashback on: * Uber, Bolt * Uber Eats, Glovo, Just Eat, Deliveroo * 2% cashback on: * Restaurants * Supermarkets * 1% cashback on all other eligible purchases * Cashback paid automatically in USDC * No monthly cashback cap on the standard cashback program * Accepted worldwide anywhere Mastercard is accepted * Apple Pay and Google Pay support * No foreign exchange (FX) fees when spending abroad * Market-rate EUR ↔️ USD conversion * Free ATM withdrawals up to EUR 400/month * Non-custodial account architecture * Users keep control of their assets * MPC (Multi-Party Computation) security model * Free crypto on-ramp options * Bank transfers * Crypto transfers",
+  "type": [
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bleap-bleap-physical-plastic-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bleap-physical-plastic-card.webp"
+}

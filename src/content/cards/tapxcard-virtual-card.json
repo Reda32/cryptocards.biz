@@ -1,0 +1,32 @@
+{
+  "name": "TapxCard Virtual Card",
+  "slug": "tapxcard-virtual-card",
+  "company": "TapxCard",
+  "summary": "Instant virtual crypto card ready in minutes. Dashboard for balance viewing, spending monitoring, and card management with freeze/unfreeze capability.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/tapxcard-virtual",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/tapxcard-virtual-card.webp"
+}

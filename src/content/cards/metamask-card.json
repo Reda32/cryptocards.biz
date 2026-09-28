@@ -1,0 +1,46 @@
+{
+  "name": "MetaMask Card",
+  "slug": "metamask-card",
+  "company": "MetaMask",
+  "summary": "Self-custody card from leading Web3 wallet. Virtual free, Metal $199/yr. 1% cashback (virtual) or 3% (metal). Mastercard rates with minimal Linea gas (~$0.02).",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "3% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/metamask-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/metamask-card.webp"
+}

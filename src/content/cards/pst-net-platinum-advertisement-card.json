@@ -1,0 +1,41 @@
+{
+  "name": "PST.NET Platinum Advertisement Card",
+  "slug": "pst-net-platinum-advertisement-card",
+  "company": "PST.NET",
+  "summary": "An elite virtual card solution for high-volume media buying teams and agencies, offering cashback and team management tools.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "3% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/pstnet-pstnet-platinum-advertisement-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/pst-net-platinum-advertisement-card.webp"
+}

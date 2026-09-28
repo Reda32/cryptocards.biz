@@ -1,0 +1,32 @@
+{
+  "name": "Amulets Card",
+  "slug": "amulets-card",
+  "company": "Amulets",
+  "summary": "Crypto wallet and Visa card combining self-custody functionality with global payment capabilities.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/amulets-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/amulets-card.webp"
+}

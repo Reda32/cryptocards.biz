@@ -28,78 +28,98 @@ const cards = defineCollection({
     company: z.string(),
     summary: z.string(),
 
-    // -- presentation (extensions to the original plan schema) --
+    // -- presentation --
     logo: z.string().optional(), // path under /public, e.g. /logos/redotpay.svg
     brandColor: z.string().optional(), // hex accent used in the UI
 
-    type: z.array(z.enum(['virtual', 'physical'])),
-    network: z.enum(['visa', 'mastercard']),
-    wallets: z.array(z.enum(['apple', 'google'])),
-    features: z.array(z.string()), // ['contactless', 'staking']
+    // -- structured data where known; omitted/empty for imported cards --
+    type: z.array(z.enum(['virtual', 'physical'])).default([]),
+    network: z.enum(['visa', 'mastercard']).optional(),
+    wallets: z.array(z.enum(['apple', 'google'])).default([]),
+    features: z.array(z.string()).default([]),
 
-    fees: z.object({
-      issuance: z.number(),
-      monthly: z.number(),
-      fx: z.number(), // percent
-      atm: z.string(),
-      topup: z.string().optional(),
-      decline: z.number().optional(),
-    }),
-    limits: z.object({
-      dailySpend: z.string(), // 'Unlimited' or amount
-      monthlySpend: z.string(),
-      atmWithdrawal: z.string(),
-    }),
-    rewards: z.object({
-      cashback: z.string().optional(),
-      cashbackToken: z.string().optional(),
-      welcomeBonus: z.string().optional(),
-      referralBonus: z.string().optional(),
-    }),
+    fees: z
+      .object({
+        issuance: z.number(),
+        monthly: z.number(),
+        fx: z.number(), // percent
+        atm: z.string(),
+        topup: z.string().optional(),
+        decline: z.number().optional(),
+      })
+      .optional(),
+    limits: z
+      .object({
+        dailySpend: z.string(), // 'Unlimited' or amount
+        monthlySpend: z.string(),
+        atmWithdrawal: z.string(),
+      })
+      .optional(),
+    rewards: z
+      .object({
+        cashback: z.string().optional(),
+        cashbackToken: z.string().optional(),
+        welcomeBonus: z.string().optional(),
+        referralBonus: z.string().optional(),
+      })
+      .optional(),
 
-    countries: z.array(z.string()),
+    countries: z.array(z.string()).default([]),
     restrictedCountries: z.array(z.string()).default([]),
     availabilityNotes: z.string().optional(),
-    cryptos: z.array(
-      z.object({
-        symbol: z.string(), // 'USDT'
-        networks: z.array(z.string()), // ['ETH', 'TRON', 'SOL']
-      }),
-    ),
+    cryptos: z
+      .array(
+        z.object({
+          symbol: z.string(), // 'USDT'
+          networks: z.array(z.string()).default([]), // ['ETH', 'TRON', 'SOL']
+        }),
+      )
+      .default([]),
 
-    kyc: z.object({
-      level: z.enum(['none', 'basic', 'id', 'full']),
-      email: z.boolean(),
-      phone: z.boolean(),
-      idDocument: z.boolean(),
-      proofOfAddress: z.boolean(),
-      selfie: z.boolean(),
-      notes: z.string().optional(),
-    }),
+    kyc: z
+      .object({
+        level: z.enum(['none', 'basic', 'id', 'full']),
+        email: z.boolean().default(false),
+        phone: z.boolean().default(false),
+        idDocument: z.boolean().default(false),
+        proofOfAddress: z.boolean().default(false),
+        selfie: z.boolean().default(false),
+        notes: z.string().optional(),
+      })
+      .optional(),
 
-    pros: z.array(z.string()).max(6),
-    cons: z.array(z.string()).max(6),
-    rating: z.number().min(0).max(10), // editorial score
+    pros: z.array(z.string()).default([]),
+    cons: z.array(z.string()).default([]),
+    rating: z.number().min(0).max(10).nullable().optional(), // editorial score
 
-    referral: z.object({
-      code: z.string(),
-      url: z.url(),
-      bonus: z.string(),
-      terms: z.string().optional(),
-      /** "Ongoing" or an explicit date, shown as validity on the promo page. */
-      expiry: z.string().optional(),
-      eligibility: z.string().optional(),
-      alternatives: z
-        .array(z.object({ label: z.string(), url: z.url() }))
-        .default([]),
-    }),
+    referral: z
+      .object({
+        code: z.string(),
+        url: z.url(),
+        bonus: z.string(),
+        terms: z.string().optional(),
+        /** "Ongoing" or an explicit date, shown as validity on the promo page. */
+        expiry: z.string().optional(),
+        eligibility: z.string().optional(),
+        alternatives: z
+          .array(z.object({ label: z.string(), url: z.url() }))
+          .default([]),
+      })
+      .optional(),
 
     /** Ordered steps for the "How to get the card" section. */
     howToGet: z.array(z.string()).default([]),
 
-    // -- extensions to the original plan schema --
     variants: z.array(cardVariant).default([]),
     faq: z.array(faqItem).default([]),
+
+    // -- provenance --
+    /** false = imported from a listing and not yet human-verified (noindexed). */
+    verified: z.boolean().default(true),
+    /** Where the data came from, for imported cards. */
+    sourceUrl: z.url().optional(),
+    /** Raw price/limit label shown in listings when structured fees are unknown. */
+    priceLabel: z.string().optional(),
 
     lastVerified: z.coerce.date(),
   }),

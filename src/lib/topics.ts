@@ -16,7 +16,10 @@ export const TOPICS: Topic[] = [
       'Crypto cards that let you get started without uploading an identity document, ranked by our editorial score.',
     intro:
       'Some crypto cards let you open an account and issue a virtual card without a passport or selfie. Limits are usually lower until you verify, but they are the fastest way to start spending crypto.',
-    filter: (card) => card.data.kyc.level === 'none' || card.data.kyc.level === 'basic',
+    filter: (card) => {
+      const level = card.data.kyc?.level;
+      return level === 'none' || level === 'basic';
+    },
   },
   {
     slug: 'bitcoin',
@@ -34,7 +37,7 @@ export const TOPICS: Topic[] = [
       'Crypto cards with no monthly fee, compared on issuance cost, FX markup and limits.',
     intro:
       'A card with no monthly fee keeps your running costs predictable. Watch the issuance fee, the FX markup and any ATM charges that sit behind the headline number.',
-    filter: (card) => card.data.fees.monthly === 0,
+    filter: (card) => card.data.fees?.monthly === 0,
   },
   {
     slug: 'cashback',
@@ -43,8 +46,10 @@ export const TOPICS: Topic[] = [
       'Crypto cards that pay cashback or rewards on your spending, ranked by our editorial score.',
     intro:
       'Cashback cards return a percentage of your spending, usually paid in crypto or stablecoins. Rates move with promotions, so verify the current rate before you rely on it.',
-    filter: (card) =>
-      Boolean(card.data.rewards.cashback) && card.data.rewards.cashback !== 'None',
+    filter: (card) => {
+      const cashback = card.data.rewards?.cashback;
+      return Boolean(cashback) && cashback !== 'None';
+    },
   },
   {
     slug: 'virtual',

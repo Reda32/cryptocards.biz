@@ -1,0 +1,49 @@
+{
+  "name": "Bybit Card",
+  "slug": "bybit-card",
+  "company": "Bybit",
+  "summary": "A high-limit digital Mastercard supporting mobile wallets and real-time crypto-to-fiat conversion.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "10% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bybit-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bybit-card.webp"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Trocador Swype Mastercard",
+  "slug": "trocador-swype-mastercard",
+  "company": "Trocador Swype",
+  "summary": "International virtual prepaid Mastercard purchased via crypto. 3% + $2 issuance fee. $2.50/month fee after 2nd month. $0.75 fee per non-US purchase. ~2% FX fee. Load amounts: $10-$1000. No 3D Secure support. Cannot be used for US purchases.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 2.5,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "XMR",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 5.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$2.5/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/trocador-swype-mastercard",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/trocador-swype-mastercard.webp"
+}

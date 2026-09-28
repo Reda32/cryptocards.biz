@@ -1,0 +1,42 @@
+{
+  "name": "XPlace Card",
+  "slug": "xplace-card",
+  "company": "XPlace",
+  "summary": "Non-custodial crypto card for spending digital assets instantly anywhere, secure, with credit mode or deposit mode (USDC/USDT)",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/xplace-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/xplace-card.webp"
+}

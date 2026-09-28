@@ -58,14 +58,16 @@ const shownCountries = d.countries.slice(0, 12);
 const moreCountries = Math.max(0, d.countries.length - shownCountries.length);
 
 const stepForKyc =
-  d.kyc.level === 'none'
+  !d.kyc || d.kyc.level === 'none'
     ? 'No identity check is required before you can use the card.'
     : `Complete verification: ${KYC_LABELS[d.kyc.level]}. ${d.kyc.notes ?? ''}`.trim();
 
 const defaultSteps = [
-  `Open the ${d.name} sign-up page using our link below — the code is usually pre-filled.`,
-  `Create your account with an email${d.kyc.phone ? ' and phone number' : ''}.`,
-  `Enter the referral code ${d.referral.code} if it is not already applied.`,
+  `Open the ${d.name} sign-up page using our link below.`,
+  `Create your account with an email${d.kyc?.phone ? ' and phone number' : ''}.`,
+  ...(d.referral
+    ? [`Enter the referral code ${d.referral.code} if it is not already applied.`]
+    : []),
   stepForKyc,
   'Make your first top-up and start spending.',
 ];
@@ -99,16 +101,23 @@ const reviewSchema = {
   },
   author: { '@type': 'Organization', name: 'CryptoCards.biz' },
   publisher: { '@type': 'Organization', name: 'CryptoCards.biz' },
-  reviewRating: {
-    '@type': 'Rating',
-    ratingValue: d.rating,
-    bestRating: 10,
-    worstRating: 0,
-  },
+  ...(d.rating !== null && d.rating !== undefined
+    ? {
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: d.rating,
+          bestRating: 10,
+          worstRating: 0,
+        },
+      }
+    : {}),
   datePublished: formatIsoDate(d.lastVerified),
   dateModified: formatIsoDate(d.lastVerified),
   reviewBody: d.summary,
 };
+
+// Only emit Review structured data for human-verified cards with a score.
+const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [reviewSchema] : [];
 ---
 
 <BaseLayout
@@ -117,7 +126,8 @@ const reviewSchema = {
   image={`/og/${d.slug}.png`}
   type="article"
   modifiedTime={d.lastVerified}
-  schemas={[reviewSchema]}
+  noindex={!d.verified}
+  schemas={schemas}
 >
   <Breadcrumbs
     items={[
@@ -136,9 +146,17 @@ const reviewSchema = {
       <div class="min-w-0 space-y-12">
         <Section id="overview" title="Overview">
           <p class="text-slate-600 dark:text-slate-300">
-            {d.summary} Our editorial score is{' '}
-            <strong>{d.rating.toFixed(1)}/10</strong>, based on fees, limits, supported coins, KYC
-            friction and day-to-day usability.
+            {d.summary}
+            {d.rating !== null && d.rating !== undefined ? (
+              <>
+                {' '}Our editorial score is <strong>{d.rating.toFixed(1)}/10</strong>, based on fees,
+                limits, supported coins, KYC friction and day-to-day usability.
+              </>
+            ) : (
+              <>
+                {' '}Our editorial score and full assessment are pending verification for this card.
+              </>
+            )}
           </p>
         </Section>
 
@@ -204,13 +222,15 @@ const reviewSchema = {
             <li class="card-surface flex items-center justify-between p-4 text-sm">
               <span class="text-slate-500 dark:text-slate-400">Card type</span>
               <span class="font-medium text-slate-900 dark:text-white">
-                {d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ')}
+                {d.type.length > 0
+                  ? d.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ')
+                  : 'Not disclosed'}
               </span>
             </li>
             <li class="card-surface flex items-center justify-between p-4 text-sm">
               <span class="text-slate-500 dark:text-slate-400">Network</span>
               <span class="font-medium text-slate-900 dark:text-white">
-                {d.network === 'visa' ? 'Visa' : 'Mastercard'}
+                {d.network === 'visa' ? 'Visa' : d.network === 'mastercard' ? 'Mastercard' : 'Not disclosed'}
               </span>
             </li>
             <li class="card-surface flex items-center justify-between p-4 text-sm">
@@ -306,7 +326,13 @@ const reviewSchema = {
             }
           </ol>
           <div class="mt-5 flex flex-wrap items-center gap-3">
-            <CtaButton slug={d.slug} label={`Get the ${d.name}`} variant="accent" />
+            {d.referral ? (
+              <CtaButton slug={d.slug} label={`Get the ${d.name}`} variant="accent" />
+            ) : (
+              <span class="text-sm text-slate-500 dark:text-slate-400">
+                No verified sign-up link yet.
+              </span>
+            )}
             <a href={`/coupons/${d.slug}`} class="btn-secondary">See promo codes</a>
           </div>
         </Section>
@@ -337,7 +363,11 @@ const reviewSchema = {
             {d.name} promo code
           </h2>
           <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            Use code <strong class="font-mono">{d.referral.code}</strong> — {d.referral.bonus}
+            {d.referral ? (
+              <>Use code <strong class="font-mono">{d.referral.code}</strong> — {d.referral.bonus}</>
+            ) : (
+              'No verified promo code or referral bonus is available for this card yet.'
+            )}
           </p>
           <div class="mt-4 flex flex-wrap items-center gap-3">
             <a href={`/coupons/${d.slug}`} class="btn-primary">View promo codes & coupons</a>
@@ -369,7 +399,9 @@ const reviewSchema = {
       <aside class="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
         <div class="card-surface p-5">
           <h2 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Promo codes & coupons</h2>
-          <p class="mb-3 text-sm text-slate-500 dark:text-slate-400">{d.referral.bonus}</p>
+          <p class="mb-3 text-sm text-slate-500 dark:text-slate-400">
+            {d.referral ? d.referral.bonus : 'No verified promo code yet.'}
+          </p>
           <a href={`/coupons/${d.slug}`} class="btn-primary w-full">Get the bonus</a>
         </div>
 

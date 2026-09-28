@@ -1,0 +1,47 @@
+{
+  "name": "Xapo Bank Card",
+  "slug": "xapo-bank-card",
+  "company": "Xapo Bank",
+  "summary": "Xapo Bank Card is a premium Bitcoin banking card with 1% BTC cashback, zero FX fees, and industry-low 0.1% BTC spread. Part of a licensed Gibraltar private bank with $1,000/year membership.",
+  "type": [
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 83.33,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$83.33/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/xapo-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/xapo-bank-card.webp"
+}

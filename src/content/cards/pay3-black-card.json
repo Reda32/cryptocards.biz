@@ -1,0 +1,42 @@
+{
+  "name": "Pay3 Black Card",
+  "slug": "pay3-black-card",
+  "company": "Pay3 Black",
+  "summary": "Entry-level crypto card with TON and USDT support. New generation credit card utilizing trust infrastructure for maximum privacy and security.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "TON",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/pay3-black-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/pay3-black-card.webp"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Ready Metal Card",
+  "slug": "ready-metal-card",
+  "company": "Ready",
+  "summary": "Premium self-custodial Mastercard with 3% STRK cashback (10% first 30 days). Zero FX fees, zero conversion fees. Funds stay in your wallet until you spend.",
+  "type": [
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 15,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "3% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$15/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/ready-metal-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/ready-metal-card.webp"
+}

@@ -64,7 +64,9 @@ const faq = [
   },
   {
     question: `What KYC is required to get the ${d.name} by country?`,
-    answer: `Verification is the same regardless of region: ${KYC_LABELS[d.kyc.level]}. ${d.kyc.notes ?? ''}`.trim(),
+    answer: d.kyc
+      ? `Verification is the same regardless of region: ${KYC_LABELS[d.kyc.level]}. ${d.kyc.notes ?? ''}`.trim()
+      : `Verification requirements for the ${d.name} have not been confirmed yet.`,
   },
   {
     question: `How do I check if the ${d.name} is available in my country?`,
@@ -88,6 +90,7 @@ const faqSchema = {
   description={`Which countries support the ${d.name}? See supported and restricted countries, eligibility by region, residency and KYC requirements, and how to check availability.`}
   image={`/og/${d.slug}.png`}
   modifiedTime={d.lastVerified}
+  noindex={!d.verified}
   schemas={[faqSchema]}
 >
   <Breadcrumbs
@@ -208,16 +211,16 @@ const faqSchema = {
         <li class="card-surface flex items-center justify-between p-4 text-sm">
           <span class="text-slate-500 dark:text-slate-400">Network</span>
           <span class="font-medium text-slate-900 dark:text-white">
-            {d.network === 'visa' ? 'Visa' : 'Mastercard'}
+            {d.network === 'visa' ? 'Visa' : d.network === 'mastercard' ? 'Mastercard' : 'Not disclosed'}
           </span>
         </li>
         <li class="card-surface flex items-center justify-between p-4 text-sm">
           <span class="text-slate-500 dark:text-slate-400">Daily spend</span>
-          <span class="font-medium text-slate-900 dark:text-white">{d.limits.dailySpend}</span>
+          <span class="font-medium text-slate-900 dark:text-white">{d.limits?.dailySpend ?? 'Not disclosed'}</span>
         </li>
         <li class="card-surface flex items-center justify-between p-4 text-sm">
           <span class="text-slate-500 dark:text-slate-400">Monthly spend</span>
-          <span class="font-medium text-slate-900 dark:text-white">{d.limits.monthlySpend}</span>
+          <span class="font-medium text-slate-900 dark:text-white">{d.limits?.monthlySpend ?? 'Not disclosed'}</span>
         </li>
       </ul>
     </Section>
@@ -225,10 +228,16 @@ const faqSchema = {
     <Section id="residency" title="Residency & KYC requirements">
       <div class="card-surface p-5 text-sm text-slate-600 dark:text-slate-300">
         <p>
-          Residency requirements are set by the provider and verified during onboarding. The {d.name}{' '}
-          requires <strong>{KYC_LABELS[d.kyc.level]}</strong> regardless of country.
+          Residency requirements are set by the provider and verified during onboarding.
+          {
+            d.kyc ? (
+              <>The {d.name} requires <strong>{KYC_LABELS[d.kyc.level]}</strong> regardless of country.</>
+            ) : (
+              <>Verification requirements for the {d.name} have not been confirmed yet.</>
+            )
+          }
         </p>
-        {d.kyc.notes && <p class="mt-3">{d.kyc.notes}</p>}
+        {d.kyc?.notes && <p class="mt-3">{d.kyc.notes}</p>}
       </div>
     </Section>
 

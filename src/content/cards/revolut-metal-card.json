@@ -1,0 +1,55 @@
+{
+  "name": "Revolut Metal Card",
+  "slug": "revolut-metal-card",
+  "company": "Revolut",
+  "summary": "Revolut Metal Card is a premium metal card offering 1% cashback on purchases outside Europe, fee-free ATM withdrawals up to €800/month, and unlimited currency exchanges. Part of the €14.99/month Metal subscription.",
+  "type": [
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 14.99,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$14.99/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/revolut-metal-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/revolut-metal-card.webp"
+}

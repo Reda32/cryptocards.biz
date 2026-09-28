@@ -1,0 +1,37 @@
+{
+  "name": "Amp Black Card",
+  "slug": "amp-black-card",
+  "company": "Amp Black",
+  "summary": "Visa card with up to 4% cashback. No monthly fees, no account minimums, no credit check. Free global USDC transfers.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "4% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/amp-pay-black-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/amp-black-card.webp"
+}

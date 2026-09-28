@@ -1,0 +1,35 @@
+{
+  "name": "Flex Business Reward Card",
+  "slug": "flex-business-reward-card",
+  "company": "Flex",
+  "summary": "A Visa business card offering up to 2% cashback and high-yield treasury accounts for corporate fiat management.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [
+    "business"
+  ],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/flexbase-technologies-inc-flex-business-reward-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/flex-business-reward-card.webp"
+}

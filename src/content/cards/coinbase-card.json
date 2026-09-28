@@ -1,0 +1,50 @@
+{
+  "name": "Coinbase Card",
+  "slug": "coinbase-card",
+  "company": "Coinbase",
+  "summary": "Coinbase Card is a Visa debit card that lets you spend crypto anywhere Visa is accepted. Earn up to 4% back in crypto rewards on purchases. Available to verified Coinbase users in the US.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/coinbase-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/coinbase-card.webp"
+}

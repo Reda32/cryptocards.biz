@@ -1,0 +1,45 @@
+{
+  "name": "Physical Paysend Mastercard",
+  "slug": "physical-paysend-mastercard",
+  "company": "Physical Paysend",
+  "summary": "A legacy physical plastic card for global ATM withdrawals and point-of-sale transactions, currently serviced for existing holders only.",
+  "type": [
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/paysend-group-physical-paysend-mastercard",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/physical-paysend-mastercard.webp"
+}

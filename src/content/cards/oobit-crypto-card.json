@@ -1,0 +1,49 @@
+{
+  "name": "Oobit Crypto Card",
+  "slug": "oobit-crypto-card",
+  "company": "Oobit Crypto",
+  "summary": "The Oobit Crypto Card is a fee-free virtual card that lets you spend directly from your crypto wallet or in-app balance, no conversion hassle required. This hybrid custody model gives you flexibility most crypto cards don't, plus cashback up to 10% in OOB or 5% in USDT. It supports USDT, Bitcoin, Ethereum, and other stablecoins, and works at 150M+ Visa merchants worldwide, backed by Tether.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "10% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/oobit-tap-pay",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/oobit-crypto-card.webp"
+}

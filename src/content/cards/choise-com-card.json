@@ -1,0 +1,55 @@
+{
+  "name": "Choise.com Card",
+  "slug": "choise-com-card",
+  "company": "Choise.com",
+  "summary": "Choise.com Card (formerly Crypterium) offers crypto spending in 170+ countries with the CHO token ecosystem. Virtual cards ready in 20 minutes, €2.99/month fee waived with €299+ monthly load.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 2.99,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$2.99/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/choise-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/choise-com-card.webp"
+}

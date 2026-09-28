@@ -1,0 +1,48 @@
+{
+  "name": "ZEN.COM Smart Business",
+  "slug": "zen-com-smart-business",
+  "company": "ZEN.COM Smart",
+  "summary": "A free business card for entrepreneurs and small companies needing multi-currency accounts.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [
+    "business"
+  ],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/zencom-smart-business",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/zen-com-smart-business.webp"
+}

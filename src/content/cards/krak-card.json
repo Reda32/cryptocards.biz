@@ -1,0 +1,33 @@
+{
+  "name": "Krak Card",
+  "slug": "krak-card",
+  "company": "Krak",
+  "summary": "Kraken debit card with no FX fees across 400+ currencies. Up to 1% cashback in fiat or BTC. No ATM fee from Kraken. Metal card for high-balance accounts.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/krak-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/krak-card.webp"
+}

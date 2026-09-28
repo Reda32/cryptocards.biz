@@ -1,0 +1,49 @@
+{
+  "name": "Bitpanda Card",
+  "slug": "bitpanda-card",
+  "company": "Bitpanda",
+  "summary": "Bitpanda Card lets you spend crypto, fiat, or precious metals with real-time conversion. Earn 1-2% cashback in BTC based on BEST/VSN token holdings. MiCAR regulated in Europe.",
+  "type": [
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bitpanda-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bitpanda-card.webp"
+}

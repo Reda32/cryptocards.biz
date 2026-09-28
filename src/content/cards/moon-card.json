@@ -1,0 +1,43 @@
+{
+  "name": "Moon Card",
+  "slug": "moon-card",
+  "company": "Moon",
+  "summary": "Prepaid virtual cards funded with Bitcoin via Lightning Network. Create disposable cards for online purchases.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 20,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 2.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$20/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/paywithmoon",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/moon-card.webp"
+}

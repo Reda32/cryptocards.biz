@@ -1,0 +1,49 @@
+{
+  "name": "LinkPay Ultra",
+  "slug": "linkpay-ultra",
+  "company": "LinkPay Ultra",
+  "summary": "Enterprise plan at $299/month. 1% transaction fee (min $0), free deposits, free decline fees. 3% cashback capped at $299/month (equals subscription cost). 100 free cards/month. 50 team members.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "3% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "TRX",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$299/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/linkpay-ultra",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/linkpay-ultra.webp"
+}

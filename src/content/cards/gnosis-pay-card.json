@@ -1,0 +1,45 @@
+{
+  "name": "Gnosis Pay Card",
+  "slug": "gnosis-pay-card",
+  "company": "Gnosis Pay",
+  "summary": "True self-custodial Visa via Safe smart contract wallet. 0% conversion fee (just gas). 5 free ATM withdrawals/month. €8K daily spend, €500 daily ATM. Gasless card purchases.",
+  "type": [
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "4% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "EURE",
+      "networks": []
+    },
+    {
+      "symbol": "GBPE",
+      "networks": []
+    },
+    {
+      "symbol": "USDCE",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/gnosis-pay-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/gnosis-pay-card.webp"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "PayWide Business Program Virtual Card",
+  "slug": "paywide-business-program-virtual-card",
+  "company": "PayWide",
+  "summary": "A premium virtual card tier for higher-volume users and NFT projects, offering a $10,000 limit and custom token support.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [
+    "business"
+  ],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "DAI",
+      "networks": []
+    },
+    {
+      "symbol": "UNI",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 4.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/paywide-paywide-business-program-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/paywide-business-program-virtual-card.webp"
+}

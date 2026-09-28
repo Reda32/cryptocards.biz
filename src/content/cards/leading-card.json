@@ -1,0 +1,46 @@
+{
+  "name": "Leading Card",
+  "slug": "leading-card",
+  "company": "Leading",
+  "summary": "A prepaid virtual card solution optimized for digital advertising, featuring 3DS security and access to over 50 BINs to prevent account bans.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 5,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 4.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$5/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/leading-card",
+  "lastVerified": "2026-09-28"
+}

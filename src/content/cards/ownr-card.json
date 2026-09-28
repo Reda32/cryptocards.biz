@@ -1,0 +1,56 @@
+{
+  "name": "OWNR Card",
+  "slug": "ownr-card",
+  "company": "OWNR",
+  "summary": "OWNR Card is a Visa prepaid card from Estonia supporting BTC, ETH, LTC, and USDT. Low KYC threshold ($50) for basic use with global ATM access. €1.50/month fee.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 1.5,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$1.5/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/ownr-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/ownr-card.webp"
+}

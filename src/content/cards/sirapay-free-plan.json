@@ -1,0 +1,41 @@
+{
+  "name": "SiraPay Free Plan",
+  "slug": "sirapay-free-plan",
+  "company": "SiraPay Free Plan",
+  "summary": "A free-forever virtual card plan requiring no monthly subscription, designed to provide users with essential privacy-first global spending capabilities.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/sirapay-sirapay-free-plan",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/sirapay-free-plan.webp"
+}

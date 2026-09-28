@@ -1,0 +1,46 @@
+{
+  "name": "Avalanche Card International",
+  "slug": "avalanche-card-international",
+  "company": "Avalanche Card International",
+  "summary": "A crypto-powered credit card designed for international users, particularly in LATAM and the Caribbean, featuring self-custody and global Visa acceptance.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "AVAX",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/rain-liquidity-llc-avalanche-card-international",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/avalanche-card-international.webp"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "SolCard Full Access",
+  "slug": "solcard-full-access",
+  "company": "SolCard Full Access",
+  "summary": "A high-limit virtual Visa card with Apple and Google Pay support, designed for verified users seeking lower fees.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 1,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "8% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$1/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/solcard-full-access",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/solcard-full-access.webp"
+}

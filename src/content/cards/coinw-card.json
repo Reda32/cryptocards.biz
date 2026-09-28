@@ -1,0 +1,46 @@
+{
+  "name": "CoinW Card",
+  "slug": "coinw-card",
+  "company": "CoinW",
+  "summary": "Visa/Mastercard crypto card from Singapore bank. $15 virtual / $98 physical issuance. 2% top-up fee, 1% transaction fee (2% non-USD). No annual fees.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/coinw-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/coinw-card.webp"
+}

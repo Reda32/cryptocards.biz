@@ -103,6 +103,25 @@ sitemap, then commit with a message like `Add <Card Name> card`.
 
 ---
 
+## Bulk import (listing scrape)
+
+Cards imported from a listing scrape are marked `verified: false`. They render,
+but their review / coupons / countries pages are **noindexed** and excluded from
+the sitemap until a human fills in fees, limits, KYC, countries and review copy,
+then flips `verified` to `true`.
+
+```bash
+node scripts/import-cards.mjs data/source-cards.json   # import/skip duplicates
+node scripts/normalize-logos.mjs                        # rasterise logos to WebP with a fitting background
+```
+
+- Import skips any card whose normalized name/slug/company already exists.
+- Logos are self-hosted under `public/logos/imported/`. Light logos (built for
+  dark backgrounds) get a dark tile so they stay visible.
+- Never leave an imported card `verified: true` without real, checked data.
+
+---
+
 ## Conventions
 
 - No comments unless they add real value.

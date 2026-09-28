@@ -1,0 +1,45 @@
+{
+  "name": "Fiat24 Card",
+  "slug": "fiat24-card",
+  "company": "Fiat24",
+  "summary": "Swiss regulated Web3 debit card with IBAN. Built on Arbitrum blockchain with NFT-based account credentials. FINMA licensed.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/fiat24-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/fiat24-card.webp"
+}

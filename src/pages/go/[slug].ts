@@ -10,7 +10,7 @@ export const GET: APIRoute = async ({ params, request, redirect, url }) => {
 
   const cards = await getCollection('cards');
   const card = cards.find((entry) => entry.data.slug === slug || entry.id === slug);
-  if (!card) return new Response('Unknown card', { status: 404 });
+  if (!card || !card.data.referral) return new Response('Unknown card', { status: 404 });
 
   // Best-effort analytics; never block or break the redirect.
   void logClick(card.data.slug, request, url);

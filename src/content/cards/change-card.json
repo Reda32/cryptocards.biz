@@ -1,0 +1,50 @@
+{
+  "name": "Change Card",
+  "slug": "change-card",
+  "company": "Change",
+  "summary": "Change Card integrates with the Change trading platform offering 0% Bitcoin fees. Free transfers up to €15,000/month with staking rewards up to 6% APY. EU-regulated under Estonian license.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 7.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/change-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/change-card.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "name": "RivoCard Starter Virtual Card",
+  "slug": "rivocard-starter-virtual-card",
+  "company": "RivoCard",
+  "summary": "A free-to-create virtual prepaid card for individuals and casual shoppers, offering instant issuance and secure online spending with no monthly fees.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/rivocard-rivocard-starter-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/rivocard-starter-virtual-card.webp"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Hide Card Virtual Card",
+  "slug": "hide-card-virtual-card",
+  "company": "Hide",
+  "summary": "A virtual prepaid card allowing users to spend over 10 different cryptocurrencies at online merchants globally.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 4.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/hide-card-hide-card-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/hide-card-virtual-card.webp"
+}

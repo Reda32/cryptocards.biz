@@ -27,7 +27,7 @@ export function groupByCountry(cards: Card[]): CountryGroup[] {
   return [...map.values()]
     .map((group) => ({
       ...group,
-      cards: group.cards.sort((a, b) => b.data.rating - a.data.rating),
+      cards: group.cards.sort((a, b) => (b.data.rating ?? -1) - (a.data.rating ?? -1)),
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
 }

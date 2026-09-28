@@ -4,8 +4,8 @@ import { usd, percent, type Fees, type Limits, type Rewards } from '@/lib/types'
 type Block = 'fees' | 'limits' | 'rewards';
 
 interface Props {
-  fees: Fees;
-  limits: Limits;
+  fees?: Fees;
+  limits?: Limits;
   rewards?: Rewards;
   /** Which blocks to render. Defaults to all three. */
   show?: Block[];
@@ -25,20 +25,25 @@ const gridClass =
       ? 'grid gap-4 sm:grid-cols-2'
       : 'grid gap-4';
 
-const feeRows: { label: string; value: string }[] = [
-  { label: 'Card issuance', value: usd(fees.issuance) },
-  { label: 'Monthly fee', value: usd(fees.monthly) },
-  { label: 'FX markup', value: percent(fees.fx) },
-  { label: 'ATM withdrawal', value: fees.atm },
-];
-if (fees.topup) feeRows.push({ label: 'Top-up', value: fees.topup });
-if (fees.decline !== undefined) feeRows.push({ label: 'Declined transaction', value: usd(fees.decline) });
+const feeRows: { label: string; value: string }[] = [];
+if (fees) {
+  feeRows.push(
+    { label: 'Card issuance', value: usd(fees.issuance) },
+    { label: 'Monthly fee', value: usd(fees.monthly) },
+    { label: 'FX markup', value: percent(fees.fx) },
+    { label: 'ATM withdrawal', value: fees.atm },
+  );
+  if (fees.topup) feeRows.push({ label: 'Top-up', value: fees.topup });
+  if (fees.decline !== undefined) feeRows.push({ label: 'Declined transaction', value: usd(fees.decline) });
+}
 
-const limitRows: { label: string; value: string }[] = [
-  { label: 'Daily spend', value: limits.dailySpend },
-  { label: 'Monthly spend', value: limits.monthlySpend },
-  { label: 'ATM withdrawal', value: limits.atmWithdrawal },
-];
+const limitRows: { label: string; value: string }[] = limits
+  ? [
+      { label: 'Daily spend', value: limits.dailySpend },
+      { label: 'Monthly spend', value: limits.monthlySpend },
+      { label: 'ATM withdrawal', value: limits.atmWithdrawal },
+    ]
+  : [];
 
 const rewardRows: { label: string; value?: string }[] = [
   { label: 'Cashback', value: rewards?.cashback },
@@ -53,14 +58,18 @@ const rewardRows: { label: string; value?: string }[] = [
     showFees && (
       <div class="card-surface overflow-hidden">
         <h3 class="border-b border-slate-200 px-5 py-3 text-sm font-bold dark:border-slate-800">Fees</h3>
-        <dl class="divide-y divide-slate-100 dark:divide-slate-800/60">
-          {feeRows.map((row) => (
-            <div class="flex items-center justify-between px-5 py-2.5 text-sm">
-              <dt class="text-slate-500 dark:text-slate-400">{row.label}</dt>
-              <dd class="font-medium text-slate-900 dark:text-white">{row.value}</dd>
-            </div>
-          ))}
-        </dl>
+        {feeRows.length > 0 ? (
+          <dl class="divide-y divide-slate-100 dark:divide-slate-800/60">
+            {feeRows.map((row) => (
+              <div class="flex items-center justify-between px-5 py-2.5 text-sm">
+                <dt class="text-slate-500 dark:text-slate-400">{row.label}</dt>
+                <dd class="font-medium text-slate-900 dark:text-white">{row.value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : (
+          <p class="px-5 py-4 text-sm text-slate-500 dark:text-slate-400">Not disclosed yet.</p>
+        )}
       </div>
     )
   }
@@ -69,14 +78,18 @@ const rewardRows: { label: string; value?: string }[] = [
     showLimits && (
       <div class="card-surface overflow-hidden">
         <h3 class="border-b border-slate-200 px-5 py-3 text-sm font-bold dark:border-slate-800">Limits</h3>
-        <dl class="divide-y divide-slate-100 dark:divide-slate-800/60">
-          {limitRows.map((row) => (
-            <div class="flex items-center justify-between gap-4 px-5 py-2.5 text-sm">
-              <dt class="text-slate-500 dark:text-slate-400">{row.label}</dt>
-              <dd class="text-right font-medium text-slate-900 dark:text-white">{row.value}</dd>
-            </div>
-          ))}
-        </dl>
+        {limitRows.length > 0 ? (
+          <dl class="divide-y divide-slate-100 dark:divide-slate-800/60">
+            {limitRows.map((row) => (
+              <div class="flex items-center justify-between gap-4 px-5 py-2.5 text-sm">
+                <dt class="text-slate-500 dark:text-slate-400">{row.label}</dt>
+                <dd class="text-right font-medium text-slate-900 dark:text-white">{row.value}</dd>
+              </div>
+            ))}
+          </dl>
+        ) : (
+          <p class="px-5 py-4 text-sm text-slate-500 dark:text-slate-400">Not disclosed yet.</p>
+        )}
       </div>
     )
   }

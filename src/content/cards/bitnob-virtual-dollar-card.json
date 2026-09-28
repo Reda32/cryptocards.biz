@@ -1,0 +1,37 @@
+{
+  "name": "Bitnob Virtual Dollar Card",
+  "slug": "bitnob-virtual-dollar-card",
+  "company": "Bitnob",
+  "summary": "Africa-focused virtual dollar card for global payments. Bitcoin buying/selling, cross-border transfers. Works for business subscriptions and international purchases without restrictions.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bitnob-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bitnob-virtual-dollar-card.webp"
+}

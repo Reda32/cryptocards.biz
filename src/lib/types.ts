@@ -48,18 +48,18 @@ export type CompareCard = {
   company: string;
   logo?: string;
   brandColor?: string;
-  network: CardNetwork;
+  network?: CardNetwork;
   type: CardType[];
   wallets: Wallet[];
   features: string[];
-  rating: number;
-  fees: Fees;
-  limits: Limits;
-  rewards: Rewards;
-  kyc: KycInfo;
+  rating?: number | null;
+  fees?: Fees;
+  limits?: Limits;
+  rewards?: Rewards;
+  kyc?: KycInfo;
   cryptos: { symbol: string; networks: string[] }[];
   countries: string[];
-  referral: { code: string; url: string };
+  referral?: { code: string; url: string };
   communityScore: number | null;
 };
 

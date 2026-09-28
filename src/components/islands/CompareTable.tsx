@@ -35,9 +35,10 @@ const ROWS: Row[] = [
     label: 'Overall score',
     best: 'high',
     cell: (c) => ({
-      text: c.rating.toFixed(1),
-      sort: c.rating,
-      tone: c.rating >= 8 ? 'good' : c.rating >= 6.5 ? 'warn' : 'bad',
+      text: c.rating != null ? c.rating.toFixed(1) : 'Not rated',
+      sort: c.rating ?? null,
+      tone:
+        c.rating == null ? undefined : c.rating >= 8 ? 'good' : c.rating >= 6.5 ? 'warn' : 'bad',
     }),
   },
   {
@@ -48,11 +49,16 @@ const ROWS: Row[] = [
       sort: c.communityScore,
     }),
   },
-  { label: 'Network', cell: (c) => ({ text: c.network === 'visa' ? 'Visa' : 'Mastercard' }) },
+  {
+    label: 'Network',
+    cell: (c) => ({
+      text: c.network === 'visa' ? 'Visa' : c.network === 'mastercard' ? 'Mastercard' : '—',
+    }),
+  },
   {
     label: 'Card type',
     cell: (c) => ({
-      text: c.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + '),
+      text: c.type.length > 0 ? c.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ') : '—',
     }),
   },
   {
@@ -70,36 +76,46 @@ const ROWS: Row[] = [
     label: 'KYC level',
     best: 'low',
     cell: (c) => ({
-      text: KYC_LABELS[c.kyc.level],
-      sort: KYC_RANK[c.kyc.level],
-      tone: c.kyc.level === 'none' ? 'good' : c.kyc.level === 'full' ? 'bad' : 'warn',
+      text: c.kyc ? KYC_LABELS[c.kyc.level] : '—',
+      sort: c.kyc ? KYC_RANK[c.kyc.level] : null,
+      tone: c.kyc
+        ? c.kyc.level === 'none'
+          ? 'good'
+          : c.kyc.level === 'full'
+            ? 'bad'
+            : 'warn'
+        : undefined,
     }),
   },
   {
     label: 'Issuance fee',
     best: 'low',
-    cell: (c) => ({ text: usd(c.fees.issuance), sort: c.fees.issuance }),
+    cell: (c) => (c.fees ? { text: usd(c.fees.issuance), sort: c.fees.issuance } : { text: '—' }),
   },
   {
     label: 'Monthly fee',
     best: 'low',
-    cell: (c) => ({ text: usd(c.fees.monthly), sort: c.fees.monthly }),
+    cell: (c) => (c.fees ? { text: usd(c.fees.monthly), sort: c.fees.monthly } : { text: '—' }),
   },
   {
     label: 'FX markup',
     best: 'low',
-    cell: (c) => ({ text: percent(c.fees.fx), sort: c.fees.fx }),
+    cell: (c) => (c.fees ? { text: percent(c.fees.fx), sort: c.fees.fx } : { text: '—' }),
   },
-  { label: 'ATM fee', cell: (c) => ({ text: c.fees.atm }) },
+  { label: 'ATM fee', cell: (c) => ({ text: c.fees ? c.fees.atm : '—' }) },
   {
     label: 'Daily spend',
     best: 'high',
-    cell: (c) => ({ text: c.limits.dailySpend, sort: parseLimit(c.limits.dailySpend) }),
+    cell: (c) =>
+      c.limits ? { text: c.limits.dailySpend, sort: parseLimit(c.limits.dailySpend) } : { text: '—' },
   },
   {
     label: 'Monthly spend',
     best: 'high',
-    cell: (c) => ({ text: c.limits.monthlySpend, sort: parseLimit(c.limits.monthlySpend) }),
+    cell: (c) =>
+      c.limits
+        ? { text: c.limits.monthlySpend, sort: parseLimit(c.limits.monthlySpend) }
+        : { text: '—' },
   },
   {
     label: 'Cryptocurrencies',
@@ -119,7 +135,7 @@ const ROWS: Row[] = [
   },
   {
     label: 'Cashback',
-    cell: (c) => ({ text: c.rewards.cashback ?? 'None' }),
+    cell: (c) => ({ text: c.rewards?.cashback ?? 'None' }),
   },
 ];
 
@@ -341,7 +357,7 @@ export default function CompareTable() {
                   </th>
                   {selected.map((card) => (
                     <td class="px-4 py-3" key={card.slug}>
-                      <CopyCode code={card.referral.code} />
+                      {card.referral ? <CopyCode code={card.referral.code} /> : <span class="text-slate-400">—</span>}
                     </td>
                   ))}
                 </tr>
@@ -351,14 +367,20 @@ export default function CompareTable() {
                   </th>
                   {selected.map((card) => (
                     <td class="px-4 py-3" key={card.slug}>
-                      <a
-                        href={`/go/${card.slug}`}
-                        rel="sponsored nofollow noopener"
-                        target="_blank"
-                        class="btn-primary"
-                      >
-                        Get card
-                      </a>
+                      {card.referral ? (
+                        <a
+                          href={`/go/${card.slug}`}
+                          rel="sponsored nofollow noopener"
+                          target="_blank"
+                          class="btn-primary"
+                        >
+                          Get card
+                        </a>
+                      ) : (
+                        <a href={`/cards/${card.slug}`} class="btn-secondary">
+                          Details
+                        </a>
+                      )}
                     </td>
                   ))}
                 </tr>

@@ -29,6 +29,13 @@ const { a, b } = Astro.props as { a: Card; b: Card };
 const A = a.data;
 const B = b.data;
 
+const ratingValue = (value: number | null | undefined) =>
+  typeof value === 'number' ? value : 0;
+const fee = (value: typeof A.fees) =>
+  value ?? { issuance: 0, monthly: 0, fx: 0, atm: 'Not disclosed' };
+const kyc = (value: typeof A.kyc) => value ?? { level: 'id' as const };
+const kycRank = { none: 0, basic: 1, id: 2, full: 3 } as const;
+
 interface Metric {
   label: string;
   aText: string;
@@ -41,34 +48,34 @@ interface Metric {
 const metrics: Metric[] = [
   {
     label: 'Editorial score',
-    aText: A.rating.toFixed(1),
-    bText: B.rating.toFixed(1),
-    aValue: A.rating,
-    bValue: B.rating,
+    aText: ratingValue(A.rating).toFixed(1),
+    bText: ratingValue(B.rating).toFixed(1),
+    aValue: ratingValue(A.rating),
+    bValue: ratingValue(B.rating),
     best: 'high',
   },
   {
     label: 'Monthly fee',
-    aText: usd(A.fees.monthly),
-    bText: usd(B.fees.monthly),
-    aValue: A.fees.monthly,
-    bValue: B.fees.monthly,
+    aText: usd(fee(A.fees).monthly),
+    bText: usd(fee(B.fees).monthly),
+    aValue: fee(A.fees).monthly,
+    bValue: fee(B.fees).monthly,
     best: 'low',
   },
   {
     label: 'Issuance fee',
-    aText: usd(A.fees.issuance),
-    bText: usd(B.fees.issuance),
-    aValue: A.fees.issuance,
-    bValue: B.fees.issuance,
+    aText: usd(fee(A.fees).issuance),
+    bText: usd(fee(B.fees).issuance),
+    aValue: fee(A.fees).issuance,
+    bValue: fee(B.fees).issuance,
     best: 'low',
   },
   {
     label: 'FX markup',
-    aText: percent(A.fees.fx),
-    bText: percent(B.fees.fx),
-    aValue: A.fees.fx,
-    bValue: B.fees.fx,
+    aText: percent(fee(A.fees).fx),
+    bText: percent(fee(B.fees).fx),
+    aValue: fee(A.fees).fx,
+    bValue: fee(B.fees).fx,
     best: 'low',
   },
   {
@@ -87,18 +94,15 @@ const metrics: Metric[] = [
     bValue: B.countries.length,
     best: 'high',
   },
+  {
+    label: 'KYC requirement',
+    aText: KYC_LABELS[kyc(A.kyc).level],
+    bText: KYC_LABELS[kyc(B.kyc).level],
+    aValue: kycRank[kyc(A.kyc).level],
+    bValue: kycRank[kyc(B.kyc).level],
+    best: 'low',
+  },
 ];
-
-const kycRank = { none: 0, basic: 1, id: 2, full: 3 } as const;
-const kycMetric: Metric = {
-  label: 'KYC requirement',
-  aText: KYC_LABELS[A.kyc.level],
-  bText: KYC_LABELS[B.kyc.level],
-  aValue: kycRank[A.kyc.level],
-  bValue: kycRank[B.kyc.level],
-  best: 'low',
-};
-metrics.push(kycMetric);
 
 const winners = (metric: Metric): 0 | 1 | null => {
   if (metric.best === 'none' || metric.aValue === metric.bValue) return null;
@@ -109,10 +113,17 @@ const winners = (metric: Metric): 0 | 1 | null => {
 const aWins = metrics.filter((m) => winners(m) === 0).length;
 const bWins = metrics.filter((m) => winners(m) === 1).length;
 
-const verdictWinner = aWins === bWins ? (A.rating >= B.rating ? A : B) : aWins > bWins ? A : B;
+const verdictWinner =
+  aWins === bWins
+    ? ratingValue(A.rating) >= ratingValue(B.rating)
+      ? A
+      : B
+    : aWins > bWins
+      ? A
+      : B;
 const verdictLoser = verdictWinner === A ? B : A;
 
-const verdict = `${verdictWinner.name} wins ${Math.max(aWins, bWins)} of ${metrics.length} categories. It scores ${verdictWinner.rating.toFixed(1)}/10 overall against ${verdictLoser.rating.toFixed(1)}/10 for ${verdictLoser.name}, and is the better pick for most people — though ${verdictLoser.name} remains strong where it wins below.`;
+const verdict = `${verdictWinner.name} wins ${Math.max(aWins, bWins)} of ${metrics.length} categories. It scores ${ratingValue(verdictWinner.rating).toFixed(1)}/10 overall against ${ratingValue(verdictLoser.rating).toFixed(1)}/10 for ${verdictLoser.name}, and is the better pick for most people — though ${verdictLoser.name} remains strong where it wins below.`;
 
 const faq = [
   {
@@ -121,11 +132,11 @@ const faq = [
   },
   {
     question: `Which is cheaper, ${A.name} or ${B.name}?`,
-    answer: `${A.name} charges a ${percent(A.fees.fx)} FX markup with a ${usd(A.fees.monthly)} monthly fee and ${usd(A.fees.issuance)} issuance cost. ${B.name} charges a ${percent(B.fees.fx)} FX markup with a ${usd(B.fees.monthly)} monthly fee and ${usd(B.fees.issuance)} issuance cost. Lower fees are highlighted in the table above.`,
+    answer: `${A.name} charges a ${percent(fee(A.fees).fx)} FX markup with a ${usd(fee(A.fees).monthly)} monthly fee and ${usd(fee(A.fees).issuance)} issuance cost. ${B.name} charges a ${percent(fee(B.fees).fx)} FX markup with a ${usd(fee(B.fees).monthly)} monthly fee and ${usd(fee(B.fees).issuance)} issuance cost. Lower fees are highlighted in the table above.`,
   },
   {
     question: `Which has the easier sign-up, ${A.name} or ${B.name}?`,
-    answer: `${A.name} requires ${KYC_LABELS[A.kyc.level]}, while ${B.name} requires ${KYC_LABELS[B.kyc.level]}. If minimising verification matters, choose the lower tier — but check the limits that apply before KYC.`,
+    answer: `${A.name} requires ${KYC_LABELS[kyc(A.kyc).level]}, while ${B.name} requires ${KYC_LABELS[kyc(B.kyc).level]}. If minimising verification matters, choose the lower tier — but check the limits that apply before KYC.`,
   },
 ];
 
@@ -176,7 +187,8 @@ const faqSchema = {
               <div>
                 <h2 class="font-bold text-slate-900 dark:text-white">{card.data.name}</h2>
                 <p class="text-sm text-slate-500 dark:text-slate-400">
-                  {card.data.company} · {card.data.rating.toFixed(1)}/10
+                  {card.data.company}
+                  {card.data.rating != null ? ` · ${card.data.rating.toFixed(1)}/10` : ''}
                 </p>
               </div>
             </div>

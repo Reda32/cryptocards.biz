@@ -21,10 +21,10 @@ const inCountry = cards.filter((card) => card.data.countries.includes(countryNam
 const scoreFor = (slug: string) =>
   communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
 
-const easiest = [...inCountry].sort((a, b) => {
-  const rank = { none: 0, basic: 1, id: 2, full: 3 };
-  return rank[a.data.kyc.level] - rank[b.data.kyc.level];
-})[0];
+const kycRank = { none: 0, basic: 1, id: 2, full: 3 } as const;
+const easiest = [...inCountry]
+  .filter((card) => card.data.kyc)
+  .sort((a, b) => kycRank[a.data.kyc!.level] - kycRank[b.data.kyc!.level])[0];
 ---
 
 <BaseLayout
@@ -48,7 +48,7 @@ const easiest = [...inCountry].sort((a, b) => {
         KYC requirements are set by each provider and can differ from the global average — check the
         card page for the details we verified.
         {
-          easiest && (
+          easiest?.data.kyc && (
             <> The easiest to start with is <strong>{easiest.data.name}</strong> ({KYC_LABELS[easiest.data.kyc.level]}).</>
           )
         }

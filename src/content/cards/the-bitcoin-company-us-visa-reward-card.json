@@ -1,0 +1,38 @@
+{
+  "name": "The Bitcoin Company US Visa Reward Card",
+  "slug": "the-bitcoin-company-us-visa-reward-card",
+  "company": "The Bitcoin Company US",
+  "summary": "A non-reloadable prepaid Visa card for US merchants, purchasable with Bitcoin via Lightning or on-chain with instant rewards.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0.21% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/the-bitcoin-company-the-bitcoin-company-us-visa-reward-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/the-bitcoin-company-us-visa-reward-card.webp"
+}

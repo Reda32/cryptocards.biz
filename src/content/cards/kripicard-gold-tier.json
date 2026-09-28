@@ -1,0 +1,55 @@
+{
+  "name": "Kripicard Gold Tier",
+  "slug": "kripicard-gold-tier",
+  "company": "Kripicard Gold Tier",
+  "summary": "An entry-level, virtual-only Visa/Mastercard issued by a U.S. bank, tailored for crypto holders needing instant spend access with minimal KYC requirements.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 1.5,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$1.5/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/kripicard-kripicard-gold-tier",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/kripicard-gold-tier.webp"
+}

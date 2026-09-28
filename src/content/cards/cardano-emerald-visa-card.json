@@ -1,0 +1,50 @@
+{
+  "name": "Cardano Emerald Visa Card",
+  "slug": "cardano-emerald-visa-card",
+  "company": "Cardano Emerald",
+  "summary": "Spend ADA and other major crypto assets anywhere Visa is accepted while contributing to the Cardano Treasury.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "ADA",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/cardano-emerald-visa",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/cardano-emerald-visa-card.webp"
+}

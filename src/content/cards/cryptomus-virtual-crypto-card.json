@@ -1,0 +1,41 @@
+{
+  "name": "Cryptomus Virtual Crypto Card",
+  "slug": "cryptomus-virtual-crypto-card",
+  "company": "Cryptomus",
+  "summary": "A digital-only prepaid card funded with USDT or USDC, supporting Apple Pay and Google Pay for global online and in-store payments.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/cryptomus-cryptomus-virtual-crypto-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/cryptomus-virtual-crypto-card.webp"
+}

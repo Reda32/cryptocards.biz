@@ -1,0 +1,50 @@
+{
+  "name": "Binance Visa Card",
+  "slug": "binance-visa-card",
+  "company": "Binance",
+  "summary": "Binance Visa Card lets you spend crypto at 60+ million merchants worldwide. Earn up to 8% cashback in BNB based on your BNB holdings. Free issuance with zero transaction fees.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0.1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "BNB",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/binance-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/binance-visa-card.webp"
+}

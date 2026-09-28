@@ -1,0 +1,50 @@
+{
+  "name": "BitMart Card",
+  "slug": "bitmart-card",
+  "company": "BitMart",
+  "summary": "A Visa-powered crypto card drawing directly from your BitMart Spot Account with real-time conversion and tiered cashback rewards.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "5.5% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bitmart-bitmart-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bitmart-card.webp"
+}

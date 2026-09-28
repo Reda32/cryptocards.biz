@@ -1,0 +1,42 @@
+{
+  "name": "Bitget Wallet Card",
+  "slug": "bitget-wallet-card",
+  "company": "Bitget Wallet",
+  "summary": "Web3-native crypto card with 1.7% comprehensive fee. $400/mo 0-fee quota, up to 8% APY on stablecoins. Minimal KYC (ID + facial check in ~3 min). $5 instant reward after KYC.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/bitget-wallet-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bitget-wallet-card.webp"
+}

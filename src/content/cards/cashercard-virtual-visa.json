@@ -1,0 +1,49 @@
+{
+  "name": "CasherCard Virtual Visa",
+  "slug": "cashercard-virtual-visa",
+  "company": "CasherCard",
+  "summary": "An instant-issuance, reloadable virtual Visa funded by cryptocurrency, designed for frictionless international shopping and digital wallets.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/cashercard-cashercard-virtual-visa",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/cashercard-virtual-visa.webp"
+}

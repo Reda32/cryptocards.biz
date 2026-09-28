@@ -1,0 +1,32 @@
+{
+  "name": "Zypto Premium Physical Card",
+  "slug": "zypto-premium-physical-card",
+  "company": "Zypto",
+  "summary": "High-limit physical Visa card with $1M monthly spend and $175K per transaction. ZYP points rewards system. Available in 180+ countries.",
+  "type": [
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "4% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 7.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/zypto-premium-physical",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/zypto-premium-physical-card.webp"
+}

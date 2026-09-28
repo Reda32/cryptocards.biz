@@ -1,0 +1,37 @@
+{
+  "name": "Kem Infinity Card",
+  "slug": "kem-infinity-card",
+  "company": "Kem Infinity",
+  "summary": "Kem Infinity Cards let you spend crypto online or in stores—just like a regular debit card.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/kem-infinity-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/kem-infinity-card.webp"
+}

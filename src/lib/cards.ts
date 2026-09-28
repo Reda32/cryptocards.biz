@@ -9,7 +9,7 @@ export type Review = CollectionEntry<'reviews'>;
 
 export async function getAllCards(): Promise<Card[]> {
   const cards = await getCollection('cards');
-  return cards.sort((a, b) => b.data.rating - a.data.rating);
+  return cards.sort((a, b) => (b.data.rating ?? -1) - (a.data.rating ?? -1));
 }
 
 export async function getCommunityForCard(slug: string): Promise<Community | null> {
@@ -45,7 +45,7 @@ export function toCompareCard(card: Card, communityScore: number | null): Compar
     kyc: d.kyc,
     cryptos: d.cryptos,
     countries: d.countries,
-    referral: { code: d.referral.code, url: d.referral.url },
+    referral: d.referral ? { code: d.referral.code, url: d.referral.url } : undefined,
     communityScore,
   };
 }

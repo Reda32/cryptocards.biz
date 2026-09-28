@@ -1,0 +1,37 @@
+{
+  "name": "Mercuryo Nova x Mercuryo Card",
+  "slug": "mercuryo-nova-x-mercuryo-card",
+  "company": "Mercuryo Nova x Mercuryo",
+  "summary": "A specialized non-custodial debit card designed for the Polkadot ecosystem, allowing Nova Wallet users to spend DOT tokens at any Mastercard merchant.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "DOT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/mercuryo-mercuryo-nova-x-mercuryo-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/mercuryo-nova-x-mercuryo-card.webp"
+}

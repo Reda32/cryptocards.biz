@@ -1,0 +1,43 @@
+{
+  "name": "Karta.io Business Corporate Visa",
+  "slug": "karta-io-business-corporate-visa",
+  "company": "Karta.io",
+  "summary": "A high-scale corporate card solution for Web3 teams and media buyers, supporting up to 500 active virtual cards with US-based BINs.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [
+    "business"
+  ],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/kartaio-business-corporate-visa",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/karta-io-business-corporate-visa.webp"
+}

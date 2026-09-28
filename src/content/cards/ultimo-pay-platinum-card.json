@@ -1,0 +1,41 @@
+{
+  "name": "Ultimo Pay Platinum Card",
+  "slug": "ultimo-pay-platinum-card",
+  "company": "Ultimo Pay",
+  "summary": "Offshore Visa debit card with global ATM access. Convert BTC/USDT to USD and spend worldwide. BTC collateral loans available up to 50% of holdings.",
+  "type": [
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/ultimo-pay-platinum",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/ultimo-pay-platinum-card.webp"
+}

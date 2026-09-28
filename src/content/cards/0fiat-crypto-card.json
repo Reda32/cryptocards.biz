@@ -1,0 +1,41 @@
+{
+  "name": "0fiat Crypto Card",
+  "slug": "0fiat-crypto-card",
+  "company": "0fiat Crypto",
+  "summary": "A non-custodial browser extension that allows you to pay with crypto at major online retailers like Amazon and Walmart without KYC.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "1% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/zero-fiat-browser-extension",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/0fiat-crypto-card.webp"
+}

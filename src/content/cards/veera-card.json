@@ -1,0 +1,33 @@
+{
+  "name": "Veera Card",
+  "slug": "veera-card",
+  "company": "Veera",
+  "summary": "On-chain neobank card with zero FX fees, gasless transactions, instant asset conversion. Crypto cashback on every purchase. Self-custodial wallet integration.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 7.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/veera-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/veera-card.webp"
+}

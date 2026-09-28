@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import CardLogo from '@/components/CardLogo.astro';
 import { getAllCards } from '@/lib/cards';
 
-const cards = await getAllCards();
+const cards = (await getAllCards()).filter((card) => card.data.referral);
 ---
 
 <BaseLayout
@@ -29,12 +29,12 @@ const cards = await getAllCards();
               <CardLogo src={card.data.logo} name={card.data.name} color={card.data.brandColor} size={44} />
               <div>
                 <h2 class="font-bold text-slate-900 dark:text-white">{card.data.name}</h2>
-                <p class="text-sm text-slate-500 dark:text-slate-400">{card.data.referral.bonus}</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400">{card.data.referral!.bonus}</p>
               </div>
             </div>
             <div class="mt-auto flex items-center gap-3">
               <code class="rounded border border-dashed border-slate-300 px-2 py-1 font-mono text-sm dark:border-slate-600">
-                {card.data.referral.code}
+                {card.data.referral!.code}
               </code>
               <a href={`/coupons/${card.data.slug}`} class="btn-secondary ml-auto">
                 View details

@@ -1,0 +1,33 @@
+{
+  "name": "THORWallet Card",
+  "slug": "thorwallet-card",
+  "company": "THORWallet",
+  "summary": "Non-custodial, self-sovereignty crypto card with Swiss banking integration powered by THORChain DeFi protocol",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/thorwallet-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/thorwallet-card.webp"
+}

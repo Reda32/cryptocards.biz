@@ -1,0 +1,42 @@
+{
+  "name": "Slash Platinum Card",
+  "slug": "slash-platinum-card",
+  "company": "Slash",
+  "summary": "Business banking Visa card with unlimited cashback up to 2%. Unlimited virtual and physical cards. Sub-1% stablecoin conversion. Free ACH/wire for Pro users.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 7.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/slash-platinum-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/slash-platinum-card.webp"
+}

@@ -1,0 +1,50 @@
+{
+  "name": "WhiteBIT Nova Card",
+  "slug": "whitebit-nova-card",
+  "company": "WhiteBIT Nova",
+  "summary": "A Visa-enabled crypto debit card offering on-the-fly conversion from 12 supported cryptocurrencies to EUR for everyday spending.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "10% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/whitebit-whitebit-nova-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/whitebit-nova-card.webp"
+}

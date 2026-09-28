@@ -1,0 +1,51 @@
+{
+  "name": "Rewarble Nimy Max Mastercard",
+  "slug": "rewarble-nimy-max-mastercard",
+  "company": "Rewarble Nimy Max",
+  "summary": "A reloadable virtual Mastercard designed for digital payments with support for Apple Pay and Google Pay.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 2.5,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$2.5/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/rewarble-rewarble-nimy-max-mastercard",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/rewarble-nimy-max-mastercard.webp"
+}

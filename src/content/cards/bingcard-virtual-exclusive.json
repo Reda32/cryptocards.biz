@@ -1,0 +1,49 @@
+{
+  "name": "BingCard Virtual Exclusive",
+  "slug": "bingcard-virtual-exclusive",
+  "company": "BingCard",
+  "summary": "A high-limit virtual card designed for online transactions and advertising payments without requiring identity verification.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "none",
+    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+  },
+  "rating": 4.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/virtual-exclusive",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/bingcard-virtual-exclusive.webp"
+}

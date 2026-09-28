@@ -1,0 +1,37 @@
+{
+  "name": "Payy Card",
+  "slug": "payy-card",
+  "company": "Payy",
+  "summary": "Privacy-focused self-custodial Visa card to spend stablecoins privately anywhere Visa is accepted, using ZK for undoxxable privacy.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5.8,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/payy-card",
+  "lastVerified": "2026-09-28"
+}

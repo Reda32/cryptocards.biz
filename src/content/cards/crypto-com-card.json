@@ -1,0 +1,50 @@
+{
+  "name": "Crypto.com Card",
+  "slug": "crypto-com-card",
+  "company": "Crypto.com",
+  "summary": "Popular crypto card with tiered rewards based on CRO staking. Offers cashback up to 8% with higher tiers.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "5% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/crypto-com-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/crypto-com-card.webp"
+}

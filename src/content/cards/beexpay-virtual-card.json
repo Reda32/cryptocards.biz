@@ -1,0 +1,49 @@
+{
+  "name": "BeeXpay Virtual Card",
+  "slug": "beexpay-virtual-card",
+  "company": "BeeXpay",
+  "summary": "An instant-access virtual payment card managed via Telegram, designed for quick crypto-to-fiat spending with minimal verification.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/beexpay-beexpay-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/beexpay-virtual-card.webp"
+}

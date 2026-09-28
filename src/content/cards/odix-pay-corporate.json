@@ -1,0 +1,43 @@
+{
+  "name": "Odix Pay Corporate",
+  "slug": "odix-pay-corporate",
+  "company": "Odix Pay",
+  "summary": "A virtual card solution designed for teams with high daily spending limits and seamless mobile wallet integration.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [
+    "business"
+  ],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/odix-pay-corporate",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/odix-pay-corporate.webp"
+}

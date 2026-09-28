@@ -1,0 +1,49 @@
+{
+  "name": "UPay Stellar Card",
+  "slug": "upay-stellar-card",
+  "company": "UPay Stellar",
+  "summary": "An entry-level virtual crypto card designed for casual users dealing with smaller balances and online subscriptions.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3.7,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/upay-technology-ltd-upay-stellar-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/upay-stellar-card.webp"
+}

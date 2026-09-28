@@ -1,0 +1,42 @@
+{
+  "name": "Solayer Emerald Card",
+  "slug": "solayer-emerald-card",
+  "company": "Solayer Emerald",
+  "summary": "The premier non-custodial Solana card that earns you airdrop points and staking rewards as you spend.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/solayer-emerald-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/solayer-emerald-card.webp"
+}

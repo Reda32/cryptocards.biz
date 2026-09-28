@@ -1,0 +1,49 @@
+{
+  "name": "Kazawallet Card Basic",
+  "slug": "kazawallet-card-basic",
+  "company": "Kazawallet",
+  "summary": "A secure virtual crypto Visa card designed for everyday online payments and SaaS subscriptions with high daily limits.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/kazawallet-kazawallet-card-basic",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/kazawallet-card-basic.webp"
+}

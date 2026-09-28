@@ -1,0 +1,56 @@
+{
+  "name": "SpectroCoin Card",
+  "slug": "spectrocoin-card",
+  "company": "SpectroCoin",
+  "summary": "SpectroCoin Card is a Visa prepaid card from Lithuania supporting BTC, ETH and other cryptos. Free card issuance and shipping with €25,000 daily POS limit. Up to 99 virtual cards per account.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 1.15,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$1.15/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/spectrocoin-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/spectrocoin-card.webp"
+}

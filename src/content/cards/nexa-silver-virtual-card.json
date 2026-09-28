@@ -1,0 +1,51 @@
+{
+  "name": "Nexa Silver Virtual Card",
+  "slug": "nexa-silver-virtual-card",
+  "company": "Nexa Silver",
+  "summary": "An instant virtual crypto debit card designed for secure online shopping and international transfers, issued within 24 hours of purchase.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "fees": {
+    "issuance": 0,
+    "monthly": 3.99,
+    "fx": 0,
+    "atm": "Not disclosed"
+  },
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "BNB",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 2.2,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "$3.99/mo",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/nexa-cards-solutions-ltd-nexa-silver-virtual-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/nexa-silver-virtual-card.webp"
+}

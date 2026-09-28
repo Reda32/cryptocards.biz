@@ -1,0 +1,49 @@
+{
+  "name": "1inch Card",
+  "slug": "1inch-card",
+  "company": "1inch",
+  "summary": "DeFi aggregator virtual Mastercard via Baanx. 0% FX fee, auto-converts crypto on purchase. ~2.1% total conversion cost. Up to 2% cashback. €8K daily / €5K monthly limits.",
+  "type": [
+    "virtual"
+  ],
+  "network": "mastercard",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "2% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "LTC",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/1inch-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/1inch-card.webp"
+}

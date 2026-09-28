@@ -1,0 +1,37 @@
+{
+  "name": "e.PN Virtual Standard Grade Card",
+  "slug": "e-pn-virtual-standard-grade-card",
+  "company": "e.PN",
+  "summary": "Entry-level virtual prepaid card designed for solo media buyers to test BIN efficacy on major ad networks.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 4.5,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/epn-epn-virtual-standard-grade-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/e-pn-virtual-standard-grade-card.webp"
+}

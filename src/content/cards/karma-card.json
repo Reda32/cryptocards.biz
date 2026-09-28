@@ -1,0 +1,40 @@
+{
+  "name": "Karma Card",
+  "slug": "karma-card",
+  "company": "Karma",
+  "summary": "Self-custody card with real IBANs and routing numbers. High-speed Solana wallet with instant settlement and real-time FX. Zero hidden fees.",
+  "type": [
+    "virtual"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "0% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/karma-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/karma-card.webp"
+}

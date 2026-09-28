@@ -1,0 +1,50 @@
+{
+  "name": "CoinZoom Visa Card",
+  "slug": "coinzoom-visa-card",
+  "company": "CoinZoom",
+  "summary": "A tiered rewards Visa debit card that instantly converts crypto to fiat for real-world spending.",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [],
+  "features": [],
+  "rewards": {
+    "cashback": "5% Cashback"
+  },
+  "countries": [],
+  "restrictedCountries": [],
+  "cryptos": [
+    {
+      "symbol": "BTC",
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "USDC",
+      "networks": []
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+  },
+  "rating": 6.3,
+  "pros": [],
+  "cons": [],
+  "variants": [],
+  "faq": [],
+  "priceLabel": "Free",
+  "verified": false,
+  "sourceUrl": "https://www.cryptocards.so/en/card/coinzoom-visa-card",
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/coinzoom-visa-card.webp"
+}
