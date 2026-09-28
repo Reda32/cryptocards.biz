@@ -15,7 +15,9 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dir = join(root, 'src/content/cards');
 
 // Tracking / affiliate patterns that should never appear in a default link.
-const TRACKING = /(onelink\.me|\/referral\/|\/ref\/|\/invite\b|deep_link_value|deep_link_sub|\/aff\/|referral_code|invite_code|[?&](ref|aff|pid|code|utm_[a-z]+|aff_id|affiliate)=)/i;
+// Note: a bare Telegram bot link (`t.me/<bot>` or `telegram.me/<bot>`) is an
+// official channel and is allowed; only bot links with a `?start=` param flag.
+const TRACKING = /(onelink\.me|\/referral\/|\/ref\/|\/r\/[A-Za-z0-9]{4,}|\/p\/[A-Za-z0-9]{6,}|\/invite\b|\/aff\/|referral_code|invite_code|deep_link_value|deep_link_sub|[?&](ref|aff|pid|referral|code|start|aff_id|affiliate|utm_[a-z]+)=)/i;
 
 const cards = readdirSync(dir)
   .filter((f) => f.endsWith('.json'))
