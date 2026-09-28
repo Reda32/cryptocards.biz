@@ -4,6 +4,7 @@ import ThemeToggle from './islands/ThemeToggle.tsx';
 const path = Astro.url.pathname;
 const links = [
   { href: '/cards', label: 'Cards' },
+  { href: '/coupons', label: 'Coupons' },
   { href: '/compare', label: 'Compare' },
   { href: '/best', label: 'Best cards' },
   { href: '/countries', label: 'Countries' },
@@ -23,7 +24,7 @@ const isActive = (href: string) => path === href || path.startsWith(`${href}/`);
     </a>
 
     <div class="flex items-center gap-2 sm:gap-4">
-      <nav class="hidden items-center gap-6 text-sm font-medium md:flex" aria-label="Main">
+      <nav class="hidden items-center gap-4 text-sm font-medium md:flex" aria-label="Main">
         {
           links.map((link) => (
             <a
