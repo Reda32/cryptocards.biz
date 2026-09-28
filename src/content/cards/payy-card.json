@@ -33,5 +33,6 @@
   "priceLabel": "Free",
   "verified": false,
   "sourceUrl": "https://www.cryptocards.so/en/card/payy-card",
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "logo": "/logos/imported/payy-card.webp"
 }

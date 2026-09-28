@@ -23,6 +23,17 @@ Replace them with official brand assets when available:
 - `mine.svg` (Mine)
 - `plasma-one.svg` (Plasma One)
 
+## Imported card logos — `public/logos/imported/`
+
+Cards imported from the listing scrape (`verified: false`) keep their logos under
+`public/logos/imported/`, rasterised to WebP 256×256. Light brand marks get a dark
+tile (and dark marks a light tile) so they stay visible in both themes.
+
+Two source URLs were dead, so these use the provider's own favicon instead:
+
+- `payy-card.webp` — from `payy.link`
+- `leading-card.webp` — from `leadingcards.com`
+
 ## Adding / refreshing a logo
 
 1. Drop the asset into `public/logos/` (prefer SVG; otherwise use a square raster and
