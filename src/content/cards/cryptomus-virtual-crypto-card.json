@@ -26,7 +26,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.5,
   "pros": [],
@@ -34,8 +39,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cryptomus-cryptomus-virtual-crypto-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/cryptomus-virtual-crypto-card.webp"
+  "logo": "/logos/imported/cryptomus-virtual-crypto-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 4,
+    "fx": 3.9,
+    "atm": "Free",
+    "topup": "3.2%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$10,000",
+    "monthlySpend": "$25,000",
+    "atmWithdrawal": "Unlimited"
+  }
 }

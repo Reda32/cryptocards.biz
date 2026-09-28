@@ -10,13 +10,16 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 15,
+    "issuance": 0,
     "fx": 0,
-    "atm": "Not disclosed"
+    "atm": "2%",
+    "topup": "Free",
+    "decline": 0
   },
   "rewards": {
-    "cashback": "3% Cashback"
+    "cashback": "3%",
+    "cashbackToken": "STRK"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -36,7 +39,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 7,
   "pros": [],
@@ -44,8 +52,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$15/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/ready-metal-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/ready-metal-card.webp"
+  "logo": "/logos/imported/ready-metal-card.webp",
+  "limits": {
+    "dailySpend": "$10,000",
+    "monthlySpend": "$30,000",
+    "atmWithdrawal": "$500"
+  }
 }

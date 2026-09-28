@@ -90,7 +90,7 @@ const faqSchema = {
   description={`Which countries support the ${d.name}? See supported and restricted countries, eligibility by region, residency and KYC requirements, and how to check availability.`}
   image={`/og/${d.slug}.png`}
   modifiedTime={d.lastVerified}
-  noindex={!d.verified}
+  noindex={!d.verified || d.countries.length === 0}
   schemas={[faqSchema]}
 >
   <Breadcrumbs

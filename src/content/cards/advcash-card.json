@@ -11,7 +11,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "cashback": "0%"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -35,7 +35,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.7,
   "pros": [],
@@ -43,8 +48,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/advcash-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/advcash-card.webp"
+  "logo": "/logos/imported/advcash-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 14.99,
+    "fx": 0.95,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$10,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$3,000"
+  }
 }

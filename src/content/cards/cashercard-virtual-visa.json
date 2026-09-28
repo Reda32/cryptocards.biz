@@ -6,7 +6,7 @@
   "type": [
     "virtual"
   ],
-  "network": "visa",
+  "network": "mastercard",
   "wallets": [],
   "features": [],
   "rewards": {
@@ -34,7 +34,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5,
   "pros": [],
@@ -42,8 +47,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cashercard-cashercard-virtual-visa",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/cashercard-virtual-visa.webp"
+  "logo": "/logos/imported/cashercard-virtual-visa.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

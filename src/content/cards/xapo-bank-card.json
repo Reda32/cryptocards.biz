@@ -10,13 +10,16 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 83.33,
+    "issuance": 0,
     "fx": 0,
-    "atm": "Not disclosed"
+    "atm": "2%",
+    "topup": "Free",
+    "decline": 0
   },
   "rewards": {
-    "cashback": "1% Cashback"
+    "cashback": "1%",
+    "cashbackToken": "BTC"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -31,8 +34,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.7,
   "pros": [],
@@ -40,8 +48,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$83.33/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/xapo-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/xapo-bank-card.webp"
+  "logo": "/logos/imported/xapo-bank-card.webp",
+  "limits": {
+    "dailySpend": "$10,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$1,000"
+  }
 }

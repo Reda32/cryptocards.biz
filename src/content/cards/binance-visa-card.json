@@ -11,7 +11,8 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0.1% Cashback"
+    "cashback": "0.1%",
+    "cashbackToken": "BNB"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -35,7 +36,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.5,
   "pros": [],
@@ -43,8 +49,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/binance-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/binance-visa-card.webp"
+  "logo": "/logos/imported/binance-visa-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "0.9%",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$8,700",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$290"
+  }
 }

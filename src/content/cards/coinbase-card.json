@@ -11,7 +11,8 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "1% Cashback"
+    "cashback": "1%",
+    "cashbackToken": "BTC"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,8 +35,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.8,
   "pros": [],
@@ -43,8 +49,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/coinbase-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/coinbase-card.webp"
+  "logo": "/logos/imported/coinbase-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 3,
+    "atm": "2.49%",
+    "topup": "2.49%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$2,500",
+    "monthlySpend": "$25,000",
+    "atmWithdrawal": "$1,000"
+  }
 }

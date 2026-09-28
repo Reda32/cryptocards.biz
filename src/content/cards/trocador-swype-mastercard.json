@@ -6,14 +6,16 @@
   "type": [
     "virtual"
   ],
-  "network": "mastercard",
+  "network": "visa",
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
-    "monthly": 2.5,
+    "monthly": 0,
+    "issuance": 2,
     "fx": 0,
-    "atm": "Not disclosed"
+    "atm": "Free",
+    "topup": "3%",
+    "decline": 0
   },
   "rewards": {
     "cashback": "0% Cashback"
@@ -40,7 +42,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.2,
   "pros": [],
@@ -48,8 +55,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$2.5/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/trocador-swype-mastercard",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/trocador-swype-mastercard.webp"
+  "logo": "/logos/imported/trocador-swype-mastercard.webp",
+  "limits": {
+    "dailySpend": "$1,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

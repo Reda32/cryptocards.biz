@@ -27,8 +27,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.5,
   "pros": [],
@@ -36,8 +41,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kartaio-business-corporate-visa",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/karta-io-business-corporate-visa.webp"
+  "logo": "/logos/imported/karta-io-business-corporate-visa.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "3.5%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

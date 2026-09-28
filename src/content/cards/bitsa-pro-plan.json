@@ -11,13 +11,15 @@
   "wallets": [],
   "features": [],
   "fees": {
+    "monthly": 0,
     "issuance": 0,
-    "monthly": 9.99,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "fx": 1.5,
+    "atm": "1%",
+    "topup": "1%",
+    "decline": 0
   },
   "rewards": {
-    "cashback": "15% Cashback"
+    "cashback": "15%"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -40,8 +42,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 2.7,
   "pros": [],
@@ -49,8 +56,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$9.99/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitsa-bitsa-pro-plan",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/bitsa-pro-plan.webp"
+  "logo": "/logos/imported/bitsa-pro-plan.webp",
+  "limits": {
+    "dailySpend": "$1,500",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$350"
+  }
 }

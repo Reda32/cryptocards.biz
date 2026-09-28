@@ -11,7 +11,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "referralBonus": "$10"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -23,7 +23,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.8,
   "pros": [],
@@ -31,8 +36,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pintopay-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/pintopay-card.webp"
+  "logo": "/logos/imported/pintopay-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 10,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "2.5%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$25,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

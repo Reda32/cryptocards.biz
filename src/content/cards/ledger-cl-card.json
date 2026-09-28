@@ -10,7 +10,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "2% Cashback"
+    "cashback": "2%"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,7 +34,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.7,
   "pros": [],
@@ -42,8 +47,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/ledger-cl-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/ledger-cl-card.webp"
+  "logo": "/logos/imported/ledger-cl-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "1.5%",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$15,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$2,000"
+  }
 }

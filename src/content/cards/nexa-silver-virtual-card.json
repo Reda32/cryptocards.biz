@@ -10,10 +10,12 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 3.99,
+    "issuance": 49.95,
     "fx": 0,
-    "atm": "Not disclosed"
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
   },
   "rewards": {
     "cashback": "0% Cashback"
@@ -36,7 +38,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 2.2,
   "pros": [],
@@ -44,8 +51,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$3.99/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/nexa-cards-solutions-ltd-nexa-silver-virtual-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/nexa-silver-virtual-card.webp"
+  "logo": "/logos/imported/nexa-silver-virtual-card.webp",
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

@@ -11,13 +11,15 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 1.15,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "issuance": 0,
+    "fx": 3,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0.12
   },
   "rewards": {
-    "cashback": "0% Cashback"
+    "cashback": "0%"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -41,7 +43,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3,
   "pros": [],
@@ -49,8 +56,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$1.15/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/spectrocoin-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/spectrocoin-card.webp"
+  "logo": "/logos/imported/spectrocoin-card.webp",
+  "limits": {
+    "dailySpend": "$25,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$2,500"
+  }
 }

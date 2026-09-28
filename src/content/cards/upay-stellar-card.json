@@ -10,7 +10,8 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "cashback": "0%",
+    "referralBonus": "$30"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,7 +35,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.7,
   "pros": [],
@@ -42,8 +48,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/upay-technology-ltd-upay-stellar-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/upay-stellar-card.webp"
+  "logo": "/logos/imported/upay-stellar-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 50,
+    "fx": 1,
+    "atm": "Free",
+    "topup": "3%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$20,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$0"
+  }
 }

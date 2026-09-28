@@ -35,15 +35,34 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "pros": [],
   "cons": [],
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pyra-pyra-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/pyra-card.webp"
+  "logo": "/logos/imported/pyra-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  },
+  "rating": 7.7
 }

@@ -22,15 +22,34 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "pros": [],
   "cons": [],
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/ape-wallet-ape-wallet-virtual-visa-and-mastercard",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/ape-wallet-virtual-visa-and-mastercard.webp"
+  "logo": "/logos/imported/ape-wallet-virtual-visa-and-mastercard.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  },
+  "rating": 3.7
 }

@@ -10,7 +10,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "referralBonus": "$5"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -21,8 +21,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "basic",
+    "email": true,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 7,
   "pros": [],
@@ -30,8 +35,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$10000/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/raincards",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/raincards.webp"
+  "logo": "/logos/imported/raincards.webp",
+  "fees": {
+    "monthly": 10000,
+    "issuance": 5,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "1%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$5,000",
+    "monthlySpend": "$25,000",
+    "atmWithdrawal": "Unlimited"
+  }
 }

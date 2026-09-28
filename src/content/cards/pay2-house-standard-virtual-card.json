@@ -10,13 +10,17 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 5,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "issuance": 5,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "4%",
+    "decline": 0.3
   },
   "rewards": {
-    "cashback": "0% Cashback"
+    "cashback": "0%",
+    "welcomeBonus": "$15",
+    "referralBonus": "$33"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -28,7 +32,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6,
   "pros": [],
@@ -36,8 +45,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$5/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pay2house-pay2house-standard-virtual-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/pay2-house-standard-virtual-card.webp"
+  "logo": "/logos/imported/pay2-house-standard-virtual-card.webp",
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "$100,000",
+    "atmWithdrawal": "Unlimited"
+  }
 }

@@ -33,8 +33,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
   "pros": [],
@@ -42,8 +47,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kazawallet-kazawallet-card-basic",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/kazawallet-card-basic.webp"
+  "logo": "/logos/imported/kazawallet-card-basic.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 15,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "1.5%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$200,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

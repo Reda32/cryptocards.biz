@@ -85,7 +85,9 @@ const toc = [
   { id: 'cryptos', label: 'Supported cryptocurrencies' },
   ...(d.variants.length > 0 ? [{ id: 'variants', label: 'Variants' }] : []),
   ...(community ? [{ id: 'community', label: 'Community sentiment' }] : []),
-  { id: 'pros-cons', label: 'Pros & limitations' },
+  ...(d.pros.length > 0 || d.cons.length > 0
+    ? [{ id: 'pros-cons', label: 'Pros & limitations' }]
+    : []),
   { id: 'how-to-get', label: 'How to get the card' },
   ...(ReviewContent ? [{ id: 'review', label: 'Full review' }] : []),
   ...(d.faq.length > 0 ? [{ id: 'faq', label: 'FAQ' }] : []),
@@ -309,9 +311,13 @@ const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [rev
           )
         }
 
-        <Section id="pros-cons" title="Pros & limitations">
-          <ProsCons pros={d.pros} cons={d.cons} />
-        </Section>
+        {
+          (d.pros.length > 0 || d.cons.length > 0) && (
+            <Section id="pros-cons" title="Pros & limitations">
+              <ProsCons pros={d.pros} cons={d.cons} />
+            </Section>
+          )
+        }
 
         <Section id="how-to-get" title="How to get the card">
           <ol class="space-y-4">

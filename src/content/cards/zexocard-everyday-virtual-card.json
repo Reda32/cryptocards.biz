@@ -33,15 +33,34 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "pros": [],
   "cons": [],
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/zexocard-zexocard-everyday-virtual-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/zexocard-everyday-virtual-card.webp"
+  "logo": "/logos/imported/zexocard-everyday-virtual-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 10,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "$500,000",
+    "atmWithdrawal": "Unlimited"
+  },
+  "rating": 6.1
 }

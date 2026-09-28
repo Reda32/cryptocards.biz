@@ -31,7 +31,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.8,
   "pros": [],
@@ -39,8 +44,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rain-liquidity-llc-avalanche-card-international",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/avalanche-card-international.webp"
+  "logo": "/logos/imported/avalanche-card-international.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

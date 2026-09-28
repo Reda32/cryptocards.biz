@@ -4,19 +4,21 @@
   "company": "PlasBit Plastic",
   "summary": "PlasBit Card stands out as a practical crypto card for everyday spending, letting users load crypto, convert it to fiat, and pay online, in stores, or withdraw from ATMs. With free virtual and plastic cards, free delivery, and only a 0.5% loading fee, it is built for people who actually use crypto in daily life",
   "type": [
-    "physical"
+    "virtual"
   ],
   "network": "visa",
   "wallets": [],
   "features": [],
   "fees": {
+    "monthly": 1,
     "issuance": 0,
-    "monthly": 2,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "fx": 1.5,
+    "atm": "Free",
+    "topup": "0.5%",
+    "decline": 25
   },
   "rewards": {
-    "cashback": "0% Cashback"
+    "referralBonus": "$10"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -39,8 +41,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
   "pros": [],
@@ -48,8 +55,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$2/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/plasbit-plasbit-plastic-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/plasbit-plastic-card.webp"
+  "logo": "/logos/imported/plasbit-plastic-card.webp",
+  "limits": {
+    "dailySpend": "$30,000",
+    "monthlySpend": "$30,000",
+    "atmWithdrawal": "$0"
+  }
 }

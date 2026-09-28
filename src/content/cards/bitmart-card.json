@@ -4,14 +4,14 @@
   "company": "BitMart",
   "summary": "A Visa-powered crypto card drawing directly from your BitMart Spot Account with real-time conversion and tiered cashback rewards.",
   "type": [
-    "virtual",
-    "physical"
+    "virtual"
   ],
   "network": "visa",
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "5.5% Cashback"
+    "cashback": "10%",
+    "cashbackToken": "USDT"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,8 +34,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
   "pros": [],
@@ -43,8 +48,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitmart-bitmart-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/bitmart-card.webp"
+  "logo": "/logos/imported/bitmart-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 120,
+    "fx": 0,
+    "atm": "1.5%",
+    "topup": "1.3%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

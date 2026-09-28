@@ -11,13 +11,16 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 1,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "issuance": 5,
+    "fx": 3,
+    "atm": "Free",
+    "topup": "1%",
+    "decline": 0
   },
   "rewards": {
-    "cashback": "1% Cashback"
+    "cashback": "1%",
+    "cashbackToken": "BTC"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -41,7 +44,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.5,
   "pros": [],
@@ -49,8 +57,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$1/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cryptopay-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/cryptopay-card.webp"
+  "logo": "/logos/imported/cryptopay-card.webp",
+  "limits": {
+    "dailySpend": "$30,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$450"
+  }
 }

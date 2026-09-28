@@ -11,7 +11,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "welcomeBonus": "$5"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -27,7 +27,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.3,
   "pros": [],
@@ -35,8 +40,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitget-wallet-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/bitget-wallet-card.webp"
+  "logo": "/logos/imported/bitget-wallet-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

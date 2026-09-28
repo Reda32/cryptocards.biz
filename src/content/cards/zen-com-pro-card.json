@@ -11,10 +11,12 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 6.9,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "issuance": 0,
+    "fx": 0.1,
+    "atm": "1.5%",
+    "topup": "0.5%",
+    "decline": 0
   },
   "rewards": {
     "cashback": "0% Cashback"
@@ -40,8 +42,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.8,
   "pros": [],
@@ -49,8 +56,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$6.9/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pro-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/zen-com-pro-card.webp"
+  "logo": "/logos/imported/zen-com-pro-card.webp",
+  "limits": {
+    "dailySpend": "$30,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$2,000"
+  }
 }

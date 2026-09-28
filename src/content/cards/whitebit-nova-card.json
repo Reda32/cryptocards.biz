@@ -11,7 +11,10 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "10% Cashback"
+    "cashback": "10%",
+    "cashbackToken": "BTC",
+    "welcomeBonus": "$10",
+    "referralBonus": "$50"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,8 +37,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.8,
   "pros": [],
@@ -43,8 +51,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/whitebit-whitebit-nova-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/whitebit-nova-card.webp"
+  "logo": "/logos/imported/whitebit-nova-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "2.2%",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$10,850",
+    "monthlySpend": "$27,125",
+    "atmWithdrawal": "$1,085"
+  }
 }

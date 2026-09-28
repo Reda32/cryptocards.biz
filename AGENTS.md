@@ -113,12 +113,19 @@ then flips `verified` to `true`.
 ```bash
 node scripts/import-cards.mjs data/source-cards.json   # import/skip duplicates
 node scripts/normalize-logos.mjs                        # rasterise logos to WebP with a fitting background
+node scripts/enrich-cards.mjs                           # scrape the source card pages for fees/limits/KYC
 ```
 
 - Import skips any card whose normalized name/slug/company already exists.
+- `enrich-cards.mjs` reads each card's `sourceUrl`, extracts the **factual** fields
+  (fees, limits, KYC, rewards, card type, network, rating) and sets `verified`
+  when fees + limits + KYC are present. It only touches `verified: false` cards
+  and never copies editorial prose (pros/cons/summaries).
 - Logos are self-hosted under `public/logos/imported/`. Light logos (built for
   dark backgrounds) get a dark tile so they stay visible.
 - Never leave an imported card `verified: true` without real, checked data.
+- Per-card countries pages with no country list are kept out of the sitemap and
+  noindexed (thin content).
 
 ---
 

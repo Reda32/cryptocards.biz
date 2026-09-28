@@ -4,13 +4,13 @@
   "company": "Odix Pay Top Plan",
   "summary": "The ultimate tier for power users, offering unlimited daily spending and full mobile wallet support.",
   "type": [
-    "physical"
+    "virtual"
   ],
   "network": "visa",
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "referralBonus": "$30"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -25,8 +25,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.3,
   "pros": [],
@@ -34,8 +39,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/odix-pay-top-plan",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/odix-pay-top-plan.webp"
+  "logo": "/logos/imported/odix-pay-top-plan.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 5,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$100,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

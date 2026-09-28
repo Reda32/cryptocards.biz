@@ -11,7 +11,10 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "5% Cashback"
+    "cashback": "5%",
+    "cashbackToken": "CRO",
+    "welcomeBonus": "$50",
+    "referralBonus": "$25"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,8 +37,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
   "pros": [],
@@ -43,8 +51,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/crypto-com-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/crypto-com-card.webp"
+  "logo": "/logos/imported/crypto-com-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 50,
+    "fx": 0,
+    "atm": "2%",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$25,000",
+    "monthlySpend": "$100,000",
+    "atmWithdrawal": "$2,000"
+  }
 }

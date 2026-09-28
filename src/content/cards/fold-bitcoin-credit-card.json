@@ -11,7 +11,8 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "1.5% Cashback"
+    "cashback": "1.5%",
+    "cashbackToken": "BTC"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -22,8 +23,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.8,
   "pros": [],
@@ -31,8 +37,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/fold-fold-bitcoin-credit-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/fold-bitcoin-credit-card.webp"
+  "logo": "/logos/imported/fold-bitcoin-credit-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

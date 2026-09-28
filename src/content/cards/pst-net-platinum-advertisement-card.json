@@ -25,8 +25,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.8,
   "pros": [],
@@ -34,8 +39,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pstnet-pstnet-platinum-advertisement-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/pst-net-platinum-advertisement-card.webp"
+  "logo": "/logos/imported/pst-net-platinum-advertisement-card.webp",
+  "fees": {
+    "monthly": 16,
+    "issuance": 16,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "2%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

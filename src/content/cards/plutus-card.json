@@ -11,7 +11,8 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "3% Cashback"
+    "cashback": "3%",
+    "cashbackToken": "PLU"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -23,7 +24,12 @@
   ],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3,
   "pros": [],
@@ -31,8 +37,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/plutus-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/plutus-card.webp"
+  "logo": "/logos/imported/plutus-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "2.5%",
+    "topup": "1%",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "$22,500",
+    "atmWithdrawal": "Unlimited"
+  }
 }

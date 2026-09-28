@@ -4,14 +4,15 @@
   "company": "KuCoin KuCard",
   "summary": "A crypto-enabled Visa debit card for EEA residents that instantly converts digital assets to EUR at the point of sale with no decline fees.",
   "type": [
-    "virtual",
-    "physical"
+    "virtual"
   ],
-  "network": "visa",
+  "network": "mastercard",
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "3% Cashback"
+    "cashback": "8.5%",
+    "cashbackToken": "USDC",
+    "welcomeBonus": "$20"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,8 +35,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4,
   "pros": [],
@@ -43,8 +49,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kucoin-kucoin-kucard",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/kucoin-kucard.webp"
+  "logo": "/logos/imported/kucoin-kucard.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 1,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

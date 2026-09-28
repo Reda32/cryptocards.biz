@@ -36,6 +36,10 @@ for (const file of readdirSync(cardsDir).filter((f) => f.endsWith('.json'))) {
   } else {
     verifiedCompanySlugs.add(company);
   }
+  // Per-card countries pages with no country list are thin -> keep them out.
+  if (!Array.isArray(card.countries) || card.countries.length === 0) {
+    excluded.add(`/cards/${card.slug}/countries`);
+  }
 }
 
 // Company pages with no verified cards are also noindexed/thin.

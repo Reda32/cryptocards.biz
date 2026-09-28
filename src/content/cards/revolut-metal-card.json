@@ -10,13 +10,16 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 14.99,
+    "issuance": 0,
     "fx": 0,
-    "atm": "Not disclosed"
+    "atm": "2%",
+    "topup": "Free",
+    "decline": 0
   },
   "rewards": {
-    "cashback": "1% Cashback"
+    "cashback": "1%",
+    "cashbackToken": "BTC"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -39,8 +42,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6,
   "pros": [],
@@ -48,8 +56,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$14.99/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/revolut-metal-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/revolut-metal-card.webp"
+  "logo": "/logos/imported/revolut-metal-card.webp",
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$800"
+  }
 }

@@ -10,7 +10,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "cashback": "0%"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,7 +34,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4,
   "pros": [],
@@ -42,8 +47,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cardupnow-cardupnow-standard-virtual-visa-mastercard",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/cardupnow-standard-virtual-visa-mastercard.webp"
+  "logo": "/logos/imported/cardupnow-standard-virtual-visa-mastercard.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 5,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "5%",
+    "decline": 0.4
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

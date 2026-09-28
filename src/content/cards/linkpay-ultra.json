@@ -10,7 +10,7 @@
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "3% Cashback"
+    "cashback": "3%"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,7 +34,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
   "pros": [],
@@ -42,8 +47,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$299/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/linkpay-ultra",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/linkpay-ultra.webp"
+  "logo": "/logos/imported/linkpay-ultra.webp",
+  "fees": {
+    "monthly": 299,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

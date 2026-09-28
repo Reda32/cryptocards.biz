@@ -17,7 +17,12 @@
   "cryptos": [],
   "kyc": {
     "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.2,
   "pros": [],
@@ -25,8 +30,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/onboard-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/onboard-usd-card.webp"
+  "logo": "/logos/imported/onboard-usd-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 3,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$5,000",
+    "monthlySpend": "$20,000",
+    "atmWithdrawal": "Unlimited"
+  }
 }

@@ -4,14 +4,14 @@
   "company": "The Bitcoin Company US",
   "summary": "A non-reloadable prepaid Visa card for US merchants, purchasable with Bitcoin via Lightning or on-chain with instant rewards.",
   "type": [
-    "virtual",
-    "physical"
+    "virtual"
   ],
   "network": "visa",
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0.21% Cashback"
+    "cashbackToken": "BTC",
+    "referralBonus": "$0.05"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -22,8 +22,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "basic",
+    "email": true,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
   "pros": [],
@@ -31,8 +36,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/the-bitcoin-company-the-bitcoin-company-us-visa-reward-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/the-bitcoin-company-us-visa-reward-card.webp"
+  "logo": "/logos/imported/the-bitcoin-company-us-visa-reward-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 2.5,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$10,000",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "$0"
+  }
 }

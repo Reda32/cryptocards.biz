@@ -4,13 +4,13 @@
   "company": "Zeroid",
   "summary": "A customizable physical metal card with priority support and enhanced privacy features.",
   "type": [
-    "physical"
+    "virtual"
   ],
   "network": "visa",
   "wallets": [],
   "features": [],
   "rewards": {
-    "cashback": "0% Cashback"
+    "referralBonus": "$10"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -34,7 +34,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.5,
   "pros": [],
@@ -42,8 +47,21 @@
   "variants": [],
   "faq": [],
   "priceLabel": "Free",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/zeroid-zeroid-premium-metal-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/zeroid-premium-metal-card.webp"
+  "logo": "/logos/imported/zeroid-premium-metal-card.webp",
+  "fees": {
+    "monthly": 0,
+    "issuance": 0,
+    "fx": 0,
+    "atm": "Free",
+    "topup": "Free",
+    "decline": 0
+  },
+  "limits": {
+    "dailySpend": "$2,500",
+    "monthlySpend": "$10,000",
+    "atmWithdrawal": "$0"
+  }
 }

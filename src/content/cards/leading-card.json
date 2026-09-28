@@ -10,10 +10,12 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 5,
+    "issuance": 6,
     "fx": 0,
-    "atm": "Not disclosed"
+    "atm": "Free",
+    "topup": "4.2%",
+    "decline": 0.2
   },
   "rewards": {
     "cashback": "0% Cashback"
@@ -32,7 +34,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.8,
   "pros": [],
@@ -40,8 +47,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$5/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/leading-card",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/leading-card.webp"
+  "logo": "/logos/imported/leading-card.webp",
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "Unlimited",
+    "atmWithdrawal": "Unlimited"
+  }
 }

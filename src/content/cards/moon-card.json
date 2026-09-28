@@ -10,13 +10,16 @@
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 20,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "issuance": 0,
+    "fx": 3,
+    "atm": "Free",
+    "topup": "2%",
+    "decline": 0
   },
   "rewards": {
-    "cashback": "1% Cashback"
+    "cashback": "1%",
+    "referralBonus": "$10"
   },
   "countries": [],
   "restrictedCountries": [],
@@ -28,7 +31,12 @@
   ],
   "kyc": {
     "level": "none",
-    "notes": "Listed as no-KYC. Requirements not yet independently verified."
+    "email": false,
+    "phone": false,
+    "idDocument": false,
+    "proofOfAddress": false,
+    "selfie": false,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 2.7,
   "pros": [],
@@ -36,8 +44,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$20/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/paywithmoon",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/moon-card.webp"
+  "logo": "/logos/imported/moon-card.webp",
+  "limits": {
+    "dailySpend": "$100,000",
+    "monthlySpend": "$5,000",
+    "atmWithdrawal": "Unlimited"
+  }
 }

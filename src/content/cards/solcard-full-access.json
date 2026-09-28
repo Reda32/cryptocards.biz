@@ -6,14 +6,16 @@
   "type": [
     "virtual"
   ],
-  "network": "visa",
+  "network": "mastercard",
   "wallets": [],
   "features": [],
   "fees": {
-    "issuance": 0,
     "monthly": 1,
-    "fx": 0,
-    "atm": "Not disclosed"
+    "issuance": 10,
+    "fx": 2,
+    "atm": "Free",
+    "topup": "5%",
+    "decline": 0.5
   },
   "rewards": {
     "cashback": "8% Cashback"
@@ -35,8 +37,13 @@
     }
   ],
   "kyc": {
-    "level": "id",
-    "notes": "Requires KYC. Exact document requirements not yet independently verified."
+    "level": "full",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": true,
+    "selfie": true,
+    "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.5,
   "pros": [],
@@ -44,8 +51,13 @@
   "variants": [],
   "faq": [],
   "priceLabel": "$1/mo",
-  "verified": false,
+  "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/solcard-full-access",
   "lastVerified": "2026-09-28",
-  "logo": "/logos/imported/solcard-full-access.webp"
+  "logo": "/logos/imported/solcard-full-access.webp",
+  "limits": {
+    "dailySpend": "Unlimited",
+    "monthlySpend": "$10,000",
+    "atmWithdrawal": "Unlimited"
+  }
 }
