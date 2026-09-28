@@ -165,14 +165,6 @@
     "No debit or virtual card option"
   ],
   "rating": 6.8,
-  "referral": {
-    "code": "GEMINI-REF",
-    "url": "https://www.gemini.com/?ref=GEMINI-REF",
-    "bonus": "$50 referral bonus for new cardholders ($200 welcome bonus for eligible applicants)",
-    "terms": "Bonuses are set by Gemini and depend on approval and qualifying spend. The welcome bonus typically requires meeting a spend threshold within a set period. Confirm the current offer before applying.",
-    "expiry": "Ongoing",
-    "eligibility": "US residents aged 18+ who apply for the Gemini Credit Card and are approved after a credit check."
-  },
   "howToGet": [
     "Confirm you are a US resident with a Social Security number and a US credit profile.",
     "Open the Gemini app or website and start the Gemini Credit Card application.",
@@ -208,5 +200,6 @@
       "answer": "Yes. Rewards can be paid in Bitcoin or 60+ other supported cryptocurrencies, and they are credited to your Gemini account rather than to a self-custody wallet."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "signupUrl": "https://www.gemini.com/"
 }

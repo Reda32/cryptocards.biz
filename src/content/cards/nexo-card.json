@@ -190,15 +190,6 @@
     "Availability limited to the EEA and UK"
   ],
   "rating": 7.1,
-  "referral": {
-    "code": "NEXO-REF",
-    "url": "https://nexo.com/?ref=NEXO-REF",
-    "bonus": "Sign-up bonus for new Nexo users",
-    "terms": "Bonus amount and eligibility are set by Nexo and vary by region and promotion. Confirm the current offer before depositing.",
-    "expiry": "Ongoing",
-    "eligibility": "New Nexo users resident in the EEA or UK who complete full KYC. UK residents cannot earn crypto cashback under FCA rules.",
-    "alternatives": []
-  },
   "variants": [
     {
       "name": "Virtual",
@@ -245,5 +236,6 @@
     "Syria",
     "Cuba"
   ],
-  "availabilityNotes": "Nexo Card availability is limited to the European Economic Area (EEA) and the United Kingdom. Outside those regions the card cannot be ordered."
+  "availabilityNotes": "Nexo Card availability is limited to the European Economic Area (EEA) and the United Kingdom. Outside those regions the card cannot be ordered.",
+  "signupUrl": "https://nexo.com/"
 }

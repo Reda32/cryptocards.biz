@@ -129,6 +129,22 @@ node scripts/enrich-cards.mjs                           # scrape the source card
 
 ---
 
+## Card links (official vs affiliate)
+
+Every card has an official provider link in `signupUrl`. `/go/<slug>` resolves the
+destination in this order:
+
+1. `CARD_LINKS` env var (JSON map `slug → URL`) — server-side, change + restart,
+   no rebuild needed.
+2. `referral.url` (an affiliate link with a real code + bonus).
+3. `signupUrl` (the official provider site).
+
+To make a link affiliate, add a `referral` object to the card JSON (real `code`,
+`url`, `bonus`) — that enables the coupon/offer page. Otherwise leave it as the
+official `signupUrl`. Placeholder codes are never shipped.
+
+---
+
 ## Conventions
 
 - No comments unless they add real value.

@@ -127,15 +127,6 @@
     "ATM withdrawals carry a 2% fee (min US$2)"
   ],
   "rating": 8.1,
-  "referral": {
-    "code": "REDA-REF",
-    "url": "https://www.redotpay.com/en/referral/?code=REDA-REF",
-    "bonus": "Mystery bonus for new users who complete KYC",
-    "terms": "Bonus credited after identity verification and first top-up. Amount varies by promotion and region.",
-    "expiry": "Ongoing",
-    "eligibility": "New RedotPay users who complete identity verification and make a first top-up.",
-    "alternatives": []
-  },
   "variants": [
     {
       "name": "Virtual",
@@ -182,5 +173,6 @@
     "Syria",
     "Cuba"
   ],
-  "availabilityNotes": "RedotPay is not offered to US residents. Availability varies by region, so confirm before completing verification."
+  "availabilityNotes": "RedotPay is not offered to US residents. Availability varies by region, so confirm before completing verification.",
+  "signupUrl": "https://www.redotpay.com/"
 }

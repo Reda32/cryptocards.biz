@@ -5,9 +5,15 @@
   "summary": "Kosh is a stablecoin-backed Visa card and USD account built for freelancers and remote workers outside the US. You receive client payouts into a named USD account, hold the balance as USDC or USDT, and spend it directly through a virtual or physical card — with 5% cashback on hotel bookings and reward points on eligible spend.",
   "logo": "/logos/kosh.svg",
   "brandColor": "#0d9488",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "visa",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "crypto-topup",
@@ -74,11 +80,27 @@
   "cryptos": [
     {
       "symbol": "USDC",
-      "networks": ["Ethereum", "Solana", "Base", "Arbitrum", "Polygon", "Optimism", "BNB Chain"]
+      "networks": [
+        "Ethereum",
+        "Solana",
+        "Base",
+        "Arbitrum",
+        "Polygon",
+        "Optimism",
+        "BNB Chain"
+      ]
     },
     {
       "symbol": "USDT",
-      "networks": ["Ethereum", "Solana", "Base", "Arbitrum", "Polygon", "Optimism", "BNB Chain"]
+      "networks": [
+        "Ethereum",
+        "Solana",
+        "Base",
+        "Arbitrum",
+        "Polygon",
+        "Optimism",
+        "BNB Chain"
+      ]
     }
   ],
   "kyc": {
@@ -107,14 +129,6 @@
     "Small independent review base and unclear dispute handling"
   ],
   "rating": 7.4,
-  "referral": {
-    "code": "KOSH-REF",
-    "url": "https://koshmoney.com/",
-    "bonus": "Referral/new-user rewards are offered periodically; check the app for the current offer",
-    "terms": "Kosh does not publish a fixed referral bonus. Promotions (such as a free virtual card for a limited window) run occasionally with their own terms. Confirm the current offer in the app before applying.",
-    "expiry": "Ongoing (promotions are time-limited)",
-    "eligibility": "New users in supported (non-US) countries who complete KYC and activate a card."
-  },
   "howToGet": [
     "Download the Kosh app for iOS or Android and check whether your country can activate the card.",
     "Verify your identity with the documents the app requests.",
@@ -162,5 +176,6 @@
       "answer": "Kosh is operated by the CopperX team with named backers and regulated card partners, and it passed third-party domain safety scans. However, balances are held as stablecoins in smart-contract wallets with partner custody, so they are not FDIC-insured. Keep only a spending balance and verify current terms yourself."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "signupUrl": "https://koshmoney.com/"
 }

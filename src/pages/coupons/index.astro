@@ -23,25 +23,36 @@ const cards = (await getAllCards()).filter((card) => card.data.referral);
 
     <div class="mt-8 grid gap-4 sm:grid-cols-2">
       {
-        cards.map((card) => (
-          <article class="card-surface flex flex-col gap-4 p-5">
-            <div class="flex items-center gap-3">
-              <CardLogo src={card.data.logo} name={card.data.name} color={card.data.brandColor} size={44} />
-              <div>
-                <h2 class="font-bold text-slate-900 dark:text-white">{card.data.name}</h2>
-                <p class="text-sm text-slate-500 dark:text-slate-400">{card.data.referral!.bonus}</p>
+        cards.length > 0 ? (
+          cards.map((card) => (
+            <article class="card-surface flex flex-col gap-4 p-5">
+              <div class="flex items-center gap-3">
+                <CardLogo src={card.data.logo} name={card.data.name} color={card.data.brandColor} size={44} />
+                <div>
+                  <h2 class="font-bold text-slate-900 dark:text-white">{card.data.name}</h2>
+                  <p class="text-sm text-slate-500 dark:text-slate-400">{card.data.referral!.bonus}</p>
+                </div>
               </div>
-            </div>
-            <div class="mt-auto flex items-center gap-3">
-              <code class="rounded border border-dashed border-slate-300 px-2 py-1 font-mono text-sm dark:border-slate-600">
-                {card.data.referral!.code}
-              </code>
-              <a href={`/coupons/${card.data.slug}`} class="btn-secondary ml-auto">
-                View details
-              </a>
-            </div>
-          </article>
-        ))
+              <div class="mt-auto flex items-center gap-3">
+                <code class="rounded border border-dashed border-slate-300 px-2 py-1 font-mono text-sm dark:border-slate-600">
+                  {card.data.referral!.code}
+                </code>
+                <a href={`/coupons/${card.data.slug}`} class="btn-secondary ml-auto">
+                  View details
+                </a>
+              </div>
+            </article>
+          ))
+        ) : (
+          <div class="card-surface p-6 sm:col-span-2">
+            <p class="text-slate-600 dark:text-slate-300">
+              We don't have any verified promo codes or referral bonuses right now. We only list
+              offers we can confirm — check back, or browse the cards and their official sign-up
+              links.
+            </p>
+            <a href="/cards" class="btn-primary mt-4">Browse all cards</a>
+          </div>
+        )
       }
     </div>
   </div>

@@ -112,15 +112,6 @@
     "Rewards rates change with promotions"
   ],
   "rating": 7.9,
-  "referral": {
-    "code": "KAST-REF",
-    "url": "https://www.kast.xyz/?ref=KAST-REF",
-    "bonus": "Welcome reward for new users who make their first top-up",
-    "terms": "Reward is credited after the first qualifying top-up. New users only, one per account.",
-    "expiry": "Ongoing",
-    "eligibility": "New KAST users who complete sign-up and make a first top-up.",
-    "alternatives": []
-  },
   "variants": [
     {
       "name": "Standard",
@@ -167,5 +158,6 @@
     "Syria",
     "Cuba"
   ],
-  "availabilityNotes": "KAST availability varies by region. Confirm your country during sign-up before completing KYC."
+  "availabilityNotes": "KAST availability varies by region. Confirm your country during sign-up before completing KYC.",
+  "signupUrl": "https://www.kast.xyz/"
 }

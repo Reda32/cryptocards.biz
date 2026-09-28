@@ -122,15 +122,6 @@
     "Newer platform with an evolving fee structure"
   ],
   "rating": 8.8,
-  "referral": {
-    "code": "AVICI-REF",
-    "url": "https://avici.money/?ref=AVICI-REF",
-    "bonus": "Referral rewards for new users who complete onboarding",
-    "terms": "Rewards are set by Avici and can change. Verify the current offer and eligibility in the app before completing verification.",
-    "expiry": "Ongoing",
-    "eligibility": "New Avici users who complete onboarding and meet the required verification level.",
-    "alternatives": []
-  },
   "variants": [
     {
       "name": "Virtual",
@@ -177,5 +168,6 @@
     "Syria",
     "Cuba"
   ],
-  "availabilityNotes": "Avici is not available in India, China, Russia or sanctioned countries."
+  "availabilityNotes": "Avici is not available in India, China, Russia or sanctioned countries.",
+  "signupUrl": "https://avici.money/"
 }

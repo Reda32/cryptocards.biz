@@ -5,9 +5,15 @@
   "summary": "Mine is a pre-launch Swiss neobank on stablecoin rails: a CHF and EUR IBAN in your own name that settles as USDC in a self-custodial wallet, plus a Mastercard accepted in 175+ countries. Non-custodial by default, with opt-in 5% yield via Aave V3 and free instant Mine-to-Mine transfers. Sign-up is not live yet.",
   "logo": "/logos/mine.svg",
   "brandColor": "#b45309",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "mastercard",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "self-custodial",
@@ -96,9 +102,24 @@
   ],
   "availabilityNotes": "Mine is pre-launch — sign-up is currently listed as 'coming soon', so this page describes announced specifications that may change. The Mastercard is accepted in 172–175 countries including the US, but the account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list. Onboarding follows AML rules and some countries require extra verification.",
   "cryptos": [
-    { "symbol": "USDC", "networks": ["Ethereum"] },
-    { "symbol": "ETH", "networks": ["Ethereum"] },
-    { "symbol": "BTC", "networks": ["Bitcoin"] }
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "networks": [
+        "Bitcoin"
+      ]
+    }
   ],
   "kyc": {
     "level": "full",
@@ -125,15 +146,7 @@
     "Earn routes funds into Aave V3 smart contracts, which carry smart-contract risk",
     "Metal and Private tiers, their pricing and business features are still unannounced"
   ],
-  "rating": 7.0,
-  "referral": {
-    "code": "MINE-REF",
-    "url": "https://mine.financial/",
-    "bonus": "Invite code: a free Basic virtual card (normally US$5) or 20% off the Premium card (US$99 instead of US$124)",
-    "terms": "Mine is invite-only — every member holds three codes. Invites are personal and may be revoked for abuse, and invite rewards are still in development. The card programme is pre-launch, so confirm the current offer when sign-up opens.",
-    "expiry": "Pre-launch (announcement coming)",
-    "eligibility": "New users in supported countries (not US persons or Russian citizens) who complete AML verification."
-  },
+  "rating": 7,
   "howToGet": [
     "Get a Mine invite code — the card is invite-only and sign-up is currently 'coming soon'.",
     "Open an account and complete AML identity verification.",
@@ -197,5 +210,6 @@
       "answer": "No. Your CHF or EUR IBAN works like a normal bank account and incoming money settles as USDC automatically. Crypto and tokenized stocks are optional features you opt into rather than requirements."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "signupUrl": "https://mine.financial/"
 }

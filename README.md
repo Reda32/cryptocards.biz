@@ -112,7 +112,10 @@ scoring rules that `/methodology` documents.
 ## Affiliate links
 
 - Every CTA points at `/go/<card-slug>` and carries `rel="sponsored nofollow noopener"`.
-- The redirect target is `referral.url` (affiliate) or `signupUrl` (provider fallback).
+- The redirect target is resolved in this order: `CARD_LINKS` env → `referral.url` → `signupUrl`
+  (every card has an official provider `signupUrl`).
+- Change any link via the `CARD_LINKS` env map (server-side, no rebuild — restart only):
+  `CARD_LINKS={"redotpay-card":"https://www.redotpay.com/","kolo-card":"https://kolo.xyz/"}`
 - Clicks are tracked client-side with Umami via `data-umami-event="affiliate_click"`.
 - Always keep the affiliate disclosure visible on pages with referral links.
 
@@ -135,6 +138,7 @@ Copy `.env.example` to `.env`:
 | `PUBLIC_SITE_URL` | Canonical/site URL (defaults to `https://cryptocards.biz`) |
 | `UMAMI_HOST` | Your self-hosted Umami URL, e.g. `https://an.cryptocards.biz` (server-side, used by the `/stats/*` proxy) |
 | `PUBLIC_UMAMI_WEBSITE_ID` | Umami website id (public). Leave blank to disable analytics entirely. |
+| `CARD_LINKS` | Optional JSON map of `slug → URL` overriding each card's "Get card" link (server-side). |
 
 ### Umami analytics (first-party proxy)
 

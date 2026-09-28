@@ -5,9 +5,15 @@
   "summary": "Plasma One is a self-custodial stablecoin Visa card built on the Plasma blockchain. You top up with USDT or USDC, spend anywhere Visa is accepted across 180+ countries, keep earning up to ~6% yield on your balance, and collect up to 4% cashback paid in XPL — with zero fees on Plasma-routed transfers. Access is invite-only via a free code.",
   "logo": "/logos/plasma-one.svg",
   "brandColor": "#4f46e5",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "visa",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "self-custodial",
@@ -100,8 +106,20 @@
   ],
   "availabilityNotes": "Plasma One is available in 180+ countries where Visa is accepted, subject to geographic and regulatory limits. Account services are provided by Bridge and the card is issued by Rain, a Visa Principal Member. Availability is invite-only during the current phase — confirm eligibility in the app.",
   "cryptos": [
-    { "symbol": "USDT", "networks": ["Plasma", "Ethereum"] },
-    { "symbol": "USDC", "networks": ["Plasma", "Ethereum"] }
+    {
+      "symbol": "USDT",
+      "networks": [
+        "Plasma",
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Plasma",
+        "Ethereum"
+      ]
+    }
   ],
   "kyc": {
     "level": "id",
@@ -127,14 +145,6 @@
     "Newer platform with a short operating track record"
   ],
   "rating": 8.3,
-  "referral": {
-    "code": "TRLLNX",
-    "url": "https://plasmaone.onelink.me/P8qq/hnkjg5pj?deep_link_value=access_code&deep_link_sub1=TRLLNX",
-    "bonus": "Free access code to join Plasma One, plus Core tier free for the first year during launch promotions",
-    "terms": "Access codes are free — never pay for one. Tier promotions (such as Core free for the first year, or free for six months on Android) run for limited windows with their own terms. Cashback and yield rates are variable and tier dependent. Confirm the current offer before topping up.",
-    "expiry": "Ongoing (tier promotions are time-limited)",
-    "eligibility": "New users in supported countries with a valid access code who complete KYC."
-  },
   "howToGet": [
     "Download the Plasma One app (iOS or Android).",
     "Enter a free access code — ours is pre-filled when you use our link. Codes are invite-only.",
@@ -190,5 +200,6 @@
       "answer": "Plasma One is self-custodial — Plasma does not hold your assets. However, the yield feature routes funds into third-party DeFi vaults that are not deposit-insured and can lose value. Stablecoin balances are not bank deposits."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "signupUrl": "https://www.plasma.org/"
 }
