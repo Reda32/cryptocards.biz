@@ -25,40 +25,68 @@ const kycStep =
 const steps = [
   'Open the sign-up page using our link below — the code is usually pre-filled.',
   `Create your account with an email${d.kyc.phone ? ' and phone number' : ''}.`,
-  `Enter the referral code ${d.referral.code} if it is not already applied.`,
+  `Enter the promo code ${d.referral.code} if it is not already applied.`,
   kycStep,
   'Make a first top-up to trigger the reward.',
 ];
 
+const whatYouGet = [
+  d.referral.bonus,
+  d.rewards.cashback ? `Ongoing cashback: ${d.rewards.cashback}${d.rewards.cashbackToken ? ` in ${d.rewards.cashbackToken}` : ''}.` : null,
+  d.rewards.welcomeBonus ? `Welcome bonus: ${d.rewards.welcomeBonus}.` : null,
+].filter((item): item is string => Boolean(item));
+
+const eligibility =
+  d.referral.eligibility ??
+  `New ${d.company} users who complete sign-up through the referral link and meet the verification level for the offer. One bonus per person and per account.`;
+
+const expiryLabel =
+  d.referral.expiry ??
+  'Ongoing — the provider has not published an end date. Promotions can be changed or withdrawn at any time.';
+
+const expiryDate =
+  d.referral.expiry && !Number.isNaN(Date.parse(d.referral.expiry))
+    ? new Date(d.referral.expiry)
+    : null;
+
 const faq = [
   {
-    question: `What does the ${d.name} referral bonus require?`,
-    answer: d.referral.terms ?? d.referral.bonus,
+    question: `What is the ${d.name} promo code?`,
+    answer: `The current ${d.name} promo code is ${d.referral.code}. It is applied during sign-up and unlocks: ${d.referral.bonus}`,
   },
   {
-    question: `Do I need to complete KYC to claim the ${d.referral.code} bonus?`,
-    answer:
-      d.kyc.level === 'none'
-        ? 'No. This card does not require identity verification for basic use, so you can claim the bonus without a document check.'
-        : `Yes. You need to reach ${KYC_LABELS[d.kyc.level]} to qualify. ${d.kyc.notes ?? ''}`.trim(),
+    question: `What do I get with the ${d.name} promo code?`,
+    answer: whatYouGet.join(' '),
   },
   {
-    question: `Is the ${d.referral.code} code safe?`,
-    answer:
-      'Yes. It is the official referral code for this card. Sign-ups go through the provider’s own website or app, and we never ask for your seed phrase or exchange login.',
+    question: `Who is eligible for the ${d.name} bonus?`,
+    answer: eligibility,
+  },
+  {
+    question: `How do I apply the ${d.name} promo code?`,
+    answer: `Start sign-up through our referral link (the code is usually pre-filled), or enter ${d.referral.code} manually at sign-up, then complete the required verification and make a first top-up.`,
+  },
+  {
+    question: `When does the ${d.name} offer expire?`,
+    answer: expiryLabel,
+  },
+  {
+    question: `Is there a ${d.name} referral code as well as a coupon?`,
+    answer: `Yes — the referral code and promo code are the same: ${d.referral.code}. Referrals reward both the new user and, where the programme allows, the referrer.`,
   },
 ];
 
 const offerSchema = {
   '@context': 'https://schema.org',
   '@type': 'Offer',
-  name: `${d.name} referral bonus`,
+  name: `${d.name} promo code ${d.referral.code}`,
   description: d.referral.bonus,
   url: `https://cryptocards.biz/coupons/${d.slug}`,
   price: 0,
   priceCurrency: 'USD',
   availability: 'https://schema.org/InStock',
   validFrom: formatIsoDate(d.lastVerified),
+  ...(expiryDate ? { validThrough: expiryDate.toISOString() } : {}),
   seller: { '@type': 'Organization', name: d.company },
   itemOffered: { '@type': 'Service', name: d.name },
 };
@@ -75,8 +103,8 @@ const faqSchema = {
 ---
 
 <BaseLayout
-  title={`${d.name} Referral Code & Bonus 2026`}
-  description={`Use code ${d.referral.code} for the ${d.name} sign-up bonus. See the exact redemption steps, KYC requirements and terms before you apply.`}
+  title={`${d.name} Promo Codes & Coupons 2026`}
+  description={`Current ${d.name} promo code, coupon and referral bonus. See what code ${d.referral.code} gives you, who is eligible, how to apply it, expiry and terms.`}
   image={`/og/${d.slug}.png`}
   modifiedTime={d.lastVerified}
   schemas={[offerSchema, faqSchema]}
@@ -95,7 +123,7 @@ const faqSchema = {
         <CardLogo src={d.logo} name={d.name} color={d.brandColor} size={52} />
         <div>
           <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-            {d.name} referral code
+            {d.name} promo codes & coupons
           </h1>
           <p class="text-sm text-slate-500 dark:text-slate-400">{d.referral.bonus}</p>
         </div>
@@ -111,7 +139,13 @@ const faqSchema = {
           href={`/cards/${d.slug}`}
           class="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400"
         >
-          Read the full {d.name} review →
+          Read the {d.name} review →
+        </a>
+        <a
+          href={`/cards/${d.slug}/countries`}
+          class="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400"
+        >
+          Available countries →
         </a>
       </div>
       <p class="mt-4 text-xs text-slate-400">Last verified {formatDate(d.lastVerified)}</p>
@@ -121,7 +155,36 @@ const faqSchema = {
 
     <section>
       <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-        How to redeem the code
+        Current {d.name} offer
+      </h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <div class="card-surface p-5">
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Promo / referral code</p>
+          <p class="mt-1 font-mono text-lg font-bold text-slate-900 dark:text-white">{d.referral.code}</p>
+        </div>
+        <div class="card-surface p-5">
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-400">Offer</p>
+          <p class="mt-1 text-sm font-medium text-slate-900 dark:text-white">{d.referral.bonus}</p>
+        </div>
+      </div>
+      <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+        {whatYouGet.map((item) => (
+          <li class="flex gap-2">
+            <span class="text-emerald-600 dark:text-emerald-400" aria-hidden="true">+</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Eligibility</h2>
+      <p class="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-300">{eligibility}</p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        How to apply the {d.name} promo code
       </h2>
       <ol class="mt-4 space-y-4">
         {
@@ -139,6 +202,62 @@ const faqSchema = {
 
     <section>
       <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        Validity & expiration
+      </h2>
+      <p class="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-300">
+        <strong>Status:</strong> {expiryLabel}
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        Important terms
+      </h2>
+      <div class="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-300">
+        <p>{d.referral.terms ?? 'Bonus terms are set by the provider and can change at any time.'}</p>
+        <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+          Bonuses are offered by {d.company}, not by CryptoCards.biz. Eligibility, amount and timing
+          are controlled by {d.company} and may vary by region. We may earn a commission when you use
+          our link.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+        Alternative offers & referral options
+      </h2>
+      {
+        d.referral.alternatives.length > 0 ? (
+          <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+            {d.referral.alternatives.map((alt) => (
+              <li class="card-surface p-4 text-sm">
+                <a
+                  href={alt.url}
+                  rel="sponsored nofollow noopener"
+                  target="_blank"
+                  class="font-medium text-brand-600 hover:underline dark:text-brand-400"
+                >
+                  {alt.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-300">
+            The referral code above is the current documented offer for the {d.name}. If the code
+            does not apply for you, browse our other{' '}
+            <a href="/coupons" class="text-brand-600 hover:underline dark:text-brand-400">
+              crypto card coupons
+            </a>{' '}
+            for alternative offers.
+          </p>
+        )
+      }
+    </section>
+
+    <section>
+      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
         Fees you should know about
       </h2>
       <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
@@ -151,20 +270,7 @@ const faqSchema = {
 
     <section>
       <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-        Terms and conditions
-      </h2>
-      <div class="mt-3 rounded-lg border border-slate-200 bg-slate-50 p-5 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-300">
-        <p>{d.referral.terms ?? 'Bonus terms are set by the provider and can change at any time.'}</p>
-        <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
-          Bonuses are offered by {d.company}, not by CryptoCards.biz. Eligibility, amount and timing
-          are controlled by {d.company} and may vary by region.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-        Referral code FAQ
+        {d.name} promo code FAQ
       </h2>
       <div class="mt-4 space-y-3">
         {
@@ -177,6 +283,18 @@ const faqSchema = {
             </details>
           ))
         }
+      </div>
+    </section>
+
+    <section class="rounded-xl border border-brand-200 bg-brand-50 p-6 dark:border-brand-900 dark:bg-brand-950/40">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white">
+        Ready to use the {d.name} promo code?
+      </h2>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+        Code <strong class="font-mono">{d.referral.code}</strong> — {d.referral.bonus}
+      </p>
+      <div class="mt-4">
+        <CtaButton slug={d.slug} label="Claim the bonus" variant="accent" />
       </div>
     </section>
   </div>

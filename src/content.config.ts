@@ -58,6 +58,8 @@ const cards = defineCollection({
     }),
 
     countries: z.array(z.string()),
+    restrictedCountries: z.array(z.string()).default([]),
+    availabilityNotes: z.string().optional(),
     cryptos: z.array(
       z.object({
         symbol: z.string(), // 'USDT'
@@ -84,7 +86,16 @@ const cards = defineCollection({
       url: z.url(),
       bonus: z.string(),
       terms: z.string().optional(),
+      /** "Ongoing" or an explicit date, shown as validity on the promo page. */
+      expiry: z.string().optional(),
+      eligibility: z.string().optional(),
+      alternatives: z
+        .array(z.object({ label: z.string(), url: z.url() }))
+        .default([]),
     }),
+
+    /** Ordered steps for the "How to get the card" section. */
+    howToGet: z.array(z.string()).default([]),
 
     // -- extensions to the original plan schema --
     variants: z.array(cardVariant).default([]),

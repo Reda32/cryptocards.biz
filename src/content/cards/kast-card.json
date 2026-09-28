@@ -5,9 +5,15 @@
   "summary": "KAST is a stablecoin-first Visa card aimed at people who want to spend USDT and USDC without heavy verification. Onboarding is fast and the virtual card is issued instantly, though limits stay modest until you completeKYC.",
   "logo": "/logos/kast.svg",
   "brandColor": "#7c3aed",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "visa",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "instant-issuance",
@@ -19,7 +25,7 @@
   "fees": {
     "issuance": 0,
     "monthly": 0,
-    "fx": 1.0,
+    "fx": 1,
     "atm": "Varies by tier",
     "topup": "Free for stablecoin top-ups",
     "decline": 0.3
@@ -58,9 +64,31 @@
     "Vietnam"
   ],
   "cryptos": [
-    { "symbol": "USDT", "networks": ["ETH", "TRON", "BSC", "SOL", "Polygon"] },
-    { "symbol": "USDC", "networks": ["ETH", "SOL", "Polygon", "Base"] },
-    { "symbol": "USDe", "networks": ["ETH"] }
+    {
+      "symbol": "USDT",
+      "networks": [
+        "ETH",
+        "TRON",
+        "BSC",
+        "SOL",
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "ETH",
+        "SOL",
+        "Polygon",
+        "Base"
+      ]
+    },
+    {
+      "symbol": "USDe",
+      "networks": [
+        "ETH"
+      ]
+    }
   ],
   "kyc": {
     "level": "basic",
@@ -88,7 +116,10 @@
     "code": "KAST-REF",
     "url": "https://www.kast.xyz/?ref=KAST-REF",
     "bonus": "Welcome reward for new users who make their first top-up",
-    "terms": "Reward is credited after the first qualifying top-up. New users only, one per account."
+    "terms": "Reward is credited after the first qualifying top-up. New users only, one per account.",
+    "expiry": "Ongoing",
+    "eligibility": "New KAST users who complete sign-up and make a first top-up.",
+    "alternatives": []
   },
   "variants": [
     {
@@ -126,5 +157,15 @@
       "answer": "The metal card adds a monthly fee, so it only pays off if you want ATM access or higher limits. The free virtual card is enough for most online spending."
     }
   ],
-  "lastVerified": "2026-09-01"
+  "lastVerified": "2026-09-01",
+  "restrictedCountries": [
+    "United States",
+    "China",
+    "Russia",
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba"
+  ],
+  "availabilityNotes": "KAST availability varies by region. Confirm your country during sign-up before completing KYC."
 }

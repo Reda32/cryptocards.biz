@@ -5,9 +5,15 @@
   "summary": "Avici is a Solana-based crypto card built around self-custody: your funds stay in your wallet until the moment you pay, and a collateral-based credit model lets you keep your crypto exposure. It targets DeFi-native users with Visa Signature acceptance, 5% cashback and gas-sponsored transactions.",
   "logo": "/logos/avici.svg",
   "brandColor": "#10b981",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "visa",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "online-payments",
@@ -56,11 +62,41 @@
     "Vietnam"
   ],
   "cryptos": [
-    { "symbol": "SOL", "networks": ["Solana"] },
-    { "symbol": "USDC", "networks": ["Solana", "Base", "Ethereum"] },
-    { "symbol": "USDT", "networks": ["Solana", "Ethereum", "Tron"] },
-    { "symbol": "ETH", "networks": ["Ethereum", "Base"] },
-    { "symbol": "BTC", "networks": ["Bitcoin"] }
+    {
+      "symbol": "SOL",
+      "networks": [
+        "Solana"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Solana",
+        "Base",
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "USDT",
+      "networks": [
+        "Solana",
+        "Ethereum",
+        "Tron"
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum",
+        "Base"
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "networks": [
+        "Bitcoin"
+      ]
+    }
   ],
   "kyc": {
     "level": "id",
@@ -90,7 +126,10 @@
     "code": "AVICI-REF",
     "url": "https://avici.money/?ref=AVICI-REF",
     "bonus": "Referral rewards for new users who complete onboarding",
-    "terms": "Rewards are set by Avici and can change. Verify the current offer and eligibility in the app before completing verification."
+    "terms": "Rewards are set by Avici and can change. Verify the current offer and eligibility in the app before completing verification.",
+    "expiry": "Ongoing",
+    "eligibility": "New Avici users who complete onboarding and meet the required verification level.",
+    "alternatives": []
   },
   "variants": [
     {
@@ -128,5 +167,15 @@
       "answer": "Avici has no monthly, issuance or top-up fees. It charges around 1% FX on non-USD spending (up to 3% in some cases) and ATM withdrawals cost US$1 plus 0.65%."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "restrictedCountries": [
+    "India",
+    "China",
+    "Russia",
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba"
+  ],
+  "availabilityNotes": "Avici is not available in India, China, Russia or sanctioned countries."
 }

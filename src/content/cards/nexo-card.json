@@ -5,9 +5,15 @@
   "summary": "Nexo's card works in two modes: spend your crypto directly, or borrow against it with a collateralised credit line so you never sell. With up to 2% cashback, up to 14% APY on idle balances and no annual fee, it targets long-term holders in the EEA and UK — though physical cards are paused and US users are excluded.",
   "logo": "/logos/nexo.svg",
   "brandColor": "#0057ff",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "mastercard",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "staking",
@@ -65,21 +71,100 @@
     "United Kingdom"
   ],
   "cryptos": [
-    { "symbol": "BTC", "networks": ["Bitcoin"] },
-    { "symbol": "ETH", "networks": ["Ethereum"] },
-    { "symbol": "USDT", "networks": ["Ethereum", "Tron", "BSC"] },
-    { "symbol": "USDC", "networks": ["Ethereum", "Solana", "Polygon"] },
-    { "symbol": "DAI", "networks": ["Ethereum"] },
-    { "symbol": "XRP", "networks": ["XRP Ledger"] },
-    { "symbol": "SOL", "networks": ["Solana"] },
-    { "symbol": "ADA", "networks": ["Cardano"] },
-    { "symbol": "DOT", "networks": ["Polkadot"] },
-    { "symbol": "MATIC", "networks": ["Polygon"] },
-    { "symbol": "LINK", "networks": ["Ethereum"] },
-    { "symbol": "AVAX", "networks": ["Avalanche"] },
-    { "symbol": "ATOM", "networks": ["Cosmos"] },
-    { "symbol": "UNI", "networks": ["Ethereum"] },
-    { "symbol": "AAVE", "networks": ["Ethereum"] }
+    {
+      "symbol": "BTC",
+      "networks": [
+        "Bitcoin"
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "USDT",
+      "networks": [
+        "Ethereum",
+        "Tron",
+        "BSC"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Ethereum",
+        "Solana",
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "DAI",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "XRP",
+      "networks": [
+        "XRP Ledger"
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "networks": [
+        "Solana"
+      ]
+    },
+    {
+      "symbol": "ADA",
+      "networks": [
+        "Cardano"
+      ]
+    },
+    {
+      "symbol": "DOT",
+      "networks": [
+        "Polkadot"
+      ]
+    },
+    {
+      "symbol": "MATIC",
+      "networks": [
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "LINK",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "AVAX",
+      "networks": [
+        "Avalanche"
+      ]
+    },
+    {
+      "symbol": "ATOM",
+      "networks": [
+        "Cosmos"
+      ]
+    },
+    {
+      "symbol": "UNI",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "AAVE",
+      "networks": [
+        "Ethereum"
+      ]
+    }
   ],
   "kyc": {
     "level": "full",
@@ -109,7 +194,10 @@
     "code": "NEXO-REF",
     "url": "https://nexo.com/?ref=NEXO-REF",
     "bonus": "Sign-up bonus for new Nexo users",
-    "terms": "Bonus amount and eligibility are set by Nexo and vary by region and promotion. Confirm the current offer before depositing."
+    "terms": "Bonus amount and eligibility are set by Nexo and vary by region and promotion. Confirm the current offer before depositing.",
+    "expiry": "Ongoing",
+    "eligibility": "New Nexo users resident in the EEA or UK who complete full KYC. UK residents cannot earn crypto cashback under FCA rules.",
+    "alternatives": []
   },
   "variants": [
     {
@@ -147,5 +235,15 @@
       "answer": "No. The Nexo card is limited to the EEA and UK, and UK residents cannot earn crypto cashback under FCA rules. US users should check the latest availability directly with Nexo."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "restrictedCountries": [
+    "United States",
+    "China",
+    "Russia",
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba"
+  ],
+  "availabilityNotes": "Nexo Card availability is limited to the European Economic Area (EEA) and the United Kingdom. Outside those regions the card cannot be ordered."
 }

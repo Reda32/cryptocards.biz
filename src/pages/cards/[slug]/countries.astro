@@ -1,0 +1,256 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/components/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CardLogo from '@/components/CardLogo.astro';
+import CtaButton from '@/components/CtaButton.astro';
+import Disclosure from '@/components/Disclosure.astro';
+import FaqSection from '@/components/FaqSection.astro';
+import Section from '@/components/Section.astro';
+import { KYC_LABELS, formatDate } from '@/lib/cards';
+import { slugify } from '@/lib/taxonomy';
+
+export async function getStaticPaths() {
+  const cards = await getCollection('cards');
+  return cards.map((card) => ({ params: { slug: card.data.slug }, props: { card } }));
+}
+
+const { card } = Astro.props;
+const d = card.data;
+
+const regionFor = (country: string): string => {
+  const europe = new Set([
+    'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czechia', 'Denmark',
+    'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland',
+    'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands',
+    'Norway', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain',
+    'Sweden', 'Switzerland', 'United Kingdom',
+  ]);
+  if (europe.has(country)) return 'Europe / EEA & UK';
+  if (['United States', 'Canada', 'Mexico'].includes(country)) return 'North America';
+  if (['Brazil', 'Argentina'].includes(country)) return 'Latin America';
+  if (['Singapore', 'Japan', 'Thailand', 'Vietnam', 'Indonesia', 'Philippines', 'Malaysia'].includes(country))
+    return 'Asia-Pacific';
+  if (['United Arab Emirates', 'Turkey'].includes(country)) return 'Middle East';
+  if (['Nigeria', 'South Africa'].includes(country)) return 'Africa';
+  return 'Other';
+};
+
+const supported = [...d.countries].sort((a, b) => a.localeCompare(b));
+const restricted = [...d.restrictedCountries].sort((a, b) => a.localeCompare(b));
+
+const regions = supported.reduce<Record<string, string[]>>((acc, country) => {
+  const region = regionFor(country);
+  (acc[region] ??= []).push(country);
+  return acc;
+}, {});
+
+const cardTypes = d.type.map((t) => (t === 'virtual' ? 'virtual' : 'physical')).join(' and ');
+
+const faq = [
+  {
+    question: `Which countries is the ${d.name} available in?`,
+    answer:
+      supported.length > 0
+        ? `The ${d.name} is listed as available in ${supported.length} countries we track, including ${supported.slice(0, 5).join(', ')} and others. Availability changes frequently, so confirm your region in the app before completing verification.`
+        : `We are still confirming the full country list for the ${d.name}. Check the provider directly before applying.`,
+  },
+  {
+    question: `Where is the ${d.name} not available?`,
+    answer:
+      restricted.length > 0
+        ? `It is not available in ${restricted.join(', ')}. Sanctioned countries are also excluded, and availability can change without notice.`
+        : `No country restrictions have been publicly documented for the ${d.name}, but sanctioned countries are excluded and provider terms can change.`,
+  },
+  {
+    question: `What KYC is required to get the ${d.name} by country?`,
+    answer: `Verification is the same regardless of region: ${KYC_LABELS[d.kyc.level]}. ${d.kyc.notes ?? ''}`.trim(),
+  },
+  {
+    question: `How do I check if the ${d.name} is available in my country?`,
+    answer: `Open the provider's app or website from your country and start sign-up — if your region is supported it will let you proceed to verification. We re-verify availability periodically; if our list is out of date, treat the provider's own check as authoritative.`,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title={`${d.name} Available Countries 2026: Supported Countries & Regions`}
+  description={`Which countries support the ${d.name}? See supported and restricted countries, eligibility by region, residency and KYC requirements, and how to check availability.`}
+  image={`/og/${d.slug}.png`}
+  modifiedTime={d.lastVerified}
+  schemas={[faqSchema]}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      { label: 'Cards', href: '/cards' },
+      { label: d.name, href: `/cards/${d.slug}` },
+      { label: 'Available countries' },
+    ]}
+  />
+
+  <div class="container-page mt-6 space-y-10">
+    <header class="card-surface p-6">
+      <div class="flex items-center gap-4">
+        <CardLogo src={d.logo} name={d.name} color={d.brandColor} size={52} />
+        <div>
+          <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+            {d.name} available countries
+          </h1>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            {supported.length} supported · {restricted.length} restricted · verified {formatDate(d.lastVerified)}
+          </p>
+        </div>
+      </div>
+      <p class="mt-4 max-w-3xl text-slate-600 dark:text-slate-300">
+        Below are the countries and regions where the {d.name} can be ordered, where it is
+        restricted, and the residency and verification requirements that apply. Availability is
+        set by {d.company} and can change — always confirm during sign-up.
+      </p>
+      <div class="mt-5 flex flex-wrap items-center gap-3">
+        <CtaButton slug={d.slug} label="Get this card" />
+        <a href={`/coupons/${d.slug}`} class="btn-secondary">Promo codes & coupons</a>
+        <a
+          href={`/cards/${d.slug}`}
+          class="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400"
+        >
+          Read the full review →
+        </a>
+      </div>
+    </header>
+
+    <Disclosure />
+
+    <Section id="supported" title="Supported countries">
+      {
+        supported.length > 0 ? (
+          <ul class="flex flex-wrap gap-2">
+            {supported.map((country) => (
+              <li>
+                <a
+                  href={`/countries/${slugify(country)}`}
+                  class="badge bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200"
+                >
+                  {country}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            We have not confirmed a definitive supported-country list yet. Check the provider
+            directly before applying.
+          </p>
+        )
+      }
+    </Section>
+
+    <Section id="restricted" title="Unsupported & restricted countries">
+      {
+        restricted.length > 0 ? (
+          <ul class="flex flex-wrap gap-2">
+            {restricted.map((country) => (
+              <li>
+                <span class="badge bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300">
+                  {country}
+                </span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            No country restrictions have been publicly documented. Sanctioned jurisdictions are
+            excluded, and terms can change without notice.
+          </p>
+        )
+      }
+      {
+        d.availabilityNotes && (
+          <p class="mt-3 rounded-lg bg-slate-50 p-4 text-sm text-slate-600 dark:bg-slate-900/50 dark:text-slate-300">
+            {d.availabilityNotes}
+          </p>
+        )
+      }
+    </Section>
+
+    <Section id="eligibility" title="Eligibility by region">
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          Object.entries(regions).map(([region, list]) => (
+            <div class="card-surface p-5">
+              <h3 class="text-sm font-bold text-slate-900 dark:text-white">{region}</h3>
+              <p class="mt-1 text-xs text-slate-400">
+                {list.length} {list.length === 1 ? 'country' : 'countries'}
+              </p>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">{list.join(', ')}</p>
+            </div>
+          ))
+        }
+      </div>
+    </Section>
+
+    <Section id="card-availability" title="Card availability">
+      <ul class="grid gap-3 sm:grid-cols-2">
+        <li class="card-surface flex items-center justify-between p-4 text-sm">
+          <span class="text-slate-500 dark:text-slate-400">Card types</span>
+          <span class="font-medium capitalize text-slate-900 dark:text-white">{cardTypes}</span>
+        </li>
+        <li class="card-surface flex items-center justify-between p-4 text-sm">
+          <span class="text-slate-500 dark:text-slate-400">Network</span>
+          <span class="font-medium text-slate-900 dark:text-white">
+            {d.network === 'visa' ? 'Visa' : 'Mastercard'}
+          </span>
+        </li>
+        <li class="card-surface flex items-center justify-between p-4 text-sm">
+          <span class="text-slate-500 dark:text-slate-400">Daily spend</span>
+          <span class="font-medium text-slate-900 dark:text-white">{d.limits.dailySpend}</span>
+        </li>
+        <li class="card-surface flex items-center justify-between p-4 text-sm">
+          <span class="text-slate-500 dark:text-slate-400">Monthly spend</span>
+          <span class="font-medium text-slate-900 dark:text-white">{d.limits.monthlySpend}</span>
+        </li>
+      </ul>
+    </Section>
+
+    <Section id="residency" title="Residency & KYC requirements">
+      <div class="card-surface p-5 text-sm text-slate-600 dark:text-slate-300">
+        <p>
+          Residency requirements are set by the provider and verified during onboarding. The {d.name}{' '}
+          requires <strong>{KYC_LABELS[d.kyc.level]}</strong> regardless of country.
+        </p>
+        {d.kyc.notes && <p class="mt-3">{d.kyc.notes}</p>}
+      </div>
+    </Section>
+
+    <Section id="how-to-check" title="How to check current availability">
+      <ol class="list-decimal space-y-2 pl-6 text-sm text-slate-600 dark:text-slate-300">
+        <li>Open the provider's app or website from the country where you are resident.</li>
+        <li>Start sign-up — supported regions proceed to verification; unsupported ones are blocked.</li>
+        <li>Complete KYC in the region you are tax-resident in; VPN workarounds breach the provider's terms.</li>
+        <li>If our list looks out of date, trust the provider's own check and let us know so we can re-verify.</li>
+      </ol>
+    </Section>
+
+    <Section id="faq" title="Availability FAQ">
+      <FaqSection items={faq} schema={false} />
+    </Section>
+
+    <section class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-xs text-slate-500 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
+      <p>
+        Last verified {d.lastVerified.toISOString().slice(0, 10)}. Country availability, fees and
+        limits are set by {d.company} and change frequently. Always confirm the current terms
+        before applying. This is not financial advice.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

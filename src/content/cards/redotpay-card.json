@@ -5,9 +5,15 @@
   "summary": "RedotPay is a Hong Kong-based crypto card that lets you spend USDT, USDC, BTC and ETH wherever Visa is accepted. It pairs low FX fees with a usable virtual card, but it is not available everywhere and many features require identity verification.",
   "logo": "/logos/redotpay.svg",
   "brandColor": "#e11d48",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "visa",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "no-annual-fee",
@@ -56,12 +62,48 @@
     "Vietnam"
   ],
   "cryptos": [
-    { "symbol": "USDT", "networks": ["ETH", "TRON", "BSC", "SOL", "Polygon"] },
-    { "symbol": "USDC", "networks": ["ETH", "SOL", "Polygon"] },
-    { "symbol": "BTC", "networks": ["Bitcoin"] },
-    { "symbol": "ETH", "networks": ["Ethereum"] },
-    { "symbol": "BNB", "networks": ["BSC"] },
-    { "symbol": "SOL", "networks": ["Solana"] }
+    {
+      "symbol": "USDT",
+      "networks": [
+        "ETH",
+        "TRON",
+        "BSC",
+        "SOL",
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "ETH",
+        "SOL",
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "networks": [
+        "Bitcoin"
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "BNB",
+      "networks": [
+        "BSC"
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "networks": [
+        "Solana"
+      ]
+    }
   ],
   "kyc": {
     "level": "id",
@@ -89,7 +131,10 @@
     "code": "REDA-REF",
     "url": "https://www.redotpay.com/en/referral/?code=REDA-REF",
     "bonus": "Mystery bonus for new users who complete KYC",
-    "terms": "Bonus credited after identity verification and first top-up. Amount varies by promotion and region."
+    "terms": "Bonus credited after identity verification and first top-up. Amount varies by promotion and region.",
+    "expiry": "Ongoing",
+    "eligibility": "New RedotPay users who complete identity verification and make a first top-up.",
+    "alternatives": []
   },
   "variants": [
     {
@@ -127,5 +172,15 @@
       "answer": "No. The card has no monthly or annual fee. You pay a one-off issuance fee and a 1.2% FX fee on non-USD transactions."
     }
   ],
-  "lastVerified": "2026-09-01"
+  "lastVerified": "2026-09-01",
+  "restrictedCountries": [
+    "United States",
+    "China",
+    "Russia",
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba"
+  ],
+  "availabilityNotes": "RedotPay is not offered to US residents. Availability varies by region, so confirm before completing verification."
 }

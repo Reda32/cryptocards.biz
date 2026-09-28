@@ -5,9 +5,15 @@
   "summary": "Ether.fi Cash is a non-custodial Visa card that lets you borrow against your crypto instead of selling it. Spend USDC on Scroll with gasless transactions while your collateral keeps earning yield, and earn banded cashback paid in WETH — provided you clear the onboarding checks and avoid liquidation.",
   "logo": "/logos/etherfi.svg",
   "brandColor": "#0ea5e9",
-  "type": ["virtual", "physical"],
+  "type": [
+    "virtual",
+    "physical"
+  ],
   "network": "visa",
-  "wallets": ["apple", "google"],
+  "wallets": [
+    "apple",
+    "google"
+  ],
   "features": [
     "contactless",
     "online-payments",
@@ -74,9 +80,26 @@
     "Vietnam"
   ],
   "cryptos": [
-    { "symbol": "ETH", "networks": ["Ethereum", "Scroll"] },
-    { "symbol": "USDC", "networks": ["Ethereum", "Scroll"] },
-    { "symbol": "USDT", "networks": ["Ethereum"] }
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum",
+        "Scroll"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Ethereum",
+        "Scroll"
+      ]
+    },
+    {
+      "symbol": "USDT",
+      "networks": [
+        "Ethereum"
+      ]
+    }
   ],
   "kyc": {
     "level": "id",
@@ -106,7 +129,10 @@
     "code": "ETHERFI-REF",
     "url": "https://www.ether.fi/?ref=ETHERFI-REF",
     "bonus": "Referral rewards for new users who activate the card",
-    "terms": "Bonus amount and eligibility are set by Ether.fi and vary by region and promotion. Confirm the current offer before depositing collateral."
+    "terms": "Bonus amount and eligibility are set by Ether.fi and vary by region and promotion. Confirm the current offer before depositing collateral.",
+    "expiry": "Ongoing",
+    "eligibility": "New Ether.fi Cash users who activate the card and meet the required verification level.",
+    "alternatives": []
   },
   "variants": [
     {
@@ -144,5 +170,18 @@
       "answer": "It is non-custodial, which means your collateral sits in a self-custodied vault rather than on Ether.fi's balance sheet. The main risk is liquidation if your collateral value falls below the required ratio in Borrow Mode."
     }
   ],
-  "lastVerified": "2026-09-28"
+  "lastVerified": "2026-09-28",
+  "restrictedCountries": [
+    "United States",
+    "India",
+    "Indonesia",
+    "Netherlands",
+    "China",
+    "Russia",
+    "Iran",
+    "North Korea",
+    "Syria",
+    "Cuba"
+  ],
+  "availabilityNotes": "Not available in the US (a reported block across roughly 20 states), India, Indonesia or the Netherlands."
 }
