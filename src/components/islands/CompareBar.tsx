@@ -67,7 +67,13 @@ export default function CompareBar() {
             <li key={card.slug} class="shrink-0">
               <span class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 py-1 pl-2 pr-1 text-sm dark:border-slate-700 dark:bg-slate-900">
                 {card.logo ? (
-                  <img src={card.logo} alt="" width={18} height={18} class="rounded" />
+                  <img
+                    src={card.logo}
+                    alt=""
+                    width={18}
+                    height={18}
+                    class="rounded object-contain ring-1 ring-slate-200 dark:ring-slate-700"
+                  />
                 ) : (
                   <span
                     class="grid h-[18px] w-[18px] place-items-center rounded text-[10px] font-bold text-white"

@@ -3,9 +3,11 @@
   "slug": "gemini-credit-card",
   "company": "Gemini",
   "summary": "The Gemini Credit Card is a US-only, no-annual-fee Mastercard that pays crypto rewards on every purchase — up to 4% on gas and EV charging, 3% on dining and 2% on groceries, paid instantly in Bitcoin or 60+ other coins. Conceptually strong, but it is gated behind a credit check and criticised for low credit limits and slow support.",
-  "logo": "/logos/gemini.svg",
+  "logo": "/logos/gemini.webp",
   "brandColor": "#00c2ff",
-  "type": ["physical"],
+  "type": [
+    "physical"
+  ],
   "network": "mastercard",
   "wallets": [],
   "features": [
@@ -35,7 +37,9 @@
     "welcomeBonus": "$200",
     "referralBonus": "$50"
   },
-  "countries": ["United States"],
+  "countries": [
+    "United States"
+  ],
   "restrictedCountries": [
     "Canada",
     "United Kingdom",
@@ -52,20 +56,90 @@
   ],
   "availabilityNotes": "The Gemini Credit Card is available to US residents only, including US territories where supported. It cannot be ordered outside the United States. The card is issued by WebBank.",
   "cryptos": [
-    { "symbol": "BTC", "networks": ["Bitcoin"] },
-    { "symbol": "ETH", "networks": ["Ethereum"] },
-    { "symbol": "SOL", "networks": ["Solana"] },
-    { "symbol": "DOGE", "networks": ["Dogecoin"] },
-    { "symbol": "XRP", "networks": ["XRP Ledger"] },
-    { "symbol": "ADA", "networks": ["Cardano"] },
-    { "symbol": "DOT", "networks": ["Polkadot"] },
-    { "symbol": "MATIC", "networks": ["Polygon"] },
-    { "symbol": "AVAX", "networks": ["Avalanche"] },
-    { "symbol": "LINK", "networks": ["Ethereum"] },
-    { "symbol": "UNI", "networks": ["Ethereum"] },
-    { "symbol": "AAVE", "networks": ["Ethereum"] },
-    { "symbol": "LTC", "networks": ["Litecoin"] },
-    { "symbol": "ATOM", "networks": ["Cosmos"] }
+    {
+      "symbol": "BTC",
+      "networks": [
+        "Bitcoin"
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "networks": [
+        "Solana"
+      ]
+    },
+    {
+      "symbol": "DOGE",
+      "networks": [
+        "Dogecoin"
+      ]
+    },
+    {
+      "symbol": "XRP",
+      "networks": [
+        "XRP Ledger"
+      ]
+    },
+    {
+      "symbol": "ADA",
+      "networks": [
+        "Cardano"
+      ]
+    },
+    {
+      "symbol": "DOT",
+      "networks": [
+        "Polkadot"
+      ]
+    },
+    {
+      "symbol": "MATIC",
+      "networks": [
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "AVAX",
+      "networks": [
+        "Avalanche"
+      ]
+    },
+    {
+      "symbol": "LINK",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "UNI",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "AAVE",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "LTC",
+      "networks": [
+        "Litecoin"
+      ]
+    },
+    {
+      "symbol": "ATOM",
+      "networks": [
+        "Cosmos"
+      ]
+    }
   ],
   "kyc": {
     "level": "full",

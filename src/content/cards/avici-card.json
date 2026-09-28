@@ -3,7 +3,7 @@
   "slug": "avici-card",
   "company": "Avici",
   "summary": "Avici is a Solana-based crypto card built around self-custody: your funds stay in your wallet until the moment you pay, and a collateral-based credit model lets you keep your crypto exposure. It targets DeFi-native users with Visa Signature acceptance, 5% cashback and gas-sponsored transactions.",
-  "logo": "/logos/avici.svg",
+  "logo": "/logos/avici.webp",
   "brandColor": "#10b981",
   "type": [
     "virtual",

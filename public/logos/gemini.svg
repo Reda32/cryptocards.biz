@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gemini">
-  <rect width="64" height="64" rx="14" fill="#00c2ff" />
-  <path d="M32 16c7 5.2 12 9.9 12 16s-5 10.8-12 16c-7-5.2-12-9.9-12-16s5-10.8 12-16Z" fill="none" stroke="#04212e" stroke-width="4" stroke-linejoin="round" />
-  <circle cx="32" cy="32" r="4" fill="#04212e" />
-</svg>

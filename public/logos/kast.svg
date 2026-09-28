@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KAST">
-  <rect width="64" height="64" rx="14" fill="#7c3aed" />
-  <path d="M18 18h6.2v12.1L36.6 18H45L31.9 32.2 45.7 46h-8.6L24.2 33.6V46H18V18Z" fill="#fff" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="196" viewBox="0 0 196 196" fill="none"><path fill="#fff" d="M0 0h196v196H0z"/><path fill="#080808" d="M77.748 143.253H57v-36.65l19.888-9.876 61.197 30.647v15.895h-16.23l-44.404-25.153.281 25.153.016-.016Z"/><path fill="#080808" d="M77.748 51.736H57v35.44l19.888 9.551 61.197-29.62v-15.37h-16.23L77.467 76.058l.281-24.323Z"/></svg>
