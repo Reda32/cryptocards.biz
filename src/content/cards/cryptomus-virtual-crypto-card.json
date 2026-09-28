@@ -34,10 +34,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Instant virtual card",
+    "0% Cashback cashback"
+  ],
+  "cons": [
+    "3.9% foreign-exchange markup",
+    "US$4 card issuance fee",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Cryptomus Virtual Crypto Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$4."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Cryptomus Virtual Crypto Card?",
+      "answer": "It charges about 3.9% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Cryptomus Virtual Crypto Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Cryptomus Virtual Crypto Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cryptomus-cryptomus-virtual-crypto-card",

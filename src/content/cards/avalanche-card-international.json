@@ -39,10 +39,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "2% foreign-exchange markup",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Avalanche Card International charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Avalanche Card International?",
+      "answer": "It charges about 2% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Avalanche Card International require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Avalanche Card International support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rain-liquidity-llc-avalanche-card-international",

@@ -47,10 +47,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "3% cashback in STRK"
+  ],
+  "cons": [
+    "US$15 monthly fee",
+    "ATM fees apply (2%)",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Ready Metal Card charge a monthly fee?",
+      "answer": "Yes — it charges US$15 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Ready Metal Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Ready Metal Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Ready Metal Card support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "$15/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/ready-metal-card",

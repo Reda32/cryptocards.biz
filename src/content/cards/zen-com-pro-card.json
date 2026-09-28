@@ -51,10 +51,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "0% Cashback cashback"
+  ],
+  "cons": [
+    "US$6.9 monthly fee",
+    "0.1% foreign-exchange markup",
+    "ATM fees apply (1.5%)",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the ZEN.COM Pro Card charge a monthly fee?",
+      "answer": "Yes — it charges US$6.9 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the ZEN.COM Pro Card?",
+      "answer": "It charges about 0.1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the ZEN.COM Pro Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the ZEN.COM Pro Card support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "$6.9/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pro-card",

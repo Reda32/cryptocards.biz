@@ -16,12 +16,19 @@ interface Props {
   publishedTime?: Date;
   modifiedTime?: Date;
   schemas?: Record<string, unknown>[];
+  /** 'full' embeds every card's data (for the /compare table); 'minimal' only
+   *  what the compare bar needs, keeping pages small. */
+  comparePayload?: 'minimal' | 'full';
 }
 
-const props = Astro.props;
+const { comparePayload = 'minimal', ...props } = Astro.props;
 
-const compareCards = await getCompareCards();
-const payload = JSON.stringify({ cards: compareCards, pairs: allPairSlugs() });
+const allCards = await getCompareCards();
+const cards =
+  comparePayload === 'full'
+    ? allCards
+    : allCards.map(({ slug, name, logo, brandColor }) => ({ slug, name, logo, brandColor }));
+const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
 ---
 
 <!doctype html>

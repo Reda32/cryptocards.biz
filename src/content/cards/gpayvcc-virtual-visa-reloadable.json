@@ -44,10 +44,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% cashback",
+    "Light-touch verification to get started",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$200 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Gpayvcc Virtual Visa Reloadable charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$200."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Gpayvcc Virtual Visa Reloadable?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Gpayvcc Virtual Visa Reloadable require?",
+      "answer": "It requires email/phone verification."
+    },
+    {
+      "question": "Which card network and wallets does the Gpayvcc Virtual Visa Reloadable support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/gpayvcc-gpayvcc-virtual-visa-reloadable",

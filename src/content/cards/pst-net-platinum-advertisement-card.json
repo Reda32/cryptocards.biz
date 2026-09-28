@@ -34,10 +34,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "3% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$16 monthly fee",
+    "US$16 card issuance fee",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the PST.NET Platinum Advertisement Card charge a monthly fee?",
+      "answer": "Yes — it charges US$16 per month. Card issuance is US$16."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the PST.NET Platinum Advertisement Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the PST.NET Platinum Advertisement Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the PST.NET Platinum Advertisement Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pstnet-pstnet-platinum-advertisement-card",

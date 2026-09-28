@@ -19,8 +19,9 @@ const topic = topicBySlug(topicSlug!);
 if (!topic) throw new Error(`Unknown topic: ${topicSlug}`);
 
 const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
-const matches = cards.filter(topic.filter);
-const others = cards.filter((c) => !matches.includes(c));
+const allMatches = cards.filter(topic.filter);
+const matches = allMatches.slice(0, 12);
+const others = cards.filter((c) => !allMatches.includes(c)).slice(0, 6);
 const scoreFor = (slug: string) =>
   communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
 ---
@@ -49,6 +50,16 @@ const scoreFor = (slug: string) =>
     <div class="space-y-4">
       {matches.map((card) => <CardSummaryRow card={card} communityScore={scoreFor(card.data.slug)} />)}
     </div>
+
+    {
+      allMatches.length > matches.length && (
+        <div class="text-center">
+          <a href="/cards" class="btn-secondary">
+            View all {allMatches.length} matching cards
+          </a>
+        </div>
+      )
+    }
 
     <section class="card-surface p-6">
       <h2 class="text-lg font-bold text-slate-900 dark:text-white">How we ranked these</h2>

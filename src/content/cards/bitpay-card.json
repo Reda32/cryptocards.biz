@@ -43,10 +43,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Both virtual and physical cards",
+    "0% cashback"
+  ],
+  "cons": [
+    "3% foreign-exchange markup",
+    "US$10 card issuance fee",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the BitPay Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$10."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the BitPay Card?",
+      "answer": "It charges about 3% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the BitPay Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the BitPay Card support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitpay-card",

@@ -51,10 +51,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Both virtual and physical cards",
+    "0% cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$1 monthly fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the NearPay Card charge a monthly fee?",
+      "answer": "Yes — it charges US$1 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the NearPay Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the NearPay Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the NearPay Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$1/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/nearpay-card",

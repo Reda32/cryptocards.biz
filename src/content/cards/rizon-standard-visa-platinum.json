@@ -36,10 +36,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Both virtual and physical cards",
+    "0% cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1.7% foreign-exchange markup",
+    "US$10 card issuance fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Rizon Standard Visa Platinum charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$10."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Rizon Standard Visa Platinum?",
+      "answer": "It charges about 1.7% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Rizon Standard Visa Platinum require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Rizon Standard Visa Platinum support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rizon-rizon-standard-visa-platinum",

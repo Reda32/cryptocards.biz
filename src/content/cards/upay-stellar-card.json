@@ -43,10 +43,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Instant virtual card",
+    "0% cashback"
+  ],
+  "cons": [
+    "1% foreign-exchange markup",
+    "US$50 card issuance fee",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the UPay Stellar Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$50."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the UPay Stellar Card?",
+      "answer": "It charges about 1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the UPay Stellar Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the UPay Stellar Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/upay-technology-ltd-upay-stellar-card",

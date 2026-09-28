@@ -26,10 +26,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "8% cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1.5% foreign-exchange markup",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Tap Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Tap Card?",
+      "answer": "It charges about 1.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Tap Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Tap Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/tap-global-card",

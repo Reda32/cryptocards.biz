@@ -30,10 +30,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Instant virtual card",
+    "4% cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1% foreign-exchange markup",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Amp Black Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Amp Black Card?",
+      "answer": "It charges about 1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Amp Black Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Amp Black Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/amp-pay-black-card",

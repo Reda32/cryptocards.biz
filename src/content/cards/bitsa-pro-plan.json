@@ -51,10 +51,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 2.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "15% cashback"
+  ],
+  "cons": [
+    "1.5% foreign-exchange markup",
+    "ATM fees apply (1%)",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Bitsa Pro Plan charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Bitsa Pro Plan?",
+      "answer": "It charges about 1.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Bitsa Pro Plan require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Bitsa Pro Plan support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$9.99/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitsa-bitsa-pro-plan",

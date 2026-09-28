@@ -46,10 +46,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Both virtual and physical cards",
+    "10% cashback in BTC"
+  ],
+  "cons": [
+    "ATM fees apply (2.2%)",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the WhiteBIT Nova Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the WhiteBIT Nova Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the WhiteBIT Nova Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the WhiteBIT Nova Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/whitebit-whitebit-nova-card",

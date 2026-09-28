@@ -25,10 +25,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the TapxCard Virtual Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the TapxCard Virtual Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the TapxCard Virtual Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the TapxCard Virtual Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/tapxcard-virtual",

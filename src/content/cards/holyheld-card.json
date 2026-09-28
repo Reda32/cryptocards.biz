@@ -44,10 +44,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Both virtual and physical cards",
+    "1% cashback in USDC"
+  ],
+  "cons": [
+    "2.5% foreign-exchange markup",
+    "US$29 card issuance fee",
+    "ATM fees apply (1.5%)",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Holyheld Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$29."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Holyheld Card?",
+      "answer": "It charges about 2.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Holyheld Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Holyheld Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/holyheld-card",

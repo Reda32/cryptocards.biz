@@ -26,10 +26,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Both virtual and physical cards",
+    "6% cashback"
+  ],
+  "cons": [
+    "US$20 card issuance fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Tria Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$20."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Tria Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Tria Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Tria Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/tria-card",

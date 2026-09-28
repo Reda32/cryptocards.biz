@@ -31,10 +31,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Instant virtual card",
+    "Light-touch verification to get started"
+  ],
+  "cons": [
+    "2.5% foreign-exchange markup",
+    "Virtual card only — no physical card",
+    "Rewards programme details are limited"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the The Bitcoin Company US Visa Reward Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the The Bitcoin Company US Visa Reward Card?",
+      "answer": "It charges about 2.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the The Bitcoin Company US Visa Reward Card require?",
+      "answer": "It requires email/phone verification."
+    },
+    {
+      "question": "Which card network and wallets does the The Bitcoin Company US Visa Reward Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/the-bitcoin-company-the-bitcoin-company-us-visa-reward-card",

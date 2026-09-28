@@ -30,10 +30,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Kem Infinity Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Kem Infinity Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Kem Infinity Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Kem Infinity Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kem-infinity-card",

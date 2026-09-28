@@ -34,10 +34,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card"
+  ],
+  "cons": [
+    "US$5 card issuance fee",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Odix Pay Top Plan charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$5."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Odix Pay Top Plan?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Odix Pay Top Plan require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Odix Pay Top Plan support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/odix-pay-top-plan",

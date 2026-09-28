@@ -53,7 +53,7 @@ const comparisons = CURATED_PAIRS.filter(
   };
 });
 
-const others = allCards.filter((c) => c.data.slug !== d.slug);
+const others = allCards.filter((c) => c.data.slug !== d.slug).slice(0, 6);
 
 const shownCountries = d.countries.slice(0, 12);
 const moreCountries = Math.max(0, d.countries.length - shownCountries.length);
@@ -64,7 +64,9 @@ const stepForKyc =
     : `Complete verification: ${KYC_LABELS[d.kyc.level]}. ${d.kyc.notes ?? ''}`.trim();
 
 const defaultSteps = [
-  `Open the ${d.name} sign-up page using our link below.`,
+  d.referral
+    ? `Open the ${d.name} sign-up page using our link below.`
+    : `Open the ${d.name} sign-up page on the provider's website.`,
   `Create your account with an email${d.kyc?.phone ? ' and phone number' : ''}.`,
   ...(d.referral
     ? [`Enter the referral code ${d.referral.code} if it is not already applied.`]

@@ -52,10 +52,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Both virtual and physical cards",
+    "1% cashback in BTC"
+  ],
+  "cons": [
+    "US$1 monthly fee",
+    "3% foreign-exchange markup",
+    "US$5 card issuance fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the CryptoPay Card charge a monthly fee?",
+      "answer": "Yes — it charges US$1 per month. Card issuance is US$5."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the CryptoPay Card?",
+      "answer": "It charges about 3% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the CryptoPay Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the CryptoPay Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$1/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cryptopay-card",

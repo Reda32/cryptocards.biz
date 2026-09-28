@@ -38,10 +38,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "4% cashback"
+  ],
+  "cons": [
+    "US$30.23 card issuance fee",
+    "ATM fees apply (2%)",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Gnosis Pay Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$30.23."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Gnosis Pay Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Gnosis Pay Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Gnosis Pay Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/gnosis-pay-card",

@@ -24,6 +24,7 @@ const scoreFor = (slug: string) =>
 <BaseLayout
   title={`${companyName} Crypto Cards`}
   description={`Every ${companyName} card we review, compared on fees, limits, KYC requirements and supported cryptocurrencies.`}
+  noindex={companyCards.length < 2}
 >
   <Breadcrumbs
     items={[

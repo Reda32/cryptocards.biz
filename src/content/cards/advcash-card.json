@@ -43,10 +43,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Both virtual and physical cards",
+    "0% cashback"
+  ],
+  "cons": [
+    "0.95% foreign-exchange markup",
+    "US$14.99 card issuance fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the AdvCash Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$14.99."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the AdvCash Card?",
+      "answer": "It charges about 0.95% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the AdvCash Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the AdvCash Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/advcash-card",

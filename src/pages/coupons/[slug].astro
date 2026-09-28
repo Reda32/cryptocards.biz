@@ -141,7 +141,7 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
   }
   image={`/og/${d.slug}.png`}
   modifiedTime={d.lastVerified}
-  noindex={!d.verified}
+  noindex={!d.verified || !hasOffer}
   schemas={schemas}
 >
   <Breadcrumbs

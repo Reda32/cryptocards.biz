@@ -50,10 +50,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "No identity verification required"
+  ],
+  "cons": [
+    "US$2 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Trocador Swype Mastercard charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$2."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Trocador Swype Mastercard?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Trocador Swype Mastercard require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the Trocador Swype Mastercard support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$2.5/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/trocador-swype-mastercard",

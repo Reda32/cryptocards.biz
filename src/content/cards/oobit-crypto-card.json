@@ -45,10 +45,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Instant virtual card",
+    "10% cashback in OOB"
+  ],
+  "cons": [
+    "3% foreign-exchange markup",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Oobit Crypto Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Oobit Crypto Card?",
+      "answer": "It charges about 3% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Oobit Crypto Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Oobit Crypto Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/oobit-tap-pay",

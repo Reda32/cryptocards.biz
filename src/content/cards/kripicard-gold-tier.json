@@ -50,10 +50,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Instant virtual card",
+    "0% cashback",
+    "Light-touch verification to get started",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$1.5 monthly fee",
+    "1% foreign-exchange markup",
+    "US$3 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Kripicard Gold Tier charge a monthly fee?",
+      "answer": "Yes — it charges US$1.5 per month. Card issuance is US$3."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Kripicard Gold Tier?",
+      "answer": "It charges about 1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Kripicard Gold Tier require?",
+      "answer": "It requires email/phone verification."
+    },
+    {
+      "question": "Which card network and wallets does the Kripicard Gold Tier support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$1.5/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kripicard-kripicard-gold-tier",

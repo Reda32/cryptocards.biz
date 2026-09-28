@@ -42,10 +42,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "No identity verification required",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1.5% foreign-exchange markup",
+    "US$25 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the BingCard Virtual Exclusive charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$25."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the BingCard Virtual Exclusive?",
+      "answer": "It charges about 1.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the BingCard Virtual Exclusive require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the BingCard Virtual Exclusive support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/virtual-exclusive",

@@ -44,10 +44,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Instant virtual card",
+    "8.5% cashback in USDC",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1% foreign-exchange markup",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the KuCoin KuCard charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the KuCoin KuCard?",
+      "answer": "It charges about 1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the KuCoin KuCard require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the KuCoin KuCard support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kucoin-kucoin-kucard",

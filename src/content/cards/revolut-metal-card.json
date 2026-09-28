@@ -51,10 +51,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "1% cashback in BTC",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$14.99 monthly fee",
+    "ATM fees apply (2%)",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Revolut Metal Card charge a monthly fee?",
+      "answer": "Yes — it charges US$14.99 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Revolut Metal Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Revolut Metal Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Revolut Metal Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$14.99/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/revolut-metal-card",

@@ -30,10 +30,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "No identity verification required",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$2 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Foton Card Virtual Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$2."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Foton Card Virtual Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Foton Card Virtual Card require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the Foton Card Virtual Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/foton-card-foton-card-virtual-card",

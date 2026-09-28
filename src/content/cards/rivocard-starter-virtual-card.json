@@ -44,10 +44,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "2% cashback",
+    "No identity verification required"
+  ],
+  "cons": [
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the RivoCard Starter Virtual Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the RivoCard Starter Virtual Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the RivoCard Starter Virtual Card require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the RivoCard Starter Virtual Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rivocard-rivocard-starter-virtual-card",

@@ -43,10 +43,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1.75% foreign-exchange markup",
+    "ATM fees apply (3%)",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Cypher Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Cypher Card?",
+      "answer": "It charges about 1.75% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Cypher Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Cypher Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cypher-card",

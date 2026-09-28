@@ -42,10 +42,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "Light-touch verification to get started",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1.75% foreign-exchange markup",
+    "US$10 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the BeeXpay Virtual Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$10."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the BeeXpay Virtual Card?",
+      "answer": "It charges about 1.75% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the BeeXpay Virtual Card require?",
+      "answer": "It requires email/phone verification."
+    },
+    {
+      "question": "Which card network and wallets does the BeeXpay Virtual Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/beexpay-beexpay-virtual-card",

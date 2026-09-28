@@ -50,10 +50,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "Instant virtual card"
+  ],
+  "cons": [
+    "US$1 monthly fee",
+    "1.5% foreign-exchange markup",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the PlasBit Plastic Card charge a monthly fee?",
+      "answer": "Yes — it charges US$1 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the PlasBit Plastic Card?",
+      "answer": "It charges about 1.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the PlasBit Plastic Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the PlasBit Plastic Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$2/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/plasbit-plasbit-plastic-card",

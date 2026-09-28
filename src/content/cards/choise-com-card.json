@@ -50,10 +50,36 @@
     "selfie": false,
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Both virtual and physical cards",
+    "0% cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$2.99 monthly fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Choise.com Card charge a monthly fee?",
+      "answer": "Yes — it charges US$2.99 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Choise.com Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Choise.com Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Choise.com Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$2.99/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/choise-card",

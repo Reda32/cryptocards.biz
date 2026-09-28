@@ -42,10 +42,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "3% cashback",
+    "No identity verification required",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$299 monthly fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the LinkPay Ultra charge a monthly fee?",
+      "answer": "Yes — it charges US$299 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the LinkPay Ultra?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the LinkPay Ultra require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the LinkPay Ultra support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$299/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/linkpay-ultra",

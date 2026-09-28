@@ -51,10 +51,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "0% cashback"
+  ],
+  "cons": [
+    "US$1.15 monthly fee",
+    "3% foreign-exchange markup",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the SpectroCoin Card charge a monthly fee?",
+      "answer": "Yes — it charges US$1.15 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the SpectroCoin Card?",
+      "answer": "It charges about 3% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the SpectroCoin Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the SpectroCoin Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$1.15/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/spectrocoin-card",

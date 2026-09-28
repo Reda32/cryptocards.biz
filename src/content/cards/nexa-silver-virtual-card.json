@@ -46,10 +46,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 2.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$3.99 monthly fee",
+    "US$49.95 card issuance fee",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Nexa Silver Virtual Card charge a monthly fee?",
+      "answer": "Yes — it charges US$3.99 per month. Card issuance is US$49.95."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Nexa Silver Virtual Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Nexa Silver Virtual Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Nexa Silver Virtual Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$3.99/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/nexa-cards-solutions-ltd-nexa-silver-virtual-card",

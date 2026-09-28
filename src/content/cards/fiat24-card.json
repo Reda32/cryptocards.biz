@@ -38,10 +38,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback"
+  ],
+  "cons": [
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Fiat24 Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Fiat24 Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Fiat24 Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Fiat24 Card support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/fiat24-card",

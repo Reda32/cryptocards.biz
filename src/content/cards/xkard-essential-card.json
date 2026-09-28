@@ -38,10 +38,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "No identity verification required",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$49 monthly fee",
+    "US$588 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Xkard Essential Card charge a monthly fee?",
+      "answer": "Yes — it charges US$49 per month. Card issuance is US$588."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Xkard Essential Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Xkard Essential Card require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the Xkard Essential Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$9/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/xkard-xkard-essential-card",

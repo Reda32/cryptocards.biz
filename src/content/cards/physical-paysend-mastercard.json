@@ -38,10 +38,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Instant virtual card",
+    "0% Cashback cashback"
+  ],
+  "cons": [
+    "2% foreign-exchange markup",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Physical Paysend Mastercard charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Physical Paysend Mastercard?",
+      "answer": "It charges about 2% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Physical Paysend Mastercard require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Physical Paysend Mastercard support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/paysend-group-physical-paysend-mastercard",

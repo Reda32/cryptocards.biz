@@ -39,10 +39,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 2.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Free card issuance",
+    "Instant virtual card",
+    "1% cashback",
+    "No identity verification required"
+  ],
+  "cons": [
+    "US$20 monthly fee",
+    "3% foreign-exchange markup",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Moon Card charge a monthly fee?",
+      "answer": "Yes — it charges US$20 per month. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Moon Card?",
+      "answer": "It charges about 3% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Moon Card require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the Moon Card support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "$20/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/paywithmoon",

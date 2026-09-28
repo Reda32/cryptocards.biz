@@ -28,10 +28,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "2% cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "1% foreign-exchange markup",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Flex Business Reward Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Flex Business Reward Card?",
+      "answer": "It charges about 1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Flex Business Reward Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Flex Business Reward Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/flexbase-technologies-inc-flex-business-reward-card",

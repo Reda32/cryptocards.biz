@@ -43,10 +43,38 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.5,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "10% cashback in USDT",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$120 card issuance fee",
+    "ATM fees apply (1.5%)",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the BitMart Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$120."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the BitMart Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the BitMart Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the BitMart Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitmart-bitmart-card",

@@ -36,10 +36,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Both virtual and physical cards"
+  ],
+  "cons": [
+    "1.5% foreign-exchange markup",
+    "US$75 card issuance fee",
+    "Identity verification (KYC) required",
+    "Rewards programme details are limited"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Solayer Emerald Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$75."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Solayer Emerald Card?",
+      "answer": "It charges about 1.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Solayer Emerald Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Solayer Emerald Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/solayer-emerald-card",

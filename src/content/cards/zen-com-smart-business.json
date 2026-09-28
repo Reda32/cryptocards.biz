@@ -41,10 +41,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "0.5% foreign-exchange markup",
+    "ATM fees apply (2%)",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the ZEN.COM Smart Business charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the ZEN.COM Smart Business?",
+      "answer": "It charges about 0.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the ZEN.COM Smart Business require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the ZEN.COM Smart Business support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/zencom-smart-business",

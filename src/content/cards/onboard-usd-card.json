@@ -25,10 +25,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Instant virtual card",
+    "0% Cashback cashback"
+  ],
+  "cons": [
+    "2% foreign-exchange markup",
+    "US$3 card issuance fee",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Onboard USD Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$3."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Onboard USD Card?",
+      "answer": "It charges about 2% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Onboard USD Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Onboard USD Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/onboard-card",

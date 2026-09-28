@@ -46,10 +46,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Both virtual and physical cards",
+    "5% cashback in CRO"
+  ],
+  "cons": [
+    "US$50 card issuance fee",
+    "ATM fees apply (2%)",
+    "Full KYC, including proof of address, required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Crypto.com Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$50."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Crypto.com Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Crypto.com Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Crypto.com Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/crypto-com-card",

@@ -45,10 +45,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 5.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Both virtual and physical cards",
+    "2% cashback in ADA"
+  ],
+  "cons": [
+    "0.5% foreign-exchange markup",
+    "ATM fees apply (1.5%)",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Cardano Emerald Visa Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Cardano Emerald Visa Card?",
+      "answer": "It charges about 0.5% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Cardano Emerald Visa Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Cardano Emerald Visa Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/cardano-emerald-visa",

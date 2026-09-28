@@ -31,10 +31,34 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.8,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Both virtual and physical cards",
+    "No identity verification required"
+  ],
+  "cons": [
+    "US$10 card issuance fee"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the PintoPay Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$10."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the PintoPay Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the PintoPay Card require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the PintoPay Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/pintopay-card",

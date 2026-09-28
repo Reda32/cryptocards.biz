@@ -30,10 +30,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 4.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$1 card issuance fee",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Bitnob Virtual Dollar Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$1."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Bitnob Virtual Dollar Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Bitnob Virtual Dollar Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Bitnob Virtual Dollar Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/bitnob-card",

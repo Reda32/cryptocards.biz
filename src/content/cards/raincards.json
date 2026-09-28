@@ -30,10 +30,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Instant virtual card",
+    "Light-touch verification to get started"
+  ],
+  "cons": [
+    "US$10000 monthly fee",
+    "2% foreign-exchange markup",
+    "US$5 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Raincards charge a monthly fee?",
+      "answer": "Yes — it charges US$10000 per month. Card issuance is US$5."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Raincards?",
+      "answer": "It charges about 2% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Raincards require?",
+      "answer": "It requires email/phone verification."
+    },
+    {
+      "question": "Which card network and wallets does the Raincards support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "$10000/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/raincards",

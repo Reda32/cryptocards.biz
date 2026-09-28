@@ -46,10 +46,37 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$2.5 monthly fee",
+    "3% foreign-exchange markup",
+    "US$1.99 card issuance fee",
+    "Identity verification (KYC) required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Rewarble Nimy Max Mastercard charge a monthly fee?",
+      "answer": "Yes — it charges US$2.5 per month. Card issuance is US$1.99."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Rewarble Nimy Max Mastercard?",
+      "answer": "It charges about 3% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Rewarble Nimy Max Mastercard require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Rewarble Nimy Max Mastercard support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "$2.5/mo",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rewarble-rewarble-nimy-max-mastercard",

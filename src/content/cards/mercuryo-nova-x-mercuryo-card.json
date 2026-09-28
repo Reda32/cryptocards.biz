@@ -30,10 +30,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.3,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Free card issuance",
+    "Instant virtual card",
+    "0% cashback"
+  ],
+  "cons": [
+    "1% foreign-exchange markup",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Mercuryo Nova x Mercuryo Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is free."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Mercuryo Nova x Mercuryo Card?",
+      "answer": "It charges about 1% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Mercuryo Nova x Mercuryo Card require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Mercuryo Nova x Mercuryo Card support?",
+      "answer": "Mastercard."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/mercuryo-mercuryo-nova-x-mercuryo-card",

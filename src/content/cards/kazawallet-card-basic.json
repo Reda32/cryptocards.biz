@@ -42,10 +42,36 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.2,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "Instant virtual card",
+    "0% Cashback cashback"
+  ],
+  "cons": [
+    "2% foreign-exchange markup",
+    "US$15 card issuance fee",
+    "Full KYC, including proof of address, required",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Kazawallet Card Basic charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$15."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Kazawallet Card Basic?",
+      "answer": "It charges about 2% on non-base-currency spending."
+    },
+    {
+      "question": "What KYC does the Kazawallet Card Basic require?",
+      "answer": "It requires a government ID plus proof of address."
+    },
+    {
+      "question": "Which card network and wallets does the Kazawallet Card Basic support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/kazawallet-kazawallet-card-basic",

@@ -34,10 +34,35 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 3.7,
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "0% Cashback cashback",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$450 card issuance fee",
+    "Identity verification (KYC) required"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the Ultimo Pay Platinum Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$450."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the Ultimo Pay Platinum Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the Ultimo Pay Platinum Card require?",
+      "answer": "It requires a government ID."
+    },
+    {
+      "question": "Which card network and wallets does the Ultimo Pay Platinum Card support?",
+      "answer": "Visa."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/ultimo-pay-platinum",

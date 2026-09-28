@@ -40,10 +40,37 @@
     "selfie": false,
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
-  "pros": [],
-  "cons": [],
+  "pros": [
+    "No monthly fee",
+    "No foreign-exchange markup on spending",
+    "Instant virtual card",
+    "0% Cashback cashback",
+    "No identity verification required",
+    "High daily spending limits"
+  ],
+  "cons": [
+    "US$10 card issuance fee",
+    "Virtual card only — no physical card"
+  ],
   "variants": [],
-  "faq": [],
+  "faq": [
+    {
+      "question": "Does the ZexoCard Everyday Virtual Card charge a monthly fee?",
+      "answer": "No — there is no monthly fee. Card issuance is US$10."
+    },
+    {
+      "question": "What are the foreign-exchange fees on the ZexoCard Everyday Virtual Card?",
+      "answer": "There is no foreign-exchange markup on spending."
+    },
+    {
+      "question": "What KYC does the ZexoCard Everyday Virtual Card require?",
+      "answer": "It requires no verification."
+    },
+    {
+      "question": "Which card network and wallets does the ZexoCard Everyday Virtual Card support?",
+      "answer": "The card network is not confirmed."
+    }
+  ],
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/zexocard-zexocard-everyday-virtual-card",
