@@ -14,6 +14,7 @@ import FaqSection from '@/components/FaqSection.astro';
 import Section from '@/components/Section.astro';
 import CardSummaryRow from '@/components/CardSummaryRow.astro';
 import CtaButton from '@/components/CtaButton.astro';
+import CardQr from '@/components/CardQr.astro';
 import {
   getAllCards,
   getCommunityForCard,
@@ -404,6 +405,14 @@ const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [rev
           </p>
           <a href={`/coupons/${d.slug}`} class="btn-primary w-full">Get the bonus</a>
         </div>
+
+        {
+          d.referral && (
+            <div class="card-surface hidden p-5 lg:block">
+              <CardQr slug={d.slug} />
+            </div>
+          )
+        }
 
         <div class="card-surface p-5">
           <h2 class="mb-2 text-sm font-bold text-slate-900 dark:text-white">Available countries</h2>

@@ -7,6 +7,7 @@ import CtaButton from '@/components/CtaButton.astro';
 import FeesTable from '@/components/FeesTable.astro';
 import CopyCodeButton from '@/components/islands/CopyCodeButton.tsx';
 import Disclosure from '@/components/Disclosure.astro';
+import CardQr from '@/components/CardQr.astro';
 import { KYC_LABELS, formatIsoDate, formatDate } from '@/lib/cards';
 
 export async function getStaticPaths() {
@@ -189,6 +190,14 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
         </a>
       </div>
       <p class="mt-4 text-xs text-slate-400">Last verified {formatDate(d.lastVerified)}</p>
+
+      {
+        hasOffer && (
+          <div class="mt-6 hidden border-t border-slate-200 pt-6 lg:flex lg:justify-center dark:border-slate-800">
+            <CardQr slug={d.slug} />
+          </div>
+        )
+      }
     </header>
 
     <Disclosure />
