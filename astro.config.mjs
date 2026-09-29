@@ -75,6 +75,19 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          // Emit CSS with a stable (unhashed) name. A stale cached HTML then
+          // always resolves the stylesheet instead of 404ing on a changed hash.
+          assetFileNames: (assetInfo) => {
+            const name = assetInfo.names?.[0] ?? assetInfo.name ?? '';
+            if (name.endsWith('.css')) return '_astro/[name][extname]';
+            return '_astro/[name].[hash][extname]';
+          },
+        },
+      },
+    },
   },
   markdown: {
     shikiConfig: { theme: 'github-dark' },

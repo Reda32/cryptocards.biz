@@ -1,4 +1,8 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+
+/* Scan only app sources so the generated CSS (and its filename hash) is stable
+   and never influenced by stray data/env files. */
+@source "../**/*.{astro,html,js,jsx,ts,tsx,md,mdx}";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
