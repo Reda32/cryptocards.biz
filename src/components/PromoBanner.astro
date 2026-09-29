@@ -1,20 +1,22 @@
 ---
 interface Props {
-  slug?: string;
-  name?: string;
-  message?: string;
+  slug: string;
+  name: string;
+  message: string;
+  short?: string;
   color?: string;
   logo?: string;
   ctaLabel?: string;
 }
 
 const {
-  slug = 'kast-card',
-  name = 'KAST Card',
-  message = 'Spend USDT & USDC with the KAST card — up to 2% cashback and an instant virtual card.',
-  color = '#7c3aed',
-  logo = '/logos/kast.svg',
-  ctaLabel = 'Get the KAST card',
+  slug,
+  name,
+  message,
+  short = message,
+  color = '#1f42f5',
+  logo,
+  ctaLabel = `Get the ${name}`,
 } = Astro.props;
 
 const dismissKey = `promo:${slug}:dismissed`;
@@ -22,17 +24,21 @@ const dismissKey = `promo:${slug}:dismissed`;
 
 <div id="promo-banner" data-banner-key={dismissKey} class="text-white" style={`background:${color}`}>
   <div class="container-page flex items-center gap-3 py-2.5">
-    <img
-      src={logo}
-      alt=""
-      width="28"
-      height="28"
-      class="hidden h-7 w-7 shrink-0 rounded bg-white/90 object-contain p-0.5 sm:block"
-    />
+    {
+      logo && (
+        <img
+          src={logo}
+          alt=""
+          width="28"
+          height="28"
+          class="hidden h-7 w-7 shrink-0 rounded bg-white/90 object-contain p-0.5 sm:block"
+        />
+      )
+    }
     <p class="min-w-0 flex-1 text-sm font-medium">
       <span class="font-bold">{name}:</span>
       <span class="hidden sm:inline"> {message}</span>
-      <span class="sm:hidden"> up to 2% cashback</span>
+      <span class="sm:hidden"> {short}</span>
     </p>
     <a
       href={`/go/${slug}`}
@@ -66,19 +72,18 @@ const dismissKey = `promo:${slug}:dismissed`;
   (function () {
     var banner = document.getElementById('promo-banner');
     if (!banner) return;
+    if (document.documentElement.classList.contains('promo-dismissed')) {
+      banner.remove();
+      return;
+    }
     var key = banner.getAttribute('data-banner-key') || 'promo:dismissed';
-    try {
-      if (localStorage.getItem(key) === '1') {
-        banner.remove();
-        return;
-      }
-    } catch (e) {}
     var btn = banner.querySelector('[data-banner-close]');
     if (btn) {
       btn.addEventListener('click', function () {
         try {
           localStorage.setItem(key, '1');
         } catch (e) {}
+        document.documentElement.classList.add('promo-dismissed');
         banner.remove();
       });
     }

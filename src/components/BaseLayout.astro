@@ -6,6 +6,7 @@ import PromoBanner from './PromoBanner.astro';
 import CompareBar from './islands/CompareBar.tsx';
 import { getCompareCards } from '@/lib/cards';
 import { allPairSlugs } from '@/lib/pairs';
+import { getCollection } from 'astro:content';
 import '@/styles/global.css';
 
 interface Props {
@@ -32,6 +33,27 @@ const cards =
     ? allCards
     : allCards.map(({ slug, name, logo, brandColor }) => ({ slug, name, logo, brandColor }));
 const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
+
+// Promo banner: copy is derived from the card data so it can't drift.
+const PROMO_SLUG = 'kast-card';
+const promoDismissKey = `promo:${PROMO_SLUG}:dismissed`;
+const promoEntry = (await getCollection('cards')).find((c) => c.data.slug === PROMO_SLUG);
+const promo = promoEntry
+  ? (() => {
+      const d = promoEntry.data;
+      const coins = d.cryptos.slice(0, 2).map((c) => c.symbol).join(' & ');
+      const cashback = d.rewards?.cashback ?? 'crypto rewards';
+      const instant = d.type.includes('virtual') ? ', and an instant virtual card' : '';
+      return {
+        slug: d.slug,
+        name: d.name,
+        logo: d.logo,
+        color: d.brandColor,
+        message: `Spend ${coins} with the ${d.name} — ${cashback}${instant}.`,
+        short: cashback,
+      };
+    })()
+  : null;
 ---
 
 <!doctype html>
@@ -56,6 +78,10 @@ const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
       })();
     </script>
     <SeoHead {...props} />
+    <script
+      is:inline
+      set:html={`(function(){try{if(localStorage.getItem(${JSON.stringify(promoDismissKey)})==='1'){document.documentElement.classList.add('promo-dismissed');}}catch(e){}})();`}
+    />
     {
       umamiWebsiteId && (
         <script is:inline defer src="/stats/script.js" data-website-id={umamiWebsiteId}></script>
@@ -64,7 +90,7 @@ const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
   </head>
   <body class="flex min-h-screen flex-col">
     <Header />
-    <PromoBanner />
+    {promo && <PromoBanner {...promo} />}
     <main class="flex-1 pb-24">
       <slot />
     </main>
