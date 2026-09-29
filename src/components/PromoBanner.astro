@@ -1,0 +1,86 @@
+---
+interface Props {
+  slug?: string;
+  name?: string;
+  message?: string;
+  color?: string;
+  logo?: string;
+  ctaLabel?: string;
+}
+
+const {
+  slug = 'kast-card',
+  name = 'KAST Card',
+  message = 'Spend USDT & USDC with the KAST card — up to 2% cashback and an instant virtual card.',
+  color = '#7c3aed',
+  logo = '/logos/kast.svg',
+  ctaLabel = 'Get the KAST card',
+} = Astro.props;
+
+const dismissKey = `promo:${slug}:dismissed`;
+---
+
+<div id="promo-banner" data-banner-key={dismissKey} class="text-white" style={`background:${color}`}>
+  <div class="container-page flex items-center gap-3 py-2.5">
+    <img
+      src={logo}
+      alt=""
+      width="28"
+      height="28"
+      class="hidden h-7 w-7 shrink-0 rounded bg-white/90 object-contain p-0.5 sm:block"
+    />
+    <p class="min-w-0 flex-1 text-sm font-medium">
+      <span class="font-bold">{name}:</span>
+      <span class="hidden sm:inline"> {message}</span>
+      <span class="sm:hidden"> up to 2% cashback</span>
+    </p>
+    <a
+      href={`/go/${slug}`}
+      rel="sponsored nofollow noopener"
+      target="_blank"
+      class="shrink-0 rounded-lg bg-white px-3 py-1.5 text-xs font-semibold transition hover:bg-white/90"
+      style={`color:${color}`}
+    >
+      {ctaLabel}
+    </a>
+    <a
+      href={`/coupons/${slug}`}
+      class="hidden shrink-0 text-xs font-medium text-white/90 underline hover:text-white md:inline"
+    >
+      See offer
+    </a>
+    <button
+      type="button"
+      data-banner-close
+      aria-label="Dismiss"
+      class="shrink-0 grid h-6 w-6 place-items-center rounded-full text-white/80 hover:bg-white/15 hover:text-white"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var banner = document.getElementById('promo-banner');
+    if (!banner) return;
+    var key = banner.getAttribute('data-banner-key') || 'promo:dismissed';
+    try {
+      if (localStorage.getItem(key) === '1') {
+        banner.remove();
+        return;
+      }
+    } catch (e) {}
+    var btn = banner.querySelector('[data-banner-close]');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        try {
+          localStorage.setItem(key, '1');
+        } catch (e) {}
+        banner.remove();
+      });
+    }
+  })();
+</script>

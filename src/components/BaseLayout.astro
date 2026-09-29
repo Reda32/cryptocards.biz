@@ -2,6 +2,7 @@
 import SeoHead from './SeoHead.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import PromoBanner from './PromoBanner.astro';
 import CompareBar from './islands/CompareBar.tsx';
 import { getCompareCards } from '@/lib/cards';
 import { allPairSlugs } from '@/lib/pairs';
@@ -63,6 +64,7 @@ const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
   </head>
   <body class="flex min-h-screen flex-col">
     <Header />
+    <PromoBanner />
     <main class="flex-1 pb-24">
       <slot />
     </main>
