@@ -92,13 +92,29 @@ const faq = hasOffer
   : [
       {
         question: `Does the ${d.name} have a promo code?`,
-        answer: `We have not verified a current promo code, coupon or referral bonus for the ${d.name}. When one is confirmed it will be listed on this page.`,
+        answer: `We have not verified a current promo code, coupon or referral bonus for the ${d.name}. You can still sign up through the official link on this page — when a promo is confirmed it will be listed here.`,
       },
       {
         question: `Does the ${d.name} offer cashback or rewards?`,
         answer: d.rewards?.cashback
-          ? `Tracked rewards: ${d.rewards.cashback}. Rates are set by the provider and can change.`
+          ? `Tracked rewards: ${d.rewards.cashback}${d.rewards.cashbackToken ? ` in ${d.rewards.cashbackToken}` : ''}. Rates are set by the provider and can change.`
           : 'No rewards programme has been confirmed for this card yet.',
+      },
+      {
+        question: `What fees does the ${d.name} charge?`,
+        answer: d.fees
+          ? `Card issuance is ${d.fees.issuance === 0 ? 'free' : `US$${d.fees.issuance}`}, the monthly fee is ${d.fees.monthly === 0 ? 'free' : `US$${d.fees.monthly}`} and the FX markup is ${d.fees.fx}%.${d.fees.atm ? ` ATM: ${d.fees.atm}.` : ''}`
+          : 'Fees have not been published by the provider.',
+      },
+      {
+        question: `What KYC does the ${d.name} require?`,
+        answer: d.kyc
+          ? `It requires ${({ none: 'no verification', basic: 'email or phone verification', id: 'a government ID', full: 'a government ID plus proof of address' } as Record<string, string>)[d.kyc.level]}.`
+          : 'Verification requirements have not been confirmed yet.',
+      },
+      {
+        question: `Which card network does the ${d.name} use?`,
+        answer: `${d.network === 'visa' ? 'Visa' : d.network === 'mastercard' ? 'Mastercard' : 'The card network is not confirmed'}${d.wallets?.length ? `, with ${d.wallets.map((w) => (w === 'apple' ? 'Apple Pay' : 'Google Pay')).join(' and ')}` : ''}.`,
       },
     ];
 
@@ -141,7 +157,7 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
   }
   image={`/og/${d.slug}.png`}
   modifiedTime={d.lastVerified}
-  noindex={!d.verified || !hasOffer}
+  noindex={!d.verified}
   schemas={schemas}
 >
   <Breadcrumbs
@@ -161,7 +177,11 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
             {d.name} promo codes & coupons
           </h1>
           <p class="text-sm text-slate-500 dark:text-slate-400">
-            {hasOffer ? d.referral!.bonus : 'No verified offer at this time.'}
+            {hasOffer
+              ? d.referral!.bonus
+              : d.rewards?.cashback
+                ? `${d.rewards.cashback}${d.rewards.cashbackToken ? ` in ${d.rewards.cashbackToken}` : ''} · official sign-up`
+                : 'Official sign-up — no promo code required'}
           </p>
         </div>
       </div>
@@ -175,7 +195,11 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
       }
 
       <div class="mt-6 flex flex-wrap items-center gap-4">
-        {hasOffer && <CtaButton slug={d.slug} label="Claim the bonus" variant="accent" />}
+        {hasOffer ? (
+          <CtaButton slug={d.slug} label="Claim the bonus" variant="accent" />
+        ) : (
+          <CtaButton slug={d.slug} label={`Get the ${d.name}`} variant="accent" />
+        )}
         <a
           href={`/cards/${d.slug}`}
           class="text-sm font-medium text-brand-600 hover:underline dark:text-brand-400"
@@ -192,7 +216,7 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
       <p class="mt-4 text-xs text-slate-400">Last verified {formatDate(d.lastVerified)}</p>
 
       {
-        hasOffer && (
+        (hasOffer || d.signupUrl) && (
           <div class="mt-6 hidden border-t border-slate-200 pt-6 lg:flex lg:justify-center dark:border-slate-800">
             <CardQr slug={d.slug} />
           </div>
@@ -237,13 +261,26 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
             )}
           </>
         ) : (
-          <p class="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-300">
-            We have not verified a current promo code, coupon or referral bonus for the {d.name}. We
-            only list offers we can confirm — check back, or browse our other{' '}
-            <a href="/coupons" class="text-brand-600 hover:underline dark:text-brand-400">
-              crypto card coupons
-            </a>.
-          </p>
+          <>
+            <p class="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-300">
+              No promo code is required to sign up for the {d.name} — use the official link and
+              follow the steps below. If a coupon or referral bonus becomes available it will be
+              listed here.
+            </p>
+            {whatYouGet.length > 0 && (
+              <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+                {whatYouGet.map((item) => (
+                  <li class="flex gap-2">
+                    <span class="text-emerald-600 dark:text-emerald-400" aria-hidden="true">+</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div class="mt-5">
+              <CtaButton slug={d.slug} label={`Get the ${d.name}`} variant="accent" />
+            </div>
+          </>
         )
       }
     </section>
