@@ -10,6 +10,11 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
+
+# PUBLIC_* values are inlined at build time, so they must be present here.
+ARG PUBLIC_UMAMI_WEBSITE_ID
+ENV PUBLIC_UMAMI_WEBSITE_ID=$PUBLIC_UMAMI_WEBSITE_ID
+
 RUN npm run build
 
 # --- Runtime stage -------------------------------------------------------

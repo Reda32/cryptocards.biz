@@ -62,7 +62,12 @@ function buildFaq(c) {
       : typeof f.monthly === 'number'
         ? `Yes — it charges US$${f.monthly} per month.`
         : 'The provider has not clearly published its monthly fee.';
-  faq.push({ question: `Does the ${c.name} charge a monthly fee?`, answer: `${monthly} Card issuance is ${usd(f.issuance ?? 0)}.` });
+  const issuanceNote =
+    typeof f.issuance === 'number' ? ` Card issuance is ${usd(f.issuance)}.` : '';
+  faq.push({
+    question: `Does the ${c.name} charge a monthly fee?`,
+    answer: `${monthly}${issuanceNote}`,
+  });
 
   faq.push({
     question: `What are the foreign-exchange fees on the ${c.name}?`,

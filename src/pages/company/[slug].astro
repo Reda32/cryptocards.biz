@@ -4,19 +4,20 @@ import BaseLayout from '@/components/BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import CardSummaryRow from '@/components/CardSummaryRow.astro';
 import { getAllCards, getAllCommunities } from '@/lib/cards';
-import { groupByCompany } from '@/lib/taxonomy';
+import { groupByCompany, slugify } from '@/lib/taxonomy';
 
 export async function getStaticPaths() {
   const cards = await getCollection('cards');
   return groupByCompany(cards).map((company) => ({
     params: { slug: company.slug },
-    props: { companyName: company.name },
+    props: { companyName: company.name, companySlug: company.slug },
   }));
 }
 
-const { companyName } = Astro.props;
+const { companyName, companySlug } = Astro.props;
 const [cards, communities] = await Promise.all([getAllCards(), getAllCommunities()]);
-const companyCards = cards.filter((card) => card.data.company === companyName);
+// Group by slug (same rule as groupByCompany / the sitemap filter).
+const companyCards = cards.filter((card) => slugify(card.data.company) === companySlug);
 const scoreFor = (slug: string) =>
   communities.find((c) => c.data.cardSlug === slug)?.data.score ?? null;
 ---

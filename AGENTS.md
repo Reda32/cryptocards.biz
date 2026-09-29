@@ -12,7 +12,7 @@ nanostores, content collections. See `README.md` for the full architecture.
 - `npm run dev` — local dev server
 - `npm run build` — production build (`dist/`)
 - `npm run preview` — preview the build
-- `npm run check` — `astro check` (types). Must pass before committing.
+- `npm run check` — `astro check` (types) + the official-links guard. Must pass before committing.
 - `node scripts/check-card.mjs "<name>"` — duplicate check before adding a card
 
 Always run `npm run check` **and** `npm run build` before committing. For UI changes,

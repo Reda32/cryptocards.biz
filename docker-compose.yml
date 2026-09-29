@@ -4,7 +4,11 @@
 
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        # PUBLIC_* vars are inlined at build time.
+        PUBLIC_UMAMI_WEBSITE_ID: ${PUBLIC_UMAMI_WEBSITE_ID:-}
     restart: unless-stopped
     ports:
       - '4321:4321'
@@ -13,7 +17,7 @@ services:
       PORT: '4321'
       PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://cryptocards.biz}
       UMAMI_HOST: ${UMAMI_HOST:-http://umami:3000}
-      PUBLIC_UMAMI_WEBSITE_ID: ${PUBLIC_UMAMI_WEBSITE_ID:-}
+      CARD_LINKS: ${CARD_LINKS:-}
     depends_on:
       - umami
 
