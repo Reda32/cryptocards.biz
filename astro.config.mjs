@@ -82,7 +82,7 @@ export default defineConfig({
           // always resolves the stylesheet instead of 404ing on a changed hash.
           assetFileNames: (assetInfo) => {
             const name = assetInfo.names?.[0] ?? assetInfo.name ?? '';
-            if (name.endsWith('.css')) return '_astro/[name][extname]';
+            if (name.endsWith('.css')) return 'styles/[name][extname]';
             return '_astro/[name].[hash][extname]';
           },
         },
