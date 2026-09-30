@@ -40,13 +40,13 @@
   "cons": [
     "US$1 card issuance fee",
     "Identity verification (KYC) required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Bitnob Virtual Dollar Card charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$1."
+      "answer": "No. There is no monthly fee. Card issuance is US$1."
     },
     {
       "question": "What are the foreign-exchange fees on the Bitnob Virtual Dollar Card?",

@@ -34,13 +34,13 @@
     "2% foreign-exchange markup",
     "US$3 card issuance fee",
     "Identity verification (KYC) required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Onboard USD Card charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$3."
+      "answer": "No. There is no monthly fee. Card issuance is US$3."
     },
     {
       "question": "What are the foreign-exchange fees on the Onboard USD Card?",

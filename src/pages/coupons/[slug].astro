@@ -27,7 +27,7 @@ const kycStep = !d.kyc
 
 const steps = hasOffer
   ? [
-      'Open the sign-up page using our link below — the code is usually pre-filled.',
+      'Open the sign-up page using our link below. The code is usually pre-filled.',
       `Create your account with an email${d.kyc?.phone ? ' and phone number' : ''}.`,
       `Enter the promo code ${d.referral!.code} if it is not already applied.`,
       kycStep,
@@ -86,13 +86,13 @@ const faq = hasOffer
       },
       {
         question: `Is there a ${d.name} referral code as well as a coupon?`,
-        answer: `Yes — the referral code and promo code are the same: ${d.referral!.code}. Referrals reward both the new user and, where the programme allows, the referrer.`,
+        answer: `Yes. The referral code and promo code are the same: ${d.referral!.code}. Referrals reward both the new user and, where the programme allows, the referrer.`,
       },
     ]
   : [
       {
         question: `Does the ${d.name} have a promo code?`,
-        answer: `We have not verified a current promo code, coupon or referral bonus for the ${d.name}. You can still sign up through the official link on this page — when a promo is confirmed it will be listed here.`,
+        answer: `We have not verified a current promo code, coupon or referral bonus for the ${d.name}. You can still sign up through the official link on this page. When a promo is confirmed it will be listed here.`,
       },
       {
         question: `Does the ${d.name} offer cashback or rewards?`,
@@ -181,7 +181,7 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
               ? d.referral!.bonus
               : d.rewards?.cashback
                 ? `${d.rewards.cashback}${d.rewards.cashbackToken ? ` in ${d.rewards.cashbackToken}` : ''} · official sign-up`
-                : 'Official sign-up — no promo code required'}
+                : 'Official sign-up: no promo code required'}
           </p>
         </div>
       </div>
@@ -263,7 +263,7 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
         ) : (
           <>
             <p class="mt-3 max-w-3xl text-sm text-slate-600 dark:text-slate-300">
-              No promo code is required to sign up for the {d.name} — use the official link and
+              No promo code is required to sign up for the {d.name}. Use the official link and
               follow the steps below. If a coupon or referral bonus becomes available it will be
               listed here.
             </p>
@@ -406,7 +406,7 @@ const schemas = [...(offerSchema ? [offerSchema] : []), faqSchema];
             Ready to use the {d.name} promo code?
           </h2>
           <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            Code <strong class="font-mono">{d.referral!.code}</strong> — {d.referral!.bonus}
+            Code <strong class="font-mono">{d.referral!.code}</strong>: {d.referral!.bonus}
           </p>
           <div class="mt-4">
             <CtaButton slug={d.slug} label="Claim the bonus" variant="accent" />

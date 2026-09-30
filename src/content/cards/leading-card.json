@@ -52,13 +52,13 @@
   "cons": [
     "US$5 monthly fee",
     "US$6 card issuance fee",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Leading Card charge a monthly fee?",
-      "answer": "Yes — it charges US$5 per month. Card issuance is US$6."
+      "answer": "Yes. It charges US$5 per month. Card issuance is US$6."
     },
     {
       "question": "What are the foreign-exchange fees on the Leading Card?",

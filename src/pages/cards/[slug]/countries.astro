@@ -70,7 +70,7 @@ const faq = [
   },
   {
     question: `How do I check if the ${d.name} is available in my country?`,
-    answer: `Open the provider's app or website from your country and start sign-up — if your region is supported it will let you proceed to verification. We re-verify availability periodically; if our list is out of date, treat the provider's own check as authoritative.`,
+    answer: `Open the provider's app or website from your country and start sign-up. If your region is supported it will let you proceed to verification. We re-verify availability periodically; if our list is out of date, treat the provider's own check as authoritative.`,
   },
 ];
 
@@ -118,7 +118,7 @@ const faqSchema = {
       <p class="mt-4 max-w-3xl text-slate-600 dark:text-slate-300">
         Below are the countries and regions where the {d.name} can be ordered, where it is
         restricted, and the residency and verification requirements that apply. Availability is
-        set by {d.company} and can change — always confirm during sign-up.
+        set by {d.company} and can change. Always confirm during sign-up.
       </p>
       <div class="mt-5 flex flex-wrap items-center gap-3">
         <CtaButton slug={d.slug} label="Get this card" />
@@ -244,7 +244,7 @@ const faqSchema = {
     <Section id="how-to-check" title="How to check current availability">
       <ol class="list-decimal space-y-2 pl-6 text-sm text-slate-600 dark:text-slate-300">
         <li>Open the provider's app or website from the country where you are resident.</li>
-        <li>Start sign-up — supported regions proceed to verification; unsupported ones are blocked.</li>
+        <li>Start sign-up. Supported regions proceed to verification; unsupported ones are blocked.</li>
         <li>Complete KYC in the region you are tax-resident in; VPN workarounds breach the provider's terms.</li>
         <li>If our list looks out of date, trust the provider's own check and let us know so we can re-verify.</li>
       </ol>

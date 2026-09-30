@@ -43,13 +43,13 @@
     "Light-touch verification to get started"
   ],
   "cons": [
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the SiraPay Free Plan charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is free."
+      "answer": "No. There is no monthly fee. Card issuance is free."
     },
     {
       "question": "What are the foreign-exchange fees on the SiraPay Free Plan?",

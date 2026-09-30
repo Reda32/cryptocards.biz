@@ -2,7 +2,7 @@
   "name": "Kem Infinity Card",
   "slug": "kem-infinity-card",
   "company": "Kem Infinity",
-  "summary": "Kem Infinity Cards let you spend crypto online or in stores—just like a regular debit card.",
+  "summary": "Kem Infinity Cards let you spend crypto online or in stores, just like a regular debit card.",
   "type": [
     "virtual"
   ],
@@ -40,13 +40,13 @@
   ],
   "cons": [
     "Full KYC, including proof of address, required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Kem Infinity Card charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is free."
+      "answer": "No. There is no monthly fee. Card issuance is free."
     },
     {
       "question": "What are the foreign-exchange fees on the Kem Infinity Card?",

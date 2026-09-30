@@ -323,13 +323,13 @@
       "rewards": "1 Winity Point / US$8",
       "monthlyFee": 0,
       "limits": "Not publicly disclosed",
-      "cardInfo": "Premium metal Visa — coming soon / waitlist; US$1,000 per year"
+      "cardInfo": "Premium metal Visa (coming soon / waitlist); US$1,000 per year"
     }
   ],
   "faq": [
     {
       "question": "Is the Winity Life Card free?",
-      "answer": "The Exclusive virtual card is free — no issuance or annual fee. The physical Exclusive card has a US$20 annual fee, but the first six months are waived on new activations and issuance is free under the current promotion after US$25 of eligible card spend (shipping may apply)."
+      "answer": "The Exclusive virtual card is free: no issuance or annual fee. The physical Exclusive card has a US$20 annual fee, but the first six months are waived on new activations and issuance is free under the current promotion after US$25 of eligible card spend (shipping may apply)."
     },
     {
       "question": "Which cryptocurrencies can I use to fund Winity?",
@@ -355,7 +355,7 @@
   "howToGet": [
     "Download the Winity Life app on iOS or Android and register with your phone number and OTP.",
     "Verify your email, then complete identity verification with a government ID and a selfie.",
-    "Submit your card application — once approved, the Exclusive virtual card is issued in the app.",
+    "Submit your card application. Once approved, the Exclusive virtual card is issued in the app.",
     "Load the card with USDT or USDC (0% fee) and keep at least US$25 on the balance.",
     "Add the card to Google Pay and start spending wherever Visa is accepted.",
     "To get the physical card, spend US$25 on the virtual card and request it in the app."

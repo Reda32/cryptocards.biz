@@ -99,13 +99,13 @@ export function featureLabel(feature: string): string {
 }
 
 export function usd(value: number | undefined | null): string {
-  if (value === undefined || value === null) return '—';
+  if (value === undefined || value === null) return 'N/A';
   if (value === 0) return 'Free';
   return `US$${value.toLocaleString('en-US')}`;
 }
 
 export function percent(value: number | undefined | null): string {
-  if (value === undefined || value === null) return '—';
+  if (value === undefined || value === null) return 'N/A';
   if (value === 0) return '0%';
   return `${value}%`;
 }

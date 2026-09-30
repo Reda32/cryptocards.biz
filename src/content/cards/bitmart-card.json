@@ -54,13 +54,13 @@
     "US$120 card issuance fee",
     "ATM fees apply (1.5%)",
     "Full KYC, including proof of address, required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the BitMart Card charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$120."
+      "answer": "No. There is no monthly fee. Card issuance is US$120."
     },
     {
       "question": "What are the foreign-exchange fees on the BitMart Card?",

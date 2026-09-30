@@ -51,13 +51,13 @@
     "2% foreign-exchange markup",
     "US$15 card issuance fee",
     "Full KYC, including proof of address, required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Kazawallet Card Basic charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$15."
+      "answer": "No. There is no monthly fee. Card issuance is US$15."
     },
     {
       "question": "What are the foreign-exchange fees on the Kazawallet Card Basic?",

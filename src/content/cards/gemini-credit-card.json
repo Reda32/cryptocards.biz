@@ -2,7 +2,7 @@
   "name": "Gemini Credit Card",
   "slug": "gemini-credit-card",
   "company": "Gemini",
-  "summary": "The Gemini Credit Card is a US-only, no-annual-fee Mastercard that pays crypto rewards on every purchase — up to 4% on gas and EV charging, 3% on dining and 2% on groceries, paid instantly in Bitcoin or 60+ other coins. Conceptually strong, but it is gated behind a credit check and criticised for low credit limits and slow support.",
+  "summary": "The Gemini Credit Card is a US-only, no-annual-fee Mastercard that pays crypto rewards on every purchase, up to 4% on gas and EV charging, 3% on dining and 2% on groceries, paid instantly in Bitcoin or 60+ other coins. Conceptually strong, but it is gated behind a credit check and criticised for low credit limits and slow support.",
   "logo": "/logos/gemini.webp",
   "brandColor": "#00c2ff",
   "type": [
@@ -161,7 +161,7 @@
     "US residents only",
     "Requires a credit check and approval",
     "The 4% category is capped at US$300 of spend per month",
-    "Variable APR of roughly 17–29% if you carry a balance",
+    "Variable APR of roughly 17-29% if you carry a balance",
     "No debit or virtual card option"
   ],
   "rating": 6.8,
@@ -189,7 +189,7 @@
     },
     {
       "question": "Does the Gemini Credit Card have an annual fee?",
-      "answer": "No. There is no annual fee and no foreign transaction fee. The main cost is interest if you carry a balance, with a variable APR of roughly 17–29%."
+      "answer": "No. There is no annual fee and no foreign transaction fee. The main cost is interest if you carry a balance, with a variable APR of roughly 17-29%."
     },
     {
       "question": "How much cashback does the Gemini Credit Card pay?",

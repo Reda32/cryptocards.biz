@@ -43,13 +43,13 @@
     "3.9% foreign-exchange markup",
     "US$4 card issuance fee",
     "Identity verification (KYC) required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Cryptomus Virtual Crypto Card charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$4."
+      "answer": "No. There is no monthly fee. Card issuance is US$4."
     },
     {
       "question": "What are the foreign-exchange fees on the Cryptomus Virtual Crypto Card?",

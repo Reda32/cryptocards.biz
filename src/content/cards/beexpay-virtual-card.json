@@ -52,13 +52,13 @@
   "cons": [
     "1.75% foreign-exchange markup",
     "US$10 card issuance fee",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the BeeXpay Virtual Card charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$10."
+      "answer": "No. There is no monthly fee. Card issuance is US$10."
     },
     {
       "question": "What are the foreign-exchange fees on the BeeXpay Virtual Card?",

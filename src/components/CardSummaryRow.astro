@@ -38,13 +38,13 @@ const rating = d.rating ?? null;
     <div class="text-right">
       <p class="text-xs uppercase tracking-wide text-slate-400">Overall</p>
       <p class="text-xl font-bold tabular-nums text-slate-900 dark:text-white">
-        {rating !== null ? rating.toFixed(1) : '—'}
+        {rating !== null ? rating.toFixed(1) : 'N/A'}
       </p>
     </div>
     <div class="text-right">
       <p class="text-xs uppercase tracking-wide text-slate-400">Community</p>
       <p class="text-xl font-bold tabular-nums text-slate-900 dark:text-white">
-        {communityScore !== null ? communityScore.toFixed(1) : '—'}
+        {communityScore !== null ? communityScore.toFixed(1) : 'N/A'}
       </p>
     </div>
   </div>

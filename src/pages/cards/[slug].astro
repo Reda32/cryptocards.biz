@@ -378,7 +378,7 @@ const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [rev
           </h2>
           <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
             {d.referral ? (
-              <>Use code <strong class="font-mono">{d.referral.code}</strong> — {d.referral.bonus}</>
+              <>Use code <strong class="font-mono">{d.referral.code}</strong>: {d.referral.bonus}</>
             ) : (
               'No verified promo code or referral bonus is available for this card yet.'
             )}
@@ -392,7 +392,7 @@ const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [rev
         <section class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-xs text-slate-500 dark:border-slate-800 dark:bg-slate-900/50 dark:text-slate-400">
           <p>
             Last verified {d.lastVerified.toISOString().slice(0, 10)}. Fees, limits and availability
-            change frequently — always confirm the current terms with {d.company} before applying.
+            change frequently. Always confirm the current terms with {d.company} before applying.
             This is not financial advice.
           </p>
         </section>

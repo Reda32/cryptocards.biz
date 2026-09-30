@@ -2,7 +2,7 @@
   "name": "Nexo Card",
   "slug": "nexo-card",
   "company": "Nexo",
-  "summary": "Nexo's card works in two modes: spend your crypto directly, or borrow against it with a collateralised credit line so you never sell. With up to 2% cashback, up to 14% APY on idle balances and no annual fee, it targets long-term holders in the EEA and UK — though physical cards are paused and US users are excluded.",
+  "summary": "Nexo's card works in two modes: spend your crypto directly, or borrow against it with a collateralised credit line so you never sell. With up to 2% cashback, up to 14% APY on idle balances and no annual fee, it targets long-term holders in the EEA and UK, though physical cards are paused and US users are excluded.",
   "logo": "/logos/nexo.webp",
   "brandColor": "#0057ff",
   "type": [
@@ -205,7 +205,7 @@
       "rewards": "Up to 2% cashback",
       "monthlyFee": 0,
       "limits": "Unlimited spend",
-      "cardInfo": "Physical Mastercard — orders paused"
+      "cardInfo": "Physical Mastercard (orders paused)"
     }
   ],
   "faq": [

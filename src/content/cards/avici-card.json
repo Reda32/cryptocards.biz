@@ -108,7 +108,7 @@
     "notes": "Avici requires identity verification before issuing a card, but does not ask for proof of address or a selfie at this tier."
   },
   "pros": [
-    "True self-custody — funds stay in your wallet until purchase",
+    "True self-custody: funds stay in your wallet until purchase",
     "No monthly fees, top-up fees or maintenance charges",
     "Visa Signature accepted at 90+ million merchants",
     "Supports Apple Pay and Google Pay contactless payments",

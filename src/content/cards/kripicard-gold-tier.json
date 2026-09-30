@@ -60,13 +60,13 @@
     "US$1.5 monthly fee",
     "1% foreign-exchange markup",
     "US$3 card issuance fee",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Kripicard Gold Tier charge a monthly fee?",
-      "answer": "Yes — it charges US$1.5 per month. Card issuance is US$3."
+      "answer": "Yes. It charges US$1.5 per month. Card issuance is US$3."
     },
     {
       "question": "What are the foreign-exchange fees on the Kripicard Gold Tier?",

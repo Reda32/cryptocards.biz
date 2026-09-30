@@ -58,13 +58,13 @@
     "US$1 monthly fee",
     "1.5% foreign-exchange markup",
     "Full KYC, including proof of address, required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the PlasBit Plastic Card charge a monthly fee?",
-      "answer": "Yes — it charges US$1 per month. Card issuance is free."
+      "answer": "Yes. It charges US$1 per month. Card issuance is free."
     },
     {
       "question": "What are the foreign-exchange fees on the PlasBit Plastic Card?",

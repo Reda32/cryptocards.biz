@@ -2,7 +2,7 @@
   "name": "Ether.fi Cash Card",
   "slug": "ether-fi-cash-card",
   "company": "Ether.fi",
-  "summary": "Ether.fi Cash is a non-custodial Visa card that lets you borrow against your crypto instead of selling it. Spend USDC on Scroll with gasless transactions while your collateral keeps earning yield, and earn banded cashback paid in WETH — provided you clear the onboarding checks and avoid liquidation.",
+  "summary": "Ether.fi Cash is a non-custodial Visa card that lets you borrow against your crypto instead of selling it. Spend USDC on Scroll with gasless transactions while your collateral keeps earning yield, and earn banded cashback paid in WETH, provided you clear the onboarding checks and avoid liquidation.",
   "logo": "/logos/etherfi.svg",
   "brandColor": "#0ea5e9",
   "type": [
@@ -113,7 +113,7 @@
   "pros": [
     "Non-custodial: your collateral stays in self-custodied vaults",
     "Up to 3% cashback with no category caps, paid in WETH",
-    "Spend without selling — no taxable disposal of your crypto",
+    "Spend without selling, with no taxable disposal of your crypto",
     "Yield keeps accruing on deposited collateral via Liquid Vaults",
     "No late fees or minimum payments, with Apple Pay and Google Pay"
   ],

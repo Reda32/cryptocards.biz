@@ -54,13 +54,13 @@
   ],
   "cons": [
     "US$200 card issuance fee",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Gpayvcc Virtual Visa Reloadable charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$200."
+      "answer": "No. There is no monthly fee. Card issuance is US$200."
     },
     {
       "question": "What are the foreign-exchange fees on the Gpayvcc Virtual Visa Reloadable?",

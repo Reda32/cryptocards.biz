@@ -52,13 +52,13 @@ const ROWS: Row[] = [
   {
     label: 'Network',
     cell: (c) => ({
-      text: c.network === 'visa' ? 'Visa' : c.network === 'mastercard' ? 'Mastercard' : '—',
+      text: c.network === 'visa' ? 'Visa' : c.network === 'mastercard' ? 'Mastercard' : 'N/A',
     }),
   },
   {
     label: 'Card type',
     cell: (c) => ({
-      text: c.type.length > 0 ? c.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ') : '—',
+      text: c.type.length > 0 ? c.type.map((t) => (t === 'virtual' ? 'Virtual' : 'Physical')).join(' + ') : 'N/A',
     }),
   },
   {
@@ -76,7 +76,7 @@ const ROWS: Row[] = [
     label: 'KYC level',
     best: 'low',
     cell: (c) => ({
-      text: c.kyc ? KYC_LABELS[c.kyc.level] : '—',
+      text: c.kyc ? KYC_LABELS[c.kyc.level] : 'N/A',
       sort: c.kyc ? KYC_RANK[c.kyc.level] : null,
       tone: c.kyc
         ? c.kyc.level === 'none'
@@ -90,24 +90,24 @@ const ROWS: Row[] = [
   {
     label: 'Issuance fee',
     best: 'low',
-    cell: (c) => (c.fees ? { text: usd(c.fees.issuance), sort: c.fees.issuance } : { text: '—' }),
+    cell: (c) => (c.fees ? { text: usd(c.fees.issuance), sort: c.fees.issuance } : { text: 'N/A' }),
   },
   {
     label: 'Monthly fee',
     best: 'low',
-    cell: (c) => (c.fees ? { text: usd(c.fees.monthly), sort: c.fees.monthly } : { text: '—' }),
+    cell: (c) => (c.fees ? { text: usd(c.fees.monthly), sort: c.fees.monthly } : { text: 'N/A' }),
   },
   {
     label: 'FX markup',
     best: 'low',
-    cell: (c) => (c.fees ? { text: percent(c.fees.fx), sort: c.fees.fx } : { text: '—' }),
+    cell: (c) => (c.fees ? { text: percent(c.fees.fx), sort: c.fees.fx } : { text: 'N/A' }),
   },
-  { label: 'ATM fee', cell: (c) => ({ text: c.fees ? c.fees.atm : '—' }) },
+  { label: 'ATM fee', cell: (c) => ({ text: c.fees ? c.fees.atm : 'N/A' }) },
   {
     label: 'Daily spend',
     best: 'high',
     cell: (c) =>
-      c.limits ? { text: c.limits.dailySpend, sort: parseLimit(c.limits.dailySpend) } : { text: '—' },
+      c.limits ? { text: c.limits.dailySpend, sort: parseLimit(c.limits.dailySpend) } : { text: 'N/A' },
   },
   {
     label: 'Monthly spend',
@@ -115,13 +115,13 @@ const ROWS: Row[] = [
     cell: (c) =>
       c.limits
         ? { text: c.limits.monthlySpend, sort: parseLimit(c.limits.monthlySpend) }
-        : { text: '—' },
+        : { text: 'N/A' },
   },
   {
     label: 'Cryptocurrencies',
     best: 'high',
     cell: (c) => ({
-      text: c.cryptos.map((x) => x.symbol).join(', ') || '—',
+      text: c.cryptos.map((x) => x.symbol).join(', ') || 'N/A',
       sort: c.cryptos.length,
       icons: c.cryptos
         .map((x) => cryptoIcon(x.symbol))
@@ -390,7 +390,7 @@ export default function CompareTable() {
                   </th>
                   {selected.map((card) => (
                     <td class="px-4 py-3" key={card.slug}>
-                      {card.referral ? <CopyCode code={card.referral.code} /> : <span class="text-slate-400">—</span>}
+                      {card.referral ? <CopyCode code={card.referral.code} /> : <span class="text-slate-400">N/A</span>}
                     </td>
                   ))}
                 </tr>
@@ -421,7 +421,7 @@ export default function CompareTable() {
             </table>
           </div>
           <p class="mt-4 text-xs text-slate-400">
-            Best value per row is highlighted. Fees and limits are verified periodically — check the
+            Best value per row is highlighted. Fees and limits are verified periodically. Check the
             provider before applying.
           </p>
         </div>

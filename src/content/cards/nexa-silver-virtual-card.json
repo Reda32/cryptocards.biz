@@ -56,13 +56,13 @@
     "US$3.99 monthly fee",
     "US$49.95 card issuance fee",
     "Identity verification (KYC) required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Nexa Silver Virtual Card charge a monthly fee?",
-      "answer": "Yes — it charges US$3.99 per month. Card issuance is US$49.95."
+      "answer": "Yes. It charges US$3.99 per month. Card issuance is US$49.95."
     },
     {
       "question": "What are the foreign-exchange fees on the Nexa Silver Virtual Card?",

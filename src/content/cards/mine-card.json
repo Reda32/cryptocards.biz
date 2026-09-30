@@ -100,7 +100,7 @@
     "Cuba",
     "Belarus"
   ],
-  "availabilityNotes": "Mine is pre-launch — sign-up is currently listed as 'coming soon', so this page describes announced specifications that may change. The Mastercard is accepted in 172–175 countries including the US, but the account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list. Onboarding follows AML rules and some countries require extra verification.",
+  "availabilityNotes": "Mine is pre-launch: sign-up is currently listed as 'coming soon', so this page describes announced specifications that may change. The Mastercard is accepted in 172-175 countries including the US, but the account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list. Onboarding follows AML rules and some countries require extra verification.",
   "cryptos": [
     {
       "symbol": "USDC",
@@ -131,7 +131,7 @@
     "notes": "Onboarding follows AML rules and requires identity verification, with extra checks in some countries. The account and IBAN are not available to US persons or Russian citizens regardless of residence."
   },
   "pros": [
-    "Non-custodial by default — you hold the keys, Mine never custodies funds",
+    "Non-custodial by default: you hold the keys, Mine never custodies funds",
     "CHF and EUR IBAN in your own name that settles as USDC in your wallet",
     "Mastercard accepted in 175+ countries including the US, with Apple Pay and Google Pay",
     "First 500 CHF/EUR convert to USDC free, with no spread",
@@ -139,7 +139,7 @@
     "Free instant Mine-to-Mine transfers and local rails (SEPA, ACH, PIX, M-Pesa, UPI)"
   ],
   "cons": [
-    "Not live yet — sign-up is 'coming soon' (pre-launch)",
+    "Not live yet: sign-up is 'coming soon' (pre-launch)",
     "Basic tier has 0% cashback and no physical card",
     "Basic FX at 1.5% is high for the category",
     "ATM withdrawals cost US$5 per international withdrawal",
@@ -148,10 +148,10 @@
   ],
   "rating": 7,
   "howToGet": [
-    "Get a Mine invite code — the card is invite-only and sign-up is currently 'coming soon'.",
+    "Get a Mine invite code: the card is invite-only and sign-up is currently 'coming soon'.",
     "Open an account and complete AML identity verification.",
     "Use the code to issue a free Basic virtual card or take 20% off Premium.",
-    "Fund your wallet — your CHF or EUR IBAN settles incoming money as USDC.",
+    "Fund your wallet: your CHF or EUR IBAN settles incoming money as USDC.",
     "Add the Mastercard to Apple Pay or Google Pay and spend in 175+ countries."
   ],
   "variants": [
@@ -195,7 +195,7 @@
     },
     {
       "question": "Where is Mine available?",
-      "answer": "The Mastercard is accepted in 172–175 countries including the US. The account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list."
+      "answer": "The Mastercard is accepted in 172-175 countries including the US. The account, IBAN and conversion services are not available to US persons or Russian citizens, or to residents of a small restricted list."
     },
     {
       "question": "What fees does the Mine card charge?",

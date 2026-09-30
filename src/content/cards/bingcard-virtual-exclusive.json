@@ -52,13 +52,13 @@
   "cons": [
     "1.5% foreign-exchange markup",
     "US$25 card issuance fee",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the BingCard Virtual Exclusive charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$25."
+      "answer": "No. There is no monthly fee. Card issuance is US$25."
     },
     {
       "question": "What are the foreign-exchange fees on the BingCard Virtual Exclusive?",

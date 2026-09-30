@@ -26,7 +26,7 @@
     "issuance": 10,
     "monthly": 0,
     "fx": 2,
-    "atm": "2% (+0–1.75% FX surcharge abroad)",
+    "atm": "2% (+0-1.75% FX surcharge abroad)",
     "topup": "Free for stablecoin deposits",
     "decline": 0.5
   },
@@ -81,7 +81,7 @@
   ],
   "cons": [
     "US citizens cannot use DPT, and several major markets are prohibited for card issuance",
-    "Funding is stablecoin-only — no BTC, ETH or other crypto can be deposited",
+    "Funding is stablecoin-only: no BTC, ETH or other crypto can be deposited",
     "ATM withdrawals are capped at US$250 per transaction and US$750 per day, with a 2% fee",
     "The physical card costs US$50 and the premium Obsidian tier is US$10,000 per year"
   ],
@@ -101,7 +101,7 @@
       "rewards": "US$5 activation credit",
       "monthlyFee": 0,
       "limits": "Unlimited spend · US$250 / ATM withdrawal",
-      "cardInfo": "Physical Visa Platinum, delivered in 7–14 business days"
+      "cardInfo": "Physical Visa Platinum, delivered in 7-14 business days"
     },
     {
       "name": "Obsidian",
@@ -127,7 +127,7 @@
     },
     {
       "question": "Does the DPT card charge a monthly fee?",
-      "answer": "The Oxygen card has no monthly fee — only a one-time US$10 application fee for the virtual card (US$50 for physical). The premium Obsidian tier is charged as an annual membership of US$10,000 per year."
+      "answer": "The Oxygen card has no monthly fee; there is only a one-time US$10 application fee for the virtual card (US$50 for physical). The premium Obsidian tier is charged as an annual membership of US$10,000 per year."
     },
     {
       "question": "What are the DPT ATM withdrawal limits?",

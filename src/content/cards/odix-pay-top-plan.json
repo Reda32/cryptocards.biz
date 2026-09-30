@@ -42,13 +42,13 @@
   "cons": [
     "US$5 card issuance fee",
     "Full KYC, including proof of address, required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Odix Pay Top Plan charge a monthly fee?",
-      "answer": "No — there is no monthly fee. Card issuance is US$5."
+      "answer": "No. There is no monthly fee. Card issuance is US$5."
     },
     {
       "question": "What are the foreign-exchange fees on the Odix Pay Top Plan?",

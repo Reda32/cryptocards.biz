@@ -56,13 +56,13 @@
     "2% foreign-exchange markup",
     "US$10 card issuance fee",
     "Full KYC, including proof of address, required",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the SolCard Full Access charge a monthly fee?",
-      "answer": "Yes — it charges US$1 per month. Card issuance is US$10."
+      "answer": "Yes. It charges US$1 per month. Card issuance is US$10."
     },
     {
       "question": "What are the foreign-exchange fees on the SolCard Full Access?",

@@ -48,13 +48,13 @@
   "cons": [
     "US$20 monthly fee",
     "3% foreign-exchange markup",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Moon Card charge a monthly fee?",
-      "answer": "Yes — it charges US$20 per month. Card issuance is free."
+      "answer": "Yes. It charges US$20 per month. Card issuance is free."
     },
     {
       "question": "What are the foreign-exchange fees on the Moon Card?",

@@ -38,13 +38,13 @@
     "US$10000 monthly fee",
     "2% foreign-exchange markup",
     "US$5 card issuance fee",
-    "Virtual card only — no physical card"
+    "Virtual card only, no physical card"
   ],
   "variants": [],
   "faq": [
     {
       "question": "Does the Raincards charge a monthly fee?",
-      "answer": "Yes — it charges US$10000 per month. Card issuance is US$5."
+      "answer": "Yes. It charges US$10000 per month. Card issuance is US$5."
     },
     {
       "question": "What are the foreign-exchange fees on the Raincards?",

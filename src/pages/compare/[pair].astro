@@ -123,7 +123,7 @@ const verdictWinner =
       : B;
 const verdictLoser = verdictWinner === A ? B : A;
 
-const verdict = `${verdictWinner.name} wins ${Math.max(aWins, bWins)} of ${metrics.length} categories. It scores ${ratingValue(verdictWinner.rating).toFixed(1)}/10 overall against ${ratingValue(verdictLoser.rating).toFixed(1)}/10 for ${verdictLoser.name}, and is the better pick for most people — though ${verdictLoser.name} remains strong where it wins below.`;
+const verdict = `${verdictWinner.name} wins ${Math.max(aWins, bWins)} of ${metrics.length} categories. It scores ${ratingValue(verdictWinner.rating).toFixed(1)}/10 overall against ${ratingValue(verdictLoser.rating).toFixed(1)}/10 for ${verdictLoser.name}, and is the better pick for most people, although ${verdictLoser.name} remains strong where it wins below.`;
 
 const faq = [
   {
@@ -136,7 +136,7 @@ const faq = [
   },
   {
     question: `Which has the easier sign-up, ${A.name} or ${B.name}?`,
-    answer: `${A.name} requires ${KYC_LABELS[kyc(A.kyc).level]}, while ${B.name} requires ${KYC_LABELS[kyc(B.kyc).level]}. If minimising verification matters, choose the lower tier — but check the limits that apply before KYC.`,
+    answer: `${A.name} requires ${KYC_LABELS[kyc(A.kyc).level]}, while ${B.name} requires ${KYC_LABELS[kyc(B.kyc).level]}. If minimising verification matters, choose the lower tier. But check the limits that apply before KYC.`,
   },
 ];
 
