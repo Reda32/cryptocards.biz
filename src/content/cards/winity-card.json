@@ -1,0 +1,375 @@
+{
+  "name": "Winity Life Card",
+  "slug": "winity-card",
+  "company": "Winity",
+  "summary": "Winity Life is a Hong Kong-based custodial card that converts USDT, USDC and other digital assets into a USD balance you can spend on Visa. The Exclusive virtual card is free and stablecoin deposits carry no fee, but the card needs a US$25 minimum balance, non-stable assets cost 5% to convert, and the rewards programme has no live redemption yet.",
+  "logo": "/logos/winity.webp",
+  "brandColor": "#21E6A7",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [
+    "google"
+  ],
+  "features": [
+    "contactless",
+    "instant-issuance",
+    "crypto-topup",
+    "atm-withdrawal",
+    "multi-currency",
+    "rewards",
+    "app-notifications"
+  ],
+  "fees": {
+    "issuance": 0,
+    "monthly": 0,
+    "fx": 0,
+    "atm": "US$3 per withdrawal (+ US$5 ATM PIN change)",
+    "topup": "Free for USDT/USDC; 5% on other assets"
+  },
+  "rewards": {
+    "cashback": "None (Winity Points instead)",
+    "welcomeBonus": "Free physical card after US$25 eligible spend (limited promotion)",
+    "referralBonus": "US$2 instant cash via Winity Loop when a referred user starts spending"
+  },
+  "countries": [
+    "Afghanistan",
+    "Albania",
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
+    "Argentina",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bhutan",
+    "Bolivia",
+    "Bosnia and Herzegovina",
+    "Botswana",
+    "Brazil",
+    "Brunei",
+    "Bulgaria",
+    "Burkina Faso",
+    "Burundi",
+    "Cambodia",
+    "Cameroon",
+    "Canada",
+    "Cape Verde",
+    "Central African Republic",
+    "Chad",
+    "Chile",
+    "China",
+    "Colombia",
+    "Comoros",
+    "Congo",
+    "Costa Rica",
+    "Croatia",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Equatorial Guinea",
+    "Eritrea",
+    "Estonia",
+    "Eswatini",
+    "Ethiopia",
+    "Fiji",
+    "Finland",
+    "France",
+    "Gabon",
+    "Gambia",
+    "Georgia",
+    "Germany",
+    "Ghana",
+    "Gibraltar",
+    "Greece",
+    "Grenada",
+    "Guatemala",
+    "Guinea",
+    "Guinea-Bissau",
+    "Guyana",
+    "Haiti",
+    "Honduras",
+    "Hong Kong",
+    "Hungary",
+    "Iceland",
+    "India",
+    "Indonesia",
+    "Iraq",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Jamaica",
+    "Japan",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kiribati",
+    "Kosovo",
+    "Kuwait",
+    "Kyrgyzstan",
+    "Laos",
+    "Latvia",
+    "Lebanon",
+    "Lesotho",
+    "Liberia",
+    "Libya",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Macau",
+    "Madagascar",
+    "Malawi",
+    "Malaysia",
+    "Maldives",
+    "Mali",
+    "Malta",
+    "Marshall Islands",
+    "Mauritania",
+    "Mauritius",
+    "Mexico",
+    "Micronesia",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Montenegro",
+    "Morocco",
+    "Mozambique",
+    "Myanmar",
+    "Namibia",
+    "Nauru",
+    "Nepal",
+    "Netherlands",
+    "New Zealand",
+    "Nicaragua",
+    "Niger",
+    "Nigeria",
+    "North Macedonia",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palau",
+    "Palestine",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Peru",
+    "Philippines",
+    "Poland",
+    "Portugal",
+    "Qatar",
+    "Romania",
+    "Rwanda",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "Samoa",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Saudi Arabia",
+    "Senegal",
+    "Serbia",
+    "Seychelles",
+    "Sierra Leone",
+    "Singapore",
+    "Slovakia",
+    "Slovenia",
+    "Solomon Islands",
+    "Somalia",
+    "South Africa",
+    "South Korea",
+    "South Sudan",
+    "Spain",
+    "Sri Lanka",
+    "Sudan",
+    "Suriname",
+    "Sweden",
+    "Switzerland",
+    "Taiwan",
+    "Tajikistan",
+    "Tanzania",
+    "Thailand",
+    "Timor-Leste",
+    "Togo",
+    "Tonga",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "Turkey",
+    "Turkmenistan",
+    "Tuvalu",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Uruguay",
+    "Uzbekistan",
+    "Vanuatu",
+    "Vatican City",
+    "Vietnam",
+    "Yemen",
+    "Zambia",
+    "Zimbabwe"
+  ],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": [
+        "Ethereum",
+        "Tron",
+        "Solana",
+        "Polygon",
+        "BNB Chain"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Ethereum",
+        "Solana",
+        "Polygon",
+        "BNB Chain"
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "networks": [
+        "Ethereum"
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "networks": [
+        "Solana"
+      ]
+    },
+    {
+      "symbol": "POL",
+      "networks": [
+        "Polygon"
+      ]
+    },
+    {
+      "symbol": "TRX",
+      "networks": [
+        "Tron"
+      ]
+    },
+    {
+      "symbol": "WCO",
+      "networks": [
+        "W Chain"
+      ]
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "email": true,
+    "phone": true,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": true,
+    "notes": "Registration uses a phone number and OTP, then email verification. Card approval is separate from account approval and requires a passport, driving licence or national identity card plus a selfie; proof of address can be requested. You must be 18+ and resident in a supported jurisdiction."
+  },
+  "pros": [
+    "Free Exclusive virtual card issued after KYC approval, with no annual fee",
+    "USDT and USDC deposits cost nothing to load",
+    "Low US$3 ATM withdrawal fee and Google Pay support",
+    "Wide acceptance across 150M+ Visa merchant locations"
+  ],
+  "cons": [
+    "Custodial and partner-issued: Winity does not name the card issuer and your balance is not insured",
+    "Non-stable assets (ETH, SOL, POL, TRX, WCO) cost 5% to convert",
+    "US$25 minimum balance required to keep spending; a US$0.10 fee applies below US$25",
+    "Winity Points cannot be redeemed yet, and Apple Pay is still 'coming soon'"
+  ],
+  "rating": 7.6,
+  "variants": [
+    {
+      "name": "Exclusive Virtual",
+      "price": 0,
+      "rewards": "1 Winity Point / US$10",
+      "monthlyFee": 0,
+      "limits": "Not publicly disclosed",
+      "cardInfo": "Virtual Visa, issued on KYC approval, Google Pay ready"
+    },
+    {
+      "name": "Exclusive Physical",
+      "price": 0,
+      "rewards": "1 Winity Point / US$10",
+      "monthlyFee": 0,
+      "limits": "Not publicly disclosed",
+      "cardInfo": "Physical Visa, US$20/yr (first 6 months waived); free issuance after US$25 spend"
+    },
+    {
+      "name": "Executive",
+      "price": 1000,
+      "rewards": "1 Winity Point / US$8",
+      "monthlyFee": 0,
+      "limits": "Not publicly disclosed",
+      "cardInfo": "Premium metal Visa — coming soon / waitlist; US$1,000 per year"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the Winity Life Card free?",
+      "answer": "The Exclusive virtual card is free — no issuance or annual fee. The physical Exclusive card has a US$20 annual fee, but the first six months are waived on new activations and issuance is free under the current promotion after US$25 of eligible card spend (shipping may apply)."
+    },
+    {
+      "question": "Which cryptocurrencies can I use to fund Winity?",
+      "answer": "USDT and USDC can be deposited at a 0% fee. Winity also supports WCO, ETH, SOL, POL, TRX and BSC, but these non-stable assets carry a 5% conversion fee. Supported networks include Ethereum, Solana, Tron, Polygon, BNB Chain and W Chain."
+    },
+    {
+      "question": "Is the Winity Life Card available in the United States?",
+      "answer": "Winity markets availability across 188+ countries, and third-party tracking lists the United States among supported markets. Eligibility is still subject to KYC, jurisdiction and partner approval, so confirm your residential address in the app before applying."
+    },
+    {
+      "question": "What are the Winity ATM fees?",
+      "answer": "ATM withdrawals cost US$3 per transaction at any Visa ATM, and changing your PIN at an ATM costs US$5. The Winity app does not support withdrawing funds back into digital assets."
+    },
+    {
+      "question": "Do Winity Points have a cash value?",
+      "answer": "Not yet. Winity Points are loyalty points, not cashback, and the redemption portal for travel, dining and lifestyle rewards is still being integrated. Treat them as future optional value until redemption is live."
+    },
+    {
+      "question": "Does the Winity Life Card require KYC?",
+      "answer": "Yes. You register with a phone number and OTP, verify your email, then complete identity verification with a passport, driving licence or national identity card plus a selfie. Account approval and card approval are separate steps."
+    }
+  ],
+  "howToGet": [
+    "Download the Winity Life app on iOS or Android and register with your phone number and OTP.",
+    "Verify your email, then complete identity verification with a government ID and a selfie.",
+    "Submit your card application — once approved, the Exclusive virtual card is issued in the app.",
+    "Load the card with USDT or USDC (0% fee) and keep at least US$25 on the balance.",
+    "Add the card to Google Pay and start spending wherever Visa is accepted.",
+    "To get the physical card, spend US$25 on the virtual card and request it in the app."
+  ],
+  "lastVerified": "2026-09-30",
+  "restrictedCountries": [
+    "Belarus",
+    "Cuba",
+    "Iran",
+    "North Korea",
+    "Russia",
+    "Syria",
+    "Venezuela"
+  ],
+  "availabilityNotes": "Winity markets card utility across 188+ countries and 150M+ Visa merchant locations, with only comprehensive-sanctions jurisdictions excluded. The supported list here is third-party sourced; Winity's own terms say access depends on KYC, jurisdiction and partner approval and is limited to approved users rather than the general public, so confirm your residency in the app before applying.",
+  "signupUrl": "https://www.winity.life/"
+}
