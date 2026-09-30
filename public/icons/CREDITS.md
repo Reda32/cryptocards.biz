@@ -27,24 +27,43 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+Additional coin icons from [simple-icons](https://github.com/simple-icons/simple-icons)
+(CC0 1.0), wrapped in a brand-coloured badge:
+
+- `crypto/near.svg` (NEAR)
+- `crypto/ton.svg` (TON)
+
+Original placeholder SVGs (not official brand assets), replace when the source
+and licence can be confirmed:
+
+- `crypto/usde.svg` (Ethena USDe)
+- `crypto/wco.svg` (Winity WCO)
+
 ## Network icons — `public/icons/networks/`
 
 Most network icons reuse the coin art above (e.g. `tron.svg` from `trx.svg`,
-`ethereum.svg` from `eth.svg`).
+`ethereum.svg` from `eth.svg`, `dogecoin.svg` from `doge.svg`, `litecoin.svg`
+from `ltc.svg`).
+
+- `networks/optimism.svg` — glyph from [simple-icons](https://github.com/simple-icons/simple-icons) (CC0 1.0).
 
 These are original placeholder SVGs, not official brand assets:
 
 - `networks/base.svg` (Base)
-- `crypto/usde.svg` (Ethena USDe)
+- `networks/arbitrum.svg` (Arbitrum)
+- `networks/scroll.svg` (Scroll)
+- `networks/plasma.svg` (Plasma)
+- `networks/w-chain.svg` (W Chain)
 
-Replace them with the official brand assets when you can confirm the source and
-license.
+## UI icons
+
+- `src/components/ui/Icon.astro` — [Lucide](https://lucide.dev) (ISC licence): `check`, `x`, `copy`.
 
 ## Refreshing the icons
 
 ```bash
 BASE=https://cdn.jsdelivr.net/npm/cryptocurrency-icons@0.18.1/svg/color
-for s in btc eth usdt usdc bnb sol dai xrp ada dot matic link avax atom uni aave trx doge ltc; do
+for s in btc eth usdt usdc bnb sol dai xrp ada dot matic link avax atom uni aave trx doge ltc xmr eur gbp; do
   curl -fsSL "$BASE/$s.svg" -o "public/icons/crypto/$s.svg"
 done
 ```
