@@ -25,12 +25,9 @@ const companySlug = (name) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 
-const companyCounts = new Map();
-
 for (const file of readdirSync(cardsDir).filter((f) => f.endsWith('.json'))) {
   const card = JSON.parse(readFileSync(join(cardsDir, file), 'utf8'));
   const company = companySlug(card.company ?? '');
-  companyCounts.set(company, (companyCounts.get(company) ?? 0) + 1);
 
   if (card.verified === false) {
     excluded.add(`/cards/${card.slug}`);
@@ -46,12 +43,9 @@ for (const file of readdirSync(cardsDir).filter((f) => f.endsWith('.json'))) {
   }
 }
 
-// Company pages with no verified cards, or only a single card, are thin.
+// Company pages with no verified cards are thin.
 for (const company of unverifiedCompanySlugs) {
   if (!verifiedCompanySlugs.has(company)) excluded.add(`/company/${company}`);
-}
-for (const [company, count] of companyCounts) {
-  if (count < 2) excluded.add(`/company/${company}`);
 }
 
 // https://astro.build/config

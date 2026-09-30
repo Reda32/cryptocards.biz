@@ -47,7 +47,7 @@ function buildCons(c) {
   if (c.kyc?.level === 'id') cons.push('Identity verification (KYC) required');
   if (c.kyc?.level === 'full') cons.push('Full KYC, including proof of address, required');
   if (c.type && c.type.length > 0 && !c.type.includes('physical'))
-    cons.push('Virtual card only — no physical card');
+    cons.push('Virtual card only, no physical card');
   if (c.rewards?.cashbackToken && !c.rewards?.cashback)
     cons.push('Rewards programme details are limited');
   return cons.slice(0, 6);
@@ -58,9 +58,9 @@ function buildFaq(c) {
   const f = c.fees ?? {};
   const monthly =
     f.monthly === 0
-      ? 'No — there is no monthly fee.'
+      ? 'No. There is no monthly fee.'
       : typeof f.monthly === 'number'
-        ? `Yes — it charges US$${f.monthly} per month.`
+        ? `Yes. It charges US$${f.monthly} per month.`
         : 'The provider has not clearly published its monthly fee.';
   const issuanceNote =
     typeof f.issuance === 'number' ? ` Card issuance is ${usd(f.issuance)}.` : '';

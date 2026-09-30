@@ -45,14 +45,12 @@ Most network icons reuse the coin art above (e.g. `tron.svg` from `trx.svg`,
 `ethereum.svg` from `eth.svg`, `dogecoin.svg` from `doge.svg`, `litecoin.svg`
 from `ltc.svg`).
 
-- `networks/optimism.svg` — glyph from [simple-icons](https://github.com/simple-icons/simple-icons) (CC0 1.0).
+Branded chain logos from [@web3icons/core](https://www.npmjs.com/package/@web3icons/core)
+(MIT): `networks/base.svg`, `networks/arbitrum.svg`, `networks/scroll.svg`,
+`networks/plasma.svg`, `networks/optimism.svg`.
 
 These are original placeholder SVGs, not official brand assets:
 
-- `networks/base.svg` (Base)
-- `networks/arbitrum.svg` (Arbitrum)
-- `networks/scroll.svg` (Scroll)
-- `networks/plasma.svg` (Plasma)
 - `networks/w-chain.svg` (W Chain)
 
 ## UI icons
