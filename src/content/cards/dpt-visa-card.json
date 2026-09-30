@@ -1,0 +1,167 @@
+{
+  "name": "DPT Visa Card",
+  "slug": "dpt-visa-card",
+  "company": "DPT",
+  "summary": "DPT is a Hong Kong-based stablecoin card that lets you spend USDT and USDC wherever Visa is accepted. The entry-level Oxygen card has no monthly fee and unlimited default spending, but funding is stablecoin-only, ATM withdrawals are capped, and US citizens cannot apply.",
+  "logo": "/logos/dpt.svg",
+  "brandColor": "#3B8C82",
+  "type": [
+    "virtual",
+    "physical"
+  ],
+  "network": "visa",
+  "wallets": [
+    "apple",
+    "google"
+  ],
+  "features": [
+    "contactless",
+    "instant-issuance",
+    "crypto-topup",
+    "atm-withdrawal",
+    "multi-currency",
+    "app-notifications"
+  ],
+  "fees": {
+    "issuance": 10,
+    "monthly": 0,
+    "fx": 2,
+    "atm": "2% (+0–1.75% FX surcharge abroad)",
+    "topup": "Free for stablecoin deposits",
+    "decline": 0.5
+  },
+  "limits": {
+    "dailySpend": "Unlimited (user-configurable)",
+    "monthlySpend": "Unlimited (user-configurable)",
+    "atmWithdrawal": "US$250 per transaction · US$750 / day (3 attempts)"
+  },
+  "rewards": {
+    "cashback": "None",
+    "welcomeBonus": "US$5 spending credit on card activation (non-withdrawable)"
+  },
+  "countries": [],
+  "cryptos": [
+    {
+      "symbol": "USDT",
+      "networks": [
+        "ETH",
+        "TRON",
+        "BSC",
+        "Polygon",
+        "Arbitrum",
+        "Solana"
+      ]
+    },
+    {
+      "symbol": "USDC",
+      "networks": [
+        "ETH",
+        "BSC",
+        "Polygon",
+        "Arbitrum",
+        "Solana",
+        "Base"
+      ]
+    }
+  ],
+  "kyc": {
+    "level": "id",
+    "email": true,
+    "phone": false,
+    "idDocument": true,
+    "proofOfAddress": false,
+    "selfie": true,
+    "notes": "Verification requires a government-issued ID and a live selfie. US citizens cannot sign up, though non-US citizens lawfully resident in the US may apply. Cards cannot be issued to residents of prohibited jurisdictions."
+  },
+  "pros": [
+    "No monthly fee on the Oxygen card and a low US$10 virtual issuance fee",
+    "Unlimited default spending and no balance cap (limits are set by you in the app)",
+    "Spends USDT and USDC across Ethereum, TRON, BSC, Polygon, Arbitrum, Solana and Base",
+    "Instant virtual Visa with Apple Pay and Google Pay, plus a US$5 activation credit"
+  ],
+  "cons": [
+    "US citizens cannot use DPT, and several major markets are prohibited for card issuance",
+    "Funding is stablecoin-only — no BTC, ETH or other crypto can be deposited",
+    "ATM withdrawals are capped at US$250 per transaction and US$750 per day, with a 2% fee",
+    "The physical card costs US$50 and the premium Obsidian tier is US$10,000 per year"
+  ],
+  "rating": 7.7,
+  "variants": [
+    {
+      "name": "Oxygen Virtual",
+      "price": 10,
+      "rewards": "US$5 activation credit",
+      "monthlyFee": 0,
+      "limits": "Unlimited spend · US$250 / ATM withdrawal",
+      "cardInfo": "Virtual Visa Platinum, instant issuance after KYC"
+    },
+    {
+      "name": "Oxygen Physical",
+      "price": 50,
+      "rewards": "US$5 activation credit",
+      "monthlyFee": 0,
+      "limits": "Unlimited spend · US$250 / ATM withdrawal",
+      "cardInfo": "Physical Visa Platinum, delivered in 7–14 business days"
+    },
+    {
+      "name": "Obsidian",
+      "price": 10000,
+      "rewards": "Visa Infinite benefits and concierge",
+      "monthlyFee": 0,
+      "limits": "Visa Infinite tier",
+      "cardInfo": "Invite-oriented Visa Infinite, US$10,000 per year"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the DPT card available in the United States?",
+      "answer": "DPT card services are not available to US citizens. Non-US citizens who are lawfully resident in the United States may still register and apply. USD is supported for worldwide deposits and withdrawals."
+    },
+    {
+      "question": "Do I need to complete KYC to use the DPT card?",
+      "answer": "Yes. Before a card is issued you must complete identity verification with a government-issued ID and a live selfie. Applications from prohibited jurisdictions are rejected."
+    },
+    {
+      "question": "Which cryptocurrencies does the DPT card support?",
+      "answer": "DPT accepts deposits in USDT and USDC. Supported networks are Ethereum, Polygon, Arbitrum One, Solana and BSC for both coins, Base for USDC only, and TRON for USDT only."
+    },
+    {
+      "question": "Does the DPT card charge a monthly fee?",
+      "answer": "The Oxygen card has no monthly fee — only a one-time US$10 application fee for the virtual card (US$50 for physical). The premium Obsidian tier is charged as an annual membership of US$10,000 per year."
+    },
+    {
+      "question": "What are the DPT ATM withdrawal limits?",
+      "answer": "ATM withdrawals are capped at US$250 per transaction and three attempts per rolling 24-hour period (US$750 per day). Both approved and declined attempts count toward the daily limit, and a 2% withdrawal fee applies."
+    }
+  ],
+  "howToGet": [
+    "Download the DPT app and start sign-up with your email.",
+    "Complete identity verification with a government-issued ID and a live selfie.",
+    "Choose the Oxygen card and pay the one-time application fee (US$10 virtual or US$50 physical).",
+    "Activate your card in the app to claim the US$5 spending credit.",
+    "Top up with USDT or USDC over a supported network.",
+    "Add the card to Apple Pay or Google Pay and start spending wherever Visa is accepted."
+  ],
+  "lastVerified": "2026-09-30",
+  "restrictedCountries": [
+    "Belarus",
+    "China",
+    "Cuba",
+    "India",
+    "Iran",
+    "Iraq",
+    "Israel",
+    "Myanmar",
+    "Nepal",
+    "Nicaragua",
+    "North Korea",
+    "Russia",
+    "Syria",
+    "Turkey",
+    "Ukraine",
+    "Venezuela",
+    "Vietnam"
+  ],
+  "availabilityNotes": "DPT cards can be used anywhere Visa is accepted, but they cannot be issued to residents of the prohibited jurisdictions listed above. US citizens cannot sign up, though non-US citizens resident in the US may apply. Card spending is additionally blocked in Cuba, Iran, North Korea, Russia, Syria, Ukraine and Venezuela.",
+  "signupUrl": "https://dpt.xyz/"
+}
