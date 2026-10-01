@@ -96,38 +96,35 @@ const toc = [
   ...(d.faq.length > 0 ? [{ id: 'faq', label: 'FAQ' }] : []),
 ];
 
-const reviewSchema = {
+const productSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  itemReviewed: {
-    '@type': 'Product',
-    name: d.name,
-    brand: { '@type': 'Brand', name: d.company },
-    category: 'Crypto card',
+  '@type': 'Product',
+  name: d.name,
+  brand: { '@type': 'Brand', name: d.company },
+  category: 'Crypto card',
+  url: `https://cryptocards.biz/cards/${d.slug}`,
+  review: {
+    '@type': 'Review',
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: d.rating ?? 0,
+      bestRating: 10,
+      worstRating: 0,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'CryptoCards.biz',
+      url: 'https://cryptocards.biz/about',
+    },
+    publisher: { '@type': 'Organization', name: 'CryptoCards.biz' },
+    datePublished: formatIsoDate(d.lastVerified),
+    dateModified: formatIsoDate(d.lastVerified),
+    reviewBody: d.summary,
   },
-  author: {
-    '@type': 'Organization',
-    name: 'CryptoCards.biz',
-    url: 'https://cryptocards.biz/about',
-  },
-  publisher: { '@type': 'Organization', name: 'CryptoCards.biz' },
-  ...(d.rating !== null && d.rating !== undefined
-    ? {
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: d.rating,
-          bestRating: 10,
-          worstRating: 0,
-        },
-      }
-    : {}),
-  datePublished: formatIsoDate(d.lastVerified),
-  dateModified: formatIsoDate(d.lastVerified),
-  reviewBody: d.summary,
 };
 
-// Only emit Review structured data for human-verified cards with a score.
-const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [reviewSchema] : [];
+// Only emit Product structured data for human-verified cards with a score.
+const schemas = d.verified && d.rating !== null && d.rating !== undefined ? [productSchema] : [];
 ---
 
 <BaseLayout
