@@ -57,6 +57,14 @@ export default defineConfig({
   // Keep URLs, canonical tags and the sitemap in agreement: no trailing slash.
   trailingSlash: 'never',
   adapter: node({ mode: 'standalone' }),
+  // Behind Coolify's proxy, trust X-Forwarded-Host/Proto for our own domains so
+  // request URLs (and the form origin check on /admin) see https://cryptocards.biz.
+  security: {
+    allowedDomains: [
+      { hostname: 'cryptocards.biz', protocol: 'https' },
+      { hostname: 'www.cryptocards.biz', protocol: 'https' },
+    ],
+  },
   integrations: [
     preact(),
     mdx(),
