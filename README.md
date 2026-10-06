@@ -126,6 +126,10 @@ promo code (the `referral` object: link, code, bonus, eligibility, terms, expiry
 alternative offers).
 
 - Set `ADMIN_PASSWORD` (12+ characters). Without it the panel is disabled.
+- Set `TURNSTILE_SECRET` to turn on the Cloudflare Turnstile human check on the
+  login form (verified server-side: success, action `admin-login` and hostname in
+  `TURNSTILE_HOSTNAMES`, default `cryptocards.biz,www.cryptocards.biz`; fails closed). The
+  site key defaults to the cryptocards.biz widget (`TURNSTILE_SITE_KEY` overrides it).
 - Saves are **committed to GitHub** (`GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BRANCH`),
   because promo codes are baked into the static pages. The push triggers a rebuild
   (enable auto-deploy on push in Coolify, or set `DEPLOY_HOOK_URL` + `DEPLOY_HOOK_TOKEN`
@@ -157,6 +161,7 @@ Copy `.env.example` to `.env`:
 | `CARD_LINKS` | Optional JSON map of `slug → URL` overriding each card's "Get card" link (server-side, runtime). |
 | `ADMIN_PASSWORD` | Enables `/admin` (12+ characters, runtime). |
 | `GITHUB_TOKEN` / `GITHUB_REPO` / `GITHUB_BRANCH` | Where `/admin` commits card edits (runtime). |
+| `TURNSTILE_SECRET` | Turns on the Cloudflare Turnstile check on the admin login (runtime). `TURNSTILE_SITE_KEY` optionally overrides the built-in site key. |
 | `DEPLOY_HOOK_URL` / `DEPLOY_HOOK_TOKEN` | Optional deploy webhook called after each admin save. |
 
 ### Umami analytics (first-party proxy)

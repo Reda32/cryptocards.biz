@@ -7,6 +7,7 @@ import {
   startSession,
   verifyPassword,
 } from '@/lib/admin/auth';
+import { TURNSTILE_ACTION, turnstileSiteKey, verifyTurnstile } from '@/lib/admin/turnstile';
 
 export const prerender = false;
 
@@ -17,6 +18,8 @@ try {
   clientId = Astro.clientAddress;
 } catch {}
 
+const siteKey = turnstileSiteKey();
+
 let error = '';
 if (!adminEnabled()) {
   error = 'The admin panel is disabled. Set ADMIN_PASSWORD (12+ characters) and restart the app.';
@@ -25,11 +28,16 @@ if (!adminEnabled()) {
     error = 'Too many failed attempts. Try again in 15 minutes.';
   } else {
     const form = await Astro.request.formData();
-    if (verifyPassword(String(form.get('password') ?? ''), clientId)) {
+    const human =
+      !siteKey || (await verifyTurnstile(String(form.get('cf-turnstile-response') ?? ''), clientId));
+    if (!human) {
+      error = 'Human check failed. Complete the Cloudflare check and try again.';
+    } else if (verifyPassword(String(form.get('password') ?? ''), clientId)) {
       startSession(Astro.cookies, import.meta.env.PROD);
       return Astro.redirect('/admin', 303);
+    } else {
+      error = 'Wrong password.';
     }
-    error = 'Wrong password.';
   }
 }
 ---
@@ -58,6 +66,7 @@ if (!adminEnabled()) {
               class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950"
             />
           </label>
+          {siteKey && <div id="turnstile" class="min-h-[65px]" />}
           <button type="submit" class="btn-primary w-full">
             Log in
           </button>
@@ -65,4 +74,25 @@ if (!adminEnabled()) {
       )
     }
   </div>
+  {
+    siteKey && (
+      <>
+        <script is:inline define:vars={{ siteKey, action: TURNSTILE_ACTION }}>
+          window.onTurnstileLoad = () =>
+            window.turnstile.render('#turnstile', {
+              sitekey: siteKey,
+              action,
+              theme: 'auto',
+              size: window.innerWidth < 400 ? 'compact' : 'normal',
+            });
+        </script>
+        <script
+          is:inline
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad"
+          async
+          defer
+        />
+      </>
+    )
+  }
 </AdminLayout>
