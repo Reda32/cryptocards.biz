@@ -18,6 +18,12 @@ services:
       PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://cryptocards.biz}
       UMAMI_HOST: ${UMAMI_HOST:-http://umami:3000}
       CARD_LINKS: ${CARD_LINKS:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      GITHUB_REPO: ${GITHUB_REPO:-}
+      GITHUB_BRANCH: ${GITHUB_BRANCH:-main}
+      DEPLOY_HOOK_URL: ${DEPLOY_HOOK_URL:-}
+      DEPLOY_HOOK_TOKEN: ${DEPLOY_HOOK_TOKEN:-}
     depends_on:
       - umami
 

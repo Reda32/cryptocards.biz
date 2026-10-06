@@ -143,6 +143,9 @@ To make a link affiliate, add a `referral` object to the card JSON (real `code`,
 `url`, `bonus`) — that enables the coupon/offer page. Otherwise leave it as the
 official `signupUrl`. Placeholder codes are never shipped.
 
+The owner can also manage `referral` from the `/admin` panel, which commits the card
+JSON to GitHub (see README → Admin panel). Pull before editing card files.
+
 ---
 
 ## Conventions

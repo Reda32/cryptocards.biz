@@ -1,0 +1,68 @@
+---
+import AdminLayout from '@/components/admin/AdminLayout.astro';
+import {
+  adminEnabled,
+  hasValidSession,
+  isLockedOut,
+  startSession,
+  verifyPassword,
+} from '@/lib/admin/auth';
+
+export const prerender = false;
+
+if (hasValidSession(Astro.cookies)) return Astro.redirect('/admin', 303);
+
+let clientId = 'unknown';
+try {
+  clientId = Astro.clientAddress;
+} catch {}
+
+let error = '';
+if (!adminEnabled()) {
+  error = 'The admin panel is disabled. Set ADMIN_PASSWORD (12+ characters) and restart the app.';
+} else if (Astro.request.method === 'POST') {
+  if (isLockedOut(clientId)) {
+    error = 'Too many failed attempts. Try again in 15 minutes.';
+  } else {
+    const form = await Astro.request.formData();
+    if (verifyPassword(String(form.get('password') ?? ''), clientId)) {
+      startSession(Astro.cookies, import.meta.env.PROD);
+      return Astro.redirect('/admin', 303);
+    }
+    error = 'Wrong password.';
+  }
+}
+---
+
+<AdminLayout title="Log in" signedIn={false}>
+  <div class="card-surface mx-auto max-w-sm p-6">
+    <h1 class="text-xl font-bold text-slate-900 dark:text-white">Admin login</h1>
+    {
+      error && (
+        <p class="mt-4 rounded-lg bg-rose-50 p-3 text-sm text-rose-700 dark:bg-rose-950/50 dark:text-rose-300">
+          {error}
+        </p>
+      )
+    }
+    {
+      adminEnabled() && (
+        <form method="post" class="mt-4 space-y-4">
+          <label class="block text-sm font-medium text-slate-700 dark:text-slate-300">
+            Password
+            <input
+              type="password"
+              name="password"
+              required
+              autocomplete="current-password"
+              autofocus
+              class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950"
+            />
+          </label>
+          <button type="submit" class="btn-primary w-full">
+            Log in
+          </button>
+        </form>
+      )
+    }
+  </div>
+</AdminLayout>

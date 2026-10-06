@@ -63,6 +63,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const pathname = new URL(page).pathname.replace(/\/$/, '');
+        if (pathname === '/admin' || pathname.startsWith('/admin/')) return false;
         return !excluded.has(pathname);
       },
     }),

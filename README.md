@@ -119,6 +119,22 @@ scoring rules that `/methodology` documents.
 - Clicks are tracked client-side with Umami via `data-umami-event="affiliate_click"`.
 - Always keep the affiliate disclosure visible on pages with referral links.
 
+### Admin panel (`/admin`)
+
+A password-protected panel to add, edit or remove each card's affiliate link and
+promo code (the `referral` object: link, code, bonus, eligibility, terms, expiry,
+alternative offers).
+
+- Set `ADMIN_PASSWORD` (12+ characters). Without it the panel is disabled.
+- Saves are **committed to GitHub** (`GITHUB_TOKEN`, `GITHUB_REPO`, `GITHUB_BRANCH`),
+  because promo codes are baked into the static pages. The push triggers a rebuild
+  (enable auto-deploy on push in Coolify, or set `DEPLOY_HOOK_URL` + `DEPLOY_HOOK_TOKEN`
+  to call Coolify's deploy webhook). Changes go live once that rebuild finishes.
+- Use a fine-grained GitHub token scoped to this repo with only *Contents: Read and write*.
+- In `npm run dev` without GitHub settings, saves write the local JSON files instead.
+- A `CARD_LINKS` entry still overrides a card's link; the panel warns when it does.
+- The official `signupUrl` is not editable in the panel (the link guard keeps it clean).
+
 ## SEO
 
 - Static HTML, one `<h1>` per page, data-driven titles and descriptions.
@@ -139,6 +155,9 @@ Copy `.env.example` to `.env`:
 | `UMAMI_HOST` | Your self-hosted Umami URL, e.g. `https://an.cryptocards.biz` (server-side, used by the `/stats/*` proxy) |
 | `PUBLIC_UMAMI_WEBSITE_ID` | Umami website id — **build-time** (set as a Coolify "Build Variable"; blank disables analytics). |
 | `CARD_LINKS` | Optional JSON map of `slug → URL` overriding each card's "Get card" link (server-side, runtime). |
+| `ADMIN_PASSWORD` | Enables `/admin` (12+ characters, runtime). |
+| `GITHUB_TOKEN` / `GITHUB_REPO` / `GITHUB_BRANCH` | Where `/admin` commits card edits (runtime). |
+| `DEPLOY_HOOK_URL` / `DEPLOY_HOOK_TOKEN` | Optional deploy webhook called after each admin save. |
 
 ### Umami analytics (first-party proxy)
 

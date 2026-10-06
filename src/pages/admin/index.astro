@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import AdminLayout from '@/components/admin/AdminLayout.astro';
+import { envLinkFor } from '@/lib/cardLinks';
+import { storeLabel, storeMode } from '@/lib/admin/store';
+
+export const prerender = false;
+
+const cards = (await getCollection('cards')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+const withOffer = cards.filter((card) => card.data.referral).length;
+const saved = Astro.url.searchParams.get('saved');
+const savedCard = saved ? cards.find((card) => card.data.slug === saved) : undefined;
+---
+
+<AdminLayout title="Cards">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Affiliate links & promo codes</h1>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        {cards.length} cards · {withOffer} with an offer · saving to {storeLabel()}
+      </p>
+    </div>
+    <input
+      id="admin-search"
+      type="search"
+      placeholder="Search cards…"
+      aria-label="Search cards"
+      class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm sm:w-64 dark:border-slate-700 dark:bg-slate-950"
+    />
+  </div>
+
+  {
+    storeMode() === 'none' && (
+      <p class="mt-6 rounded-lg bg-amber-50 p-4 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+        Saving is not configured. Set <code>GITHUB_TOKEN</code> and <code>GITHUB_REPO</code> on the
+        server, then restart.
+      </p>
+    )
+  }
+  {
+    savedCard && (
+      <p class="mt-6 rounded-lg bg-emerald-50 p-4 text-sm text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
+        Saved {savedCard.data.name}. The live site updates after the next rebuild finishes; this list
+        shows the currently deployed data until then.
+      </p>
+    )
+  }
+
+  <div class="card-surface relative mt-6 overflow-x-auto">
+    <table class="w-full text-left text-sm">
+      <thead class="border-b border-slate-200 text-xs uppercase tracking-wide text-slate-400 dark:border-slate-800">
+        <tr>
+          <th class="px-4 py-3">Card</th>
+          <th class="px-4 py-3">Promo code</th>
+          <th class="px-4 py-3">"Get card" goes to</th>
+          <th class="px-4 py-3"><span class="sr-only">Actions</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          cards.map((card) => {
+            const d = card.data;
+            const override = envLinkFor(d.slug);
+            const target = override ?? d.referral?.url ?? d.signupUrl ?? '';
+            const source = override ? 'CARD_LINKS env' : d.referral ? 'Affiliate link' : 'Official site';
+            return (
+              <tr
+                class="border-b border-slate-100 last:border-0 dark:border-slate-800/60"
+                data-search={`${d.name} ${d.slug} ${d.company} ${d.referral?.code ?? ''}`.toLowerCase()}
+              >
+                <td class="px-4 py-3">
+                  <p class="font-medium text-slate-900 dark:text-white">{d.name}</p>
+                  <p class="text-xs text-slate-400">
+                    {d.slug}
+                    {!d.verified && ' · unverified'}
+                  </p>
+                </td>
+                <td class="px-4 py-3 font-mono">
+                  {d.referral?.code ?? <span class="font-sans text-slate-400">None</span>}
+                </td>
+                <td class="max-w-xs px-4 py-3">
+                  <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">{source}</p>
+                  <p class="truncate text-xs text-slate-400" title={target}>
+                    {target}
+                  </p>
+                </td>
+                <td class="px-4 py-3 text-right">
+                  <a href={`/admin/cards/${d.slug}`} class="btn-secondary">
+                    Edit
+                  </a>
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const search = document.getElementById('admin-search') as HTMLInputElement | null;
+    search?.addEventListener('input', () => {
+      const query = search.value.trim().toLowerCase();
+      document.querySelectorAll<HTMLTableRowElement>('tr[data-search]').forEach((row) => {
+        row.hidden = Boolean(query) && !row.dataset.search!.includes(query);
+      });
+    });
+  </script>
+</AdminLayout>

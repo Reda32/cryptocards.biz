@@ -1,0 +1,192 @@
+---
+import { getCollection } from 'astro:content';
+import AdminLayout from '@/components/admin/AdminLayout.astro';
+import { envLinkFor } from '@/lib/cardLinks';
+import {
+  applyReferral,
+  parseReferral,
+  readReferralForm,
+  referralToInput,
+  type Referral,
+  type ReferralInput,
+} from '@/lib/admin/referral';
+import { readCard, StoreError, storeLabel, storeMode, writeCard } from '@/lib/admin/store';
+
+export const prerender = false;
+
+const card = (await getCollection('cards')).find((entry) => entry.data.slug === Astro.params.slug);
+if (!card) return Astro.redirect('/admin', 303);
+const d = card.data;
+
+let errors: string[] = [];
+let sha: string | null = null;
+let input: ReferralInput = referralToInput(d.referral);
+let hasReferral = Boolean(d.referral);
+
+try {
+  const file = await readCard(d.slug);
+  sha = file.sha;
+  input = referralToInput(file.data.referral as Referral | undefined);
+  hasReferral = Boolean(file.data.referral);
+} catch (error) {
+  errors = [error instanceof StoreError ? error.message : 'Could not load the latest card data.'];
+}
+
+if (Astro.request.method === 'POST' && errors.length === 0) {
+  const form = await Astro.request.formData();
+  const remove = form.get('action') === 'remove';
+  const verifiedToday = form.get('verifiedToday') === 'on';
+  input = readReferralForm(form);
+
+  const parsed = remove ? { referral: null, errors: [] } : parseReferral(input);
+  errors = parsed.errors;
+
+  if (errors.length === 0) {
+    try {
+      const latest = await readCard(d.slug);
+      if (latest.sha !== String(form.get('sha') ?? '') && latest.sha !== null) {
+        throw new StoreError('The card changed since you opened it. Reload and try again.');
+      }
+      const next = applyReferral(latest.data, parsed.referral ?? null, verifiedToday);
+      const message = remove ? `Remove ${d.name} affiliate offer` : `Update ${d.name} affiliate offer`;
+      await writeCard(d.slug, next, latest.sha, `${message} (admin panel)`);
+      return Astro.redirect(`/admin?saved=${encodeURIComponent(d.slug)}`, 303);
+    } catch (error) {
+      errors = [error instanceof StoreError ? error.message : 'Saving failed. Try again.'];
+    }
+  }
+}
+
+const override = envLinkFor(d.slug);
+const canSave = storeMode() !== 'none';
+const field =
+  'mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-950';
+const label = 'block text-sm font-medium text-slate-700 dark:text-slate-300';
+const hint = 'mt-1 block text-xs font-normal text-slate-400';
+---
+
+<AdminLayout title={d.name}>
+  <a href="/admin" class="text-sm text-brand-600 hover:underline dark:text-brand-400">← All cards</a>
+  <h1 class="mt-3 text-2xl font-bold text-slate-900 dark:text-white">{d.name}</h1>
+  <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+    <a href={`/coupons/${d.slug}`} class="hover:underline" target="_blank">Coupon page</a>
+    {' · '}
+    <a href={`/cards/${d.slug}`} class="hover:underline" target="_blank">Review</a>
+    {` · saving to ${storeLabel()}`}
+  </p>
+
+  <div class="mt-6 max-w-3xl space-y-3">
+    {
+      errors.length > 0 && (
+        <ul class="list-disc rounded-lg bg-rose-50 p-4 pl-8 text-sm text-rose-700 dark:bg-rose-950/50 dark:text-rose-300">
+          {errors.map((message) => (
+            <li>{message}</li>
+          ))}
+        </ul>
+      )
+    }
+    {
+      override && (
+        <p class="rounded-lg bg-amber-50 p-4 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
+          The <code>CARD_LINKS</code> env var overrides this card, so "Get card" keeps redirecting to{' '}
+          <span class="break-all">{override}</span>. Remove <code>{d.slug}</code> from CARD_LINKS for the
+          affiliate link below to take effect. The promo code is still shown on the site.
+        </p>
+      )
+    }
+    {
+      !d.verified && (
+        <p class="rounded-lg bg-slate-100 p-4 text-sm text-slate-600 dark:bg-slate-900 dark:text-slate-300">
+          This card is unverified, so its coupon page is hidden from search engines until its data is
+          verified.
+        </p>
+      )
+    }
+    <p class="text-sm text-slate-500 dark:text-slate-400">
+      Official site (used when there is no affiliate link):{' '}
+      <span class="break-all">{d.signupUrl ?? 'none'}</span>
+    </p>
+  </div>
+
+  <form method="post" class="card-surface mt-6 max-w-3xl space-y-5 p-6">
+    <input type="hidden" name="sha" value={sha ?? ''} />
+
+    <label class={label}>
+      Affiliate link *
+      <input name="url" type="url" required value={input.url} placeholder="https://..." class={field} />
+      <span class={hint}>Where "Get card" and "Claim the bonus" send visitors (via /go/{d.slug}).</span>
+    </label>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      <label class={label}>
+        Promo / referral code *
+        <input name="code" required maxlength="100" value={input.code} class:list={[field, 'font-mono']} />
+      </label>
+      <label class={label}>
+        Expiry
+        <input name="expiry" value={input.expiry} placeholder="Ongoing or 2026-12-31" class={field} />
+        <span class={hint}>"Ongoing", or a date (YYYY-MM-DD) for the offer's validThrough.</span>
+      </label>
+    </div>
+
+    <label class={label}>
+      What the user gets *
+      <input
+        name="bonus"
+        required
+        maxlength="300"
+        value={input.bonus}
+        placeholder="e.g. US$5 bonus after your first top-up"
+        class={field}
+      />
+    </label>
+
+    <label class={label}>
+      Eligibility
+      <textarea name="eligibility" rows="2" maxlength="1000" class={field}>{input.eligibility}</textarea>
+      <span class={hint}>Leave empty to use the default ("New {d.company} users who...").</span>
+    </label>
+
+    <label class={label}>
+      Terms
+      <textarea name="terms" rows="3" maxlength="1000" class={field}>{input.terms}</textarea>
+    </label>
+
+    <label class={label}>
+      Alternative offers
+      <textarea
+        name="alternatives"
+        rows="3"
+        placeholder="Label | https://..."
+        class:list={[field, 'font-mono']}>{input.alternatives}</textarea
+      >
+      <span class={hint}>One per line: <code>Label | https://link</code></span>
+    </label>
+
+    <label class="flex items-center gap-2 text-sm text-slate-700 dark:text-slate-300">
+      <input type="checkbox" name="verifiedToday" checked />
+      Set "Last verified" to today
+    </label>
+
+    <div class="flex flex-wrap items-center gap-3 border-t border-slate-200 pt-5 dark:border-slate-800">
+      <button type="submit" name="action" value="save" class="btn-primary" disabled={!canSave}>
+        Save offer
+      </button>
+      {
+        hasReferral && (
+          <button
+            type="submit"
+            name="action"
+            value="remove"
+            formnovalidate
+            class="btn-secondary text-rose-600 dark:text-rose-400"
+            disabled={!canSave}
+            onclick="return confirm('Remove the affiliate link and promo code from this card?')"
+          >
+            Remove offer
+          </button>
+        )
+      }
+    </div>
+  </form>
+</AdminLayout>

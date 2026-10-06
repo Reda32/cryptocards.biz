@@ -7,4 +7,7 @@ Disallow: /go/
 # First-party analytics proxy.
 Disallow: /stats/
 
+# Admin panel.
+Disallow: /admin
+
 Sitemap: https://cryptocards.biz/sitemap-index.xml
