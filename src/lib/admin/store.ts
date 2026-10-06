@@ -69,12 +69,21 @@ async function github(config: GitHubConfig, path: string, init: RequestInit = {}
   });
 }
 
+/** GitHub's own error message, e.g. "Resource not accessible by personal access token". */
+async function githubError(res: Response, action: string): Promise<StoreError> {
+  let detail = '';
+  try {
+    detail = ((await res.json()) as { message?: string }).message ?? '';
+  } catch {}
+  return new StoreError(`GitHub returned ${res.status} while ${action} the card${detail ? `: ${detail}` : '.'}`);
+}
+
 export async function readCard(slug: string): Promise<CardFile> {
   const config = githubConfig();
   if (config) {
     const res = await github(config, `${cardPath(slug)}?ref=${encodeURIComponent(config.branch)}`);
     if (res.status === 404) throw new StoreError(`${cardPath(slug)} was not found on ${config.branch}.`);
-    if (!res.ok) throw new StoreError(`GitHub returned ${res.status} while reading the card.`);
+    if (!res.ok) throw await githubError(res, 'reading');
     const body = (await res.json()) as { content: string; sha: string };
     const text = Buffer.from(body.content, 'base64').toString('utf8');
     return { data: JSON.parse(text), sha: body.sha };
@@ -107,7 +116,7 @@ export async function writeCard(
     if (res.status === 409 || res.status === 422) {
       throw new StoreError('The card changed on GitHub since you opened it. Reload and try again.');
     }
-    if (!res.ok) throw new StoreError(`GitHub returned ${res.status} while saving the card.`);
+    if (!res.ok) throw await githubError(res, 'saving');
     await triggerDeploy();
     return;
   }
