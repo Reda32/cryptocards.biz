@@ -86,6 +86,11 @@
     "The physical card costs US$50 and the premium Obsidian tier is US$10,000 per year"
   ],
   "rating": 7.7,
+  "referral": {
+    "code": "google",
+    "url": "https://www.google.com/",
+    "bonus": "freee"
+  },
   "variants": [
     {
       "name": "Oxygen Virtual",
@@ -142,7 +147,7 @@
     "Top up with USDT or USDC over a supported network.",
     "Add the card to Apple Pay or Google Pay and start spending wherever Visa is accepted."
   ],
-  "lastVerified": "2026-09-30",
+  "lastVerified": "2026-10-06",
   "restrictedCountries": [
     "Belarus",
     "China",
