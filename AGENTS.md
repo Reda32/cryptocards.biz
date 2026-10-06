@@ -42,6 +42,12 @@ node scripts/check-card.mjs "Card Name"
 
 Create `src/content/cards/<slug>.json` (schema: `src/content.config.ts`) plus:
 
+- The filename **must** equal the card's `slug` and the card needs an official
+  `signupUrl`. That is what makes the card appear and save correctly in the `/admin`
+  panel, where the owner manages its affiliate link and promo code (`npm run check`
+  fails otherwise).
+- Pull `main` first: the owner's admin edits are commits on `main`.
+
 - `src/content/community/<slug>.json` — `score: null`, `sources: []` until the pipeline
   runs.
 - `src/content/reviews/<slug>.mdx` — long-form editorial body (`cardSlug`, `title`).

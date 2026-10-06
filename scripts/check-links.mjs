@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Guard against referral/tracking links sneaking into card data.
- * Prints any card whose `signupUrl` looks like an affiliate/tracking URL.
+ * Prints any card whose `signupUrl` looks like an affiliate/tracking URL, and any
+ * card whose filename is not `<slug>.json` (the /admin panel saves by slug).
  *
  * Usage: node scripts/check-links.mjs
  * Exit code 1 when flagged links are found.
@@ -21,12 +22,15 @@ const TRACKING = /(onelink\.me|\/referral\/|\/ref\/|\/r\/[A-Za-z0-9]{4,}|\/p\/[A
 
 const cards = readdirSync(dir)
   .filter((f) => f.endsWith('.json'))
-  .map((f) => JSON.parse(readFileSync(join(dir, f), 'utf8')));
+  .map((f) => ({ ...JSON.parse(readFileSync(join(dir, f), 'utf8')), file: f }));
 
 const flagged = [];
 const invalid = [];
 
 for (const card of cards) {
+  if (card.file !== `${card.slug}.json`) {
+    invalid.push(`${card.file}: filename must be ${card.slug}.json for /admin`);
+  }
   const url = card.signupUrl;
   if (!url) {
     invalid.push(`${card.slug}: missing signupUrl`);
