@@ -19,7 +19,7 @@ interface Props {
   modifiedTime?: Date;
   schemas?: Record<string, unknown>[];
   /** 'full' embeds every card's data (for the /compare table); 'minimal' only
-   *  what the compare bar needs, keeping pages small. */
+   *  what the compare bar and search box need, keeping pages small. */
   comparePayload?: 'minimal' | 'full';
 }
 
@@ -31,7 +31,14 @@ const allCards = await getCompareCards();
 const cards =
   comparePayload === 'full'
     ? allCards
-    : allCards.map(({ slug, name, logo, brandColor }) => ({ slug, name, logo, brandColor }));
+    : allCards.map(({ slug, name, company, logo, brandColor, rating }) => ({
+        slug,
+        name,
+        company,
+        logo,
+        brandColor,
+        rating,
+      }));
 const payload = JSON.stringify({ cards, pairs: allPairSlugs() });
 
 // Promo banner: copy is derived from the card data so it can't drift.
