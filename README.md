@@ -112,10 +112,8 @@ scoring rules that `/methodology` documents.
 ## Affiliate links
 
 - Every CTA points at `/go/<card-slug>` and carries `rel="sponsored nofollow noopener"`.
-- The redirect target is resolved in this order: `CARD_LINKS` env → `referral.url` → `signupUrl`
-  (every card has an official provider `signupUrl`).
-- Change any link via the `CARD_LINKS` env map (server-side, no rebuild — restart only):
-  `CARD_LINKS={"redotpay-card":"https://www.redotpay.com/","kolo-card":"https://kolo.xyz/"}`
+- The redirect target is the card's `referral.url` (affiliate link, managed in `/admin`),
+  else its official `signupUrl` (every card has one).
 - Clicks are tracked client-side with Umami via `data-umami-event="affiliate_click"`.
 - Always keep the affiliate disclosure visible on pages with referral links.
 
@@ -136,7 +134,6 @@ alternative offers).
   to call Coolify's deploy webhook). Changes go live once that rebuild finishes.
 - Use a fine-grained GitHub token scoped to this repo with only *Contents: Read and write*.
 - In `npm run dev` without GitHub settings, saves write the local JSON files instead.
-- A `CARD_LINKS` entry still overrides a card's link; the panel warns when it does.
 - The official `signupUrl` is not editable in the panel (the link guard keeps it clean).
 
 ## SEO
@@ -158,7 +155,6 @@ Copy `.env.example` to `.env`:
 | `PUBLIC_SITE_URL` | Canonical/site URL (defaults to `https://cryptocards.biz`) |
 | `UMAMI_HOST` | Your self-hosted Umami URL, e.g. `https://an.cryptocards.biz` (server-side, used by the `/stats/*` proxy) |
 | `PUBLIC_UMAMI_WEBSITE_ID` | Umami website id — **build-time** (set as a Coolify "Build Variable"; blank disables analytics). |
-| `CARD_LINKS` | Optional JSON map of `slug → URL` overriding each card's "Get card" link (server-side, runtime). |
 | `ADMIN_PASSWORD` | Enables `/admin` (12+ characters, runtime). |
 | `GITHUB_TOKEN` / `GITHUB_REPO` / `GITHUB_BRANCH` | Where `/admin` commits card edits (runtime). |
 | `TURNSTILE_SECRET` | Turns on the Cloudflare Turnstile check on the admin login (runtime). `TURNSTILE_SITE_KEY` optionally overrides the built-in site key. |

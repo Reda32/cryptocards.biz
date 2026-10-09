@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import AdminLayout from '@/components/admin/AdminLayout.astro';
-import { envLinkFor } from '@/lib/cardLinks';
 import {
   applyReferral,
   parseReferral,
@@ -57,7 +56,6 @@ if (Astro.request.method === 'POST' && errors.length === 0) {
   }
 }
 
-const override = envLinkFor(d.slug);
 const canSave = storeMode() !== 'none';
 const field =
   'mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-950';
@@ -83,15 +81,6 @@ const hint = 'mt-1 block text-xs font-normal text-slate-400';
             <li>{message}</li>
           ))}
         </ul>
-      )
-    }
-    {
-      override && (
-        <p class="rounded-lg bg-amber-50 p-4 text-sm text-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
-          The <code>CARD_LINKS</code> env var overrides this card, so "Get card" keeps redirecting to{' '}
-          <span class="break-all">{override}</span>. Remove <code>{d.slug}</code> from CARD_LINKS for the
-          affiliate link below to take effect. The promo code is still shown on the site.
-        </p>
       )
     }
     {
