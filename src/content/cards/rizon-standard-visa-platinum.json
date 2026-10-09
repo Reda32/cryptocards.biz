@@ -1,5 +1,5 @@
 {
-  "name": "Rizon Standard Visa Platinum",
+  "name": "Rizon Card",
   "slug": "rizon-standard-visa-platinum",
   "company": "Rizon",
   "summary": "An entry-level non-custodial Visa card with no monthly fees, designed for users who want to spend stablecoins directly from their own wallet.",
@@ -55,19 +55,19 @@
   "variants": [],
   "faq": [
     {
-      "question": "Does the Rizon Standard Visa Platinum charge a monthly fee?",
+      "question": "Does the Rizon Card charge a monthly fee?",
       "answer": "No. There is no monthly fee. Card issuance is US$10."
     },
     {
-      "question": "What are the foreign-exchange fees on the Rizon Standard Visa Platinum?",
+      "question": "What are the foreign-exchange fees on the Rizon Card?",
       "answer": "It charges about 1.7% on non-base-currency spending."
     },
     {
-      "question": "What KYC does the Rizon Standard Visa Platinum require?",
+      "question": "What KYC does the Rizon Card require?",
       "answer": "It requires a government ID."
     },
     {
-      "question": "Which card network and wallets does the Rizon Standard Visa Platinum support?",
+      "question": "Which card network and wallets does the Rizon Card support?",
       "answer": "Visa."
     }
   ],
