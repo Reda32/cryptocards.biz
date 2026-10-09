@@ -2,20 +2,33 @@
   "name": "Rizon Card",
   "slug": "rizon",
   "company": "Rizon",
-  "summary": "An entry-level non-custodial Visa card with no monthly fees, designed for users who want to spend stablecoins directly from their own wallet.",
+  "summary": "Rizon is a USD stablecoin wallet with a Visa Platinum card for spending USDC and USDT, aimed mainly at users in the US and Latin America. The virtual card costs US$10, USD card spending is free, and non-USD spending costs 1.7% + US$0.10, which the paid Emerald plan halves.",
   "type": [
     "virtual",
     "physical"
   ],
   "network": "visa",
-  "wallets": [],
-  "features": [],
-  "rewards": {
-    "cashback": "0%",
-    "referralBonus": "$50"
-  },
+  "wallets": [
+    "apple",
+    "google"
+  ],
+  "features": [
+    "contactless",
+    "online-payments",
+    "crypto-topup",
+    "multi-currency"
+  ],
   "countries": [],
-  "restrictedCountries": [],
+  "restrictedCountries": [
+    "Albania",
+    "Belarus",
+    "Cuba",
+    "Iran",
+    "North Korea",
+    "Russia",
+    "Syria",
+    "Ukraine"
+  ],
   "cryptos": [
     {
       "symbol": "USDC",
@@ -29,11 +42,11 @@
   "kyc": {
     "level": "id",
     "email": true,
-    "phone": true,
-    "idDocument": true,
+    "phone": false,
+    "idDocument": false,
     "proofOfAddress": false,
     "selfie": false,
-    "notes": "Requirements as published by the provider; confirm during onboarding."
+    "notes": "You sign up with an email and then complete a short in-app KYC check. Rizon does not publish which documents it asks for."
   },
   "rating": 6.3,
   "referral": {
@@ -42,33 +55,56 @@
     "bonus": "card"
   },
   "pros": [
-    "No monthly fee",
-    "Both virtual and physical cards",
-    "0% cashback",
-    "High daily spending limits"
+    "USD card spending is free",
+    "Virtual Visa Platinum card for US$10",
+    "Works with Apple Pay and Google Pay",
+    "Spend USDC and USDT wherever Visa is accepted",
+    "No card spending limit listed"
   ],
   "cons": [
-    "1.7% foreign-exchange markup",
-    "US$10 card issuance fee",
-    "Identity verification (KYC) required"
+    "1.7% + US$0.10 fee on non-USD card spending",
+    "No cashback or rewards",
+    "Mainly offered in the US and Latin America; no published country list",
+    "Fee figures differ between Rizon's own pages",
+    "ATM fees and limits are not clearly published"
   ],
-  "variants": [],
+  "variants": [
+    {
+      "name": "Standard",
+      "price": 10,
+      "rewards": "None",
+      "monthlyFee": 0,
+      "limits": "No card spend limit listed",
+      "cardInfo": "Virtual Visa Platinum · non-USD spend 1.7% + US$0.10"
+    },
+    {
+      "name": "Emerald plan",
+      "rewards": "None",
+      "monthlyFee": 5.59,
+      "limits": "No card spend limit listed",
+      "cardInfo": "From US$5.59/month · halves FX, trading and transaction fees"
+    }
+  ],
   "faq": [
     {
-      "question": "Does the Rizon Card charge a monthly fee?",
-      "answer": "No. There is no monthly fee. Card issuance is US$10."
+      "question": "How much does the Rizon Card cost?",
+      "answer": "The virtual card's standard price is US$10, though Rizon runs offers that lower it. Account maintenance is free and there is no monthly fee on the standard plan."
     },
     {
       "question": "What are the foreign-exchange fees on the Rizon Card?",
-      "answer": "It charges about 1.7% on non-base-currency spending."
+      "answer": "USD card spending is free. Non-USD spending costs 1.7% + US$0.10 per transaction on the standard plan; the Emerald plan (from US$5.59/month) halves FX and transaction fees."
     },
     {
       "question": "What KYC does the Rizon Card require?",
-      "answer": "It requires a government ID."
+      "answer": "You sign up with an email and then complete a short in-app KYC check. Rizon does not publish the exact documents required."
+    },
+    {
+      "question": "Which countries is Rizon available in?",
+      "answer": "Rizon does not publish a country list. Its terms say it focuses on the US and Latin America and does not actively offer its services in the EU. Cuba, Iran, North Korea, Syria, Russia, Belarus, Albania and Ukraine are among the restricted countries in its card terms."
     },
     {
       "question": "Which card network and wallets does the Rizon Card support?",
-      "answer": "Visa."
+      "answer": "It is a Visa Platinum card and works with Apple Pay and Google Pay."
     }
   ],
   "priceLabel": "Free",
@@ -77,17 +113,24 @@
   "lastVerified": "2026-10-09",
   "logo": "/logos/imported/rizon.webp",
   "fees": {
-    "monthly": 0,
     "issuance": 10,
+    "monthly": 0,
     "fx": 1.7,
-    "atm": "0.65%",
-    "topup": "Free",
-    "decline": 0
+    "atm": "Not published (cash withdrawals supported)",
+    "topup": "Free account maintenance; USD card spend is free"
   },
   "limits": {
-    "dailySpend": "Unlimited",
-    "monthlySpend": "Unlimited",
-    "atmWithdrawal": "Unlimited"
+    "dailySpend": "No limit listed",
+    "monthlySpend": "No limit listed",
+    "atmWithdrawal": "Not published"
   },
-  "signupUrl": "https://www.getrizon.com/"
+  "signupUrl": "https://www.getrizon.com/",
+  "availabilityNotes": "Rizon does not publish a list of supported countries: its pages cite 122+ countries in one place and 178 in another, and its terms say it does not actively offer its services outside the US and Latin America, including in the EU. The restricted list here comes from Rizon's card terms (the card is issued through Rain) and is not exhaustive; it also covers Crimea, Donetsk and Luhansk. Check the country picker in the app before signing up.",
+  "howToGet": [
+    "Download the Rizon app and sign up with your email.",
+    "Complete the short in-app KYC check.",
+    "Fund your USD balance with USDC or USDT.",
+    "Order the virtual Visa Platinum card (US$10 standard price; promotions may lower it).",
+    "Add the card to Apple Pay or Google Pay. Consider the Emerald plan only if you spend a lot in non-USD currencies."
+  ]
 }

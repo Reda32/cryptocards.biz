@@ -2,7 +2,7 @@
   "name": "RedotPay Card",
   "slug": "redotpay-card",
   "company": "RedotPay",
-  "summary": "RedotPay is a Hong Kong-based crypto card that lets you spend USDT, USDC, BTC and ETH wherever Visa is accepted. It pairs low FX fees with a usable virtual card, but it is not available everywhere and many features require identity verification.",
+  "summary": "RedotPay is a Hong Kong-based crypto card that lets you spend USDT, USDC, BTC, ETH and other assets wherever Visa is accepted. It has no monthly fee and a 1.2% FX fee, but it requires identity verification and is not available in the United States, mainland China and around 45 other restricted countries.",
   "logo": "/logos/redotpay.svg",
   "brandColor": "#e11d48",
   "type": [
@@ -11,7 +11,6 @@
   ],
   "network": "visa",
   "wallets": [
-    "apple",
     "google"
   ],
   "features": [
@@ -26,153 +25,335 @@
     "issuance": 10,
     "monthly": 0,
     "fx": 1.2,
-    "atm": "2% (min US$2)",
-    "topup": "Free for crypto top-ups",
-    "decline": 0.5
+    "atm": "2% (3% on amounts above US$10,000/month)",
+    "topup": "Crypto deposits free; 1% fee to convert crypto when spending"
   },
   "limits": {
-    "dailySpend": "US$10,000",
-    "monthlySpend": "US$100,000",
-    "atmWithdrawal": "US$2,000 / day"
+    "dailySpend": "You set it in the app (per card)",
+    "monthlySpend": "No fixed cap published",
+    "atmWithdrawal": "No fixed cap published (physical card only)"
   },
   "rewards": {
-    "cashback": "None",
-    "welcomeBonus": "Varies by promotion",
-    "referralBonus": "Varies by promotion"
+    "cashback": "None on the free plan; 3% on Apple Pay/Google Pay purchases with RedotPay Pro (capped at US$18/month)",
+    "cashbackToken": "USD balance"
   },
   "countries": [
+    "Algeria",
+    "Andorra",
+    "Angola",
+    "Antigua and Barbuda",
     "Argentina",
+    "Armenia",
     "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bhutan",
+    "Bolivia",
+    "Botswana",
     "Brazil",
+    "Brunei",
+    "Bulgaria",
+    "Cambodia",
+    "Cameroon",
     "Canada",
+    "Cape Verde",
+    "Chad",
+    "Chile",
+    "Colombia",
+    "Comoros",
+    "Congo",
+    "Costa Rica",
+    "Cyprus",
+    "Czech Republic",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Equatorial Guinea",
+    "Estonia",
+    "Eswatini",
+    "Fiji",
+    "Finland",
     "France",
+    "Gabon",
+    "Gambia",
+    "Georgia",
     "Germany",
+    "Ghana",
+    "Greece",
+    "Grenada",
+    "Guatemala",
+    "Guinea",
+    "Guyana",
+    "Honduras",
     "Hong Kong",
-    "Indonesia",
+    "Hungary",
+    "Iceland",
+    "Ireland",
+    "Israel",
     "Italy",
+    "Ivory Coast",
+    "Jamaica",
     "Japan",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kiribati",
+    "Kuwait",
+    "Kyrgyzstan",
+    "Laos",
+    "Latvia",
+    "Lesotho",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Macau",
+    "Madagascar",
+    "Malawi",
     "Malaysia",
+    "Maldives",
+    "Malta",
+    "Marshall Islands",
+    "Mauritania",
+    "Mauritius",
+    "Mexico",
+    "Micronesia",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Mozambique",
+    "Namibia",
+    "Nauru",
     "Netherlands",
+    "New Zealand",
+    "Niger",
+    "Nigeria",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palau",
+    "Palestine",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Peru",
     "Philippines",
-    "Singapore",
+    "Poland",
+    "Portugal",
+    "Qatar",
+    "Romania",
+    "Rwanda",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "Samoa",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Saudi Arabia",
+    "Senegal",
+    "Seychelles",
+    "Sierra Leone",
+    "Slovakia",
+    "Solomon Islands",
+    "South Africa",
+    "South Korea",
     "Spain",
+    "Sri Lanka",
+    "Suriname",
+    "Sweden",
+    "Switzerland",
+    "Taiwan",
+    "Tajikistan",
+    "Tanzania",
     "Thailand",
+    "Timor-Leste",
+    "Togo",
+    "Tonga",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "Turkmenistan",
+    "Tuvalu",
+    "Uganda",
     "United Arab Emirates",
     "United Kingdom",
-    "Vietnam"
+    "Uruguay",
+    "Uzbekistan",
+    "Vanuatu",
+    "Vatican City",
+    "Vietnam",
+    "Zambia"
   ],
   "cryptos": [
     {
       "symbol": "USDT",
-      "networks": [
-        "ETH",
-        "TRON",
-        "BSC",
-        "SOL",
-        "Polygon"
-      ]
+      "networks": []
     },
     {
       "symbol": "USDC",
-      "networks": [
-        "ETH",
-        "SOL",
-        "Polygon"
-      ]
+      "networks": []
     },
     {
       "symbol": "BTC",
-      "networks": [
-        "Bitcoin"
-      ]
+      "networks": []
     },
     {
       "symbol": "ETH",
-      "networks": [
-        "Ethereum"
-      ]
+      "networks": []
     },
     {
       "symbol": "BNB",
-      "networks": [
-        "BSC"
-      ]
+      "networks": []
     },
     {
       "symbol": "SOL",
-      "networks": [
-        "Solana"
-      ]
+      "networks": []
+    },
+    {
+      "symbol": "TRX",
+      "networks": []
+    },
+    {
+      "symbol": "XRP",
+      "networks": []
+    },
+    {
+      "symbol": "SUI",
+      "networks": []
     }
   ],
   "kyc": {
     "level": "id",
     "email": true,
-    "phone": true,
+    "phone": false,
     "idDocument": true,
     "proofOfAddress": false,
-    "selfie": true,
-    "notes": "Email sign-up is enough to create an account, but issuing a card and raising limits requires a government ID and a liveness selfie. Some regions also ask for proof of address."
+    "selfie": false,
+    "notes": "Identity verification is mandatory and runs inside the app through Sumsub. Citizens of restricted countries cannot complete it."
   },
   "pros": [
-    "Low 1.2% FX fee on non-USD spending",
     "No monthly or annual card fee",
-    "Supports USDT, USDC, BTC and ETH across major networks",
-    "Works with Apple Pay and Google Pay"
+    "Virtual card is issued instantly in the app for US$10",
+    "Spend USDT, USDC, BTC, ETH and other assets through Visa",
+    "Physical card supports ATM withdrawals",
+    "You control per-transaction and daily limits per card"
   ],
   "cons": [
-    "Not available in the United States",
-    "No cashback or rewards programme",
-    "Identity verification is required to unlock real limits",
-    "ATM withdrawals carry a 2% fee (min US$2)"
+    "Not available to US or mainland China residents, plus around 45 other restricted countries",
+    "1.2% FX fee plus a 1% crypto conversion fee",
+    "Physical card costs US$100",
+    "No cashback without the paid Pro membership",
+    "Apple Pay can no longer be added to cards (existing cards keep working)"
   ],
   "rating": 8.1,
   "variants": [
     {
       "name": "Virtual",
       "price": 10,
-      "rewards": "None",
+      "rewards": "None (3% Apple Pay/Google Pay cashback with Pro)",
       "monthlyFee": 0,
-      "limits": "US$10,000 / day",
-      "cardInfo": "Virtual Visa, instant issuance"
+      "limits": "Set per card in the app",
+      "cardInfo": "Virtual Visa, issued in the app"
     },
     {
       "name": "Physical",
-      "price": 10,
-      "rewards": "None",
+      "price": 100,
+      "rewards": "None (3% Apple Pay/Google Pay cashback with Pro)",
       "monthlyFee": 0,
-      "limits": "US$100,000 / month",
-      "cardInfo": "Physical Visa, shipped after full KYC"
+      "limits": "Set per card in the app",
+      "cardInfo": "Physical Visa with ATM withdrawals"
     }
   ],
   "faq": [
     {
       "question": "Is RedotPay available in the United States?",
-      "answer": "No. RedotPay is not offered to US residents. Availability varies by region, so check the app before completing verification."
+      "answer": "No. US residents are on RedotPay's restricted list, along with mainland China, Russia, India, Indonesia, Singapore, Turkey and other countries. The full list is on the RedotPay available countries page."
+    },
+    {
+      "question": "How much does the RedotPay card cost?",
+      "answer": "The virtual card costs US$10 and the physical card US$100, both one-off fees. There is no monthly or annual card fee."
+    },
+    {
+      "question": "What are RedotPay's FX and ATM fees?",
+      "answer": "Purchases in a currency other than the card's currency carry a 1.2% fee, and converting crypto to spend carries a 1% fee. ATM withdrawals cost 2%, rising to 3% on the amount above US$10,000 in a month."
     },
     {
       "question": "Do I need to complete KYC to use RedotPay?",
-      "answer": "You can create an account with just an email and phone number, but a government ID and selfie are required to issue a card and unlock higher limits."
+      "answer": "Yes. Identity verification is mandatory and is done inside the app through Sumsub before you can use the card."
     },
     {
-      "question": "What cryptocurrencies does RedotPay support?",
-      "answer": "RedotPay supports USDT, USDC, BTC, ETH, BNB and SOL, with deposits over several networks including Ethereum, TRON, BSC, Solana and Polygon."
+      "question": "Does RedotPay work with Apple Pay and Google Pay?",
+      "answer": "Google Pay works. Since August 2025 new RedotPay cards cannot be added to Apple Pay; cards added before then keep working, but cannot be re-added if removed."
     },
     {
-      "question": "Does RedotPay charge a monthly fee?",
-      "answer": "No. The card has no monthly or annual fee. You pay a one-off issuance fee and a 1.2% FX fee on non-USD transactions."
+      "question": "Does RedotPay offer cashback?",
+      "answer": "Not on the free plan. RedotPay Pro (US$12.90/month or US$129/year) adds 3% cashback on Apple Pay and Google Pay purchases, capped at US$18 a month."
     }
   ],
-  "lastVerified": "2026-09-01",
+  "lastVerified": "2026-10-09",
   "restrictedCountries": [
-    "United States",
+    "Afghanistan",
+    "Albania",
+    "Belarus",
+    "Bosnia and Herzegovina",
+    "Burkina Faso",
+    "Burundi",
+    "Central African Republic",
     "China",
-    "Russia",
+    "Croatia",
+    "Cuba",
+    "Democratic Republic of the Congo",
+    "Eritrea",
+    "Ethiopia",
+    "Guinea-Bissau",
+    "Haiti",
+    "India",
+    "Indonesia",
     "Iran",
+    "Iraq",
+    "Kosovo",
+    "Lebanon",
+    "Liberia",
+    "Libya",
+    "Mali",
+    "Montenegro",
+    "Morocco",
+    "Myanmar",
+    "Nepal",
+    "Nicaragua",
     "North Korea",
+    "North Macedonia",
+    "Russia",
+    "Serbia",
+    "Singapore",
+    "Slovenia",
+    "Somalia",
+    "South Sudan",
+    "Sudan",
     "Syria",
-    "Cuba"
+    "Turkey",
+    "Ukraine",
+    "United States",
+    "Venezuela",
+    "Yemen",
+    "Zimbabwe"
   ],
-  "availabilityNotes": "RedotPay is not offered to US residents. Availability varies by region, so confirm before completing verification.",
-  "signupUrl": "https://www.redotpay.com/"
+  "availabilityNotes": "RedotPay publishes the countries it excludes rather than a list of supported ones. Residents of the restricted list cannot complete identity verification or be issued a card (RedotPay also lists Bouvet Island and the Netherlands Antilles). Physical cards additionally cannot be delivered to Egypt, Palestine or Tunisia, and the card cannot be used in sanctioned territories. The supported list here is every other country; RedotPay updates its lists, so confirm in the app before verifying.",
+  "signupUrl": "https://www.redotpay.com/",
+  "howToGet": [
+    "Download the RedotPay app and create an account.",
+    "Complete identity verification in the app (Sumsub ID check). Residents of restricted countries cannot verify.",
+    "Deposit crypto such as USDT or USDC to cover the card fee: US$10 for a virtual card or US$100 for a physical card.",
+    "Apply for the virtual card in the app, or order the physical card and confirm your delivery address.",
+    "Add the virtual card to Google Pay or start spending online. Set your per-transaction and daily limits under Card > Limit."
+  ]
 }

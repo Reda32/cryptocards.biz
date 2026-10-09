@@ -74,9 +74,9 @@ scripts/community/         # Community Score pipeline (not built yet)
 That is enough to generate the review page, coupon page, country/company pages,
 best-of inclusion and OG image automatically.
 
-> **⚠️ The two sample cards (RedotPay, KAST) use realistic placeholder data.**
-> Fees, limits, KYC details and referral codes must be verified against each provider
-> before launch. Set `lastVerified` to the date you checked them.
+> **Accuracy:** card data must come from the provider's official pages; never guess. RedotPay, KAST,
+> Plasma One, Avici and Rizon were checked against official sources on 2026-10-09 (each review
+> lists them). Set `lastVerified` to the date you checked a card.
 
 ### Curated comparisons
 

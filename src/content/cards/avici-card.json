@@ -2,7 +2,7 @@
   "name": "Avici Card",
   "slug": "avici-card",
   "company": "Avici",
-  "summary": "Avici is a Solana-based crypto card built around self-custody: your funds stay in your wallet until the moment you pay, and a collateral-based credit model lets you keep your crypto exposure. It targets DeFi-native users with Visa Signature acceptance, 5% cashback and gas-sponsored transactions.",
+  "summary": "Avici is a secured Visa credit card backed by your own USDC: you keep your funds in your wallet, and Avici gives you a credit line that matches your collateral. It charges no transaction fees or FX markup, with a US$15 virtual Platinum card or a Signature tier with Visa Signature benefits. It is available in about 50 countries and 31 US states.",
   "logo": "/logos/avici.webp",
   "brandColor": "#10b981",
   "type": [
@@ -17,157 +17,202 @@
   "features": [
     "contactless",
     "online-payments",
-    "bank-transfers",
     "crypto-topup",
-    "gas-sponsored"
+    "atm-withdrawal"
   ],
   "fees": {
-    "issuance": 0,
+    "issuance": 15,
     "monthly": 0,
-    "fx": 1,
-    "atm": "US$1 + 0.65%",
-    "topup": "Free",
-    "decline": 0
+    "fx": 0,
+    "atm": "US$1 + 0.65% (Platinum); free (Signature)",
+    "topup": "Free (Visa may add a 0.4% to 1% cross-border fee on non-USD spend)"
   },
   "limits": {
-    "dailySpend": "Unlimited",
-    "monthlySpend": "Unlimited",
-    "atmWithdrawal": "Unlimited"
-  },
-  "rewards": {
-    "cashback": "5%",
-    "cashbackToken": "Crypto"
+    "dailySpend": "No fixed limit; set by Avici from your collateral",
+    "monthlySpend": "No fixed limit; set by Avici from your collateral",
+    "atmWithdrawal": "Up to 3 per day; US$1,000 per withdrawal, US$3,000 per day"
   },
   "countries": [
+    "Antigua and Barbuda",
     "Argentina",
     "Australia",
+    "Bahamas",
+    "Bangladesh",
+    "Barbados",
+    "Belize",
+    "Bolivia",
     "Brazil",
-    "Canada",
-    "France",
-    "Germany",
-    "Indonesia",
-    "Italy",
+    "Cayman Islands",
+    "Colombia",
+    "Costa Rica",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Ghana",
+    "Grenada",
+    "Guatemala",
+    "Guyana",
+    "Honduras",
+    "Hong Kong",
+    "Ivory Coast",
     "Japan",
+    "Kenya",
+    "Malaysia",
     "Mexico",
-    "Netherlands",
-    "Nigeria",
+    "Morocco",
+    "New Zealand",
+    "Pakistan",
+    "Panama",
+    "Paraguay",
+    "Peru",
     "Philippines",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "Senegal",
     "Singapore",
     "South Africa",
-    "Spain",
+    "Suriname",
     "Thailand",
-    "Turkey",
+    "Trinidad and Tobago",
+    "Turks and Caicos Islands",
+    "Uganda",
     "United Arab Emirates",
-    "United Kingdom",
-    "Vietnam"
+    "United States",
+    "Uruguay",
+    "Zambia"
   ],
   "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": [
+        "Ethereum",
+        "Polygon",
+        "Optimism",
+        "Arbitrum"
+      ]
+    },
     {
       "symbol": "SOL",
       "networks": [
         "Solana"
-      ]
-    },
-    {
-      "symbol": "USDC",
-      "networks": [
-        "Solana",
-        "Base",
-        "Ethereum"
-      ]
-    },
-    {
-      "symbol": "USDT",
-      "networks": [
-        "Solana",
-        "Ethereum",
-        "Tron"
-      ]
-    },
-    {
-      "symbol": "ETH",
-      "networks": [
-        "Ethereum",
-        "Base"
-      ]
-    },
-    {
-      "symbol": "BTC",
-      "networks": [
-        "Bitcoin"
       ]
     }
   ],
   "kyc": {
     "level": "id",
     "email": true,
-    "phone": true,
+    "phone": false,
     "idDocument": true,
     "proofOfAddress": false,
-    "selfie": false,
-    "notes": "Avici requires identity verification before issuing a card, but does not ask for proof of address or a selfie at this tier."
+    "selfie": true,
+    "notes": "Verification runs through Sumsub: choose your account type and country of residence, enter personal details, upload an ID document and complete a liveness check. The card fee is charged before verification; request a refund from support if you do not pass."
   },
   "pros": [
-    "True self-custody: funds stay in your wallet until purchase",
-    "No monthly fees, top-up fees or maintenance charges",
-    "Visa Signature accepted at 90+ million merchants",
-    "Supports Apple Pay and Google Pay contactless payments",
-    "Gas-sponsored transactions on Solana and Base"
+    "No transaction fees and no FX markup from Avici",
+    "You keep your USDC in your own wallet as collateral instead of pre-loading the card",
+    "Works with Apple Pay and Google Pay at no extra cost",
+    "Signature tier adds Visa Signature benefits and free ATM withdrawals",
+    "Top up with any token; Avici swaps it to USDC automatically"
   ],
   "cons": [
-    "Collateral-based system carries liquidation risk if crypto drops",
-    "FX fees can reach up to 3% on international transactions",
-    "ATM withdrawals cost US$1 + 0.65%",
-    "Not available in India, China, Russia or sanctioned countries",
-    "Newer platform with an evolving fee structure"
+    "No cashback on purchases",
+    "Card fee (US$15 to US$75) is charged before identity verification",
+    "Visa may add a 0.4% to 1% cross-border fee on non-USD spending",
+    "Available in only about 50 countries and 31 US states",
+    "Avici can change or cut the credit limit at any time"
   ],
   "rating": 8.8,
   "variants": [
     {
-      "name": "Virtual",
-      "price": 0,
-      "rewards": "5% cashback",
+      "name": "Platinum (virtual)",
+      "price": 15,
+      "rewards": "None",
       "monthlyFee": 0,
-      "limits": "Unlimited",
-      "cardInfo": "Virtual Visa Signature"
+      "limits": "Collateral-based; ATM US$1 + 0.65%",
+      "cardInfo": "Basic Visa Platinum; extra virtual cards US$10"
     },
     {
-      "name": "Physical",
-      "price": 0,
-      "rewards": "5% cashback",
+      "name": "Platinum (physical)",
+      "price": 50,
+      "rewards": "None",
       "monthlyFee": 0,
-      "limits": "Unlimited",
-      "cardInfo": "Physical Visa Signature"
+      "limits": "Collateral-based; ATM US$1 + 0.65%",
+      "cardInfo": "Physical Visa Platinum, one-off fee"
+    },
+    {
+      "name": "Signature (virtual)",
+      "price": 30,
+      "rewards": "Visa Signature benefits",
+      "monthlyFee": 1.67,
+      "limits": "Collateral-based; free ATM",
+      "cardInfo": "US$30 first year, then US$20/year · lounge access (paid), rental and purchase protection"
+    },
+    {
+      "name": "Signature (physical)",
+      "price": 75,
+      "rewards": "Visa Signature benefits",
+      "monthlyFee": 1.67,
+      "limits": "Collateral-based; free ATM",
+      "cardInfo": "US$75, then US$20/year from year two"
     }
   ],
   "faq": [
     {
-      "question": "What is the Avici card?",
-      "answer": "Avici is a Solana-based crypto card that combines self-custody with a collateral-based credit model. Your funds stay in your wallet until you spend, and you can borrow against your crypto instead of selling it."
+      "question": "How does the Avici card work?",
+      "answer": "Avici is a secured credit card: your USDC stays in your wallet as collateral, and Visa gives you a credit line with matching spending power. Visa can only take funds when there is a proven card spend."
     },
     {
-      "question": "Does Avici require KYC?",
-      "answer": "Yes. Avici requires identity verification (ID document) before issuing a card. Proof of address and a selfie are not requested at this tier."
-    },
-    {
-      "question": "Where is the Avici card not available?",
-      "answer": "Avici is not available in India, China, Russia or sanctioned countries. Availability can change, so confirm your region in the app before applying."
+      "question": "How much does the Avici card cost?",
+      "answer": "A virtual Platinum card costs US$15 (extra ones US$10) and a physical Platinum card US$50, both one-off. Signature costs US$30 for the first year then US$20 a year (virtual), or US$75 then US$20 a year from year two (physical)."
     },
     {
       "question": "What fees does the Avici card charge?",
-      "answer": "Avici has no monthly, issuance or top-up fees. It charges around 1% FX on non-USD spending (up to 3% in some cases) and ATM withdrawals cost US$1 plus 0.65%."
+      "answer": "Avici charges no transaction fee and no FX markup, but Visa may add a 0.4% to 1% cross-border fee on non-USD spending. ATM withdrawals cost US$1 + 0.65% on Platinum and are free on Signature."
+    },
+    {
+      "question": "Does Avici require KYC?",
+      "answer": "Yes. Verification runs through Sumsub and includes an ID document and a liveness check. The card fee is charged before verification, so request a refund from support if you do not pass."
+    },
+    {
+      "question": "Where is the Avici card available?",
+      "answer": "In about 50 countries, including Argentina, Australia, Brazil, Japan, Mexico, Singapore, the UAE and 31 US states. It is not available to residents of China, India, Russia, Turkey, Vietnam, Israel and other restricted countries."
+    },
+    {
+      "question": "Does Avici pay cashback?",
+      "answer": "Not on purchases. Avici's rewards come through its referral programme, which pays referrers a share of referred users' eligible spending."
     }
   ],
-  "lastVerified": "2026-09-28",
+  "lastVerified": "2026-10-09",
   "restrictedCountries": [
-    "India",
+    "Belarus",
     "China",
-    "Russia",
+    "Cuba",
+    "India",
     "Iran",
+    "Iraq",
+    "Israel",
+    "Myanmar",
+    "Nepal",
+    "Nicaragua",
     "North Korea",
+    "Russia",
+    "Sri Lanka",
     "Syria",
-    "Cuba"
+    "Turkey",
+    "Ukraine",
+    "Venezuela",
+    "Vietnam"
   ],
-  "availabilityNotes": "Avici is not available in India, China, Russia or sanctioned countries.",
-  "signupUrl": "https://avici.money/"
+  "availabilityNotes": "Avici lists the countries where its card is available; residents of the restricted list cannot use it, and the card cannot be used for spending in Cuba, Iran, North Korea, Russia, Syria, Ukraine or Venezuela. In the United States only these states are supported for personal accounts: Alabama, Alaska, Arkansas, California, Colorado, Connecticut, Florida, Hawaii, Illinois, Indiana, Iowa, Kansas, Kentucky, Maine, Massachusetts, Michigan, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, New York, North Carolina, Oklahoma, Pennsylvania, South Carolina, Texas, Utah, Virginia, West Virginia and Wyoming. Avici's business-account region table differs from the card list, so confirm in the app before paying the card fee.",
+  "signupUrl": "https://avici.money/",
+  "howToGet": [
+    "Sign up in the Avici app with your email.",
+    "Choose a card (Platinum or Signature, virtual or physical) and pay the card fee in USDC.",
+    "Complete Sumsub verification: account type, country of residence, personal details, ID document and liveness check.",
+    "Deposit USDC as collateral, or top up with another token and let Avici swap it to USDC.",
+    "Add the card to Apple Pay or Google Pay and set per-card spending limits in the card settings."
+  ]
 }
