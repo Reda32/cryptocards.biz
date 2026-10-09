@@ -36,6 +36,11 @@
     "notes": "Requirements as published by the provider; confirm during onboarding."
   },
   "rating": 6.3,
+  "referral": {
+    "code": "4EXV43K",
+    "url": "https://getrizon.sng.link/Eshdf/1cro/dfwn?ref=4EXV43K&_forward_params=2",
+    "bonus": "card"
+  },
   "pros": [
     "No monthly fee",
     "Both virtual and physical cards",
@@ -69,7 +74,7 @@
   "priceLabel": "Free",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rizon-rizon-standard-visa-platinum",
-  "lastVerified": "2026-09-28",
+  "lastVerified": "2026-10-09",
   "logo": "/logos/imported/rizon-standard-visa-platinum.webp",
   "fees": {
     "monthly": 0,
