@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { useStore } from '@nanostores/preact';
 import {
-  MAX_COMPARE,
   KYC_LABELS,
   percent,
   usd,
@@ -9,14 +8,13 @@ import {
   type KycLevel,
 } from '@/lib/types';
 import {
-  clearSlugs,
   readPayload,
   resolveCards,
   selectedSlugs,
   setSlugs,
-  toggleSlug,
 } from '@/stores/compare';
 import { cryptoIcon } from '@/lib/icons';
+import CardPicker from './CardPicker';
 
 type Tone = 'good' | 'warn' | 'bad';
 type Cell = { text: string; sort?: number | null; tone?: Tone; icons?: string[] };
@@ -265,48 +263,7 @@ export default function CompareTable() {
 
   return (
     <div>
-      {/* Picker */}
-      <div class="card-surface mb-6 p-5">
-        <div class="flex items-center justify-between">
-          <h2 class="text-sm font-bold text-slate-900 dark:text-white">
-            Select up to {MAX_COMPARE} cards
-          </h2>
-          {selected.length > 0 && (
-            <button
-              type="button"
-              class="text-xs font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200"
-              onClick={() => clearSlugs()}
-            >
-              Clear
-            </button>
-          )}
-        </div>
-        <div class="mt-3 flex flex-wrap gap-2">
-          {cards.map((card) => {
-            const checked = slugs.includes(card.slug);
-            const disabled = !checked && slugs.length >= MAX_COMPARE;
-            return (
-              <label
-                key={card.slug}
-                class={`inline-flex cursor-pointer items-center gap-2 rounded-lg border px-3 py-1.5 text-sm transition ${
-                  checked
-                    ? 'border-brand-500 bg-brand-50 text-brand-700 dark:bg-brand-950/40 dark:text-brand-300'
-                    : 'border-slate-300 bg-white text-slate-600 hover:border-brand-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300'
-                } ${disabled ? 'cursor-not-allowed opacity-40' : ''}`}
-              >
-                <input
-                  type="checkbox"
-                  class="h-4 w-4 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
-                  checked={checked}
-                  disabled={disabled}
-                  onChange={() => toggleSlug(card.slug)}
-                />
-                {card.name}
-              </label>
-            );
-          })}
-        </div>
-      </div>
+      <CardPicker cards={cards} selected={selected} />
 
       {selected.length < 2 ? (
         <p class="card-surface p-8 text-center text-sm text-slate-500 dark:text-slate-400">
