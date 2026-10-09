@@ -1,5 +1,5 @@
 // @ts-check
-import { readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
@@ -64,6 +64,10 @@ const redirects = Object.fromEntries(
       ['/cards/', '/countries'],
       ['/coupons/', ''],
       ['/go/', ''],
+      // Old cached pages and image search still request the old logo file.
+      ...(existsSync(join(process.cwd(), 'public/logos/imported', `${to}.webp`))
+        ? [['/logos/imported/', '.webp']]
+        : []),
     ].map(([prefix, suffix]) => [
       `${prefix}${from}${suffix}`,
       { status: 301, destination: `${prefix}${to}${suffix}` },
