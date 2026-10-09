@@ -47,6 +47,9 @@ Create `src/content/cards/<slug>.json` (schema: `src/content.config.ts`) plus:
   panel, where the owner manages its affiliate link and promo code (`npm run check`
   fails otherwise).
 - Pull `main` first: the owner's admin edits are commits on `main`.
+- **Renaming a slug** (changes the card's URLs): `git mv` the card, community and review
+  files to the new slug, update `slug`/`cardSlug`, and add `'old-slug': 'new-slug'` to
+  `SLUG_REDIRECTS` in `astro.config.mjs` so every old URL answers with a 301.
 
 - `src/content/community/<slug>.json` — `score: null`, `sources: []` until the pipeline
   runs.

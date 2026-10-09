@@ -1,6 +1,6 @@
 {
   "name": "Rizon Card",
-  "slug": "rizon-standard-visa-platinum",
+  "slug": "rizon",
   "company": "Rizon",
   "summary": "An entry-level non-custodial Visa card with no monthly fees, designed for users who want to spend stablecoins directly from their own wallet.",
   "type": [
@@ -75,7 +75,7 @@
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/rizon-rizon-standard-visa-platinum",
   "lastVerified": "2026-10-09",
-  "logo": "/logos/imported/rizon-standard-visa-platinum.webp",
+  "logo": "/logos/imported/rizon.webp",
   "fees": {
     "monthly": 0,
     "issuance": 10,

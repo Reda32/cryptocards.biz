@@ -48,6 +48,29 @@ for (const company of unverifiedCompanySlugs) {
   if (!verifiedCompanySlugs.has(company)) excluded.add(`/company/${company}`);
 }
 
+/**
+ * Renamed card slugs (old -> new). Every per-card URL of the old slug answers with a
+ * 301 to the new one, so links and rankings carry over. Add a line when renaming a card.
+ */
+const SLUG_REDIRECTS = {
+  'rizon-standard-visa-platinum': 'rizon',
+};
+
+/** @type {import('astro').AstroUserConfig['redirects']} */
+const redirects = Object.fromEntries(
+  Object.entries(SLUG_REDIRECTS).flatMap(([from, to]) =>
+    [
+      ['/cards/', ''],
+      ['/cards/', '/countries'],
+      ['/coupons/', ''],
+      ['/go/', ''],
+    ].map(([prefix, suffix]) => [
+      `${prefix}${from}${suffix}`,
+      { status: 301, destination: `${prefix}${to}${suffix}` },
+    ]),
+  ),
+);
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://cryptocards.biz',
@@ -57,6 +80,9 @@ export default defineConfig({
   // Keep URLs, canonical tags and the sitemap in agreement: no trailing slash.
   trailingSlash: 'never',
   adapter: node({ mode: 'standalone' }),
+  redirects,
+  // Serve redirects from the server as real 301s instead of meta-refresh HTML pages.
+  build: { redirects: false },
   // Behind Coolify's proxy, trust X-Forwarded-Host/Proto for our own domains so
   // request URLs (and the form origin check on /admin) see https://cryptocards.biz.
   security: {
