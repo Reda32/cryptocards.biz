@@ -2,7 +2,7 @@
   "name": "Winity Life Card",
   "slug": "winity-card",
   "company": "Winity",
-  "summary": "Winity Life is a Hong Kong-based custodial card that converts USDT, USDC and other digital assets into a USD balance you can spend on Visa. The Exclusive virtual card is free and stablecoin deposits carry no fee, but the card needs a US$25 minimum balance, non-stable assets cost 5% to convert, and the rewards programme has no live redemption yet.",
+  "summary": "Winity Life is a Visa card issued in Hong Kong that turns USDT, USDC and other digital assets into a USD balance you can spend in 180+ countries. The Exclusive virtual card is free, stablecoin deposits and card spending carry no fee, and ATM withdrawals cost US$3, but non-stable assets cost 5% to convert and you must keep a US$25 minimum balance.",
   "logo": "/logos/winity.webp",
   "brandColor": "#21E6A7",
   "type": [
@@ -15,361 +15,127 @@
   ],
   "features": [
     "contactless",
-    "instant-issuance",
     "crypto-topup",
     "atm-withdrawal",
-    "multi-currency",
-    "rewards",
-    "app-notifications"
+    "rewards"
   ],
   "fees": {
     "issuance": 0,
     "monthly": 0,
     "fx": 0,
-    "atm": "US$3 per withdrawal (+ US$5 ATM PIN change)",
-    "topup": "Free for USDT/USDC; 5% on other assets"
+    "atm": "US$3 per withdrawal (US$5 to change your PIN at an ATM)",
+    "topup": "Free for USDT/USDC; 5% conversion on other assets"
   },
   "rewards": {
-    "cashback": "None (Winity Points instead)",
-    "welcomeBonus": "Free physical card after US$25 eligible spend (limited promotion)",
-    "referralBonus": "US$2 instant cash via Winity Loop when a referred user starts spending"
+    "cashback": "None (Winity Points: 1 point per US$10)"
   },
-  "countries": [
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "Andorra",
-    "Angola",
-    "Antigua and Barbuda",
-    "Argentina",
-    "Armenia",
-    "Australia",
-    "Austria",
-    "Azerbaijan",
-    "Bahamas",
-    "Bahrain",
-    "Bangladesh",
-    "Barbados",
-    "Belgium",
-    "Belize",
-    "Benin",
-    "Bhutan",
-    "Bolivia",
-    "Bosnia and Herzegovina",
-    "Botswana",
-    "Brazil",
-    "Brunei",
-    "Bulgaria",
-    "Burkina Faso",
-    "Burundi",
-    "Cambodia",
-    "Cameroon",
-    "Canada",
-    "Cape Verde",
-    "Central African Republic",
-    "Chad",
-    "Chile",
-    "China",
-    "Colombia",
-    "Comoros",
-    "Congo",
-    "Costa Rica",
-    "Croatia",
-    "Cyprus",
-    "Czech Republic",
-    "Denmark",
-    "Djibouti",
-    "Dominica",
-    "Dominican Republic",
-    "Ecuador",
-    "Egypt",
-    "El Salvador",
-    "Equatorial Guinea",
-    "Eritrea",
-    "Estonia",
-    "Eswatini",
-    "Ethiopia",
-    "Fiji",
-    "Finland",
-    "France",
-    "Gabon",
-    "Gambia",
-    "Georgia",
-    "Germany",
-    "Ghana",
-    "Gibraltar",
-    "Greece",
-    "Grenada",
-    "Guatemala",
-    "Guinea",
-    "Guinea-Bissau",
-    "Guyana",
-    "Haiti",
-    "Honduras",
-    "Hong Kong",
-    "Hungary",
-    "Iceland",
-    "India",
-    "Indonesia",
-    "Iraq",
-    "Ireland",
-    "Israel",
-    "Italy",
-    "Jamaica",
-    "Japan",
-    "Jordan",
-    "Kazakhstan",
-    "Kenya",
-    "Kiribati",
-    "Kosovo",
-    "Kuwait",
-    "Kyrgyzstan",
-    "Laos",
-    "Latvia",
-    "Lebanon",
-    "Lesotho",
-    "Liberia",
-    "Libya",
-    "Liechtenstein",
-    "Lithuania",
-    "Luxembourg",
-    "Macau",
-    "Madagascar",
-    "Malawi",
-    "Malaysia",
-    "Maldives",
-    "Mali",
-    "Malta",
-    "Marshall Islands",
-    "Mauritania",
-    "Mauritius",
-    "Mexico",
-    "Micronesia",
-    "Moldova",
-    "Monaco",
-    "Mongolia",
-    "Montenegro",
-    "Morocco",
-    "Mozambique",
-    "Myanmar",
-    "Namibia",
-    "Nauru",
-    "Nepal",
-    "Netherlands",
-    "New Zealand",
-    "Nicaragua",
-    "Niger",
-    "Nigeria",
-    "North Macedonia",
-    "Norway",
-    "Oman",
-    "Pakistan",
-    "Palau",
-    "Palestine",
-    "Panama",
-    "Papua New Guinea",
-    "Paraguay",
-    "Peru",
-    "Philippines",
-    "Poland",
-    "Portugal",
-    "Qatar",
-    "Romania",
-    "Rwanda",
-    "Saint Kitts and Nevis",
-    "Saint Lucia",
-    "Saint Vincent and the Grenadines",
-    "Samoa",
-    "San Marino",
-    "Sao Tome and Principe",
-    "Saudi Arabia",
-    "Senegal",
-    "Serbia",
-    "Seychelles",
-    "Sierra Leone",
-    "Singapore",
-    "Slovakia",
-    "Slovenia",
-    "Solomon Islands",
-    "Somalia",
-    "South Africa",
-    "South Korea",
-    "South Sudan",
-    "Spain",
-    "Sri Lanka",
-    "Sudan",
-    "Suriname",
-    "Sweden",
-    "Switzerland",
-    "Taiwan",
-    "Tajikistan",
-    "Tanzania",
-    "Thailand",
-    "Timor-Leste",
-    "Togo",
-    "Tonga",
-    "Trinidad and Tobago",
-    "Tunisia",
-    "Turkey",
-    "Turkmenistan",
-    "Tuvalu",
-    "Uganda",
-    "Ukraine",
-    "United Arab Emirates",
-    "United Kingdom",
-    "United States",
-    "Uruguay",
-    "Uzbekistan",
-    "Vanuatu",
-    "Vatican City",
-    "Vietnam",
-    "Yemen",
-    "Zambia",
-    "Zimbabwe"
-  ],
+  "countries": [],
   "cryptos": [
     {
       "symbol": "USDT",
-      "networks": [
-        "Ethereum",
-        "Tron",
-        "Solana",
-        "Polygon",
-        "BNB Chain"
-      ]
+      "networks": []
     },
     {
       "symbol": "USDC",
-      "networks": [
-        "Ethereum",
-        "Solana",
-        "Polygon",
-        "BNB Chain"
-      ]
-    },
-    {
-      "symbol": "ETH",
-      "networks": [
-        "Ethereum"
-      ]
-    },
-    {
-      "symbol": "SOL",
-      "networks": [
-        "Solana"
-      ]
-    },
-    {
-      "symbol": "POL",
-      "networks": [
-        "Polygon"
-      ]
-    },
-    {
-      "symbol": "TRX",
-      "networks": [
-        "Tron"
-      ]
+      "networks": []
     },
     {
       "symbol": "WCO",
-      "networks": [
-        "W Chain"
-      ]
+      "networks": []
+    },
+    {
+      "symbol": "ETH",
+      "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
     }
   ],
   "kyc": {
     "level": "id",
-    "email": true,
-    "phone": true,
-    "idDocument": true,
+    "email": false,
+    "phone": false,
+    "idDocument": false,
     "proofOfAddress": false,
-    "selfie": true,
-    "notes": "Registration uses a phone number and OTP, then email verification. Card approval is separate from account approval and requires a passport, driving licence or national identity card plus a selfie; proof of address can be requested. You must be 18+ and resident in a supported jurisdiction."
+    "selfie": false,
+    "notes": "You must be 18 or older, complete KYC verification in the app and not live in a prohibited or sanctioned jurisdiction. Winity does not publish the exact documents it asks for."
   },
   "pros": [
-    "Free Exclusive virtual card issued after KYC approval, with no annual fee",
-    "USDT and USDC deposits cost nothing to load",
-    "Low US$3 ATM withdrawal fee and Google Pay support",
-    "Wide acceptance across 150M+ Visa merchant locations"
+    "Free Exclusive virtual card",
+    "No fee to deposit USDT or USDC, and no card spend fee",
+    "US$3 ATM withdrawals",
+    "Works with Google Pay",
+    "Spend in 180+ countries wherever Visa is accepted"
   ],
   "cons": [
-    "Custodial and partner-issued: Winity does not name the card issuer and your balance is not insured",
-    "Non-stable assets (ETH, SOL, POL, TRX, WCO) cost 5% to convert",
-    "US$25 minimum balance required to keep spending; a US$0.10 fee applies below US$25",
-    "Winity Points cannot be redeemed yet, and Apple Pay is still 'coming soon'"
+    "Non-stable assets such as ETH and SOL cost 5% to convert",
+    "US$25 minimum balance; new virtual cards are deactivated without a US$25 deposit within 14 days",
+    "No published spending limits or country list",
+    "Issued by unnamed licensed partners; Winity is not a bank",
+    "US$100 chargeback fee"
   ],
   "rating": 7.6,
   "variants": [
     {
-      "name": "Exclusive Virtual",
+      "name": "Exclusive (virtual)",
       "price": 0,
-      "rewards": "1 Winity Point / US$10",
+      "rewards": "1 Winity Point per US$10",
       "monthlyFee": 0,
-      "limits": "Not publicly disclosed",
-      "cardInfo": "Virtual Visa, issued on KYC approval, Google Pay ready"
+      "limits": "Not published",
+      "cardInfo": "Free virtual Visa, Google Pay ready; US$25 minimum balance"
     },
     {
-      "name": "Exclusive Physical",
-      "price": 0,
-      "rewards": "1 Winity Point / US$10",
-      "monthlyFee": 0,
-      "limits": "Not publicly disclosed",
-      "cardInfo": "Physical Visa, US$20/yr (first 6 months waived); free issuance after US$25 spend"
+      "name": "Exclusive (physical)",
+      "rewards": "1 Winity Point per US$10",
+      "monthlyFee": 1.67,
+      "limits": "Not published",
+      "cardInfo": "Listed at US$20/year, with free issuance under a limited promotion; confirm in the app"
     },
     {
       "name": "Executive",
-      "price": 1000,
-      "rewards": "1 Winity Point / US$8",
+      "rewards": "Faster earn rate (rate not published)",
       "monthlyFee": 0,
-      "limits": "Not publicly disclosed",
-      "cardInfo": "Premium metal Visa (coming soon / waitlist); US$1,000 per year"
+      "limits": "Not published",
+      "cardInfo": "Virtual card plus premium metal physical card; price not published"
     }
   ],
   "faq": [
     {
       "question": "Is the Winity Life Card free?",
-      "answer": "The Exclusive virtual card is free: no issuance or annual fee. The physical Exclusive card has a US$20 annual fee, but the first six months are waived on new activations and issuance is free under the current promotion after US$25 of eligible card spend (shipping may apply)."
+      "answer": "The Exclusive virtual card is free and there is no card spend fee. You must keep a US$25 minimum balance. The physical card is listed at US$20 a year, with free issuance under a limited promotion; check the price in the app."
     },
     {
-      "question": "Which cryptocurrencies can I use to fund Winity?",
-      "answer": "USDT and USDC can be deposited at a 0% fee. Winity also supports WCO, ETH, SOL, POL, TRX and BSC, but these non-stable assets carry a 5% conversion fee. Supported networks include Ethereum, Solana, Tron, Polygon, BNB Chain and W Chain."
+      "question": "What fees does Winity charge?",
+      "answer": "USDT and USDC deposits are free; other assets cost 5% to convert. ATM withdrawals cost US$3, changing your PIN at an ATM costs US$5, and a chargeback costs US$100. ATM operators and merchants may add their own fees."
     },
     {
-      "question": "Is the Winity Life Card available in the United States?",
-      "answer": "Winity markets availability across 188+ countries, and third-party tracking lists the United States among supported markets. Eligibility is still subject to KYC, jurisdiction and partner approval, so confirm your residential address in the app before applying."
+      "question": "Which cryptocurrencies can I use with Winity?",
+      "answer": "USDT and USDC at no fee, plus WCO and non-stable assets such as ETH and SOL at a 5% conversion rate. Supported networks are Ethereum, Solana, Tron, Polygon, BNB Chain and W Chain."
     },
     {
-      "question": "What are the Winity ATM fees?",
-      "answer": "ATM withdrawals cost US$3 per transaction at any Visa ATM, and changing your PIN at an ATM costs US$5. The Winity app does not support withdrawing funds back into digital assets."
+      "question": "Where is the Winity Life Card available?",
+      "answer": "Winity says the card is available in 180+ countries, but it does not publish a list. Residents of prohibited or sanctioned jurisdictions cannot apply, so check eligibility in the app."
     },
     {
-      "question": "Do Winity Points have a cash value?",
-      "answer": "Not yet. Winity Points are loyalty points, not cashback, and the redemption portal for travel, dining and lifestyle rewards is still being integrated. Treat them as future optional value until redemption is live."
-    },
-    {
-      "question": "Does the Winity Life Card require KYC?",
-      "answer": "Yes. You register with a phone number and OTP, verify your email, then complete identity verification with a passport, driving licence or national identity card plus a selfie. Account approval and card approval are separate steps."
+      "question": "Does Winity work with Apple Pay or Google Pay?",
+      "answer": "The Exclusive virtual card is Google Pay ready. Winity does not currently list Apple Pay support."
     }
   ],
   "howToGet": [
-    "Download the Winity Life app on iOS or Android and register with your phone number and OTP.",
-    "Verify your email, then complete identity verification with a government ID and a selfie.",
-    "Submit your card application. Once approved, the Exclusive virtual card is issued in the app.",
-    "Load the card with USDT or USDC (0% fee) and keep at least US$25 on the balance.",
-    "Add the card to Google Pay and start spending wherever Visa is accepted.",
-    "To get the physical card, spend US$25 on the virtual card and request it in the app."
+    "Download the Winity Life app and create an account.",
+    "Complete KYC verification in the app (18+, not resident in a sanctioned jurisdiction).",
+    "Apply for the free Exclusive virtual card.",
+    "Deposit at least US$25 in USDT or USDC within 14 days so the card stays active.",
+    "Add the card to Google Pay and spend wherever Visa is accepted. Request a physical card in the app if you want one."
   ],
-  "lastVerified": "2026-09-30",
-  "restrictedCountries": [
-    "Belarus",
-    "Cuba",
-    "Iran",
-    "North Korea",
-    "Russia",
-    "Syria",
-    "Venezuela"
-  ],
-  "availabilityNotes": "Winity markets card utility across 188+ countries and 150M+ Visa merchant locations, with only comprehensive-sanctions jurisdictions excluded. The supported list here is third-party sourced; Winity's own terms say access depends on KYC, jurisdiction and partner approval and is limited to approved users rather than the general public, so confirm your residency in the app before applying.",
-  "signupUrl": "https://www.winity.life/"
+  "lastVerified": "2026-10-12",
+  "restrictedCountries": [],
+  "availabilityNotes": "Winity does not publish a list of supported or restricted countries. Its site says the card is available in 180+ countries and that availability varies by jurisdiction; residents of prohibited or sanctioned jurisdictions cannot apply. Check eligibility in the app before applying.",
+  "signupUrl": "https://www.winity.life/",
+  "limits": {
+    "dailySpend": "Not published",
+    "monthlySpend": "Not published",
+    "atmWithdrawal": "Not published"
+  }
 }
