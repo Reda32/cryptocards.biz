@@ -25,8 +25,6 @@ interface Props {
 
 const { comparePayload = 'minimal', ...props } = Astro.props;
 
-const umamiWebsiteId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID;
-
 const allCards = await getCompareCards();
 const cards =
   comparePayload === 'full'
@@ -89,11 +87,6 @@ const promo = promoEntry
       is:inline
       set:html={`(function(){try{if(localStorage.getItem(${JSON.stringify(promoDismissKey)})==='1'){document.documentElement.classList.add('promo-dismissed');}}catch(e){}})();`}
     />
-    {
-      umamiWebsiteId && (
-        <script is:inline defer src="/stats/script.js" data-website-id={umamiWebsiteId}></script>
-      )
-    }
   </head>
   <body class="flex min-h-screen flex-col">
     <Header />

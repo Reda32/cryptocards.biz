@@ -14,6 +14,5 @@ export const GET: APIRoute = async ({ params, redirect }) => {
   const target = card?.data.referral?.url ?? card?.data.signupUrl;
   if (!card || !target) return new Response('Unknown card', { status: 404 });
 
-  // Affiliate clicks are tracked client-side via Umami (data-umami-event on the CTA).
   return redirect(target, 302);
 };

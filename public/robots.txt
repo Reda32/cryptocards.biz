@@ -4,9 +4,6 @@ Allow: /
 # Affiliate redirect endpoints add no indexable value.
 Disallow: /go/
 
-# First-party analytics proxy.
-Disallow: /stats/
-
 # Admin panel.
 Disallow: /admin
 

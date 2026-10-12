@@ -13,7 +13,6 @@ to be deployed on [Coolify](https://coolify.io).
 | Interactivity | Preact islands |
 | Shared state | nanostores + `@nanostores/persistent` (localStorage) |
 | Content | JSON + MDX via the Astro Content Layer API, stored in Git |
-| Analytics | Umami (optional, self-hosted via Coolify) |
 | Hosting | Coolify (Docker) |
 
 There is no database. Card data lives in the repository, and the only server-rendered
@@ -114,7 +113,6 @@ scoring rules that `/methodology` documents.
 - Every CTA points at `/go/<card-slug>` and carries `rel="sponsored nofollow noopener"`.
 - The redirect target is the card's `referral.url` (affiliate link, managed in `/admin`),
   else its official `signupUrl` (every card has one).
-- Clicks are tracked client-side with Umami via `data-umami-event="affiliate_click"`.
 - Always keep the affiliate disclosure visible on pages with referral links.
 
 ### Admin panel (`/admin`)
@@ -153,23 +151,10 @@ Copy `.env.example` to `.env`:
 | Variable | Purpose |
 | --- | --- |
 | `PUBLIC_SITE_URL` | Canonical/site URL (defaults to `https://cryptocards.biz`) |
-| `UMAMI_HOST` | Your self-hosted Umami URL, e.g. `https://an.cryptocards.biz` (server-side, used by the `/stats/*` proxy) |
-| `PUBLIC_UMAMI_WEBSITE_ID` | Umami website id — **build-time** (set as a Coolify "Build Variable"; blank disables analytics). |
 | `ADMIN_PASSWORD` | Enables `/admin` (12+ characters, runtime). |
 | `GITHUB_TOKEN` / `GITHUB_REPO` / `GITHUB_BRANCH` | Where `/admin` commits card edits (runtime). |
 | `TURNSTILE_SECRET` | Turns on the Cloudflare Turnstile check on the admin login (runtime). `TURNSTILE_SITE_KEY` optionally overrides the built-in site key. |
 | `DEPLOY_HOOK_URL` / `DEPLOY_HOOK_TOKEN` | Optional deploy webhook called after each admin save. |
-
-### Umami analytics (first-party proxy)
-
-The tracking script is served from **`/stats/script.js`** and proxied to your
-Umami instance, so it appears as first-party traffic and survives ad blockers.
-
-- `src/pages/stats/[...path].ts` proxies `/stats/<x>` → `<UMAMI_HOST>/<x>`
-  (script + `/api/send`), forwarding all headers.
-- Affiliate clicks fire an `affiliate_click` event (data attributes on the CTA).
-- Umami's default login is `admin` / `umami` — change it on first login.
-- Session replay/heatmaps are optional and off by default.
 
 ## Deploying on Coolify
 
@@ -178,10 +163,6 @@ Umami instance, so it appears as first-party traffic and survives ad blockers.
 3. Health check path: `/`. Exposed port: `4321`.
 4. Add the environment variables above.
 5. Set the domain and let Coolify provision HTTPS.
-6. (Optional) Deploy Umami as a separate Coolify service
-   (`ghcr.io/umami-software/umami:postgresql-latest` + Postgres), log in
-   `admin`/`umami`, add a website, and point `UMAMI_HOST` +
-   `PUBLIC_UMAMI_WEBSITE_ID` at it.
 
 To refresh content automatically later: run the Community Score job on a schedule,
 commit the updated JSON, then trigger a Coolify rebuild webhook.

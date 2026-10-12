@@ -1,14 +1,10 @@
 # Self-managed deployment example. On Coolify you can either point a resource
-# at this compose file or build from the Dockerfile directly and add Umami as a
-# separate service.
+# at this compose file or build from the Dockerfile directly.
 
 services:
   app:
     build:
       context: .
-      args:
-        # PUBLIC_* vars are inlined at build time.
-        PUBLIC_UMAMI_WEBSITE_ID: ${PUBLIC_UMAMI_WEBSITE_ID:-}
     restart: unless-stopped
     ports:
       - '4321:4321'
@@ -16,7 +12,6 @@ services:
       HOST: 0.0.0.0
       PORT: '4321'
       PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-https://cryptocards.biz}
-      UMAMI_HOST: ${UMAMI_HOST:-http://umami:3000}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
       GITHUB_TOKEN: ${GITHUB_TOKEN:-}
       GITHUB_REPO: ${GITHUB_REPO:-}
@@ -26,29 +21,3 @@ services:
       TURNSTILE_HOSTNAMES: ${TURNSTILE_HOSTNAMES:-}
       DEPLOY_HOOK_URL: ${DEPLOY_HOOK_URL:-}
       DEPLOY_HOOK_TOKEN: ${DEPLOY_HOOK_TOKEN:-}
-    depends_on:
-      - umami
-
-  umami:
-    image: ghcr.io/umami-software/umami:postgresql-latest
-    restart: unless-stopped
-    ports:
-      - '3000:3000'
-    environment:
-      DATABASE_URL: postgresql://umami:umami@umami-db:5432/umami
-      APP_SECRET: change-me
-    depends_on:
-      - umami-db
-
-  umami-db:
-    image: postgres:16-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_USER: umami
-      POSTGRES_PASSWORD: umami
-      POSTGRES_DB: umami
-    volumes:
-      - umami-db-data:/var/lib/postgresql/data
-
-volumes:
-  umami-db-data:
