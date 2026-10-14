@@ -1,6 +1,6 @@
 {
-  "name": "ZexoCard Everyday Virtual Card",
-  "slug": "zexocard-everyday-virtual-card",
+  "name": "ZexoCard",
+  "slug": "zexocard",
   "company": "ZexoCard",
   "summary": "ZexoCard is a reloadable virtual card you fund with crypto such as USDT, USDC, Bitcoin, Ethereum or Solana, with no routine ID check for standard sign-up. The Everyday card costs US$10 to issue, charges US$0.25 per purchase and works with Apple Pay and Google Pay; a separate subscription card for AI, advertising and cloud services has no per-purchase fee.",
   "type": [
@@ -82,7 +82,7 @@
   ],
   "faq": [
     {
-      "question": "How much does the ZexoCard Everyday Virtual Card cost?",
+      "question": "How much does the ZexoCard cost?",
       "answer": "US$10 one-time issuance, with no monthly fee. Every purchase with the Everyday card costs US$0.25, deducted from the card balance. Funding fees are shown in your quote before you pay."
     },
     {
@@ -106,7 +106,7 @@
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/zexocard-zexocard-everyday-virtual-card",
   "lastVerified": "2026-10-14",
-  "logo": "/logos/imported/zexocard-everyday-virtual-card.webp",
+  "logo": "/logos/imported/zexocard.webp",
   "fees": {
     "issuance": 10,
     "monthly": 0,

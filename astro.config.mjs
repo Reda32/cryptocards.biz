@@ -54,6 +54,7 @@ for (const company of unverifiedCompanySlugs) {
  */
 const SLUG_REDIRECTS = {
   'rizon-standard-visa-platinum': 'rizon',
+  'zexocard-everyday-virtual-card': 'zexocard',
 };
 
 /** @type {import('astro').AstroUserConfig['redirects']} */
