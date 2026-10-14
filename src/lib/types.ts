@@ -12,7 +12,7 @@ export type CardType = 'virtual' | 'physical';
 export type Fees = {
   issuance: number;
   monthly: number;
-  fx: number;
+  fx?: number;
   atm: string;
   topup?: string;
   decline?: number;

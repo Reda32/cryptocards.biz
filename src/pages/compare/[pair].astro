@@ -32,7 +32,10 @@ const B = b.data;
 const ratingValue = (value: number | null | undefined) =>
   typeof value === 'number' ? value : 0;
 const fee = (value: typeof A.fees) =>
-  value ?? { issuance: 0, monthly: 0, fx: 0, atm: 'Not disclosed' };
+  value ?? { issuance: 0, monthly: 0, fx: undefined, atm: 'Not disclosed' };
+const fxKnown = typeof fee(A.fees).fx === 'number' && typeof fee(B.fees).fx === 'number';
+const fxPhrase = (fx: number | undefined) =>
+  typeof fx === 'number' ? `a ${percent(fx)}` : 'an unpublished';
 const kyc = (value: typeof A.kyc) => value ?? { level: 'id' as const };
 const kycRank = { none: 0, basic: 1, id: 2, full: 3 } as const;
 
@@ -74,9 +77,9 @@ const metrics: Metric[] = [
     label: 'FX markup',
     aText: percent(fee(A.fees).fx),
     bText: percent(fee(B.fees).fx),
-    aValue: fee(A.fees).fx,
-    bValue: fee(B.fees).fx,
-    best: 'low',
+    aValue: fee(A.fees).fx ?? 0,
+    bValue: fee(B.fees).fx ?? 0,
+    best: fxKnown ? 'low' : 'none',
   },
   {
     label: 'Cryptocurrencies',
@@ -132,7 +135,7 @@ const faq = [
   },
   {
     question: `Which is cheaper, ${A.name} or ${B.name}?`,
-    answer: `${A.name} charges a ${percent(fee(A.fees).fx)} FX markup with a ${usd(fee(A.fees).monthly)} monthly fee and ${usd(fee(A.fees).issuance)} issuance cost. ${B.name} charges a ${percent(fee(B.fees).fx)} FX markup with a ${usd(fee(B.fees).monthly)} monthly fee and ${usd(fee(B.fees).issuance)} issuance cost. Lower fees are highlighted in the table above.`,
+    answer: `${A.name} charges ${fxPhrase(fee(A.fees).fx)} FX markup with a ${usd(fee(A.fees).monthly)} monthly fee and ${usd(fee(A.fees).issuance)} issuance cost. ${B.name} charges ${fxPhrase(fee(B.fees).fx)} FX markup with a ${usd(fee(B.fees).monthly)} monthly fee and ${usd(fee(B.fees).issuance)} issuance cost. Lower fees are highlighted in the table above.`,
   },
   {
     question: `Which has the easier sign-up, ${A.name} or ${B.name}?`,

@@ -75,6 +75,14 @@ const redirects = Object.fromEntries(
   ),
 );
 
+/** Renamed company slugs (old -> new) for /company pages. */
+const COMPANY_REDIRECTS = {
+  'zexocard-everyday': 'zexocard',
+};
+for (const [from, to] of Object.entries(COMPANY_REDIRECTS)) {
+  redirects[`/company/${from}`] = { status: 301, destination: `/company/${to}` };
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://cryptocards.biz',

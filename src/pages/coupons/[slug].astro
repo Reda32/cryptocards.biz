@@ -103,7 +103,7 @@ const faq = hasOffer
       {
         question: `What fees does the ${d.name} charge?`,
         answer: d.fees
-          ? `Card issuance is ${d.fees.issuance === 0 ? 'free' : `US$${d.fees.issuance}`}, the monthly fee is ${d.fees.monthly === 0 ? 'free' : `US$${d.fees.monthly}`} and the FX markup is ${d.fees.fx}%.${d.fees.atm ? ` ATM: ${d.fees.atm}.` : ''}`
+          ? `Card issuance is ${d.fees.issuance === 0 ? 'free' : `US$${d.fees.issuance}`}, the monthly fee is ${d.fees.monthly === 0 ? 'free' : `US$${d.fees.monthly}`} and the FX markup is ${typeof d.fees.fx === 'number' ? `${d.fees.fx}%` : 'not published'}.${d.fees.atm ? ` ATM: ${d.fees.atm}.` : ''}`
           : 'Fees have not been published by the provider.',
       },
       {

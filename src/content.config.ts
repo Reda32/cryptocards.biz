@@ -42,7 +42,7 @@ const cards = defineCollection({
       .object({
         issuance: z.number(),
         monthly: z.number(),
-        fx: z.number(), // percent
+        fx: z.number().optional(), // percent; omitted when the provider does not publish it
         atm: z.string(),
         topup: z.string().optional(),
         decline: z.number().optional(),

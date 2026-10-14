@@ -1,16 +1,20 @@
 {
   "name": "ZexoCard Everyday Virtual Card",
   "slug": "zexocard-everyday-virtual-card",
-  "company": "ZexoCard Everyday",
-  "summary": "A virtual card designed for day-to-day use, such as travel bookings, online purchases, and contactless spending.",
+  "company": "ZexoCard",
+  "summary": "ZexoCard is a reloadable virtual card you fund with crypto such as USDT, USDC, Bitcoin, Ethereum or Solana, with no routine ID check for standard sign-up. The Everyday card costs US$10 to issue, charges US$0.25 per purchase and works with Apple Pay and Google Pay; a separate subscription card for AI, advertising and cloud services has no per-purchase fee.",
   "type": [
     "virtual"
   ],
-  "wallets": [],
-  "features": [],
-  "rewards": {
-    "cashback": "0% Cashback"
-  },
+  "wallets": [
+    "apple",
+    "google"
+  ],
+  "features": [
+    "contactless",
+    "online-payments",
+    "crypto-topup"
+  ],
   "countries": [],
   "restrictedCountries": [],
   "cryptos": [
@@ -29,66 +33,99 @@
     {
       "symbol": "ETH",
       "networks": []
+    },
+    {
+      "symbol": "SOL",
+      "networks": []
     }
   ],
   "kyc": {
     "level": "none",
-    "email": false,
+    "email": true,
     "phone": false,
     "idDocument": false,
     "proofOfAddress": false,
     "selfie": false,
-    "notes": "Requirements as published by the provider; confirm during onboarding."
+    "notes": "Standard onboarding needs only an email sign-up, with no routine identity-document submission. Country restrictions still apply."
   },
   "pros": [
-    "No monthly fee",
-    "No foreign-exchange markup on spending",
-    "Instant virtual card",
-    "0% Cashback cashback",
-    "No identity verification required",
-    "High daily spending limits"
+    "No routine ID check for standard sign-up",
+    "No monthly or account fee",
+    "Works with Apple Pay and Google Pay",
+    "High limits: US$100,000 per transaction and US$500,000 per month",
+    "Fund with USDT, USDC, BTC, ETH or SOL"
   ],
   "cons": [
-    "US$10 card issuance fee",
-    "Virtual card only, no physical card"
+    "US$10 issuance fee per card",
+    "US$0.25 fee on every Everyday card purchase",
+    "Funding fee rate and FX fee are not published",
+    "Virtual only, so no ATM withdrawals",
+    "Card network and country list are not published"
   ],
-  "variants": [],
-  "faq": [
+  "variants": [
     {
-      "question": "Does the ZexoCard Everyday Virtual Card charge a monthly fee?",
-      "answer": "No. There is no monthly fee. Card issuance is US$10."
+      "name": "Everyday",
+      "price": 10,
+      "rewards": "None",
+      "monthlyFee": 0,
+      "limits": "US$100,000 per transaction; US$500,000 per month",
+      "cardInfo": "Reloadable virtual card · US$0.25 per purchase · Apple Pay and Google Pay"
     },
     {
-      "question": "What are the foreign-exchange fees on the ZexoCard Everyday Virtual Card?",
-      "answer": "There is no foreign-exchange markup on spending."
-    },
-    {
-      "question": "What KYC does the ZexoCard Everyday Virtual Card require?",
-      "answer": "It requires no verification."
-    },
-    {
-      "question": "Which card network and wallets does the ZexoCard Everyday Virtual Card support?",
-      "answer": "The card network is not confirmed."
+      "name": "Subscription",
+      "price": 10,
+      "rewards": "None",
+      "monthlyFee": 0,
+      "limits": "US$100,000 per transaction; US$500,000 per month",
+      "cardInfo": "For supported AI, advertising and cloud merchants · no per-purchase fee"
     }
   ],
-  "priceLabel": "Free",
+  "faq": [
+    {
+      "question": "How much does the ZexoCard Everyday Virtual Card cost?",
+      "answer": "US$10 one-time issuance, with no monthly fee. Every purchase with the Everyday card costs US$0.25, deducted from the card balance. Funding fees are shown in your quote before you pay."
+    },
+    {
+      "question": "Does ZexoCard require KYC?",
+      "answer": "Standard onboarding needs only an email and no routine identity-document submission. Country restrictions still apply."
+    },
+    {
+      "question": "What are ZexoCard's limits?",
+      "answer": "Up to US$100,000 per transaction and US$500,000 per calendar month per card, with no separate daily cap. The card balance must cover the payment plus fees."
+    },
+    {
+      "question": "Does ZexoCard work with Apple Pay and Google Pay?",
+      "answer": "Yes. The Everyday card can be added to Apple Pay or Google Pay on eligible devices."
+    },
+    {
+      "question": "What is the ZexoCard subscription card?",
+      "answer": "A card for supported AI, advertising and cloud merchants. It has no per-purchase merchant fee and can be topped up at any time."
+    }
+  ],
+  "priceLabel": "US$10 one-time",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/zexocard-zexocard-everyday-virtual-card",
-  "lastVerified": "2026-09-28",
+  "lastVerified": "2026-10-14",
   "logo": "/logos/imported/zexocard-everyday-virtual-card.webp",
   "fees": {
-    "monthly": 0,
     "issuance": 10,
-    "fx": 0,
-    "atm": "Free",
-    "topup": "Free",
-    "decline": 0
+    "monthly": 0,
+    "atm": "Not available (virtual card)",
+    "topup": "Funding fee shown in your quote before paying (rate not published)"
   },
   "limits": {
-    "dailySpend": "Unlimited",
-    "monthlySpend": "$500,000",
-    "atmWithdrawal": "Unlimited"
+    "dailySpend": "No separate daily cap (US$100,000 per transaction)",
+    "monthlySpend": "US$500,000 per card",
+    "atmWithdrawal": "Not available (virtual card)"
   },
   "rating": 6.1,
-  "signupUrl": "https://zexocard.com/"
+  "signupUrl": "https://zexocard.com/",
+  "availabilityNotes": "ZexoCard says country restrictions apply but does not publish which countries are supported or restricted. Check during sign-up before funding a card.",
+  "howToGet": [
+    "Sign up on zexocard.com with your email.",
+    "Fund your ZexoCard wallet with crypto such as USDT, USDC, BTC, ETH or SOL.",
+    "Choose the Everyday card (or the Subscription card for AI, ads and cloud services) and pay the US$10 issuance fee.",
+    "Check the quote: the funding fee is shown before you confirm.",
+    "Top up the card from your wallet and add it to Apple Pay or Google Pay."
+  ]
 }
