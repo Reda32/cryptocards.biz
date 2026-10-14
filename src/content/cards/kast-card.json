@@ -119,6 +119,11 @@
     "No published list of supported countries"
   ],
   "rating": 7.9,
+  "referral": {
+    "code": "7HGPVNML",
+    "url": "https://app.kast.xyz/referral/7HGPVNML",
+    "bonus": "Up to 20% off card subscriptions"
+  },
   "variants": [
     {
       "name": "Standard",
@@ -165,7 +170,7 @@
       "answer": "KAST says it serves 170+ countries but does not publish the list. The identity check in the app shows the supported countries; if yours is not listed, KAST is not available to you."
     }
   ],
-  "lastVerified": "2026-10-09",
+  "lastVerified": "2026-10-14",
   "restrictedCountries": [],
   "availabilityNotes": "KAST says its account and card are available in 170+ countries but does not publish the list. During sign-up, the identity check shows the supported countries: if yours is not listed, KAST is not available to you. Restricted locations are not published either; they include sanctioned and embargoed countries and can change without notice. Dual citizens may pass verification with an ID from a supported country.",
   "signupUrl": "https://www.kast.xyz/",
