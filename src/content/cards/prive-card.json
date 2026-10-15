@@ -2,77 +2,114 @@
   "name": "Prive Card",
   "slug": "prive-card",
   "company": "Prive",
-  "summary": "Crypto payment card with financial services integration.",
+  "summary": "Prive is a private global wallet with a Visa Platinum card, aimed at high-value payments. You hold stablecoins such as USDC, USDT, EURC and PYUSD in self-custodial wallets, fund in GBP, USD, EUR, NGN, KES, MXN or BRL, and spend up to US$100,000 per transaction depending on your verification tier, with virtual and physical cards.",
   "type": [
-    "virtual"
+    "virtual",
+    "physical"
   ],
   "network": "visa",
   "wallets": [],
-  "features": [],
-  "rewards": {
-    "cashback": "0% Cashback"
-  },
+  "features": [
+    "contactless",
+    "online-payments",
+    "crypto-topup",
+    "multi-currency"
+  ],
   "countries": [],
   "restrictedCountries": [],
-  "cryptos": [],
+  "cryptos": [
+    {
+      "symbol": "USDC",
+      "networks": []
+    },
+    {
+      "symbol": "USDT",
+      "networks": []
+    },
+    {
+      "symbol": "EURC",
+      "networks": []
+    },
+    {
+      "symbol": "PYUSD",
+      "networks": []
+    }
+  ],
   "kyc": {
     "level": "id",
-    "email": true,
-    "phone": true,
-    "idDocument": true,
+    "email": false,
+    "phone": false,
+    "idDocument": false,
     "proofOfAddress": false,
     "selfie": false,
-    "notes": "Requirements as published by the provider; confirm during onboarding."
+    "notes": "Prive uses verification tiers, and your spending limits depend on your tier. It does not publish the documents each tier requires. Prive may support reusable KYC, letting you reuse identity data verified elsewhere where available."
   },
   "rating": 6.5,
   "pros": [
-    "No monthly fee",
-    "Free card issuance",
-    "No foreign-exchange markup on spending",
-    "Instant virtual card",
-    "0% Cashback cashback",
-    "High daily spending limits"
+    "High limits: up to US$100,000 per transaction on higher verification tiers",
+    "Virtual and physical Visa Platinum cards",
+    "Self-custodial stablecoin wallets for USDC, USDT, EURC and PYUSD",
+    "Fiat funding in GBP, USD, EUR, NGN, KES, MXN and BRL",
+    "Withdrawals to local bank accounts in 80+ countries"
   ],
   "cons": [
-    "Identity verification (KYC) required",
-    "Virtual card only, no physical card"
+    "Card fees are not published on the main site",
+    "Limits depend on your verification tier",
+    "No published country list",
+    "Apple Pay, Google Pay and cashback are not mentioned",
+    "FX is described as competitive, but no rate is published"
   ],
-  "variants": [],
-  "faq": [
+  "variants": [
     {
-      "question": "Does the Prive Card charge a monthly fee?",
-      "answer": "No. There is no monthly fee. Card issuance is free."
+      "name": "Visa Platinum (virtual)",
+      "rewards": "Not published",
+      "monthlyFee": 0,
+      "limits": "Up to US$100,000 per transaction, by verification tier",
+      "cardInfo": "Linked to your Prive wallet; fees on Prive's card fees page"
     },
     {
-      "question": "What are the foreign-exchange fees on the Prive Card?",
-      "answer": "There is no foreign-exchange markup on spending."
-    },
-    {
-      "question": "What KYC does the Prive Card require?",
-      "answer": "It requires a government ID."
-    },
-    {
-      "question": "Which card network and wallets does the Prive Card support?",
-      "answer": "Visa."
+      "name": "Visa Platinum (physical)",
+      "rewards": "Not published",
+      "monthlyFee": 0,
+      "limits": "Up to US$100,000 per transaction, by verification tier",
+      "cardInfo": "Linked to your Prive wallet; fees on Prive's card fees page"
     }
   ],
-  "priceLabel": "Free",
+  "faq": [
+    {
+      "question": "What is the Prive Card?",
+      "answer": "The Prive Visa Platinum is a card linked to your Prive wallet, a private global wallet for high-value payments, payment links and concierge access. It comes in virtual and physical form."
+    },
+    {
+      "question": "What are the Prive Card limits?",
+      "answer": "Up to US$100,000 per transaction. The exact limits depend on your verification tier."
+    },
+    {
+      "question": "What can I fund Prive with?",
+      "answer": "Stablecoins including USDC, USDT, EURC and PYUSD, held in self-custodial wallets, or fiat in GBP, USD, EUR, NGN, KES, MXN and BRL. Withdrawals reach local bank accounts in 80+ countries."
+    },
+    {
+      "question": "What fees does the Prive Card charge?",
+      "answer": "Prive lists its card fees on a separate card fees page and describes its FX as competitive, without publishing a rate on the main site. Check the fees page before ordering."
+    }
+  ],
+  "priceLabel": "See card fees page",
   "verified": true,
   "sourceUrl": "https://www.cryptocards.so/en/card/prive-card",
-  "lastVerified": "2026-09-28",
+  "lastVerified": "2026-10-15",
   "logo": "/logos/imported/prive-card.webp",
-  "fees": {
-    "monthly": 0,
-    "issuance": 0,
-    "fx": 0,
-    "atm": "Free",
-    "topup": "Free",
-    "decline": 0
-  },
   "limits": {
-    "dailySpend": "Unlimited",
-    "monthlySpend": "Unlimited",
-    "atmWithdrawal": "Unlimited"
+    "dailySpend": "Depends on verification tier (up to US$100,000 per transaction)",
+    "monthlySpend": "Depends on verification tier",
+    "atmWithdrawal": "Not published"
   },
-  "signupUrl": "https://www.prive.money/"
+  "signupUrl": "https://www.prive.money/",
+  "availabilityNotes": "Prive does not publish a list of supported or restricted countries. It offers fiat funding in GBP, USD, EUR, NGN, KES, MXN and BRL and withdrawals to local bank accounts in 80+ countries, and says the card is accepted at 130M+ locations worldwide. Check eligibility in the app before signing up.",
+  "howToGet": [
+    "Sign up for a Prive wallet at prive.money.",
+    "Complete identity verification for the tier you need; higher tiers unlock higher limits.",
+    "Fund your wallet with stablecoins (USDC, USDT, EURC or PYUSD) or in GBP, USD, EUR, NGN, KES, MXN or BRL.",
+    "Check the card fees page, then order the Prive Visa Platinum card (virtual or physical).",
+    "Spend online or in stores at Visa merchants worldwide."
+  ]
 }
